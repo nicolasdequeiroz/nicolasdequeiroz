@@ -1,0 +1,106 @@
+/* --- CAROUSEL CSS --- */
+.mouse-tracing-wrapper {
+    width: 100%;
+    height: 100%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 2000px;
+    position: relative;
+    overflow: visible;
+    z-index: 10;
+    touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+.mouse-tracing-wrapper:active { cursor: grabbing; }
+
+.scene-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+    transition: transform 0.3s ease-out;
+    transform-origin: center center;
+}
+
+.carousel-3d {
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 1s cubic-bezier(0.19, 1, 0.22, 1);
+    /* Tamanho Desktop */
+    width: 420px; 
+    height: 260px;
+}
+
+.carousel-item {
+    position: absolute !important;
+    width: 100% !important;
+    height: 100% !important;
+    left: 0 !important;
+    top: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    backface-visibility: visible;
+    border-radius: 8px;
+    overflow: hidden; 
+    display: block !important; 
+    transform-origin: center center;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.carousel-link-wrapper {
+    display: block;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    transform-style: preserve-3d; 
+}
+
+.carousel-item img {
+    position: absolute;
+    top: 0; left: 0; 
+    width: 100% !important; 
+    height: 100% !important;
+    object-fit: cover;
+    z-index: 0;
+    pointer-events: none;
+    transition: transform 0.6s ease;
+    border-radius: 0 !important;
+    transform: scale(1);
+    filter: none !important;
+    box-shadow: none !important;
+}
+
+/* Hover Zoom apenas no Desktop */
+@media (hover: hover) and (pointer: fine) {
+    .carousel-item:hover img {
+        transform: scale(1.05);
+    }
+}
+
+/* --- MOBILE AJUSTADO --- */
+@media (max-width: 768px) {
+    /* Mantivemos a perspectiva agressiva para o efeito 3D */
+    .mouse-tracing-wrapper { perspective: 600px; }
+    
+    /* MUDANÇA AQUI: Cards menores para caber melhor e mostrar o entorno */
+    .carousel-3d { 
+        width: 180px; 
+        height: 260px; 
+    }
+    
+    .scene-container { transform: rotateX(-10deg); }
+    
+    .carousel-item img { 
+        transform: none !important; 
+        transition: none !important; 
+        animation: none !important;
+    }
+}
+
+#cms-list { display: none !important; }

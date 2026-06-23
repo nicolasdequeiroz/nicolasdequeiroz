@@ -1,0 +1,53 @@
+/* --- GLOBAL CURSOR CSS --- */
+  
+  /* Esconde a setinha do mouse APENAS se o JS tiver carregado com sucesso */
+  @media (min-width: 769px) and (hover: hover) {
+      body.custom-cursor-active, 
+      body.custom-cursor-active a, 
+      body.custom-cursor-active button, 
+      body.custom-cursor-active input {
+          cursor: none !important;
+      }
+  }
+
+  /* A Bolinha Personalizada */
+  .custom-cursor-ball {
+      position: fixed;
+      top: 0; left: 0;
+      width: 20px; height: 20px;
+      border-radius: 50%;
+      
+      /* Visual: Cinza + Borda Interna */
+      background-color: rgba(100, 100, 100, 0.4); 
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+      
+      pointer-events: none;
+      z-index: 9999; /* Z-Index alto, mas menor que menus (geralmente 10000+) */
+      
+      transform: translate(-50%, -50%);
+      transition: width 0.3s ease, height 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+      
+      /* Começa invisível (opacity 0) até o mouse mexer */
+      opacity: 0; 
+  }
+  
+  /* Quando o mouse mexe, fica visível */
+  .custom-cursor-ball.visible { 
+      opacity: 1; 
+  }
+
+  /* Estado Hover (Link) */
+  .custom-cursor-ball.hovered {
+      width: 50px;
+      height: 50px;
+      background-color: rgba(100, 100, 100, 0.2);
+      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.3);
+  }
+
+  /* Segurança Mobile */
+  @media (max-width: 768px), (hover: none), (pointer: coarse) {
+      .custom-cursor-ball { display: none !important; }
+      body.custom-cursor-active { cursor: auto !important; }
+  }

@@ -1,0 +1,9 @@
+@media (max-width: 1023px) {
+  #nav-menu {
+    display: none;
+  }
+
+  #nav-menu.nav-menu--open {
+    display: flex;
+  }
+}
