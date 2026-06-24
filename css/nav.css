@@ -1,0 +1,133 @@
+:root {
+  --nav-blur: blur(36px) saturate(160%);
+}
+
+#site-nav {
+  top: 0;
+  left: 0;
+  right: 0;
+  background: transparent;
+}
+
+#site-nav > .site-nav-shell {
+  position: relative;
+  border-radius: 8px;
+}
+
+#site-nav .site-nav-glass {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+  -webkit-backdrop-filter: var(--nav-blur);
+  backdrop-filter: var(--nav-blur);
+  transition: opacity 0.5s ease, background-color 0.35s ease, box-shadow 0.35s ease;
+}
+
+/* Páginas de work: o glass nasce invisível para não entrar no snapshot da
+   View Transition (evita o blur "piscar" sobre a imagem durante o morph).
+   Depois que a transição termina, o JS adiciona .nav--glass-in e ele entra
+   suavemente por fade. */
+.work-page #site-nav .site-nav-glass {
+  opacity: 0;
+}
+
+.work-page #site-nav.nav--glass-in .site-nav-glass {
+  opacity: 1;
+}
+
+#site-nav .site-nav-inner {
+  position: relative;
+  z-index: 1;
+  view-transition-name: site-nav;
+}
+
+#site-nav .site-nav-logo,
+#site-nav .nav-link,
+#site-nav #nav-toggle {
+  transition: color 0.35s ease, opacity 0.35s ease;
+}
+
+#site-nav.nav--on-light .site-nav-logo,
+#site-nav.nav--on-light .nav-link {
+  color: #000;
+}
+
+#site-nav.nav--on-light .nav-link {
+  opacity: 0.6;
+}
+
+#site-nav.nav--on-light .nav-link:hover {
+  opacity: 1;
+}
+
+#site-nav.nav--on-light #nav-toggle {
+  color: #9b9b9b;
+}
+
+#site-nav.nav--on-light .site-nav-glass {
+  background-color: rgba(255, 255, 255, 0.35);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.3);
+}
+
+#site-nav.nav--on-dark .site-nav-logo,
+#site-nav.nav--on-dark .nav-link {
+  color: #fff;
+}
+
+#site-nav.nav--on-dark .nav-link {
+  opacity: 0.75;
+}
+
+#site-nav.nav--on-dark .nav-link:hover {
+  opacity: 1;
+}
+
+#site-nav.nav--on-dark #nav-toggle {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+#site-nav.nav--on-dark .site-nav-glass {
+  background-color: rgba(0, 0, 0, 0.22);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+}
+
+#site-nav.nav--enter-pending {
+  opacity: 0;
+  transform: translateY(-12px);
+  pointer-events: none;
+}
+
+#site-nav.nav--entering {
+  animation: nav-enter 0.4s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+  pointer-events: auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #site-nav.nav--enter-pending {
+    opacity: 1;
+    transform: none;
+    pointer-events: auto;
+  }
+
+  #site-nav.nav--entering {
+    animation: none;
+  }
+
+  .work-page #site-nav .site-nav-glass {
+    opacity: 1;
+    transition: none;
+  }
+}
+
+@media (max-width: 844px) {
+  #nav-menu {
+    display: none;
+  }
+
+  #nav-menu.nav-menu--open {
+    display: flex;
+  }
+}

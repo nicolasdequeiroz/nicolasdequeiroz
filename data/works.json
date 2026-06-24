@@ -1,0 +1,95 @@
+{
+  "site": {
+    "name": "Nícolas de Queiróz",
+    "title": "Nícolas de Queiróz - Branding & Web Design",
+    "description": "I create brands, interfaces, and high-performance websites from concept to launch.",
+    "url": "https://www.nicolasdequeiroz.com",
+    "ogImage": "assets/site/frame-100054099.webp"
+  },
+  "works": [
+    {
+      "slug": "mizzu-sushi",
+      "title": "Mizzu Sushi",
+      "description": "Branding e identidade visual para restaurante de sushi contemporâneo.",
+      "year": 2025,
+      "services": ["Branding", "Web Design"],
+      "thumb": "assets/works/mizzu-sushi/hero.webp",
+      "hero": {
+        "type": "image",
+        "src": "assets/works/mizzu-sushi/hero.webp",
+        "alt": "Mizzu Sushi"
+      },
+      "blocks": []
+    },
+    {
+      "slug": "jabutibar",
+      "title": "JabutiBar",
+      "description": "Identidade visual e presença digital para bar e experiências ao ar livre.",
+      "year": 2025,
+      "services": ["Branding", "Web Design"],
+      "thumb": "assets/works/jabutibar/hero.webp",
+      "hero": {
+        "type": "image",
+        "src": "assets/works/jabutibar/hero.webp",
+        "alt": "JabutiBar"
+      },
+      "blocks": []
+    },
+    {
+      "slug": "studioisa",
+      "title": "studioisa",
+      "description": "Marca e site para estúdio de pilates com foco em bem-estar e movimento.",
+      "year": 2025,
+      "services": ["Branding", "Web Design"],
+      "thumb": "assets/works/studioisa/hero.webp",
+      "hero": {
+        "type": "image",
+        "src": "assets/works/studioisa/hero.webp",
+        "alt": "studioisa"
+      },
+      "blocks": []
+    },
+    {
+      "slug": "move",
+      "title": "Move+",
+      "description": "Plataforma de mobilidade urbana com identidade dinâmica e interface digital.",
+      "year": 2025,
+      "services": ["Branding", "Product Design"],
+      "thumb": "assets/works/move/hero.gif",
+      "hero": {
+        "type": "image",
+        "src": "assets/works/move/hero.gif",
+        "alt": "Move+"
+      },
+      "blocks": []
+    },
+    {
+      "slug": "topfit",
+      "title": "TOPFIT",
+      "description": "Reposicionamento de marca e website para academia premium.",
+      "year": 2025,
+      "services": ["Branding", "Web Design"],
+      "thumb": "assets/works/topfit/hero.webp",
+      "hero": {
+        "type": "image",
+        "src": "assets/works/topfit/hero.webp",
+        "alt": "TOPFIT"
+      },
+      "blocks": []
+    },
+    {
+      "slug": "sd-digital",
+      "title": "SD Digital",
+      "description": "Identidade e presença digital para agência de comércio eletrônico.",
+      "year": 2025,
+      "services": ["Branding", "Web Design"],
+      "thumb": "assets/works/sd-digital/hero.webp",
+      "hero": {
+        "type": "image",
+        "src": "assets/works/sd-digital/hero.webp",
+        "alt": "SD Digital"
+      },
+      "blocks": []
+    }
+  ]
+}

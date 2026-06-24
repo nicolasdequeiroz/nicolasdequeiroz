@@ -1,0 +1,100 @@
+.work-main {
+    min-height: 100svh;
+}
+
+.work-hero {
+    width: 100%;
+}
+
+.work-media {
+    width: 100%;
+    min-height: 100svh;
+    object-fit: cover;
+    display: block;
+    background: #f5f5f5;
+}
+
+.work-intro {
+    padding: 32px 32px 0;
+    max-width: 720px;
+}
+
+.work-title {
+    font-family: "Instrument Serif", serif;
+    font-size: clamp(32px, 5vw, 48px);
+    line-height: 1.1;
+    margin: 0 0 12px;
+}
+
+.work-meta {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    opacity: 0.6;
+    margin: 0 0 16px;
+}
+
+.work-description {
+    font-size: 16px;
+    line-height: 1.6;
+    opacity: 0.8;
+    margin: 0;
+}
+
+.work-blocks {
+    padding: 48px 32px 0;
+}
+
+.work-block {
+    margin: 0 auto 32px;
+    max-width: 1280px;
+}
+
+.work-block img,
+.work-block video {
+    width: 100%;
+    display: block;
+    border-radius: 8px;
+}
+
+.work-block--text p {
+    font-size: 16px;
+    line-height: 1.7;
+    max-width: 640px;
+    opacity: 0.85;
+    margin: 0;
+}
+
+.work-project-nav {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 48px 32px 96px;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.work-project-link {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: inherit;
+    opacity: 0.6;
+    transition: opacity 0.2s ease;
+}
+
+.work-project-link:hover {
+    opacity: 1;
+}
+
+.work-noscript {
+    padding: 32px;
+    text-align: center;
+}
+
+.work-noscript a {
+    color: inherit;
+}

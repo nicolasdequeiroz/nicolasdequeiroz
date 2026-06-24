@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mizzu Sushi — Nícolas de Queiróz</title>
-  <meta name="description" content="Mizzu Sushi — portfolio project by Nícolas de Queiróz">
-  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon.png">
-  <link rel="apple-touch-icon" sizes="256x256" href="../../assets/web-clip.png">
+  <title>TOPFIT — Nícolas de Queiróz</title>
+  <meta name="description" content="Reposicionamento de marca e website para academia premium.">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/site/favicon.png">
+  <link rel="apple-touch-icon" sizes="256x256" href="../../assets/site/web-clip.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Instrument+Serif:wght@400&display=swap">
@@ -14,27 +14,29 @@
   <link rel="stylesheet" href="../../css/main.css">
   <link rel="stylesheet" href="../../css/cursor.css">
   <link rel="stylesheet" href="../../css/nav.css">
-  <style>
-    .work-media {
-      width: 100%;
-      min-height: 100svh;
-      object-fit: cover;
-      display: block;
-      background: #f5f5f5;
-    }
-    .work-page {
-      padding-top: 80px;
-    }
-  </style>
+  <link rel="stylesheet" href="../../css/work.css">
+  <link rel="stylesheet" href="../../css/transitions.css">
+  <link rel="canonical" href="https://www.nicolasdequeiroz.com/work/topfit/">
+  <meta property="og:url" content="https://www.nicolasdequeiroz.com/work/topfit/">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="TOPFIT — Nícolas de Queiróz">
+  <meta property="og:description" content="Reposicionamento de marca e website para academia premium.">
+  <meta property="og:image" content="https://www.nicolasdequeiroz.com/assets/works/topfit/hero.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="TOPFIT — Nícolas de Queiróz">
+  <meta name="twitter:description" content="Reposicionamento de marca e website para academia premium.">
+  <meta name="twitter:image" content="https://www.nicolasdequeiroz.com/assets/works/topfit/hero.webp">
 </head>
 <body class="min-h-[100%] antialiased font-dm-sans tracking-[0.025em] work-page">
-  <nav class="flex-col flex fixed w-[100%] z-[999] rounded-[8px] ml-[0px] mt-[0px] mr-[0px] mb-[0px] pt-[4px] pb-[4px] pl-[8px] pr-[8px]">
-    <div class="flex flex-col w-[100%] mr-[auto] ml-[auto] max-w-[auto] pl-[32px] pr-[32px] pt-[8px] pb-[8px] rounded-[8px] bg-opacity-[20%] bg-[#d3d3d3] backdrop-blur-[16px] backdrop-sepia-[5%]">
+  <nav id="site-nav" class="nav--enter-pending flex-col flex fixed w-[100%] z-[999] ml-[0px] mt-[0px] mr-[0px] mb-[0px] pt-[4px] pb-[4px] pl-[8px] pr-[8px]">
+    <div class="site-nav-shell w-[100%] mr-[auto] ml-[auto] max-w-[auto] pl-[32px] pr-[32px] pt-[8px] pb-[8px]">
+      <div class="site-nav-glass" aria-hidden="true"></div>
+      <div class="site-nav-inner flex flex-col w-[100%]">
       <div class="flex flex-row justify-between items-center md:flex-col md:items-stretch md:gap-[40px] gap-[32px]">
         <div class="flex gap-[20px] items-center justify-between">
           <div class="flex items-center justify-center">
             <a href="../../" class="no-underline text-inherit">
-              <span class="block font-instrument-serif font-bold text-[18px]">Nícolas de Queiróz</span>
+              <span class="site-nav-logo block font-instrument-serif font-bold text-[18px]">Nícolas de Queiróz</span>
             </a>
           </div>
           <button id="nav-toggle" class="md:flex md:items-center md:justify-center hidden border-0 bg-transparent p-0 cursor-pointer" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Abrir menu">
@@ -52,11 +54,24 @@
           <a href="../../#contact" class="no-underline focus:outline-none text-opacity-[100%] text-[#000000] opacity-[60%] hover:opacity-[100%] nav-link tracking-[0.05em] uppercase font-semibold text-[12px]">contact</a>
         </div>
       </div>
+      </div>
     </div>
   </nav>
 
-  <main>
-    <img class="work-media" src="../../assets/capture-2025-12-15-175505.webp" alt="Mizzu Sushi">
+  <main class="work-main">
+    <div class="work-hero"><img class="work-media" style="view-transition-name: work-media" src="../../assets/works/topfit/hero.webp" alt="TOPFIT" fetchpriority="high" decoding="async"></div>
+    <section class="work-intro">
+    <h1 class="work-title">TOPFIT</h1>
+    <p class="work-meta">2025 · Branding · Web Design</p>
+    <p class="work-description">Reposicionamento de marca e website para academia premium.</p>
+  </section>
+    
+    <nav class="work-project-nav" aria-label="Outros projetos"><a href="../move/" class="work-project-link work-project-link--prev">← Move+</a><a href="../sd-digital/" class="work-project-link work-project-link--next">SD Digital →</a></nav>
+    <noscript>
+      <p class="work-noscript">
+        <a href="../../">← Voltar ao portfólio</a> · TOPFIT
+      </p>
+    </noscript>
   </main>
 
   <footer class="top-[auto] fixed bottom-[0px] w-[100%] pl-[32px] pr-[32px] flex justify-between pb-[16px] pt-[16px]">
@@ -64,6 +79,8 @@
   </footer>
 
   <script src="../../js/nav.js" defer></script>
+  <script src="../../js/nav-enter.js" defer></script>
+  <script src="../../js/nav-theme.js" defer></script>
   <script src="../../js/cursor.js" defer></script>
 </body>
 </html>
