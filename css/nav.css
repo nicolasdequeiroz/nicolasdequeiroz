@@ -9,11 +9,17 @@
   background: transparent;
 }
 
+/* O blur fica numa única camada (a shell), sempre ativo. A transição garante
+   que qualquer mudança de intensidade seja suave em vez de "ligar" de uma vez. */
 #site-nav > .site-nav-shell {
   position: relative;
   border-radius: 8px;
+  -webkit-backdrop-filter: var(--nav-blur);
+  backdrop-filter: var(--nav-blur);
+  transition: -webkit-backdrop-filter 0.5s ease, backdrop-filter 0.5s ease;
 }
 
+/* O glass é só a camada de tint/contorno (sem blur — o blur mora na shell). */
 #site-nav .site-nav-glass {
   position: absolute;
   inset: 0;
@@ -21,17 +27,28 @@
   pointer-events: none;
   z-index: 0;
   overflow: hidden;
-  -webkit-backdrop-filter: var(--nav-blur);
-  backdrop-filter: var(--nav-blur);
   transition: opacity 0.5s ease, background-color 0.35s ease, box-shadow 0.35s ease;
 }
 
-/* Páginas de work: o glass nasce invisível para não entrar no snapshot da
-   View Transition (evita o blur "piscar" sobre a imagem durante o morph).
-   Depois que a transição termina, o JS adiciona .nav--glass-in e ele entra
-   suavemente por fade. */
+/* Páginas de work: a nav sobrepõe o hero e entra deslizando. Durante o slide
+   o transform impede o backdrop-filter de renderizar; por isso o frost (blur +
+   tint) começa zerado e só materializa DEPOIS que a nav assenta, com um
+   transition-delay alinhado à duração do slide (0.4s) — entrando de forma
+   gradual em vez de "piscar" abruptamente. */
+.work-page #site-nav > .site-nav-shell {
+  -webkit-backdrop-filter: blur(0px) saturate(100%);
+  backdrop-filter: blur(0px) saturate(100%);
+  transition: -webkit-backdrop-filter 0.55s ease 0.4s, backdrop-filter 0.55s ease 0.4s;
+}
+
+.work-page #site-nav.nav--glass-in > .site-nav-shell {
+  -webkit-backdrop-filter: var(--nav-blur);
+  backdrop-filter: var(--nav-blur);
+}
+
 .work-page #site-nav .site-nav-glass {
   opacity: 0;
+  transition: opacity 0.55s ease 0.4s, background-color 0.35s ease, box-shadow 0.35s ease;
 }
 
 .work-page #site-nav.nav--glass-in .site-nav-glass {
@@ -100,8 +117,13 @@
   pointer-events: none;
 }
 
+/* Sem fill-mode "forwards": após a animação o transform volta ao base (none).
+   Um transform residual no #site-nav (mesmo identidade) quebraria o
+   backdrop-filter dos descendentes (.site-nav-shell / .site-nav-glass),
+   fazendo o blur não renderizar. O frame final da animação é idêntico ao
+   estado base, então não há salto visual. */
 #site-nav.nav--entering {
-  animation: nav-enter 0.4s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+  animation: nav-enter 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
   pointer-events: auto;
 }
 
@@ -114,6 +136,12 @@
 
   #site-nav.nav--entering {
     animation: none;
+  }
+
+  .work-page #site-nav > .site-nav-shell {
+    -webkit-backdrop-filter: var(--nav-blur);
+    backdrop-filter: var(--nav-blur);
+    transition: none;
   }
 
   .work-page #site-nav .site-nav-glass {
