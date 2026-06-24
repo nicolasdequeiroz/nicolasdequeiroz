@@ -1,161 +1,331 @@
 :root {
   --nav-blur: blur(36px) saturate(160%);
+  --bubble-bg-light: rgba(255, 255, 255, 0.58);
+  --bubble-border-light: rgba(0, 0, 0, 0.07);
+  --bubble-shadow-light: 0 2px 20px rgba(0, 0, 0, 0.08);
+  --bubble-bg-dark: rgba(17, 17, 17, 0.52);
+  --bubble-border-dark: rgba(255, 255, 255, 0.13);
+  --bubble-shadow-dark: 0 2px 24px rgba(0, 0, 0, 0.32);
 }
 
+/* O site é desenhado para fundo claro. Fixamos o esquema e o fundo branco para
+   que navegadores em dark mode não usem um canvas escuro (tornando textos
+   pretos invisíveis). */
+html {
+  background-color: #ffffff;
+  color-scheme: light;
+}
+
+/* =============================================================
+   CONTAINER DA NAV
+   ============================================================= */
 #site-nav {
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  background: transparent;
-}
-
-/* O blur fica numa única camada (a shell), sempre ativo. A transição garante
-   que qualquer mudança de intensidade seja suave em vez de "ligar" de uma vez. */
-#site-nav > .site-nav-shell {
-  position: relative;
-  border-radius: 8px;
-  -webkit-backdrop-filter: var(--nav-blur);
-  backdrop-filter: var(--nav-blur);
-  transition: -webkit-backdrop-filter 0.5s ease, backdrop-filter 0.5s ease;
-}
-
-/* O glass é só a camada de tint/contorno (sem blur — o blur mora na shell). */
-#site-nav .site-nav-glass {
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 12px;
+  z-index: 999;
   pointer-events: none;
-  z-index: 0;
-  overflow: hidden;
-  transition: opacity 0.5s ease, background-color 0.35s ease, box-shadow 0.35s ease;
 }
 
-/* Páginas de work: a nav sobrepõe o hero e entra deslizando. Durante o slide
-   o transform impede o backdrop-filter de renderizar; por isso o frost (blur +
-   tint) começa zerado e só materializa DEPOIS que a nav assenta, com um
-   transition-delay alinhado à duração do slide (0.4s) — entrando de forma
-   gradual em vez de "piscar" abruptamente. */
-.work-page #site-nav > .site-nav-shell {
-  -webkit-backdrop-filter: blur(0px) saturate(100%);
-  backdrop-filter: blur(0px) saturate(100%);
-  transition: -webkit-backdrop-filter 0.55s ease 0.4s, backdrop-filter 0.55s ease 0.4s;
-}
-
-.work-page #site-nav.nav--glass-in > .site-nav-shell {
+/* =============================================================
+   BASE COMPARTILHADA DOS DOIS BUBBLES
+   ============================================================= */
+.bubble-logo,
+.bubble-toggle {
+  pointer-events: auto;
   -webkit-backdrop-filter: var(--nav-blur);
   backdrop-filter: var(--nav-blur);
+  background: var(--bubble-bg-light);
+  border: 1px solid var(--bubble-border-light);
+  box-shadow: var(--bubble-shadow-light);
+  color: #111;
+  transition:
+    background-color 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease,
+    color 0.35s ease;
 }
 
-.work-page #site-nav .site-nav-glass {
-  opacity: 0;
-  transition: opacity 0.55s ease 0.4s, background-color 0.35s ease, box-shadow 0.35s ease;
-}
-
-.work-page #site-nav.nav--glass-in .site-nav-glass {
-  opacity: 1;
-}
-
-#site-nav .site-nav-inner {
-  position: relative;
-  z-index: 1;
-  view-transition-name: site-nav;
-}
-
-#site-nav .site-nav-logo,
-#site-nav .nav-link,
-#site-nav #nav-toggle {
-  transition: color 0.35s ease, opacity 0.35s ease;
-}
-
-#site-nav.nav--on-light .site-nav-logo,
-#site-nav.nav--on-light .nav-link {
-  color: #000;
-}
-
-#site-nav.nav--on-light .nav-link {
-  opacity: 0.6;
-}
-
-#site-nav.nav--on-light .nav-link:hover {
-  opacity: 1;
-}
-
-#site-nav.nav--on-light #nav-toggle {
-  color: #9b9b9b;
-}
-
-#site-nav.nav--on-light .site-nav-glass {
-  background-color: rgba(255, 255, 255, 0.35);
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.3);
-}
-
-#site-nav.nav--on-dark .site-nav-logo,
-#site-nav.nav--on-dark .nav-link {
+/* --- DARK THEME (nav sobre hero escuro) --- */
+#site-nav.nav--on-dark .bubble-logo,
+#site-nav.nav--on-dark .bubble-toggle {
+  background: var(--bubble-bg-dark);
+  border-color: var(--bubble-border-dark);
+  box-shadow: var(--bubble-shadow-dark);
   color: #fff;
 }
 
-#site-nav.nav--on-dark .nav-link {
-  opacity: 0.75;
+/* Pills do overlay seguem o mesmo tema via sibling combinator */
+#site-nav.nav--on-dark ~ #nav-overlay .nav-pill-link {
+  background: var(--bubble-bg-dark);
+  border-color: var(--bubble-border-dark);
+  box-shadow: var(--bubble-shadow-dark);
+  color: #fff;
 }
 
-#site-nav.nav--on-dark .nav-link:hover {
-  opacity: 1;
+/* =============================================================
+   BUBBLE LOGO (pill com texto)
+   ============================================================= */
+.bubble-logo {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 20px;
+  border-radius: 999px;
+  text-decoration: none;
+  color: inherit;
+  /* view-transition-name aqui para o morph cross-document */
+  view-transition-name: site-nav;
 }
 
-#site-nav.nav--on-dark #nav-toggle {
-  color: rgba(255, 255, 255, 0.7);
+.site-nav-logo {
+  display: block;
+  font-family: "Instrument Serif", serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.2;
+  white-space: nowrap;
+  color: inherit;
 }
 
-#site-nav.nav--on-dark .site-nav-glass {
-  background-color: rgba(0, 0, 0, 0.22);
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+/* =============================================================
+   BUBBLE TOGGLE (círculo hamburger)
+   ============================================================= */
+.bubble-toggle {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 0;
 }
 
-#site-nav.nav--enter-pending {
+.menu-line {
+  display: block;
+  width: 22px;
+  height: 2px;
+  border-radius: 2px;
+  background: currentColor;
+  transition:
+    transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1),
+    opacity 0.2s ease;
+  transform-origin: center;
+}
+
+.bubble-toggle.open .menu-line:first-child {
+  transform: translateY(4px) rotate(45deg);
+}
+
+.bubble-toggle.open .menu-line:last-child {
+  transform: translateY(-4px) rotate(-45deg);
+}
+
+/* =============================================================
+   ANIMAÇÃO DE ENTRADA (páginas de work — via nav-enter.js)
+   A home nunca tem nav--enter-pending; a nav é imediatamente visível.
+   ============================================================= */
+#site-nav.nav--enter-pending .bubble-logo,
+#site-nav.nav--enter-pending .bubble-toggle {
   opacity: 0;
-  transform: translateY(-12px);
+  transform: translateY(-14px) scale(0.9);
+  -webkit-backdrop-filter: blur(0px);
+  backdrop-filter: blur(0px);
   pointer-events: none;
 }
 
-/* Sem fill-mode "forwards": após a animação o transform volta ao base (none).
-   Um transform residual no #site-nav (mesmo identidade) quebraria o
-   backdrop-filter dos descendentes (.site-nav-shell / .site-nav-glass),
-   fazendo o blur não renderizar. O frame final da animação é idêntico ao
-   estado base, então não há salto visual. */
-#site-nav.nav--entering {
-  animation: nav-enter 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+#site-nav.nav--entering .bubble-logo {
+  opacity: 1;
+  transform: none;
+  -webkit-backdrop-filter: var(--nav-blur);
+  backdrop-filter: var(--nav-blur);
+  transition:
+    background-color 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease,
+    color 0.35s ease,
+    opacity 0.45s ease,
+    transform 0.45s cubic-bezier(0.2, 0.8, 0.2, 1),
+    -webkit-backdrop-filter 0.55s ease 0.4s,
+    backdrop-filter 0.55s ease 0.4s;
+}
+
+/* Toggle entra 80ms depois do logo */
+#site-nav.nav--entering .bubble-toggle {
+  opacity: 1;
+  transform: none;
+  -webkit-backdrop-filter: var(--nav-blur);
+  backdrop-filter: var(--nav-blur);
+  transition:
+    background-color 0.35s ease 0.08s,
+    border-color 0.35s ease 0.08s,
+    box-shadow 0.35s ease 0.08s,
+    color 0.35s ease 0.08s,
+    opacity 0.45s ease 0.08s,
+    transform 0.45s cubic-bezier(0.2, 0.8, 0.2, 1) 0.08s,
+    -webkit-backdrop-filter 0.55s ease 0.48s,
+    backdrop-filter 0.55s ease 0.48s;
+}
+
+/* =============================================================
+   OVERLAY (GSAP controla display + escala dos pills)
+   ============================================================= */
+#nav-overlay {
+  position: fixed;
+  inset: 0;
+  display: none;   /* JS alterna para flex */
+  align-items: center;
+  justify-content: center;
+  z-index: 998;
+  pointer-events: none;
+}
+
+.nav-pill-list {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  width: 100%;
+  max-width: 1280px;
+  pointer-events: none;
+}
+
+.nav-pill-col {
+  flex: 0 0 calc(50% - 6px);
+  display: flex;
   pointer-events: auto;
 }
 
-@media (prefers-reduced-motion: reduce) {
-  #site-nav.nav--enter-pending {
-    opacity: 1;
-    transform: none;
-    pointer-events: auto;
+.nav-pill-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 160px;
+  padding: clamp(1.5rem, 2.5vw, 3.5rem) 0;
+  border-radius: 999px;
+  font-family: "DM Sans", sans-serif;
+  font-size: clamp(1.5rem, 3.5vw, 3rem);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  line-height: 1;
+  text-decoration: none;
+  color: #111;
+  -webkit-backdrop-filter: var(--nav-blur);
+  backdrop-filter: var(--nav-blur);
+  background: var(--bubble-bg-light);
+  border: 1px solid var(--bubble-border-light);
+  box-shadow: var(--bubble-shadow-light);
+  overflow: hidden;
+  white-space: nowrap;
+  will-change: transform;
+  transform-origin: center;
+  transition: background 0.25s ease, color 0.25s ease;
+}
+
+@media (min-width: 900px) {
+  .nav-pill-link:hover {
+    background: rgba(0, 0, 0, 0.06);
   }
 
-  #site-nav.nav--entering {
-    animation: none;
-  }
-
-  .work-page #site-nav > .site-nav-shell {
-    -webkit-backdrop-filter: var(--nav-blur);
-    backdrop-filter: var(--nav-blur);
-    transition: none;
-  }
-
-  .work-page #site-nav .site-nav-glass {
-    opacity: 1;
-    transition: none;
+  #site-nav.nav--on-dark ~ #nav-overlay .nav-pill-link:hover {
+    background: rgba(255, 255, 255, 0.14);
   }
 }
 
-@media (max-width: 844px) {
-  #nav-menu {
-    display: none;
+.nav-pill-label {
+  display: inline-block;
+  will-change: transform, opacity;
+}
+
+/* Mobile: pills empilhados verticalmente abaixo dos bubbles */
+@media (max-width: 768px) {
+  #nav-overlay {
+    align-items: flex-start;
   }
 
-  #nav-menu.nav-menu--open {
-    display: flex;
+  .nav-pill-list {
+    padding-top: 88px;
+    gap: 10px;
   }
+
+  .nav-pill-col {
+    flex: 0 0 100%;
+  }
+
+  .nav-pill-link {
+    min-height: 76px;
+    font-size: clamp(1.1rem, 3vw, 1.8rem);
+  }
+}
+
+/* =============================================================
+   FEEDBACK AO NAVEGAR (click no card do carrossel)
+   ============================================================= */
+@media (prefers-reduced-motion: no-preference) {
+  #site-nav.is-navigating .bubble-logo,
+  #site-nav.is-navigating .bubble-toggle {
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    pointer-events: none;
+  }
+}
+
+/* =============================================================
+   MOVIMENTO REDUZIDO
+   ============================================================= */
+@media (prefers-reduced-motion: reduce) {
+  .bubble-logo,
+  .bubble-toggle {
+    transition:
+      background-color 0.35s ease,
+      border-color 0.35s ease,
+      box-shadow 0.35s ease,
+      color 0.35s ease;
+  }
+
+  #site-nav.nav--enter-pending .bubble-logo,
+  #site-nav.nav--enter-pending .bubble-toggle {
+    opacity: 1;
+    transform: none;
+    -webkit-backdrop-filter: var(--nav-blur);
+    backdrop-filter: var(--nav-blur);
+    pointer-events: auto;
+  }
+
+  #site-nav.nav--entering .bubble-logo,
+  #site-nav.nav--entering .bubble-toggle {
+    transition:
+      background-color 0.35s ease,
+      border-color 0.35s ease,
+      box-shadow 0.35s ease,
+      color 0.35s ease;
+  }
+}
+
+/* =============================================================
+   FOOTER
+   ============================================================= */
+body > footer {
+  z-index: 50;
+  pointer-events: none;
+}
+
+body > footer > * {
+  pointer-events: auto;
+}
+
+.site-copyright {
+  opacity: 0.3;
 }

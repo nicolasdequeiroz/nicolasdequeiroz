@@ -112,14 +112,33 @@ function buildWorkPages(data) {
   });
 }
 
+// Mantém os dados embutidos (inline) no index.html sincronizados com works.json.
+// O carrossel lê esse JSON de forma síncrona, o que é necessário para o morph
+// do hero de volta ao card funcionar na View Transition de retorno.
+function injectHomeData(data) {
+  const indexPath = path.join(root, "index.html");
+  if (!fs.existsSync(indexPath)) return false;
+
+  const json = JSON.stringify({ site: data.site, works: data.works });
+  const re = /(<script type="application\/json" id="works-data">)[\s\S]*?(<\/script>)/;
+  let html = fs.readFileSync(indexPath, "utf8");
+  if (!re.test(html)) return false;
+
+  html = html.replace(re, `$1${json}$2`);
+  fs.writeFileSync(indexPath, html);
+  return true;
+}
+
 function main() {
   const dataPath = path.join(root, "data/works.json");
   const data = JSON.parse(fs.readFileSync(dataPath, "utf8"));
 
   validateWorks(data);
   buildWorkPages(data);
+  const injected = injectHomeData(data);
 
   console.log(`✓ ${data.works.length} páginas geradas em work/`);
+  console.log(injected ? "✓ works-data inline sincronizado no index.html" : "⚠ index.html sem bloco works-data");
 }
 
 main();

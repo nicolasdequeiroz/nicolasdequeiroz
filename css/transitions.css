@@ -7,10 +7,17 @@
     navigation: auto;
   }
 
-  /* Morph do elemento compartilhado (card -> hero) */
+  /* Morph do elemento compartilhado (card -> hero).
+     O view-transition-name vive no <img>, mas o arredondamento dos cards vem do
+     clip do pai (.carousel-item). Sem o border-radius/overflow aqui, o snapshot
+     que faz o morph teria cantos retos e só "arredondaria" ao fim. Arredondamos
+     o próprio grupo (8px, igual ao .carousel-item) para casar com o card durante
+     toda a transição. */
   ::view-transition-group(work-media) {
     animation-duration: 0.55s;
     animation-timing-function: cubic-bezier(0.2, 0.8, 0.2, 1);
+    border-radius: 8px;
+    overflow: clip;
   }
 
   ::view-transition-old(work-media),
@@ -18,9 +25,10 @@
     height: 100%;
     object-fit: cover;
     overflow: clip;
+    border-radius: 8px;
   }
 
-  /* Nav: sai na home, entra na página de work (fora do cross-fade genérico) */
+  /* Bubble logo: sai na home, entra na página de work */
   ::view-transition-group(site-nav) {
     z-index: 100;
   }
@@ -33,7 +41,7 @@
     animation: nav-enter 0.4s cubic-bezier(0.2, 0.8, 0.2, 1) 0.42s both;
   }
 
-  /* Work: nav entra via JS só depois do blur (hero carregado) */
+  /* Work: bubble logo entra via CSS/nav-enter.js (após hero carregar) */
   .work-page ::view-transition-new(site-nav) {
     animation: none;
     opacity: 0;
@@ -65,12 +73,36 @@
   }
 }
 
-/* Feedback imediato ao clicar no card central (antes da navegação) */
+/* --- VOLTA PARA A HOME (work -> home) --- */
+/* O hero faz o morph de volta para o card do carrossel. Easing com leve
+   overshoot para o card "assentar" no slot, enfatizando a entrada no 3D.
+   O restante da home (carrossel, dots) entra com um cross-fade um pouco mais
+   suave em torno do card que pousa. */
 @media (prefers-reduced-motion: no-preference) {
-  #site-nav.is-navigating {
-    opacity: 0;
-    transform: translateY(-10px);
-    transition: opacity 0.2s ease, transform 0.2s ease;
-    pointer-events: none;
+  :root:active-view-transition-type(nq-to-home)::view-transition-group(work-media) {
+    animation-duration: 0.62s;
+    animation-timing-function: cubic-bezier(0.34, 1.18, 0.42, 1);
+  }
+
+  :root:active-view-transition-type(nq-to-home)::view-transition-old(root),
+  :root:active-view-transition-type(nq-to-home)::view-transition-new(root) {
+    animation-duration: 0.55s;
+    animation-timing-function: ease;
+  }
+
+  :root:active-view-transition-type(nq-to-home)::view-transition-new(root) {
+    animation-name: nq-home-fade-in;
+  }
+
+  @keyframes nq-home-fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
   }
 }
+
+/* Feedback imediato ao clicar no card central (antes da navegação) —
+   O efeito visual está em nav.css (.is-navigating .bubble-logo/toggle). */

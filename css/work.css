@@ -98,3 +98,47 @@
 .work-noscript a {
     color: inherit;
 }
+
+/* Botão "back to home" flutuante. */
+.back-home {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    text-decoration: none;
+    color: inherit;
+    /* "Move in": entra depois que a nav e o blur assentam (classe adicionada
+       por nav-enter.js no mesmo reveal da nav, com um leve atraso). */
+    opacity: 0;
+    transform: translateY(14px);
+    transition: opacity 0.5s ease 0.45s, transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) 0.45s;
+}
+
+.back-home--in {
+    opacity: 0.6;
+    transform: none;
+}
+
+.back-home--in:hover {
+    opacity: 1;
+}
+
+.back-home-arrow {
+    transition: transform 0.25s ease;
+}
+
+.back-home:hover .back-home-arrow {
+    transform: translateX(-3px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .back-home {
+        transition: none;
+    }
+
+    .back-home--in {
+        transform: none;
+    }
+}

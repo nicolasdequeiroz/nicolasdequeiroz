@@ -71,20 +71,17 @@
     .carousel-item:hover img { transform: scale(1.05); }
 }
 
-/* --- INDICADOR DE POSIÇÃO --- */
+/* --- INDICADOR DE POSIÇÃO ---
+   Fica dentro do <footer>, na mesma linha do copyright (alinhado à direita
+   via justify-between). Minimalista e pequeno. */
 .carousel-dots {
-    position: fixed;
-    left: 50%;
-    bottom: 56px;
-    transform: translateX(-50%);
     display: flex;
     align-items: center;
-    gap: 10px;
-    z-index: 50;
+    gap: 6px;
 }
 .carousel-dot {
-    width: 8px;
-    height: 8px;
+    width: 5px;
+    height: 5px;
     padding: 0;
     border: 0;
     border-radius: 9999px;
@@ -93,11 +90,11 @@
     transition: width 0.3s ease, background-color 0.3s ease;
 }
 .carousel-dot.is-active {
-    width: 22px;
+    width: 14px;
     background: rgba(0, 0, 0, 0.8);
 }
 .carousel-dot:focus-visible {
-    outline: 2px solid rgba(0, 0, 0, 0.8);
+    outline: 2px solid rgba(0, 0, 0, 0.6);
     outline-offset: 3px;
 }
 
@@ -113,7 +110,6 @@
         transform: none;
         transition: none;
     }
-    .carousel-dots { bottom: 40px; }
 }
 
 /* --- MOVIMENTO REDUZIDO --- */

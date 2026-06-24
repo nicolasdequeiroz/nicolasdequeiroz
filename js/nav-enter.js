@@ -11,6 +11,10 @@
     clearTimeout(safety);
     nav.classList.remove("nav--enter-pending");
     nav.classList.add("nav--entering", "nav--glass-in");
+
+    // O botão flutuante "back to home" entra junto com a nav/blur (move-in).
+    const back = document.querySelector(".back-home");
+    if (back) back.classList.add("back-home--in");
   }
 
   function afterPaint() {

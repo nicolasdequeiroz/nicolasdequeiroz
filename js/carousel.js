@@ -1,3 +1,17 @@
+// Capturado em escopo de módulo porque o pagereveal dispara depois do
+// DOMContentLoaded; a init define o callback quando estamos voltando de uma
+// página de work, para tocar o "settle" 3D assim que o morph termina.
+let __nqOnReveal = null;
+if ("onpagereveal" in window) {
+  window.addEventListener(
+    "pagereveal",
+    (e) => {
+      if (__nqOnReveal) __nqOnReveal(e);
+    },
+    { once: true }
+  );
+}
+
 document.addEventListener("DOMContentLoaded", async () => {
   const CONFIG = {
     radius: { mobile: 240, desktop: 750 },
@@ -36,6 +50,13 @@ document.addEventListener("DOMContentLoaded", async () => {
   let dots = [];
   let cards = [];
   let suppressClick = false;
+  let parallaxEnabled = true;
+  let parallaxWarmup = false;
+  let lastParallaxX = null;
+  let lastParallaxY = null;
+
+  const PARALLAX_WARMUP_MIN_PX = 16;
+  const PARALLAX_RESUME_DELAY_MS = 700;
 
   const isMobile = () => mobileQuery.matches;
   const baseTilt = () =>
@@ -43,6 +64,17 @@ document.addEventListener("DOMContentLoaded", async () => {
   const activeIndex = () => ((currentIndex % itemCount) + itemCount) % itemCount;
 
   async function loadWorks() {
+    // Preferimos os dados embutidos (inline) no HTML: assim o carrossel monta de
+    // forma síncrona, ANTES do snapshot da View Transition na volta — condição
+    // necessária para o hero conseguir fazer o morph de volta para o card.
+    const inline = document.getElementById("works-data");
+    if (inline && inline.textContent.trim()) {
+      try {
+        return JSON.parse(inline.textContent).works ?? [];
+      } catch (err) {
+        console.warn("Carrossel: works-data inline inválido, usando fetch.", err);
+      }
+    }
     const res = await fetch(CONFIG.worksUrl);
     if (!res.ok) throw new Error(`Falha ao carregar ${CONFIG.worksUrl}`);
     const data = await res.json();
@@ -90,7 +122,8 @@ document.addEventListener("DOMContentLoaded", async () => {
       return dot;
     });
 
-    (wrapper.closest("main") || document.body).appendChild(nav);
+    const footer = document.querySelector("footer");
+    (footer || wrapper.closest("main") || document.body).appendChild(nav);
   }
 
   function syncDots() {
@@ -161,6 +194,63 @@ document.addEventListener("DOMContentLoaded", async () => {
     clearTimeout(resumeTimer);
     if (prefersReducedMotion) return;
     resumeTimer = setTimeout(startAutoplay, CONFIG.resumeAfter);
+  }
+
+  // Voltando de uma página de work: centraliza, sem animar, o card do projeto
+  // que estávamos visualizando e o marca com view-transition-name, para o hero
+  // fazer o morph de volta exatamente para ele. Retorna true se aplicou.
+  function setupReturnState() {
+    let slug = null;
+    try {
+      slug = sessionStorage.getItem("nq:returnSlug");
+      sessionStorage.removeItem("nq:returnSlug");
+    } catch {}
+    if (!slug) return false;
+
+    const fromWork = /\/work\//.test(document.referrer || "");
+    if (!fromWork) return false;
+
+    const idx = works.findIndex((w) => w.slug === slug);
+    if (idx < 0) return false;
+
+    const prevCarousel = carousel.style.transition;
+    const prevScene = scene ? scene.style.transition : "";
+    carousel.style.transition = "none";
+    if (scene) scene.style.transition = "none";
+
+    currentIndex = idx;
+    rotateCarousel(); // posiciona o container e marca o card ativo como work-media
+
+    void carousel.offsetWidth; // commita antes de reabilitar as transições
+    carousel.style.transition = prevCarousel;
+    if (scene) scene.style.transition = prevScene;
+    return true;
+  }
+
+  // Pequeno "assentar" 3D ao pousar o card de volta no carrossel, para deixar
+  // claro que o hero voltou para o espaço tridimensional.
+  function playReturnSettle() {
+    if (prefersReducedMotion || !scene) return;
+
+    parallaxEnabled = false;
+    parallaxWarmup = false;
+
+    scene.style.transition = "none";
+    scene.style.transform = `rotateX(${baseTilt() - 7}deg) rotateY(10deg)`;
+    void scene.offsetWidth;
+    scene.style.transition = "transform 1.4s cubic-bezier(0.2, 0.8, 0.2, 1)";
+    resetSceneTilt();
+
+    const onSettleEnd = (e) => {
+      if (e.propertyName !== "transform") return;
+      scene.removeEventListener("transitionend", onSettleEnd);
+      // Espera o settle terminar + um respiro antes de aceitar parallax do mouse.
+      setTimeout(() => {
+        parallaxEnabled = true;
+        parallaxWarmup = true;
+      }, PARALLAX_RESUME_DELAY_MS);
+    };
+    scene.addEventListener("transitionend", onSettleEnd);
   }
 
   function playIntro() {
@@ -298,6 +388,29 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     const { rotateX, rotateY, translateX, translateY } = CONFIG.mouseTilt;
     wrapper.addEventListener("mousemove", (e) => {
+      if (!parallaxEnabled) {
+        lastParallaxX = e.clientX;
+        lastParallaxY = e.clientY;
+        return;
+      }
+
+      // Após voltar de uma work page, ignora o mouse "parado" em cima do
+      // carrossel — só aplica parallax depois de um movimento real.
+      if (parallaxWarmup) {
+        if (lastParallaxX !== null) {
+          const dx = e.clientX - lastParallaxX;
+          const dy = e.clientY - lastParallaxY;
+          if (Math.hypot(dx, dy) < PARALLAX_WARMUP_MIN_PX) return;
+        }
+        parallaxWarmup = false;
+        scene.style.transition = "transform 0.8s ease-out";
+      } else {
+        scene.style.transition = "";
+      }
+
+      lastParallaxX = e.clientX;
+      lastParallaxY = e.clientY;
+
       const rect = wrapper.getBoundingClientRect();
       const x = ((e.clientX - rect.left) / rect.width - 0.5) * 2;
       const y = ((e.clientY - rect.top) / rect.height - 0.5) * 2;
@@ -305,7 +418,11 @@ document.addEventListener("DOMContentLoaded", async () => {
         `rotateX(${y * rotateX}deg) rotateY(${x * rotateY}deg) ` +
         `translateX(${x * translateX}px) translateY(${y * translateY}px)`;
     });
-    wrapper.addEventListener("mouseleave", resetSceneTilt);
+    wrapper.addEventListener("mouseleave", () => {
+      lastParallaxX = null;
+      lastParallaxY = null;
+      resetSceneTilt();
+    });
   }
 
   let works;
@@ -344,5 +461,17 @@ document.addEventListener("DOMContentLoaded", async () => {
   bindClick();
   bindPointerParallax();
 
-  setTimeout(playIntro, 100);
+  const returning = setupReturnState();
+  if (returning) {
+    // Sem giro de intro: o card já está no lugar para receber o morph do hero.
+    parallaxEnabled = false;
+    __nqOnReveal = (e) => {
+      if (e && e.viewTransition) e.viewTransition.finished.finally(playReturnSettle);
+      else playReturnSettle();
+    };
+    if (!("onpagereveal" in window)) setTimeout(playReturnSettle, 200);
+    pauseThenResume();
+  } else {
+    setTimeout(playIntro, 100);
+  }
 });
