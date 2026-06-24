@@ -36,7 +36,8 @@ html {
    BASE COMPARTILHADA DOS DOIS BUBBLES
    ============================================================= */
 .bubble-logo,
-.bubble-toggle {
+.bubble-toggle,
+.bubble-back-home {
   pointer-events: auto;
   -webkit-backdrop-filter: var(--nav-blur);
   backdrop-filter: var(--nav-blur);
@@ -53,7 +54,8 @@ html {
 
 /* --- DARK THEME (nav sobre hero escuro) --- */
 #site-nav.nav--on-dark .bubble-logo,
-#site-nav.nav--on-dark .bubble-toggle {
+#site-nav.nav--on-dark .bubble-toggle,
+#site-nav.nav--on-dark ~ footer .bubble-back-home {
   background: var(--bubble-bg-dark);
   border-color: var(--bubble-border-dark);
   box-shadow: var(--bubble-shadow-dark);
@@ -287,7 +289,8 @@ html {
    ============================================================= */
 @media (prefers-reduced-motion: reduce) {
   .bubble-logo,
-  .bubble-toggle {
+  .bubble-toggle,
+  .bubble-back-home {
     transition:
       background-color 0.35s ease,
       border-color 0.35s ease,
@@ -315,9 +318,17 @@ html {
 }
 
 /* =============================================================
-   FOOTER
+   FOOTER — mesmas margens da nav (12px), conteúdo alinhado ao bottom
    ============================================================= */
 body > footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 12px;
   z-index: 50;
   pointer-events: none;
 }
@@ -327,5 +338,10 @@ body > footer > * {
 }
 
 .site-copyright {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: -0.025em;
   opacity: 0.3;
+  line-height: 1;
 }

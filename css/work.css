@@ -99,30 +99,49 @@
     color: inherit;
 }
 
-/* Botão "back to home" flutuante. */
-.back-home {
+/* Botão "back to home" — bubble pill no footer (work pages). */
+.back-home.bubble-back-home {
     display: inline-flex;
     align-items: center;
     gap: 6px;
+    padding: 10px 16px;
+    border-radius: 999px;
     font-size: 12px;
     font-weight: 700;
     letter-spacing: -0.025em;
     text-decoration: none;
     color: inherit;
-    /* "Move in": entra depois que a nav e o blur assentam (classe adicionada
-       por nav-enter.js no mesmo reveal da nav, com um leve atraso). */
+    background: var(--bubble-bg-light);
+    border: 1px solid var(--bubble-border-light);
+    box-shadow: var(--bubble-shadow-light);
+    -webkit-backdrop-filter: blur(0px) saturate(100%);
+    backdrop-filter: blur(0px) saturate(100%);
+    /* Move-in: entra junto com a nav (classe adicionada por nav-enter.js). */
     opacity: 0;
     transform: translateY(14px);
-    transition: opacity 0.5s ease 0.45s, transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) 0.45s;
+    transition:
+        background-color 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease,
+        color 0.35s ease,
+        opacity 0.45s ease 0.45s,
+        transform 0.45s cubic-bezier(0.2, 0.8, 0.2, 1) 0.45s,
+        -webkit-backdrop-filter 0.55s ease 0.85s,
+        backdrop-filter 0.55s ease 0.85s;
 }
 
-.back-home--in {
-    opacity: 0.6;
-    transform: none;
+#site-nav.nav--on-dark ~ footer .back-home.bubble-back-home {
+    background: var(--bubble-bg-dark);
+    border-color: var(--bubble-border-dark);
+    box-shadow: var(--bubble-shadow-dark);
+    color: #fff;
 }
 
-.back-home--in:hover {
+.back-home.bubble-back-home.back-home--in {
     opacity: 1;
+    transform: none;
+    -webkit-backdrop-filter: var(--nav-blur);
+    backdrop-filter: var(--nav-blur);
 }
 
 .back-home-arrow {
@@ -134,11 +153,18 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .back-home {
-        transition: none;
+    .back-home.bubble-back-home {
+        transition:
+            background-color 0.35s ease,
+            border-color 0.35s ease,
+            box-shadow 0.35s ease,
+            color 0.35s ease;
     }
 
-    .back-home--in {
+    .back-home.bubble-back-home.back-home--in {
+        opacity: 1;
         transform: none;
+        -webkit-backdrop-filter: var(--nav-blur);
+        backdrop-filter: var(--nav-blur);
     }
 }
