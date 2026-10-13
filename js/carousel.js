@@ -227,30 +227,16 @@ document.addEventListener("DOMContentLoaded", async () => {
     return true;
   }
 
-  // Pequeno "assentar" 3D ao pousar o card de volta no carrossel, para deixar
-  // claro que o hero voltou para o espaço tridimensional.
-  function playReturnSettle() {
-    if (prefersReducedMotion || !scene) return;
-
+  // Ao pousar o card de volta no carrossel a cena fica exatamente onde o morph
+  // a deixou — qualquer movimento aqui lê como um "pulo" no fim do load. Só
+  // reativamos o parallax do mouse, com warmup, depois de um respiro.
+  function resumeParallaxAfterReturn() {
     parallaxEnabled = false;
     parallaxWarmup = false;
-
-    scene.style.transition = "none";
-    scene.style.transform = `rotateX(${baseTilt() - 7}deg) rotateY(10deg)`;
-    void scene.offsetWidth;
-    scene.style.transition = "transform 1.4s cubic-bezier(0.2, 0.8, 0.2, 1)";
-    resetSceneTilt();
-
-    const onSettleEnd = (e) => {
-      if (e.propertyName !== "transform") return;
-      scene.removeEventListener("transitionend", onSettleEnd);
-      // Espera o settle terminar + um respiro antes de aceitar parallax do mouse.
-      setTimeout(() => {
-        parallaxEnabled = true;
-        parallaxWarmup = true;
-      }, PARALLAX_RESUME_DELAY_MS);
-    };
-    scene.addEventListener("transitionend", onSettleEnd);
+    setTimeout(() => {
+      parallaxEnabled = true;
+      parallaxWarmup = true;
+    }, PARALLAX_RESUME_DELAY_MS);
   }
 
   function playIntro() {
@@ -377,6 +363,9 @@ document.addEventListener("DOMContentLoaded", async () => {
     );
   }
 
+  // Parallax do mouse com lerp contínuo em rAF: a cena sempre desliza da pose
+  // atual em direção à pose do cursor. Sem saltos — inclusive no primeiro
+  // movimento depois de voltar de uma work page (a pose parte do descanso).
   function bindPointerParallax() {
     if (
       prefersReducedMotion ||
@@ -387,6 +376,53 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
 
     const { rotateX, rotateY, translateX, translateY } = CONFIG.mouseTilt;
+    const EASE = 0.09; // fator de aproximação por frame (~60fps)
+    const SETTLE_EPS = 0.05;
+
+    const basePose = () => ({ rx: baseTilt(), ry: 0, tx: 0, ty: 0 });
+
+    let pose = basePose(); // pose renderizada no momento
+    let target = basePose(); // pose alvo (derivada do cursor)
+    let rafId = null;
+
+    function apply() {
+      scene.style.transform =
+        `rotateX(${pose.rx.toFixed(3)}deg) rotateY(${pose.ry.toFixed(3)}deg) ` +
+        `translateX(${pose.tx.toFixed(2)}px) translateY(${pose.ty.toFixed(2)}px)`;
+    }
+
+    function frame() {
+      const dist =
+        Math.abs(target.rx - pose.rx) +
+        Math.abs(target.ry - pose.ry) +
+        Math.abs(target.tx - pose.tx) +
+        Math.abs(target.ty - pose.ty);
+
+      if (dist < SETTLE_EPS) {
+        pose = { ...target };
+        apply();
+        scene.style.transition = ""; // devolve a transição padrão do CSS
+        rafId = null;
+        return;
+      }
+
+      pose.rx += (target.rx - pose.rx) * EASE;
+      pose.ry += (target.ry - pose.ry) * EASE;
+      pose.tx += (target.tx - pose.tx) * EASE;
+      pose.ty += (target.ty - pose.ty) * EASE;
+      apply();
+      rafId = requestAnimationFrame(frame);
+    }
+
+    function setTarget(next) {
+      target = next;
+      if (rafId === null) {
+        // O rAF assume a suavização; a transição CSS atrapalharia o lerp.
+        scene.style.transition = "none";
+        rafId = requestAnimationFrame(frame);
+      }
+    }
+
     wrapper.addEventListener("mousemove", (e) => {
       if (!parallaxEnabled) {
         lastParallaxX = e.clientX;
@@ -395,17 +431,18 @@ document.addEventListener("DOMContentLoaded", async () => {
       }
 
       // Após voltar de uma work page, ignora o mouse "parado" em cima do
-      // carrossel — só aplica parallax depois de um movimento real.
+      // carrossel — só reage depois de um movimento real. A primeira amostra
+      // apenas registra a posição (nada de aplicar pose de cara).
       if (parallaxWarmup) {
-        if (lastParallaxX !== null) {
-          const dx = e.clientX - lastParallaxX;
-          const dy = e.clientY - lastParallaxY;
-          if (Math.hypot(dx, dy) < PARALLAX_WARMUP_MIN_PX) return;
+        if (lastParallaxX === null) {
+          lastParallaxX = e.clientX;
+          lastParallaxY = e.clientY;
+          return;
         }
+        const dx = e.clientX - lastParallaxX;
+        const dy = e.clientY - lastParallaxY;
+        if (Math.hypot(dx, dy) < PARALLAX_WARMUP_MIN_PX) return;
         parallaxWarmup = false;
-        scene.style.transition = "transform 0.8s ease-out";
-      } else {
-        scene.style.transition = "";
       }
 
       lastParallaxX = e.clientX;
@@ -414,14 +451,18 @@ document.addEventListener("DOMContentLoaded", async () => {
       const rect = wrapper.getBoundingClientRect();
       const x = ((e.clientX - rect.left) / rect.width - 0.5) * 2;
       const y = ((e.clientY - rect.top) / rect.height - 0.5) * 2;
-      scene.style.transform =
-        `rotateX(${y * rotateX}deg) rotateY(${x * rotateY}deg) ` +
-        `translateX(${x * translateX}px) translateY(${y * translateY}px)`;
+      setTarget({
+        rx: y * rotateX,
+        ry: x * rotateY,
+        tx: x * translateX,
+        ty: y * translateY,
+      });
     });
+
     wrapper.addEventListener("mouseleave", () => {
       lastParallaxX = null;
       lastParallaxY = null;
-      resetSceneTilt();
+      setTarget(basePose());
     });
   }
 
@@ -466,10 +507,10 @@ document.addEventListener("DOMContentLoaded", async () => {
     // Sem giro de intro: o card já está no lugar para receber o morph do hero.
     parallaxEnabled = false;
     __nqOnReveal = (e) => {
-      if (e && e.viewTransition) e.viewTransition.finished.finally(playReturnSettle);
-      else playReturnSettle();
+      if (e && e.viewTransition) e.viewTransition.finished.finally(resumeParallaxAfterReturn);
+      else resumeParallaxAfterReturn();
     };
-    if (!("onpagereveal" in window)) setTimeout(playReturnSettle, 200);
+    if (!("onpagereveal" in window)) setTimeout(resumeParallaxAfterReturn, 200);
     pauseThenResume();
   } else {
     setTimeout(playIntro, 100);

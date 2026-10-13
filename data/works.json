@@ -10,16 +10,76 @@
     {
       "slug": "mizzu-sushi",
       "title": "Mizzu Sushi",
-      "description": "Branding e identidade visual para restaurante de sushi contemporâneo.",
+      "tagline": "Sushi contemporâneo com alma de izakaya.",
+      "description": "O Mizzu nasceu para traduzir a precisão da culinária japonesa em uma experiência descontraída. Entre o balcão do chef e a mesa compartilhada, o restaurante aposta em cortes autorais, ingredientes locais e um ambiente que mistura tradição e ruído urbano — um izakaya à brasileira.",
       "year": 2025,
       "services": ["Branding", "Web Design"],
+      "industry": "Restaurante",
+      "location": "Brasil",
       "thumb": "assets/works/mizzu-sushi/hero.webp",
       "hero": {
         "type": "image",
         "src": "assets/works/mizzu-sushi/hero.webp",
         "alt": "Mizzu Sushi"
       },
-      "blocks": []
+      "blocks": [
+        {
+          "type": "image",
+          "src": "assets/site/placeholder-image.jpg",
+          "alt": "Identidade visual do Mizzu aplicada",
+          "ratio": "16:9"
+        },
+        {
+          "type": "text",
+          "label": "Desafio",
+          "text": "O Mizzu precisava se diferenciar em um mercado saturado de sushi delivery com estética genérica. O desafio era construir uma marca com personalidade própria — japonesa na essência, brasileira no tom — e um site que transformasse curiosidade em reserva, sem perder a leveza do ambiente físico."
+        },
+        {
+          "type": "pair",
+          "items": [
+            {
+              "src": "assets/site/placeholder-image.jpg",
+              "alt": "Cardápio impresso do Mizzu",
+              "caption": "Cardápio"
+            },
+            {
+              "src": "assets/site/placeholder-image.jpg",
+              "alt": "Site do Mizzu em tela mobile",
+              "caption": "Mobile"
+            }
+          ]
+        },
+        {
+          "type": "statement",
+          "text": "Uma marca servida em fatias precisas."
+        },
+        {
+          "type": "image",
+          "src": "assets/site/placeholder-image.jpg",
+          "alt": "Fotografia do ambiente do restaurante",
+          "ratio": "4:3"
+        },
+        {
+          "type": "text",
+          "label": "Solução",
+          "text": "A identidade parte de um sistema tipográfico de contraste — serifa expressiva para o discurso, sans para a operação — e uma paleta que troca o vermelho óbvio por tons de cerâmica e nori. No site, o cardápio vira navegação: cada categoria é uma seção, cada prato uma composição fotográfica em tela cheia."
+        },
+        {
+          "type": "capture",
+          "src": "assets/site/placeholder-image.jpg",
+          "alt": "Página inicial do site do Mizzu, do topo ao rodapé",
+          "caption": "Home completa"
+        }
+      ],
+      "credits": [
+        { "role": "Fotografia", "name": "Nome do Fotógrafo" },
+        { "role": "Desenvolvimento", "name": "Nícolas de Queiróz" }
+      ],
+      "testimonial": {
+        "quote": "O processo foi direto e o resultado passou longe do que a gente via no mercado. A marca virou assunto entre os clientes.",
+        "name": "Nome do Cliente",
+        "role": "Sócio · Mizzu Sushi"
+      }
     },
     {
       "slug": "jabutibar",
