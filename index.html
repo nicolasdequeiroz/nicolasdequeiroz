@@ -1,70 +1,101 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en" class="is-home">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Nícolas de Queiróz - Branding &amp; Web Design</title>
-  <meta name="description" content="I create brands, interfaces, and high-performance websites from concept to launch.">
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/site/favicon.png">
-  <link rel="apple-touch-icon" sizes="256x256" href="assets/site/web-clip.png">
+  <meta name="theme-color" content="#f5f5f5">
+  <script>
+    // Tema antes da pintura: escolha salva ou claro (padrão do site).
+    try { if (localStorage.getItem("nq:theme") === "dark") document.documentElement.dataset.theme = "dark"; } catch (e) {}
+  </script>
+  <title data-pt="Nícolas de Queiróz — Branding e Web Design">Nícolas de Queiróz — Branding and Web Design</title>
+  <meta name="description" content="I create brands, interfaces and high-performance websites, from concept to launch." data-pt-content="Crio marcas, interfaces e sites de alta performance, do conceito ao lançamento.">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/site/favicon.png?v=eb50665e">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/site/web-clip.png?v=6ee28690">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Instrument+Serif:ital,wght@0,400&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap">
-  <link rel="stylesheet" href="css/generated.css">
-  <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/cursor.css">
-  <link rel="stylesheet" href="css/carousel.css">
-  <link rel="stylesheet" href="css/nav.css">
-  <link rel="stylesheet" href="css/transitions.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700&family=Instrument+Serif:wght@400&display=swap">
+  <link rel="stylesheet" href="css/generated.css?v=df18f5aa">
+  <link rel="stylesheet" href="css/main.css?v=0a4d2854">
+  <link rel="stylesheet" href="css/cursor.css?v=a068ecc8">
+  <link rel="stylesheet" href="css/carousel.css?v=c0c94948">
+  <link rel="stylesheet" href="css/nav.css?v=3a0f122b">
+  <link rel="stylesheet" href="css/transitions.css?v=4b78321a">
   <link rel="canonical" href="https://www.nicolasdequeiroz.com/">
   <meta property="og:url" content="https://www.nicolasdequeiroz.com/">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Nícolas de Queiróz - Branding &amp; Web Design">
-  <meta property="og:description" content="I create brands, interfaces, and high-performance websites from concept to launch.">
-  <meta property="og:image" content="https://www.nicolasdequeiroz.com/assets/site/frame-100054099.webp">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:site_name" content="Nícolas de Queiróz">
+  <meta property="og:title" content="Nícolas de Queiróz — Branding and Web Design" data-pt-content="Nícolas de Queiróz — Branding e Web Design">
+  <meta property="og:description" content="I create brands, interfaces and high-performance websites, from concept to launch." data-pt-content="Crio marcas, interfaces e sites de alta performance, do conceito ao lançamento.">
+  <meta property="og:image" content="https://www.nicolasdequeiroz.com/assets/site/og-home.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Nícolas de Queiróz">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Nícolas de Queiróz - Branding &amp; Web Design">
-  <meta name="twitter:description" content="I create brands, interfaces, and high-performance websites from concept to launch.">
-  <meta name="twitter:image" content="https://www.nicolasdequeiroz.com/assets/site/frame-100054099.webp">
+  <meta name="twitter:title" content="Nícolas de Queiróz — Branding and Web Design" data-pt-content="Nícolas de Queiróz — Branding e Web Design">
+  <meta name="twitter:description" content="I create brands, interfaces and high-performance websites, from concept to launch." data-pt-content="Crio marcas, interfaces e sites de alta performance, do conceito ao lançamento.">
+  <meta name="twitter:image" content="https://www.nicolasdequeiroz.com/assets/site/og-home.jpg">
+  <meta name="twitter:image:alt" content="Nícolas de Queiróz">
 </head>
 <body class="min-h-[100%] antialiased font-dm-sans tracking-[0.025em]">
-  <nav id="site-nav" aria-label="Navegação principal">
-    <a href="./" class="bubble-logo" aria-label="Nícolas de Queiróz — início">
+  <nav id="site-nav" aria-label="Main navigation" data-pt-aria-label="Navegação principal">
+    <a href="./" class="bubble-logo" aria-label="Nícolas de Queiróz — home" data-pt-aria-label="Nícolas de Queiróz — início">
       <span class="site-nav-logo">Nícolas de Queiróz</span>
     </a>
-    <button class="bubble-toggle" id="nav-toggle" type="button"
-            aria-label="Abrir menu" aria-pressed="false" aria-controls="nav-overlay">
-      <span class="menu-line"></span>
-      <span class="menu-line"></span>
-    </button>
+    <div class="nav-actions">
+      <button class="bubble-toggle bubble-lang" type="button" data-lang-toggle
+              aria-label="Mudar para português" aria-pressed="false">
+        <span class="lang-knob" aria-hidden="true"></span>
+        <span class="lang-opt" aria-hidden="true"><svg class="lang-flag" viewBox="0 0 24 24"><clipPath id="lf-us"><circle cx="12" cy="12" r="12"/></clipPath><g clip-path="url(#lf-us)"><rect width="24" height="24" fill="#fff"/><path fill="#d22f3a" d="M0 0h24v3.4H0zm0 6.9h24v3.4H0zm0 6.9h24v3.4H0zm0 6.9h24V24H0z"/><rect width="12.5" height="10.3" fill="#2b3b82"/><g fill="#fff"><circle cx="3" cy="2.6" r=".7"/><circle cx="6.2" cy="2.6" r=".7"/><circle cx="9.4" cy="2.6" r=".7"/><circle cx="4.6" cy="5.2" r=".7"/><circle cx="7.8" cy="5.2" r=".7"/><circle cx="3" cy="7.8" r=".7"/><circle cx="6.2" cy="7.8" r=".7"/><circle cx="9.4" cy="7.8" r=".7"/></g></g></svg></span>
+        <span class="lang-opt" aria-hidden="true"><svg class="lang-flag" viewBox="0 0 24 24"><clipPath id="lf-br"><circle cx="12" cy="12" r="12"/></clipPath><g clip-path="url(#lf-br)"><rect width="24" height="24" fill="#1f9a4b"/><path d="M12 3.6 21.4 12 12 20.4 2.6 12Z" fill="#f7d437"/><circle cx="12" cy="12" r="4.4" fill="#25459a"/><path d="M7.8 11.1c2.8-.7 5.6-.2 8.4 1.6" stroke="#fff" stroke-width=".9" fill="none"/></g></svg></span>
+      </button>
+      <button class="bubble-toggle bubble-theme" id="theme-toggle" type="button"
+              aria-label="Turn on dark mode" aria-pressed="false">
+        <svg class="theme-icon theme-icon--moon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"></path>
+        </svg>
+        <svg class="theme-icon theme-icon--sun" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8"></circle>
+          <path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path>
+        </svg>
+      </button>
+      <button class="bubble-toggle" id="nav-toggle" type="button"
+              aria-label="Open menu" aria-expanded="false" aria-controls="nav-overlay">
+        <span class="menu-line" aria-hidden="true"></span>
+        <span class="menu-line" aria-hidden="true"></span>
+      </button>
+    </div>
   </nav>
 
   <div id="nav-overlay" class="nav-overlay" aria-hidden="true">
-    <ul class="nav-pill-list" role="menu" aria-label="Links de navegação">
-      <li class="nav-pill-col" role="none">
-        <a href="#about" class="nav-pill-link" role="menuitem" data-rotation="-8">
-          <span class="nav-pill-label">about</span>
+    <ul class="nav-pill-list" aria-label="Navigation links" data-pt-aria-label="Links de navegação">
+      <li class="nav-pill-col">
+        <a href="sobre/" class="nav-pill-link" data-rotation="-8">
+          <span class="nav-pill-label" data-pt="sobre">about</span>
         </a>
       </li>
-      <li class="nav-pill-col" role="none">
-        <a href="#work" class="nav-pill-link" role="menuitem" data-rotation="8">
-          <span class="nav-pill-label">work</span>
+      <li class="nav-pill-col">
+        <a href="#trabalhos" class="nav-pill-link" data-rotation="8">
+          <span class="nav-pill-label" data-pt="trabalhos">work</span>
         </a>
       </li>
-      <li class="nav-pill-col" role="none">
-        <a href="#feed" class="nav-pill-link" role="menuitem" data-rotation="8">
+      <li class="nav-pill-col">
+        <a href="#feed" class="nav-pill-link" data-rotation="8">
           <span class="nav-pill-label">feed</span>
         </a>
       </li>
-      <li class="nav-pill-col" role="none">
-        <a href="#contact" class="nav-pill-link" role="menuitem" data-rotation="-8">
-          <span class="nav-pill-label">contact</span>
+      <li class="nav-pill-col">
+        <a href="sobre/#contato" class="nav-pill-link" data-rotation="-8">
+          <span class="nav-pill-label" data-pt="contato">contact</span>
         </a>
       </li>
     </ul>
   </div>
 
-  <main id="work" class="w-[100vw] flex items-center justify-center overflow-hidden h-[100svh] sm:h-[90svh]">
+  <main id="trabalhos" class="w-[100vw] flex items-center justify-center overflow-hidden h-[100svh] sm:h-[90svh]">
+    <h1 class="visually-hidden" data-pt="Nícolas de Queiróz — Branding e Web Design">Nícolas de Queiróz — Branding and Web Design</h1>
     <div class="flex items-center justify-center w-[100%] h-[100%]">
       <div class="mouse-tracing-wrapper" id="mouse-wrapper">
         <div class="scene-container" id="scene">
@@ -78,12 +109,16 @@
     <span class="site-copyright">© 2026 Nícolas de Queiróz</span>
   </footer>
 
-  <script type="application/json" id="works-data">{"site":{"name":"Nícolas de Queiróz","title":"Nícolas de Queiróz - Branding & Web Design","description":"I create brands, interfaces, and high-performance websites from concept to launch.","url":"https://www.nicolasdequeiroz.com","ogImage":"assets/site/frame-100054099.webp"},"works":[{"slug":"mizzu-sushi","title":"Mizzu Sushi","tagline":"Sushi contemporâneo com alma de izakaya.","description":"O Mizzu nasceu para traduzir a precisão da culinária japonesa em uma experiência descontraída. Entre o balcão do chef e a mesa compartilhada, o restaurante aposta em cortes autorais, ingredientes locais e um ambiente que mistura tradição e ruído urbano — um izakaya à brasileira.","year":2025,"services":["Branding","Web Design"],"industry":"Restaurante","location":"Brasil","thumb":"assets/works/mizzu-sushi/hero.webp","hero":{"type":"image","src":"assets/works/mizzu-sushi/hero.webp","alt":"Mizzu Sushi"},"blocks":[{"type":"image","src":"assets/site/placeholder-image.jpg","alt":"Identidade visual do Mizzu aplicada","ratio":"16:9"},{"type":"text","label":"Desafio","text":"O Mizzu precisava se diferenciar em um mercado saturado de sushi delivery com estética genérica. O desafio era construir uma marca com personalidade própria — japonesa na essência, brasileira no tom — e um site que transformasse curiosidade em reserva, sem perder a leveza do ambiente físico."},{"type":"pair","items":[{"src":"assets/site/placeholder-image.jpg","alt":"Cardápio impresso do Mizzu","caption":"Cardápio"},{"src":"assets/site/placeholder-image.jpg","alt":"Site do Mizzu em tela mobile","caption":"Mobile"}]},{"type":"statement","text":"Uma marca servida em fatias precisas."},{"type":"image","src":"assets/site/placeholder-image.jpg","alt":"Fotografia do ambiente do restaurante","ratio":"4:3"},{"type":"text","label":"Solução","text":"A identidade parte de um sistema tipográfico de contraste — serifa expressiva para o discurso, sans para a operação — e uma paleta que troca o vermelho óbvio por tons de cerâmica e nori. No site, o cardápio vira navegação: cada categoria é uma seção, cada prato uma composição fotográfica em tela cheia."},{"type":"capture","src":"assets/site/placeholder-image.jpg","alt":"Página inicial do site do Mizzu, do topo ao rodapé","caption":"Home completa"}],"credits":[{"role":"Fotografia","name":"Nome do Fotógrafo"},{"role":"Desenvolvimento","name":"Nícolas de Queiróz"}],"testimonial":{"quote":"O processo foi direto e o resultado passou longe do que a gente via no mercado. A marca virou assunto entre os clientes.","name":"Nome do Cliente","role":"Sócio · Mizzu Sushi"}},{"slug":"jabutibar","title":"JabutiBar","description":"Identidade visual e presença digital para bar e experiências ao ar livre.","year":2025,"services":["Branding","Web Design"],"thumb":"assets/works/jabutibar/hero.webp","hero":{"type":"image","src":"assets/works/jabutibar/hero.webp","alt":"JabutiBar"},"blocks":[]},{"slug":"studioisa","title":"studioisa","description":"Marca e site para estúdio de pilates com foco em bem-estar e movimento.","year":2025,"services":["Branding","Web Design"],"thumb":"assets/works/studioisa/hero.webp","hero":{"type":"image","src":"assets/works/studioisa/hero.webp","alt":"studioisa"},"blocks":[]},{"slug":"move","title":"Move+","description":"Plataforma de mobilidade urbana com identidade dinâmica e interface digital.","year":2025,"services":["Branding","Product Design"],"thumb":"assets/works/move/hero.gif","hero":{"type":"image","src":"assets/works/move/hero.gif","alt":"Move+"},"blocks":[]},{"slug":"topfit","title":"TOPFIT","description":"Reposicionamento de marca e website para academia premium.","year":2025,"services":["Branding","Web Design"],"thumb":"assets/works/topfit/hero.webp","hero":{"type":"image","src":"assets/works/topfit/hero.webp","alt":"TOPFIT"},"blocks":[]},{"slug":"sd-digital","title":"SD Digital","description":"Identidade e presença digital para agência de comércio eletrônico.","year":2025,"services":["Branding","Web Design"],"thumb":"assets/works/sd-digital/hero.webp","hero":{"type":"image","src":"assets/works/sd-digital/hero.webp","alt":"SD Digital"},"blocks":[]}]}</script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
-  <script src="js/view-transitions.js" defer></script>
-  <script src="js/nav.js" defer></script>
-  <script src="js/nav-theme.js" defer></script>
-  <script src="js/cursor.js" defer></script>
-  <script src="js/carousel.js" defer></script>
+  <script type="application/json" id="works-data">{"site":{"name":"Nícolas de Queiróz","title":"Nícolas de Queiróz — Branding e Web Design","description":"Crio marcas, interfaces e sites de alta performance, do conceito ao lançamento.","url":"https://www.nicolasdequeiroz.com","ogImage":"assets/site/og-home.jpg"},"works":[{"slug":"mizzu-sushi","title":"Mizzu Sushi","tagline":"O oceano em sua mesa.","description":"Identidade visual para um restaurante japonês em Siqueira Campos, no interior do Paraná. O nome parte de mizu (水), água em japonês: a ligação entre a água e os frutos do mar, base da gastronomia japonesa, guia a marca. Uma adaptação da Grande Onda de Kanagawa (Hokusai, 1830) evoca a herança japonesa e traz a energia do oceano para cada aplicação.","year":2024,"services":["Identidade visual","Embalagens"],"industry":"Restaurante japonês","location":"Siqueira Campos, PR","thumb":"assets/works/mizzu-sushi/hero.webp","hero":{"type":"image","src":"assets/works/mizzu-sushi/hero.webp","mobile":"assets/works/mizzu-sushi/hero-mobile.webp","alt":"Logotipo do Mizzu Sushi sobre a Grande Onda em vermelho escuro"},"blocks":[{"type":"image","src":"assets/works/mizzu-sushi/assinaturas.webp","alt":"Quatro versões do logotipo do Mizzu Sushi em vermelho, preto, creme e branco","ratio":"16:9","caption":"Assinaturas"},{"type":"text","label":"Conceito","text":"Mizu (水) significa água. A palavra virou o ponto de partida: a água como elo entre o oceano e o prato. O ideograma assume o papel de símbolo, a tipografia serifada com espaçamento largo traz a calma da tradição, e o vermelho com o marrom quase preto remetem à laca e à cerâmica japonesas."},{"type":"video","src":"assets/works/mizzu-sushi/selo.mp4","poster":"assets/works/mizzu-sushi/selo-poster.webp","alt":"Selo circular do Mizzu Sushi girando sobre padrão de ondas","ratio":"16:9","caption":"Selo"},{"type":"pair","items":[{"src":"assets/works/mizzu-sushi/poster.webp","alt":"Pôster vermelho com a Grande Onda em um cavalete","caption":"Pôster"},{"src":"assets/works/mizzu-sushi/mizu-agua.webp","alt":"Ideograma 水 com as palavras Mizu e Água","caption":"水 · Água"}]},{"type":"statement","text":"Uma onda de 1830 como assinatura."},{"type":"image","src":"assets/works/mizzu-sushi/embalagem.webp","alt":"Bandeja de sushi com cinta vermelha do Mizzu, molho shoyu e hashis","ratio":"16:9","caption":"Embalagem"},{"type":"text","label":"Aplicações","text":"O sistema se estende por todo o contato com o cliente: cinta das bandejas de delivery, envelope do hashi, ecobag, cartão, uniforme e o perfil no Instagram. Em cada peça, a onda e o selo aparecem com parcimônia, deixando o vermelho fazer o trabalho."},{"type":"pair","items":[{"src":"assets/works/mizzu-sushi/ecobag.webp","alt":"Ecobag de algodão com a Grande Onda em vermelho","caption":"Ecobag"},{"src":"assets/works/mizzu-sushi/instagram.webp","alt":"Perfil do Mizzu Sushi no Instagram em um celular","caption":"Instagram"}]},{"type":"image","src":"assets/works/mizzu-sushi/hashi.webp","alt":"Hashis em envelope vermelho do Mizzu sobre prato preto","ratio":"4:3","caption":"Hashi"},{"type":"image","src":"assets/works/mizzu-sushi/cartao.webp","alt":"Cartão preto do Mizzu entre flores de cerejeira","ratio":"4:3","caption":"Cartão"},{"type":"image","src":"assets/works/mizzu-sushi/camiseta.webp","alt":"Camiseta branca com o logotipo do Mizzu Sushi","ratio":"16:9","caption":"Uniforme"},{"type":"image","src":"assets/works/mizzu-sushi/embalagem-2.webp","alt":"Bandeja de sushis variados com a cinta do Mizzu","ratio":"16:9"}],"credits":[{"role":"Design e aplicações","name":"Nícolas de Queiróz"},{"role":"Briefing","name":"Matheus Morita"}]},{"slug":"jabutibar","title":"JabutiBar","tagline":"Um oásis de descontração no interior paulista.","description":"Identidade visual para um bar ao ar livre em Itaporanga, no interior de São Paulo. O JabutiBar celebra a vida ao ar livre, a comida e a bebida de qualidade e a cultura local. A marca nasce da natureza que cerca o lugar e da atmosfera leve do interior paulista, traduzindo uma filosofia de acolhimento e celebração.","year":2024,"services":["Identidade visual","Ilustração","Cardápio"],"industry":"Bar e lounge","location":"Itaporanga, SP","thumb":"assets/works/jabutibar/hero.webp","hero":{"type":"image","src":"assets/works/jabutibar/hero.webp","mobile":"assets/works/jabutibar/hero-mobile.webp","alt":"Kombi verde com o jabuti do JabutiBar estacionada entre árvores"},"blocks":[{"type":"image","src":"assets/works/jabutibar/ilustracao.webp","alt":"Logotipo do JabutiBar com o jabuti, emoldurado por folhagens ilustradas","ratio":"16:9"},{"type":"text","label":"Conceito","text":"Um lugar onde as preocupações somem na brisa e as risadas ecoam entre as árvores. O jabuti, sem pressa, virou o símbolo desse ritmo. Verdes de folhagem, um creme de papel e um lettering arredondado dão à marca o tom descontraído do interior, e as ilustrações de folhas trazem a mata para cada peça."},{"type":"image","src":"assets/works/jabutibar/assinaturas.webp","alt":"Versões do logotipo e do selo Bar Lounge do JabutiBar em verde, creme e preto","ratio":"16:9","caption":"Assinaturas"},{"type":"pair","items":[{"src":"assets/works/jabutibar/cartao.webp","alt":"Cartão creme do JabutiBar sobre uma folha grande","caption":"Cartão"},{"src":"assets/works/jabutibar/comanda.webp","alt":"Comanda numerada do JabutiBar entre folhas","caption":"Comanda"}]},{"type":"image","src":"assets/works/jabutibar/cardapio.webp","alt":"Cardápio impresso verde com drinks ilustrados e petiscos","ratio":"16:9","caption":"Cardápio"},{"type":"image","src":"assets/works/jabutibar/cardapio-digital.webp","alt":"Telas do cardápio digital do JabutiBar com destilados","ratio":"16:9","caption":"Cardápio digital"},{"type":"statement","text":"Uma celebração da vida ao ar livre."},{"type":"image","src":"assets/works/jabutibar/posteres.webp","alt":"Dois pôsteres de drinks em uma parede coberta de hera","ratio":"16:9","caption":"Pôsteres"},{"type":"pair","items":[{"src":"assets/works/jabutibar/ecobag.webp","alt":"Ecobag do JabutiBar segurada em meio ao mato alto","caption":"Ecobag"},{"src":"assets/works/jabutibar/garrafa.webp","alt":"Garrafa com rótulo verde do JabutiBar contra o céu","caption":"Garrafa"}]},{"type":"image","src":"assets/works/jabutibar/cavalete.webp","alt":"Cavalete verde com o selo do JabutiBar ao lado de um garçom","ratio":"16:9","caption":"Cavalete"},{"type":"image","src":"assets/works/jabutibar/camiseta.webp","alt":"Camiseta creme com o logotipo do JabutiBar","ratio":"16:9","caption":"Uniforme"}],"credits":[{"role":"Ilustrações","name":"Nícolas de Queiróz e Artur Tadao Massuda"},{"role":"Design e aplicações","name":"Nícolas de Queiróz"},{"role":"Briefing","name":"Leonardo Diniz e Nelson Fiuza"}]},{"slug":"studioisa","title":"studioisa","description":"Marca e site para estúdio de pilates com foco em bem-estar e movimento.","year":2025,"services":["Branding","Web Design"],"thumb":"assets/works/studioisa/hero.webp","hero":{"type":"image","src":"assets/works/studioisa/hero.webp","mobile":"assets/works/studioisa/hero-mobile.webp","alt":"studioisa"},"blocks":[]},{"slug":"move","title":"Move+","description":"Plataforma de mobilidade urbana com identidade dinâmica e interface digital.","year":2025,"services":["Branding","Product Design"],"thumb":"assets/works/move/hero.gif","hero":{"type":"image","src":"assets/works/move/hero.gif","mobile":"assets/works/move/hero-mobile.gif","alt":"Move+"},"blocks":[]},{"slug":"topfit","title":"TOPFIT","description":"Identidade visual completa para a TOPFIT, marca conceito de suplementos de Ribeirão Preto (SP). Letras brutas e blocadas, um vermelho intenso e um ícone em forma de seta, que sobe, sustentam uma marca que vende atitude e posicionamento, do e-commerce à loja física.","year":2025,"services":["Identidade visual","E-commerce"],"thumb":"assets/works/topfit/hero.webp","hero":{"type":"image","src":"assets/works/topfit/hero.webp","mobile":"assets/works/topfit/hero-mobile.webp","alt":"Camiseta preta com a etiqueta vermelha do logotipo TOPFIT"},"blocks":[{"type":"text","label":"Sobre a marca","text":"A TOPFIT não nasceu para ser só mais uma loja de suplementos. Atua com loja física, e-commerce próprio, marketplaces e distribuição, e vende mais do que produto: vende atitude, curadoria e posicionamento. Uma marca com voz própria, provocadora, bruta, direta e autêntica."},{"type":"image","src":"assets/works/topfit/familia-logos.webp","alt":"Família de logotipos TOPFIT em vermelho: logo primária, ícone de seta, logo com slogan, box logo, versão vertical, isométrica e estilizada","ratio":"7:5","caption":"Família de logotipos"},{"type":"text","label":"Logotipo","text":"A logo é uma afirmação visual: o nome em sua forma mais pura, em letras brutas, blocadas e pesadas. Removemos até a contraforma do “O” e do “P” para intensificar a sensação de bloco, e a tipografia quase não tem espaçamento. Com essas definições, a única cor que cabia era o vermelho, por sua natureza visceral e corajosa."},{"type":"image","src":"assets/works/topfit/logotipo.webp","alt":"Logotipo TOPFIT em branco sobre degradê de vermelho a vinho, com o slogan Suplementos para você chegar ao topo","ratio":"16:9","caption":"Logotipo e slogan"},{"type":"statement","text":"Símbolos que gritam, não sussurram."},{"type":"image","src":"assets/works/topfit/icone.webp","alt":"Ícone da TOPFIT: uma seta isométrica branca sobre fundo vermelho, com linhas de construção, e aplicada em uma quina","ratio":"7:5","caption":"Ícone"},{"type":"text","label":"Ícone","text":"Construído a partir do “T” da marca, distorcido simetricamente, separado em dois blocos e inclinado em 30 graus, cria uma vista isométrica que lembra uma quina sólida. Pode ser lido como uma seta disfarçada apontando para cima, a quina de uma caixa de e-commerce ou um selo geométrico que marca território."},{"type":"image","src":"assets/works/topfit/perfil-instagram.webp","alt":"Ícone vermelho da TOPFIT, perfil do Instagram com o ícone como foto e ícone de aplicativo","ratio":"7:5","caption":"Perfil e aplicativo"},{"type":"text","label":"Cores","text":"O vermelho intenso (#C21819) é o tom principal: força, movimento e potência. Branco e cinza claro dão respiro e legibilidade, principalmente no digital, enquanto o vinho e o preto entram com moderação, como cores de força silenciosa."},{"type":"image","src":"assets/works/topfit/paleta.webp","alt":"Paleta da TOPFIT: vermelho intenso, vermelhos de apoio, bege, branco, cinza claro, vinho e preto","ratio":"7:5","caption":"Paleta de cores"},{"type":"text","label":"Tipografia","text":"A Gasoek One, ultra-bold e de terminal reto, impõe nos títulos, slogans e frases de impacto. Quando o conteúdo precisa respirar, entra a Figtree, versátil e legível, em descrições e textos corridos."},{"type":"image","src":"assets/works/topfit/tipografia.webp","alt":"Especimes das tipografias da TOPFIT: Gasoek One como primária e Figtree como secundária","ratio":"7:5","caption":"Tipografia"},{"type":"text","label":"Aplicações","text":"As variações da marca mudam de contexto sem perder a força: do feed a um vídeo, do carimbo a uma estampa. A box logo estampa a TOPFIT como bandeira, a versão isométrica dá movimento e o ícone assina o que for preciso."},{"type":"pair","items":[{"src":"assets/works/topfit/embalagem.webp","alt":"Embalagem vermelha com o logotipo TOPFIT em branco","caption":"Embalagem","ratio":"7:5"},{"src":"assets/works/topfit/moletom.webp","alt":"Moletom preto com a logo isométrica da TOPFIT em branco","caption":"Moletom","ratio":"7:5"}]},{"type":"pair","items":[{"src":"assets/works/topfit/bone.webp","alt":"Boné preto com o ícone da TOPFIT em branco e aba vermelha por baixo","caption":"Boné","ratio":"7:5"},{"src":"assets/works/topfit/adesivo.webp","alt":"Adesivo redondo vermelho com a logo isométrica e o slogan em volta","caption":"Adesivo","ratio":"7:5"}]},{"type":"statement","text":"Vendemos suplementos. Mas também postura."},{"type":"image","src":"assets/works/topfit/ecommerce-mobile.webp","alt":"Vários celulares mostrando a loja virtual da TOPFIT, com páginas de categorias, produtos e campanhas","ratio":"7:5","caption":"E-commerce no celular"},{"type":"text","label":"E-commerce","text":"No e-commerce próprio, feito em Shopify, a experiência é rápida, segura e sem enrolação, do clique ao resultado. O visual é de alto contraste: fundo preto, tipografia pesada e o vermelho como ponto de ação."},{"type":"image","src":"assets/works/topfit/ecommerce-desktop.webp","alt":"Notebook mostrando a home da loja virtual TOPFIT, com o slogan sobre uma foto de treino","ratio":"7:5","caption":"Home do site"},{"type":"text","label":"Loja física","text":"A loja conceito, em Ribeirão Preto, leva a marca para o espaço: parede vermelha com a logo repetida, o ícone em seta sobre o balcão e as prateleiras escuras. Um ambiente que expressa o posicionamento premium, urbano e de alta performance."},{"type":"image","src":"assets/works/topfit/loja.webp","alt":"Quatro imagens da loja conceito TOPFIT, com parede vermelha estampada, balcão de madeira com o ícone em seta e prateleiras escuras","ratio":"7:5","caption":"Loja conceito"},{"type":"statement","text":"Para chegar ao topo."}],"tagline":"Suplementos para você chegar ao topo.","industry":"Suplementos","credits":[{"role":"Design","name":"Nícolas de Queiróz"},{"role":"Fundador","name":"Luiz Arlindo"}],"location":"Ribeirão Preto, SP","website":"https://topfitsuplementos.com.br"},{"slug":"sd-digital","title":"SD Digital","description":"Identidade e presença digital para agência de comércio eletrônico.","year":2025,"services":["Branding","Web Design"],"thumb":"assets/works/sd-digital/hero.webp","hero":{"type":"image","src":"assets/works/sd-digital/hero.webp","mobile":"assets/works/sd-digital/hero-mobile.webp","alt":"SD Digital"},"blocks":[]}]}</script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/Draggable.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/InertiaPlugin.min.js" defer></script>
+  <script src="js/i18n.js?v=d36dfdb5" defer></script>
+  <script src="js/view-transitions.js?v=c40ef3f9" defer></script>
+  <script src="js/theme.js?v=4505fa4f" defer></script>
+  <script src="js/nav.js?v=14cecfbe" defer></script>
+  <script src="js/nav-theme.js?v=aa9c5c32" defer></script>
+  <script src="js/cursor.js?v=2f59726e" defer></script>
+  <script src="js/carousel.js?v=c3c830ae" defer></script>
 </body>
 </html>

@@ -18,6 +18,43 @@ Não mude estes pontos sem pedido explícito, mesmo que uma skill ou o inspetor 
 - **Stack**: HTML/CSS/JS puro + `scripts/build.mjs`. Não introduza framework, bundler ou Tailwind
   novo; tokens novos viram custom properties em `:root` nos CSS editáveis.
 - **Fontes atuais**: DM Sans (texto) e Instrument Serif (logo/display), via Google Fonts.
+- **Tema**: claro por padrão, escuro pelo seletor na nav (`js/theme.js`, salvo em `localStorage`
+  como `nq:theme`). Cores sempre pelos tokens de `:root` em `css/nav.css` (`--bg`, `--bg-home`,
+  `--fg`, `--line`…) — nunca `#fff`/`#111` direto, senão quebra o modo escuro. Home em whitesmoke.
+- **Capa mobile**: cada case tem `hero.mobile` (vertical 9:16) em `works.json`, usada no hero e no
+  card do carrossel abaixo de 768px. Deixe o assunto no centro ~80% da largura (o celular corta as
+  laterais). O preview de link usa `assets/works/<slug>/og.jpg` (1200×630).
+- **Movimento**: o carrossel é animado só pelo GSAP 3.13 (Draggable + InertiaPlugin para arrasto,
+  `quickTo` no parallax, `delayedCall` no autoplay) — não ponha `transition` CSS em `.carousel-3d`
+  nem `.scene-container`. Nas páginas de work, `js/reveal.js` faz a entrada dos blocos na rolagem
+  (seletores no topo do arquivo); bloco novo no build precisa entrar nessa lista.
+- **Página sobre**: `sobre/index.html` é estática, estilo em `css/about.css`. Mistura o layout dos
+  cases (container 1280px/32px, rótulos `.ab-label` iguais ao `.work-block-label`, ficha de 4 colunas
+  sob o título, frase centrada, contato escuro de ponta a ponta como o "Próximo projeto") com o
+  tratamento de texto de rodolpho.works (frase de identidade com o ano, história em duas colunas,
+  números grandes com uma linha de contexto). Números sem valor ficam com `data-pending` (sublinhado
+  vermelho) — não publicar assim.
+  O contato termina no "verso": o nome gigante em itálico, preso (sticky) embaixo, e a folha branca
+  (`<main data-nav-sheet>`) sobe por cima dele — tudo em CSS (`.ab-contact`). `data-nav-dark`
+  em qualquer bloco escuro faz a nav escurecer sobre ele (`js/nav-theme.js`). O site tem
+  `scroll-behavior: smooth`: em testes, role com `behavior: 'instant'`.
+  A nav é repetida em `index.html`, `templates/work.html` e `sobre/index.html` — mudou uma, mude as três.
+- **Easter eggs (sobre)**: "coleciono vinil" e "geografia, bandeiras e mapas" abrem dialogs
+  (`js/easter-eggs.js` carrega `js/egg-vinis.js` / `js/egg-globo.js` sob demanda). Dados em
+  `data/vinis.json` e `data/viagens.json` (`"exemplo": true` mostra o aviso de lista de exemplo —
+  tire quando os dados forem reais). Capas: `node scripts/vinis-capas.mjs` (iTunes Search API).
+  Globo: cobe 2.0.1 via jsDelivr (API `update()`, sem `onRender`).
+- **Cache busting**: o build põe `?v=<hash>` em todo CSS/JS local (work/, `index.html`,
+  `sobre/index.html`, `404.html`). Mexeu em CSS ou JS → rode `npm run build` antes do commit.
+- **Idioma (EN padrão + PT)**: o HTML sai em inglês e carrega o português ao lado (`data-pt="…"` no
+  conteúdo, `data-pt-<atributo>="…"` em alt/aria-label/content). `js/i18n.js` faz a troca pelo botão
+  EN/PT da nav (`data-lang-toggle`, salvo em `localStorage` como `nq:lang`) e dispara `nq:langchange`.
+  Texto montado em JS usa `window.nqI18n.t("English", "Português")`; HTML criado depois (dialogs dos
+  easter eggs) chama `nqI18n.translate(escopo)`. Cases: `data/works.json` guarda o português e
+  `data/works.en.json` a tradução por slug (blocks/credits alinhados por posição) — case novo precisa
+  das duas. Texto novo em qualquer página = inglês no HTML + `data-pt`. A nav (com o botão de idioma)
+  é repetida em `index.html`, `templates/work.html` e `sobre/index.html`. `sitemap.xml` é gerado pelo
+  build; `robots.txt` é estático. Previews de link e SEO ficam em inglês (padrão).
 
 ## Rodar o site
 

@@ -9,7 +9,9 @@
   const RETURN_KEY = "nq:returnSlug";
 
   function kindOf(pathname) {
-    return /\/work\/[^/]+\/?$/.test(pathname) ? "work" : "home";
+    if (/\/work\/[^/]+\/?$/.test(pathname)) return "work";
+    if (pathname === "/" || pathname === "/index.html") return "home";
+    return "other";
   }
 
   function slugOf(pathname) {

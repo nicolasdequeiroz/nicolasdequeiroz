@@ -1,3 +1,11 @@
+// Carrossel 3D da home.
+//
+// O GSAP é a única fonte de movimento: a rotação do carrossel e a pose da cena
+// são tweens/sets do GSAP (nada de transition CSS em cima, que brigaria com
+// ele). Draggable + InertiaPlugin cuidam do arrasto (mouse, toque e caneta,
+// com inércia e encaixe no card mais próximo); quickTo cuida do parallax do
+// mouse; matchMedia separa celular, desktop e "reduzir movimento".
+
 // Capturado em escopo de módulo porque o pagereveal dispara depois do
 // DOMContentLoaded; a init define o callback quando estamos voltando de uma
 // página de work, para tocar o "settle" 3D assim que o morph termina.
@@ -16,13 +24,14 @@ document.addEventListener("DOMContentLoaded", async () => {
   const CONFIG = {
     radius: { mobile: 240, desktop: 750 },
     baseTilt: { mobile: -10, desktop: 0 },
-    autoplayDelay: 5000,
-    resumeAfter: 6000,
-    introSpinDuration: 2500,
-    wheelStep: 40,
-    swipeThreshold: 50,
-    clickGuardThreshold: 10,
-    dragRotateFactor: 0.5,
+    autoplayDelay: 5, // s
+    resumeAfter: 6, // s sem interação até o autoplay voltar
+    introSpinDuration: 2.5, // s
+    stepDuration: 1, // s
+    wheelStep: 40, // px acumulados para girar um card
+    wheelCooldown: 450, // ms: trava após um passo (inércia do trackpad)
+    wheelIdle: 140, // ms sem eventos = gesto terminou
+    dragRotateFactor: 0.5, // graus por px arrastado
     touchTiltFactor: 0.3,
     touchTiltRange: { min: -40, max: 30 },
     mouseTilt: { rotateX: -8, rotateY: 12, translateX: 30, translateY: 20 },
@@ -31,37 +40,68 @@ document.addEventListener("DOMContentLoaded", async () => {
     worksUrl: "/data/works.json",
   };
 
-  const prefersReducedMotion = window.matchMedia(
-    "(prefers-reduced-motion: reduce)"
-  ).matches;
-
   const carousel = document.getElementById("carousel-target");
   const wrapper = document.getElementById("mouse-wrapper");
   const scene = document.getElementById("scene");
   if (!carousel || !wrapper) return;
 
+  const hasGsap = typeof window.gsap !== "undefined";
+  const reduceQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
   const mobileQuery = window.matchMedia(CONFIG.mobileQuery);
+  const reduceMotion = () => reduceQuery.matches;
+  const isMobile = () => mobileQuery.matches;
 
   let currentIndex = 0;
   let itemCount = 0;
+
+  const t = (en, pt) => (window.nqI18n ? window.nqI18n.t(en, pt) : en);
+  const dotLabel = (i) => `${t("Go to project", "Ir para o projeto")} ${i + 1} ${t("of", "de")} ${itemCount}`;
   let theta = 0;
-  let autoplayTimer = null;
-  let resumeTimer = null;
   let dots = [];
   let cards = [];
-  let suppressClick = false;
+  let liveRegion = null;
   let parallaxEnabled = true;
   let parallaxWarmup = false;
   let lastParallaxX = null;
   let lastParallaxY = null;
+  let lastDragEnd = 0;
+  let introRunning = false;
+  let userTouchedIntro = false;
 
   const PARALLAX_WARMUP_MIN_PX = 16;
   const PARALLAX_RESUME_DELAY_MS = 700;
+  const CLICK_AFTER_DRAG_MS = 120;
 
-  const isMobile = () => mobileQuery.matches;
-  const baseTilt = () =>
-    isMobile() ? CONFIG.baseTilt.mobile : CONFIG.baseTilt.desktop;
-  const activeIndex = () => ((currentIndex % itemCount) + itemCount) % itemCount;
+  const baseTilt = () => (isMobile() ? CONFIG.baseTilt.mobile : CONFIG.baseTilt.desktop);
+  const mod = (n) => ((n % itemCount) + itemCount) % itemCount;
+  const activeIndex = () => mod(currentIndex);
+
+  // --- Movimento (GSAP, com fallback instantâneo se a CDN falhar) ---------
+
+  function setRotation(deg) {
+    if (hasGsap) gsap.set(carousel, { rotationY: deg });
+    else carousel.style.transform = `rotateY(${deg}deg)`;
+  }
+
+  function tweenRotation(deg, duration, ease) {
+    if (!hasGsap || reduceMotion()) {
+      if (hasGsap) gsap.killTweensOf(carousel);
+      setRotation(deg);
+      return;
+    }
+    gsap.to(carousel, { rotationY: deg, duration, ease, overwrite: true });
+  }
+
+  const getRotation = () =>
+    hasGsap ? Number(gsap.getProperty(carousel, "rotationY")) : -currentIndex * theta;
+
+  function setSceneTilt(rx) {
+    if (!scene) return;
+    if (hasGsap) gsap.set(scene, { rotationX: rx });
+    else scene.style.transform = `rotateX(${rx}deg)`;
+  }
+
+  // --- Dados e DOM --------------------------------------------------------
 
   async function loadWorks() {
     // Preferimos os dados embutidos (inline) no HTML: assim o carrossel monta de
@@ -91,12 +131,25 @@ document.addEventListener("DOMContentLoaded", async () => {
       const link = document.createElement("a");
       link.className = "carousel-link-wrapper";
       link.href = `work/${work.slug}/`;
+      link.draggable = false; // sem "fantasma" de link ao arrastar com o mouse
 
       const img = document.createElement("img");
       img.src = work.thumb;
       img.alt = work.title;
+      img.draggable = false;
 
-      link.appendChild(img);
+      // Capa vertical no celular (mesmo breakpoint do hero da página de work,
+      // para o morph card → hero partir e chegar na mesma imagem).
+      if (work.hero?.mobile) {
+        const picture = document.createElement("picture");
+        const source = document.createElement("source");
+        source.media = CONFIG.mobileQuery;
+        source.srcset = work.hero.mobile;
+        picture.append(source, img);
+        link.appendChild(picture);
+      } else {
+        link.appendChild(img);
+      }
       card.appendChild(link);
       carousel.appendChild(card);
       return card;
@@ -107,15 +160,15 @@ document.addEventListener("DOMContentLoaded", async () => {
     const nav = document.createElement("nav");
     nav.className = "carousel-dots";
     nav.id = "carousel-dots";
-    nav.setAttribute("aria-label", "Selecionar projeto");
+    nav.setAttribute("aria-label", t("Select project", "Selecionar projeto"));
 
     dots = Array.from({ length: itemCount }, (_, i) => {
       const dot = document.createElement("button");
       dot.type = "button";
       dot.className = "carousel-dot";
-      dot.setAttribute("aria-label", `Ir para o projeto ${i + 1} de ${itemCount}`);
+      dot.setAttribute("aria-label", dotLabel(i));
       dot.addEventListener("click", () => {
-        goTo(i);
+        goTo(i, { announce: true });
         pauseThenResume();
       });
       nav.appendChild(dot);
@@ -124,6 +177,21 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     const footer = document.querySelector("footer");
     (footer || wrapper.closest("main") || document.body).appendChild(nav);
+  }
+
+  // Anuncia o projeto ativo para leitores de tela — só em trocas feitas pela
+  // pessoa (teclado, dots, arrasto), nunca no autoplay.
+  function buildLiveRegion() {
+    liveRegion = document.createElement("p");
+    liveRegion.className = "visually-hidden";
+    liveRegion.setAttribute("aria-live", "polite");
+    wrapper.appendChild(liveRegion);
+  }
+
+  function announce() {
+    if (!liveRegion) return;
+    const img = cards[activeIndex()]?.querySelector("img");
+    liveRegion.textContent = `${t("Project", "Projeto")} ${activeIndex() + 1} ${t("of", "de")} ${itemCount}: ${img?.alt ?? ""}`;
   }
 
   function syncDots() {
@@ -136,13 +204,19 @@ document.addEventListener("DOMContentLoaded", async () => {
     });
   }
 
-  // Apenas o card central recebe o view-transition-name (precisa ser único)
-  // e a classe que o marca como clicável/navegável.
+  // Só o card central: recebe o view-transition-name (precisa ser único), entra
+  // na ordem do Tab e fica visível para leitores de tela. Os outros continuam
+  // clicáveis (giram até o centro), mas saem do teclado — eles podem estar de
+  // costas no 3D.
   function updateActiveCard() {
     const active = activeIndex();
     cards.forEach((card, i) => {
       const isActive = i === active;
       card.classList.toggle("is-active", isActive);
+      const link = card.querySelector("a");
+      if (link) link.tabIndex = isActive ? 0 : -1;
+      if (isActive) card.removeAttribute("aria-hidden");
+      else card.setAttribute("aria-hidden", "true");
       const img = card.querySelector("img");
       if (img) img.style.viewTransitionName = isActive ? "work-media" : "";
     });
@@ -150,56 +224,374 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   function applyRadius() {
     const radius = isMobile() ? CONFIG.radius.mobile : CONFIG.radius.desktop;
-    carousel.querySelectorAll(".carousel-item").forEach((card, i) => {
+    cards.forEach((card, i) => {
       card.style.transform = `rotateY(${theta * i}deg) translateZ(${radius}px)`;
     });
   }
 
-  function resetSceneTilt() {
-    if (scene) scene.style.transform = `rotateX(${baseTilt()}deg)`;
-  }
+  // --- Navegação ----------------------------------------------------------
 
-  function rotateCarousel() {
-    carousel.style.transform = `rotateY(${currentIndex * -theta}deg)`;
+  function syncState() {
     syncDots();
     updateActiveCard();
   }
 
-  function step(direction) {
-    currentIndex += direction;
-    rotateCarousel();
+  function rotateTo(index, { duration = CONFIG.stepDuration, ease = "expo.out", announce: say = false } = {}) {
+    currentIndex = index;
+    tweenRotation(-currentIndex * theta, duration, ease);
+    syncState();
+    if (say) announce();
   }
 
-  function goTo(targetMod) {
+  const step = (direction, opts) => rotateTo(currentIndex + direction, opts);
+
+  // Pelo caminho mais curto até o card alvo.
+  function goTo(targetMod, opts) {
     let diff = targetMod - activeIndex();
     if (diff > itemCount / 2) diff -= itemCount;
     if (diff < -itemCount / 2) diff += itemCount;
-    currentIndex += diff;
-    rotateCarousel();
+    rotateTo(currentIndex + diff, opts);
+  }
+
+  // --- Autoplay -----------------------------------------------------------
+  // gsap.delayedCall usa o ticker do GSAP, que para sozinho com a aba em
+  // segundo plano — nada de "pular" vários cards ao voltar para a aba.
+
+  let autoplayCall = null;
+  let resumeCall = null;
+  let hovering = false;
+  let focusInside = false;
+  const isHeld = () => hovering || focusInside;
+
+  function stopAutoplay() {
+    autoplayCall?.kill();
+    autoplayCall = null;
   }
 
   function startAutoplay() {
-    if (prefersReducedMotion) return;
     stopAutoplay();
-    autoplayTimer = setInterval(() => step(1), CONFIG.autoplayDelay);
-  }
-
-  function stopAutoplay() {
-    clearInterval(autoplayTimer);
-    autoplayTimer = null;
+    if (!hasGsap || reduceMotion() || isHeld()) return;
+    const tick = () => {
+      step(1);
+      autoplayCall = gsap.delayedCall(CONFIG.autoplayDelay, tick);
+    };
+    autoplayCall = gsap.delayedCall(CONFIG.autoplayDelay, tick);
   }
 
   function pauseThenResume() {
+    if (introRunning) userTouchedIntro = true;
     stopAutoplay();
-    clearTimeout(resumeTimer);
-    if (prefersReducedMotion) return;
-    resumeTimer = setTimeout(startAutoplay, CONFIG.resumeAfter);
+    resumeCall?.kill();
+    resumeCall = null;
+    if (!hasGsap || reduceMotion() || isHeld()) return;
+    resumeCall = gsap.delayedCall(CONFIG.resumeAfter, startAutoplay);
   }
+
+  // Mouse sobre um card ou foco de teclado no carrossel/dots seguram a roda.
+  function bindHold() {
+    const dotsNav = document.getElementById("carousel-dots");
+    const hold = () => {
+      stopAutoplay();
+      resumeCall?.kill();
+      resumeCall = null;
+    };
+    const release = () => {
+      if (!isHeld()) pauseThenResume();
+    };
+
+    // Só os cards: o wrapper ocupa a tela toda e pararia o autoplay sempre.
+    carousel.addEventListener("mouseenter", () => {
+      hovering = true;
+      hold();
+    });
+    carousel.addEventListener("mouseleave", () => {
+      hovering = false;
+      release();
+    });
+    [wrapper, dotsNav].forEach((el) => {
+      if (!el) return;
+      el.addEventListener("focusin", (e) => {
+        // Só foco de teclado: um clique no dot também foca e travaria o giro.
+        if (!e.target.matches(":focus-visible")) return;
+        focusInside = true;
+        hold();
+      });
+      el.addEventListener("focusout", (e) => {
+        if (wrapper.contains(e.relatedTarget) || dotsNav?.contains(e.relatedTarget)) return;
+        focusInside = false;
+        release();
+      });
+    });
+  }
+
+  // --- Entrada: teclado, roda/trackpad, arrasto, clique -------------------
+
+  // Setas giram quando o foco está no carrossel ou nos dots. Se o foco estava
+  // num card, ele acompanha o novo card central.
+  function bindKeyboard() {
+    const dotsNav = document.getElementById("carousel-dots");
+    const onKey = (e) => {
+      if (e.key !== "ArrowRight" && e.key !== "ArrowLeft") return;
+      e.preventDefault();
+      pauseThenResume();
+      step(e.key === "ArrowRight" ? 1 : -1, { announce: true });
+      if (wrapper.contains(document.activeElement)) {
+        cards[activeIndex()]?.querySelector("a")?.focus({ preventScroll: true });
+      }
+    };
+    wrapper.addEventListener("keydown", onKey);
+    dotsNav?.addEventListener("keydown", onKey);
+  }
+
+  // Um passo por gesto. O trackpad continua mandando eventos por inércia
+  // depois que o dedo sai; travamos após cada passo e só destravamos quando o
+  // gesto termina (pausa nos eventos) ou um gesto novo começa (delta cresce).
+  function bindWheel() {
+    let acc = 0;
+    let locked = false;
+    let lockedAt = 0;
+    let lastAbs = 0;
+    let idleTimer = null;
+
+    wrapper.addEventListener(
+      "wheel",
+      (e) => {
+        // Horizontal fica com o navegador (gesto de voltar/avançar).
+        if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) return;
+        e.preventDefault();
+        pauseThenResume();
+
+        const abs = Math.abs(e.deltaY);
+        clearTimeout(idleTimer);
+        idleTimer = setTimeout(() => {
+          locked = false;
+          acc = 0;
+          lastAbs = 0;
+        }, CONFIG.wheelIdle);
+
+        if (locked) {
+          const cooled = performance.now() - lockedAt > CONFIG.wheelCooldown;
+          const newGesture = abs > lastAbs * 1.5 + 4;
+          lastAbs = abs;
+          if (!(cooled && newGesture)) return;
+          locked = false;
+          acc = 0;
+        }
+        lastAbs = abs;
+
+        acc += e.deltaY;
+        if (Math.abs(acc) >= CONFIG.wheelStep) {
+          step(Math.sign(acc));
+          acc = 0;
+          locked = true;
+          lockedAt = performance.now();
+        }
+      },
+      { passive: false }
+    );
+  }
+
+  // Arrasto com Draggable: um proxy invisível recebe o "x" do gesto e nós o
+  // convertemos em rotação. O InertiaPlugin continua o giro depois de soltar
+  // e o snap encaixa no card mais próximo. Toque também inclina a cena (Y).
+  function bindDrag() {
+    if (!hasGsap || typeof window.Draggable === "undefined") return;
+    gsap.registerPlugin(Draggable);
+    const hasInertia = typeof window.InertiaPlugin !== "undefined";
+    if (hasInertia) gsap.registerPlugin(InertiaPlugin);
+
+    const proxy = document.createElement("div");
+    let startRot = 0;
+    let startY = 0;
+    let touchTilt = false;
+
+    const rotFromX = (x) => startRot + x * CONFIG.dragRotateFactor;
+    const snapRot = (rot) => Math.round(rot / theta) * theta;
+
+    function settleTo(rot) {
+      currentIndex = Math.round(-rot / theta);
+      syncState();
+      announce();
+    }
+
+    Draggable.create(proxy, {
+      type: "x",
+      trigger: wrapper,
+      dragClickables: true, // os cards são links; o arrasto começa neles também
+      minimumMovement: 6,
+      allowContextMenu: true,
+      inertia: hasInertia && !reduceMotion(),
+      maxDuration: 1.2,
+      snap: {
+        x: (endX) => (snapRot(rotFromX(endX)) - startRot) / CONFIG.dragRotateFactor,
+      },
+      onPress(e) {
+        // Um clique simples não pode congelar um giro em andamento: o tween
+        // só é interrompido quando o arrasto de fato começa (onDragStart).
+        startY = this.pointerY;
+        touchTilt = e.pointerType === "touch" || e.type === "touchstart";
+        gsap.set(proxy, { x: 0 });
+        this.update();
+      },
+      onDragStart() {
+        gsap.killTweensOf(carousel);
+        pauseThenResume();
+        // O gesto já andou minimumMovement px; a rotação parte de onde está.
+        startRot = getRotation() - this.x * CONFIG.dragRotateFactor;
+      },
+      onDrag() {
+        const rot = rotFromX(this.x);
+        setRotation(rot);
+        currentIndex = Math.round(-rot / theta);
+        syncDots();
+        if (touchTilt && scene) {
+          const { min, max } = CONFIG.touchTiltRange;
+          const tilt = baseTilt() + (startY - this.pointerY) * CONFIG.touchTiltFactor;
+          setSceneTilt(Math.max(min, Math.min(max, tilt)));
+        }
+      },
+      onThrowUpdate() {
+        setRotation(rotFromX(this.x));
+        currentIndex = Math.round(-getRotation() / theta);
+        syncDots();
+      },
+      onThrowComplete() {
+        settleTo(getRotation());
+      },
+      onDragEnd() {
+        lastDragEnd = performance.now();
+        if (touchTilt && scene && !reduceMotion()) {
+          gsap.to(scene, { rotationX: baseTilt(), duration: 0.6, ease: "power3.out" });
+        }
+        // Sem inércia, o snap não roda sozinho: encaixa aqui.
+        if (!this.tween) {
+          const target = snapRot(getRotation());
+          tweenRotation(target, 0.6, "power3.out");
+          settleTo(target);
+        }
+      },
+    });
+  }
+
+  // Só o card central navega; clicar num lateral gira para centralizá-lo.
+  // Um clique logo depois de um arrasto é descartado.
+  function bindClick() {
+    carousel.addEventListener(
+      "click",
+      (e) => {
+        if (performance.now() - lastDragEnd < CLICK_AFTER_DRAG_MS) {
+          e.preventDefault();
+          e.stopPropagation();
+          return;
+        }
+
+        const card = e.target.closest(".carousel-item");
+        if (!card) return;
+
+        const index = cards.indexOf(card);
+        if (index === -1) return;
+
+        if (index !== activeIndex()) {
+          e.preventDefault();
+          goTo(index, { announce: true });
+          pauseThenResume();
+          return;
+        }
+
+        // Card central: esconde nav antes da View Transition cross-document
+        const nav = document.getElementById("site-nav");
+        if (nav) nav.classList.add("is-navigating");
+      },
+      true
+    );
+  }
+
+  // Parallax do mouse com gsap.quickTo: cada propriedade da cena persegue a
+  // pose do cursor com o mesmo ease, sem saltos — inclusive no primeiro
+  // movimento depois de voltar de uma work page.
+  function bindPointerParallax() {
+    if (!hasGsap || !scene) return;
+
+    const mm = gsap.matchMedia();
+    mm.add(
+      { fine: CONFIG.pointerFineQuery, reduce: "(prefers-reduced-motion: reduce)" },
+      (ctx) => {
+        const { fine, reduce } = ctx.conditions;
+        if (!fine || reduce) return;
+
+        const { rotateX, rotateY, translateX, translateY } = CONFIG.mouseTilt;
+        const opts = { duration: 0.9, ease: "power3.out" };
+        const toRX = gsap.quickTo(scene, "rotationX", opts);
+        const toRY = gsap.quickTo(scene, "rotationY", opts);
+        const toX = gsap.quickTo(scene, "x", opts);
+        const toY = gsap.quickTo(scene, "y", opts);
+
+        // Mede o wrapper só quando ele muda de tamanho, não a cada movimento.
+        let rect = wrapper.getBoundingClientRect();
+        const ro = new ResizeObserver(() => {
+          rect = wrapper.getBoundingClientRect();
+        });
+        ro.observe(wrapper);
+
+        const onMove = (e) => {
+          if (!parallaxEnabled) {
+            lastParallaxX = e.clientX;
+            lastParallaxY = e.clientY;
+            return;
+          }
+
+          // Após voltar de uma work page, ignora o mouse "parado" em cima do
+          // carrossel — só reage depois de um movimento real. A primeira
+          // amostra apenas registra a posição (nada de aplicar pose de cara).
+          if (parallaxWarmup) {
+            if (lastParallaxX === null) {
+              lastParallaxX = e.clientX;
+              lastParallaxY = e.clientY;
+              return;
+            }
+            const dx = e.clientX - lastParallaxX;
+            const dy = e.clientY - lastParallaxY;
+            if (Math.hypot(dx, dy) < PARALLAX_WARMUP_MIN_PX) return;
+            parallaxWarmup = false;
+          }
+
+          lastParallaxX = e.clientX;
+          lastParallaxY = e.clientY;
+
+          const x = ((e.clientX - rect.left) / rect.width - 0.5) * 2;
+          const y = ((e.clientY - rect.top) / rect.height - 0.5) * 2;
+          toRX(baseTilt() + y * rotateX);
+          toRY(x * rotateY);
+          toX(x * translateX);
+          toY(y * translateY);
+        };
+
+        const onLeave = () => {
+          lastParallaxX = null;
+          lastParallaxY = null;
+          toRX(baseTilt());
+          toRY(0);
+          toX(0);
+          toY(0);
+        };
+
+        wrapper.addEventListener("mousemove", onMove);
+        wrapper.addEventListener("mouseleave", onLeave);
+        return () => {
+          ro.disconnect();
+          wrapper.removeEventListener("mousemove", onMove);
+          wrapper.removeEventListener("mouseleave", onLeave);
+        };
+      }
+    );
+  }
+
+  // --- Volta de uma página de work e intro --------------------------------
 
   // Voltando de uma página de work: centraliza, sem animar, o card do projeto
   // que estávamos visualizando e o marca com view-transition-name, para o hero
   // fazer o morph de volta exatamente para ele. Retorna true se aplicou.
-  function setupReturnState() {
+  function setupReturnState(works) {
     let slug = null;
     try {
       slug = sessionStorage.getItem("nq:returnSlug");
@@ -213,17 +605,9 @@ document.addEventListener("DOMContentLoaded", async () => {
     const idx = works.findIndex((w) => w.slug === slug);
     if (idx < 0) return false;
 
-    const prevCarousel = carousel.style.transition;
-    const prevScene = scene ? scene.style.transition : "";
-    carousel.style.transition = "none";
-    if (scene) scene.style.transition = "none";
-
     currentIndex = idx;
-    rotateCarousel(); // posiciona o container e marca o card ativo como work-media
-
-    void carousel.offsetWidth; // commita antes de reabilitar as transições
-    carousel.style.transition = prevCarousel;
-    if (scene) scene.style.transition = prevScene;
+    setRotation(-currentIndex * theta);
+    syncState();
     return true;
   }
 
@@ -239,232 +623,32 @@ document.addEventListener("DOMContentLoaded", async () => {
     }, PARALLAX_RESUME_DELAY_MS);
   }
 
+  // Um giro completo de entrada. Se a pessoa mexer no carrossel durante o
+  // giro, o autoplay espera a pausa normal em vez de começar no fim da intro.
   function playIntro() {
-    if (prefersReducedMotion) {
-      rotateCarousel();
+    if (!hasGsap || reduceMotion()) {
+      syncState();
       return;
     }
-    carousel.style.transition = `transform ${CONFIG.introSpinDuration}ms cubic-bezier(0.2, 0.8, 0.2, 1)`;
-    carousel.style.transform = "rotateY(-360deg)";
-    currentIndex = itemCount;
-    syncDots();
-
-    setTimeout(() => {
-      carousel.style.transition = "transform 1s cubic-bezier(0.19, 1, 0.22, 1)";
-      startAutoplay();
-    }, CONFIG.introSpinDuration + 100);
-  }
-
-  function bindWheel() {
-    let acc = 0;
-    wrapper.addEventListener(
-      "wheel",
-      (e) => {
-        if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) return;
-        e.preventDefault();
-        pauseThenResume();
-        acc += e.deltaY;
-        if (acc > CONFIG.wheelStep) {
-          step(1);
-          acc = 0;
-        } else if (acc < -CONFIG.wheelStep) {
-          step(-1);
-          acc = 0;
-        }
-      },
-      { passive: false }
+    introRunning = true;
+    currentIndex = itemCount; // uma volta inteira; o card ativo é o mesmo
+    syncState();
+    gsap.fromTo(
+      carousel,
+      { rotationY: 0 },
+      {
+        rotationY: -360,
+        duration: CONFIG.introSpinDuration,
+        ease: "power3.out",
+        onComplete() {
+          introRunning = false;
+          if (!userTouchedIntro) startAutoplay();
+        },
+      }
     );
   }
 
-  function bindTouch() {
-    let startX = 0;
-    let startY = 0;
-    let dragging = false;
-
-    wrapper.addEventListener(
-      "touchstart",
-      (e) => {
-        startX = e.touches[0].clientX;
-        startY = e.touches[0].clientY;
-        dragging = true;
-        pauseThenResume();
-        carousel.style.transition = "none";
-        if (scene) scene.style.transition = "none";
-      },
-      { passive: true }
-    );
-
-    wrapper.addEventListener(
-      "touchmove",
-      (e) => {
-        if (!dragging) return;
-        const dx = startX - e.touches[0].clientX;
-        const dy = startY - e.touches[0].clientY;
-
-        const angle = currentIndex * -theta - dx * CONFIG.dragRotateFactor;
-        const tilt = Math.max(
-          CONFIG.touchTiltRange.min,
-          Math.min(CONFIG.touchTiltRange.max, baseTilt() + dy * CONFIG.touchTiltFactor)
-        );
-
-        carousel.style.transform = `rotateY(${angle}deg)`;
-        if (scene) scene.style.transform = `rotateX(${tilt}deg)`;
-      },
-      { passive: true }
-    );
-
-    wrapper.addEventListener("touchend", (e) => {
-      dragging = false;
-      carousel.style.transition = "transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1)";
-      if (scene)
-        scene.style.transition = "transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1)";
-
-      const dx = startX - e.changedTouches[0].clientX;
-      suppressClick = Math.abs(dx) > CONFIG.clickGuardThreshold;
-
-      if (dx > CONFIG.swipeThreshold) step(1);
-      else if (dx < -CONFIG.swipeThreshold) step(-1);
-      else rotateCarousel();
-
-      resetSceneTilt();
-    });
-  }
-
-  // Só o card central navega; clicar num lateral gira para centralizá-lo.
-  function bindClick() {
-    carousel.addEventListener(
-      "click",
-      (e) => {
-        if (suppressClick) {
-          e.preventDefault();
-          e.stopPropagation();
-          suppressClick = false;
-          return;
-        }
-
-        const card = e.target.closest(".carousel-item");
-        if (!card) return;
-
-        const index = cards.indexOf(card);
-        if (index === -1) return;
-
-        if (index !== activeIndex()) {
-          e.preventDefault();
-          goTo(index);
-          pauseThenResume();
-          return;
-        }
-
-        // Card central: esconde nav antes da View Transition cross-document
-        const nav = document.getElementById("site-nav");
-        if (nav) nav.classList.add("is-navigating");
-      },
-      true
-    );
-  }
-
-  // Parallax do mouse com lerp contínuo em rAF: a cena sempre desliza da pose
-  // atual em direção à pose do cursor. Sem saltos — inclusive no primeiro
-  // movimento depois de voltar de uma work page (a pose parte do descanso).
-  function bindPointerParallax() {
-    if (
-      prefersReducedMotion ||
-      !scene ||
-      !window.matchMedia(CONFIG.pointerFineQuery).matches
-    ) {
-      return;
-    }
-
-    const { rotateX, rotateY, translateX, translateY } = CONFIG.mouseTilt;
-    const EASE = 0.09; // fator de aproximação por frame (~60fps)
-    const SETTLE_EPS = 0.05;
-
-    const basePose = () => ({ rx: baseTilt(), ry: 0, tx: 0, ty: 0 });
-
-    let pose = basePose(); // pose renderizada no momento
-    let target = basePose(); // pose alvo (derivada do cursor)
-    let rafId = null;
-
-    function apply() {
-      scene.style.transform =
-        `rotateX(${pose.rx.toFixed(3)}deg) rotateY(${pose.ry.toFixed(3)}deg) ` +
-        `translateX(${pose.tx.toFixed(2)}px) translateY(${pose.ty.toFixed(2)}px)`;
-    }
-
-    function frame() {
-      const dist =
-        Math.abs(target.rx - pose.rx) +
-        Math.abs(target.ry - pose.ry) +
-        Math.abs(target.tx - pose.tx) +
-        Math.abs(target.ty - pose.ty);
-
-      if (dist < SETTLE_EPS) {
-        pose = { ...target };
-        apply();
-        scene.style.transition = ""; // devolve a transição padrão do CSS
-        rafId = null;
-        return;
-      }
-
-      pose.rx += (target.rx - pose.rx) * EASE;
-      pose.ry += (target.ry - pose.ry) * EASE;
-      pose.tx += (target.tx - pose.tx) * EASE;
-      pose.ty += (target.ty - pose.ty) * EASE;
-      apply();
-      rafId = requestAnimationFrame(frame);
-    }
-
-    function setTarget(next) {
-      target = next;
-      if (rafId === null) {
-        // O rAF assume a suavização; a transição CSS atrapalharia o lerp.
-        scene.style.transition = "none";
-        rafId = requestAnimationFrame(frame);
-      }
-    }
-
-    wrapper.addEventListener("mousemove", (e) => {
-      if (!parallaxEnabled) {
-        lastParallaxX = e.clientX;
-        lastParallaxY = e.clientY;
-        return;
-      }
-
-      // Após voltar de uma work page, ignora o mouse "parado" em cima do
-      // carrossel — só reage depois de um movimento real. A primeira amostra
-      // apenas registra a posição (nada de aplicar pose de cara).
-      if (parallaxWarmup) {
-        if (lastParallaxX === null) {
-          lastParallaxX = e.clientX;
-          lastParallaxY = e.clientY;
-          return;
-        }
-        const dx = e.clientX - lastParallaxX;
-        const dy = e.clientY - lastParallaxY;
-        if (Math.hypot(dx, dy) < PARALLAX_WARMUP_MIN_PX) return;
-        parallaxWarmup = false;
-      }
-
-      lastParallaxX = e.clientX;
-      lastParallaxY = e.clientY;
-
-      const rect = wrapper.getBoundingClientRect();
-      const x = ((e.clientX - rect.left) / rect.width - 0.5) * 2;
-      const y = ((e.clientY - rect.top) / rect.height - 0.5) * 2;
-      setTarget({
-        rx: y * rotateX,
-        ry: x * rotateY,
-        tx: x * translateX,
-        ty: y * translateY,
-      });
-    });
-
-    wrapper.addEventListener("mouseleave", () => {
-      lastParallaxX = null;
-      lastParallaxY = null;
-      setTarget(basePose());
-    });
-  }
+  // --- Init ---------------------------------------------------------------
 
   let works;
   try {
@@ -477,32 +661,44 @@ document.addEventListener("DOMContentLoaded", async () => {
   if (works.length === 0) return;
 
   buildCards(works);
-  itemCount = carousel.querySelectorAll(".carousel-item").length;
+  itemCount = cards.length;
   if (itemCount === 0) return;
   theta = 360 / itemCount;
 
   wrapper.setAttribute("role", "group");
-  wrapper.setAttribute("aria-roledescription", "carrossel");
-  wrapper.setAttribute("aria-label", "Projetos em destaque");
+  const applyWrapperLabels = () => {
+    wrapper.setAttribute("aria-roledescription", t("carousel", "carrossel"));
+    wrapper.setAttribute("aria-label", t("Featured projects. Use the arrow keys to switch.", "Projetos em destaque. Use as setas para trocar."));
+  };
+  applyWrapperLabels();
 
   buildDots();
+  buildLiveRegion();
+
+  // Troca de idioma: rótulos de acessibilidade criados aqui acompanham.
+  window.addEventListener("nq:langchange", () => {
+    applyWrapperLabels();
+    document.getElementById("carousel-dots")?.setAttribute("aria-label", t("Select project", "Selecionar projeto"));
+    dots.forEach((dot, i) => dot.setAttribute("aria-label", dotLabel(i)));
+  });
   applyRadius();
-  resetSceneTilt();
-  syncDots();
-  updateActiveCard();
+  setSceneTilt(baseTilt());
+  setRotation(0);
+  syncState();
 
   mobileQuery.addEventListener("change", () => {
     applyRadius();
-    resetSceneTilt();
+    setSceneTilt(baseTilt());
   });
-  window.addEventListener("resize", applyRadius);
 
   bindWheel();
-  bindTouch();
+  bindDrag();
   bindClick();
+  bindKeyboard();
   bindPointerParallax();
+  bindHold();
 
-  const returning = setupReturnState();
+  const returning = setupReturnState(works);
   if (returning) {
     // Sem giro de intro: o card já está no lugar para receber o morph do hero.
     parallaxEnabled = false;

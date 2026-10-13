@@ -14,6 +14,9 @@
 }
 .mouse-tracing-wrapper:active { cursor: grabbing; }
 
+/* Cena e carrossel não têm transition CSS: quem anima é o GSAP (carousel.js).
+   Uma transition por cima suavizaria cada frame do tween e o arrasto. */
+
 .scene-container {
     width: 100%;
     height: 100%;
@@ -21,14 +24,12 @@
     justify-content: center;
     align-items: center;
     transform-style: preserve-3d;
-    transition: transform 0.3s ease-out;
     transform-origin: center center;
 }
 
 .carousel-3d {
     position: relative;
     transform-style: preserve-3d;
-    transition: transform 1s cubic-bezier(0.19, 1, 0.22, 1);
     width: 420px;
     height: 260px;
 }
@@ -84,16 +85,18 @@
     padding: 0;
     border: 0;
     border-radius: 9999px;
-    background: rgba(0, 0, 0, 0.25);
+    background: var(--line);
+    background: color-mix(in srgb, var(--fg) 25%, transparent);
     cursor: pointer;
     transition: width 0.3s ease, background-color 0.3s ease;
 }
 .carousel-dot.is-active {
     width: 14px;
-    background: rgba(0, 0, 0, 0.8);
+    background: var(--fg);
+    background: color-mix(in srgb, var(--fg) 80%, transparent);
 }
 .carousel-dot:focus-visible {
-    outline: 2px solid rgba(0, 0, 0, 0.6);
+    outline: 2px solid var(--fg);
     outline-offset: 3px;
 }
 
@@ -113,8 +116,6 @@
 
 /* --- MOVIMENTO REDUZIDO --- */
 @media (prefers-reduced-motion: reduce) {
-    .carousel-3d,
-    .scene-container,
     .carousel-item img {
         transition: none !important;
     }

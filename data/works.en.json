@@ -1,0 +1,317 @@
+{
+  "mizzu-sushi": {
+    "tagline": "The ocean on your table.",
+    "description": "Visual identity for a Japanese restaurant in Siqueira Campos, in the countryside of Paraná, Brazil. The name comes from mizu (水), Japanese for water: the link between water and seafood, the base of Japanese cuisine, guides the brand. An adaptation of The Great Wave off Kanagawa (Hokusai, 1830) evokes the Japanese heritage and brings the energy of the ocean to every application.",
+    "services": [
+      "Visual identity",
+      "Packaging"
+    ],
+    "industry": "Japanese restaurant",
+    "location": "Siqueira Campos, PR, Brazil",
+    "hero": {
+      "alt": "Mizzu Sushi logo over the Great Wave in dark red"
+    },
+    "blocks": [
+      {
+        "alt": "Four versions of the Mizzu Sushi logo in red, black, cream and white",
+        "caption": "Signatures"
+      },
+      {
+        "label": "Concept",
+        "text": "Mizu (水) means water. The word became the starting point: water as the link between the ocean and the plate. The ideogram takes the role of the symbol, the widely spaced serif typography brings the calm of tradition, and the red with a near-black brown recalls Japanese lacquer and ceramics."
+      },
+      {
+        "alt": "Circular Mizzu Sushi seal spinning over a wave pattern",
+        "caption": "Seal"
+      },
+      {
+        "items": [
+          {
+            "alt": "Red poster with the Great Wave on an easel",
+            "caption": "Poster"
+          },
+          {
+            "alt": "The ideogram 水 with the words Mizu and Water",
+            "caption": "水 · Water"
+          }
+        ]
+      },
+      {
+        "text": "A wave from 1830 as a signature."
+      },
+      {
+        "alt": "Sushi tray with a red Mizzu band, soy sauce and chopsticks",
+        "caption": "Packaging"
+      },
+      {
+        "label": "Applications",
+        "text": "The system extends across every customer touchpoint: the band on delivery trays, the chopstick sleeve, tote bag, business card, uniform and the Instagram profile. On every piece, the wave and the seal appear sparingly, letting the red do the work."
+      },
+      {
+        "items": [
+          {
+            "alt": "Cotton tote bag with the Great Wave in red",
+            "caption": "Tote bag"
+          },
+          {
+            "alt": "The Mizzu Sushi Instagram profile on a phone",
+            "caption": "Instagram"
+          }
+        ]
+      },
+      {
+        "alt": "Chopsticks in a red Mizzu sleeve on a black plate",
+        "caption": "Chopsticks"
+      },
+      {
+        "alt": "Black Mizzu business card among cherry blossoms",
+        "caption": "Business card"
+      },
+      {
+        "alt": "White T-shirt with the Mizzu Sushi logo",
+        "caption": "Uniform"
+      },
+      {
+        "alt": "Tray of assorted sushi with the Mizzu band"
+      }
+    ],
+    "credits": [
+      {
+        "role": "Design and applications"
+      },
+      {
+        "role": "Briefing"
+      }
+    ]
+  },
+  "jabutibar": {
+    "tagline": "An oasis of relaxation in the countryside of São Paulo.",
+    "description": "Visual identity for an open-air bar in Itaporanga, in the countryside of São Paulo state, Brazil. JabutiBar celebrates life outdoors, quality food and drink, and local culture. The brand comes from the nature that surrounds the place and the light atmosphere of the countryside, translating a philosophy of welcome and celebration.",
+    "services": [
+      "Visual identity",
+      "Illustration",
+      "Menu"
+    ],
+    "industry": "Bar and lounge",
+    "location": "Itaporanga, SP, Brazil",
+    "hero": {
+      "alt": "Green Kombi van with the JabutiBar tortoise parked among trees"
+    },
+    "blocks": [
+      {
+        "alt": "JabutiBar logo with the tortoise, framed by illustrated foliage"
+      },
+      {
+        "label": "Concept",
+        "text": "A place where worries vanish in the breeze and laughter echoes among the trees. The tortoise, in no rush, became the symbol of that rhythm. Foliage greens, a paper cream and a rounded lettering give the brand the relaxed tone of the countryside, and the leaf illustrations bring the forest into every piece."
+      },
+      {
+        "alt": "Versions of the JabutiBar logo and the Bar Lounge seal in green, cream and black",
+        "caption": "Signatures"
+      },
+      {
+        "items": [
+          {
+            "alt": "Cream JabutiBar business card on a large leaf",
+            "caption": "Business card"
+          },
+          {
+            "alt": "Numbered JabutiBar tab among leaves",
+            "caption": "Tab"
+          }
+        ]
+      },
+      {
+        "alt": "Green printed menu with illustrated drinks and snacks",
+        "caption": "Menu"
+      },
+      {
+        "alt": "Screens of the JabutiBar digital menu with spirits",
+        "caption": "Digital menu"
+      },
+      {
+        "text": "A celebration of life outdoors."
+      },
+      {
+        "alt": "Two drink posters on a wall covered in ivy",
+        "caption": "Posters"
+      },
+      {
+        "items": [
+          {
+            "alt": "JabutiBar tote bag held in tall grass",
+            "caption": "Tote bag"
+          },
+          {
+            "alt": "Bottle with a green JabutiBar label against the sky",
+            "caption": "Bottle"
+          }
+        ]
+      },
+      {
+        "alt": "Green A-frame sign with the JabutiBar seal next to a waiter",
+        "caption": "A-frame sign"
+      },
+      {
+        "alt": "Cream T-shirt with the JabutiBar logo",
+        "caption": "Uniform"
+      }
+    ],
+    "credits": [
+      {
+        "role": "Illustrations"
+      },
+      {
+        "role": "Design and applications"
+      },
+      {
+        "role": "Briefing"
+      }
+    ]
+  },
+  "studioisa": {
+    "description": "Brand and website for a pilates studio focused on well-being and movement.",
+    "services": [
+      "Branding",
+      "Web Design"
+    ]
+  },
+  "move": {
+    "description": "Urban mobility platform with a dynamic identity and digital interface.",
+    "services": [
+      "Branding",
+      "Product Design"
+    ]
+  },
+  "topfit": {
+    "tagline": "Supplements to help you reach the top.",
+    "description": "Complete visual identity for TOPFIT, a concept supplements brand from Ribeirão Preto (SP). Raw, blocky letters, an intense red and an arrow-shaped icon that goes up hold together a brand that sells attitude and positioning, from the e-commerce to the physical store.",
+    "services": [
+      "Visual identity",
+      "E-commerce"
+    ],
+    "industry": "Supplements",
+    "hero": {
+      "alt": "Black T-shirt with the red TOPFIT logo label"
+    },
+    "blocks": [
+      {
+        "label": "About the brand",
+        "text": "TOPFIT was not born to be just another supplements store. It runs a physical store, its own e-commerce, marketplaces and distribution, and it sells more than product: it sells attitude, curation and positioning. A brand with its own voice: provocative, raw, direct and authentic."
+      },
+      {
+        "alt": "TOPFIT logo family in red: primary logo, arrow icon, logo with tagline, box logo, vertical, isometric and stylized versions",
+        "caption": "Logo family"
+      },
+      {
+        "label": "Logo",
+        "text": "The logo is a visual statement: the name in its purest form, in raw, blocky, heavy letters. We removed even the counters of the “O” and the “P” to intensify the sense of a block, and the type has almost no letter spacing. With those decisions, the only color that fit was red, for its visceral and brave nature."
+      },
+      {
+        "alt": "TOPFIT logo in white over a red-to-wine gradient, with the tagline Supplements to help you reach the top",
+        "caption": "Logo and tagline"
+      },
+      {
+        "text": "Symbols that shout, not whisper."
+      },
+      {
+        "alt": "TOPFIT icon: a white isometric arrow over a red background, with construction lines, and applied to a corner",
+        "caption": "Icon"
+      },
+      {
+        "label": "Icon",
+        "text": "Built from the brand’s “T”, symmetrically distorted, split into two blocks and tilted by 30 degrees, it creates an isometric view that recalls a solid corner. It can be read as a disguised arrow pointing up, the corner of an e-commerce box, or a geometric seal that marks territory."
+      },
+      {
+        "alt": "Red TOPFIT icon, Instagram profile with the icon as the picture, and an app icon",
+        "caption": "Profile and app"
+      },
+      {
+        "label": "Colors",
+        "text": "Intense red (#C21819) is the main tone: strength, movement and power. White and light gray give room to breathe and legibility, especially on digital, while wine and black come in sparingly, as colors of quiet strength."
+      },
+      {
+        "alt": "TOPFIT palette: intense red, supporting reds, beige, white, light gray, wine and black",
+        "caption": "Color palette"
+      },
+      {
+        "label": "Typography",
+        "text": "Gasoek One, ultra-bold with straight terminals, imposes on headlines, taglines and statements. When the content needs to breathe, Figtree comes in, versatile and legible, for descriptions and running text."
+      },
+      {
+        "alt": "Type specimens of TOPFIT’s typefaces: Gasoek One as primary and Figtree as secondary",
+        "caption": "Typography"
+      },
+      {
+        "label": "Applications",
+        "text": "The brand’s variations change context without losing strength: from the feed to a video, from a stamp to a print. The box logo carries TOPFIT like a flag, the isometric version adds movement and the icon signs whatever is needed."
+      },
+      {
+        "items": [
+          {
+            "alt": "Red packaging with the TOPFIT logo in white",
+            "caption": "Packaging"
+          },
+          {
+            "alt": "Black hoodie with the isometric TOPFIT logo in white",
+            "caption": "Hoodie"
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "alt": "Black cap with the TOPFIT icon in white and a red underside on the brim",
+            "caption": "Cap"
+          },
+          {
+            "alt": "Round red sticker with the isometric logo and the tagline around it",
+            "caption": "Sticker"
+          }
+        ]
+      },
+      {
+        "text": "We sell supplements. But also attitude."
+      },
+      {
+        "alt": "Several phones showing the TOPFIT online store, with category, product and campaign pages",
+        "caption": "E-commerce on mobile"
+      },
+      {
+        "label": "E-commerce",
+        "text": "On the brand’s own e-commerce, built on Shopify, the experience is fast, safe and no-nonsense, from the click to the result. The look is high contrast: black background, heavy type and red as the point of action."
+      },
+      {
+        "alt": "Laptop showing the TOPFIT online store home, with the tagline over a workout photo",
+        "caption": "Site home"
+      },
+      {
+        "label": "Physical store",
+        "text": "The concept store, in Ribeirão Preto, takes the brand into space: a red wall with the repeated logo, the arrow icon over the counter and dark shelving. An environment that expresses the premium, urban, high-performance positioning."
+      },
+      {
+        "alt": "Four images of the TOPFIT concept store, with a stamped red wall, a wooden counter with the arrow icon and dark shelves",
+        "caption": "Concept store"
+      },
+      {
+        "text": "To reach the top."
+      }
+    ],
+    "credits": [
+      {
+        "role": "Design"
+      },
+      {
+        "role": "Founder"
+      }
+    ],
+    "location": "Ribeirão Preto, SP, Brazil"
+  },
+  "sd-digital": {
+    "description": "Identity and digital presence for an e-commerce agency.",
+    "services": [
+      "Branding",
+      "Web Design"
+    ]
+  }
+}

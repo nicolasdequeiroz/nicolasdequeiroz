@@ -106,3 +106,44 @@
 
 /* Feedback imediato ao clicar no card central (antes da navegação) —
    O efeito visual está em nav.css (.is-navigating .bubble-logo/toggle). */
+
+/* --- TROCA DE TEMA (claro/escuro, js/theme.js) --- */
+/* Durante a troca, nada de elementos compartilhados: a página inteira vira um
+   quadro só (root). O !important vence o view-transition-name inline do hero
+   e do card central. */
+html.theme-switching .bubble-logo,
+html.theme-switching .work-media,
+html.theme-switching .carousel-item img {
+  view-transition-name: none !important;
+}
+
+/* Sem transições próprias durante a troca. O navegador tira a foto da página
+   nova no primeiro quadro depois de mudar o tema: se botões, fundos e textos
+   ainda estiverem "deslizando" para a cor nova (transition de 0,35 s), a foto
+   sai com as cores antigas e, quando o círculo termina, tudo troca de uma vez. */
+html.theme-switching *,
+html.theme-switching *::before,
+html.theme-switching *::after {
+  transition: none !important;
+}
+
+/* O tema novo se revela num círculo que nasce no botão (--theme-x/y/r vêm do
+   JS) e cobre a tela; o antigo fica parado por baixo. */
+html.theme-switching::view-transition-old(root),
+html.theme-switching::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+
+html.theme-switching::view-transition-new(root) {
+  animation: nq-theme-reveal 0.7s cubic-bezier(0.65, 0, 0.35, 1) both;
+}
+
+@keyframes nq-theme-reveal {
+  from {
+    clip-path: circle(0 at var(--theme-x, 100%) var(--theme-y, 0));
+  }
+  to {
+    clip-path: circle(var(--theme-r, 150vmax) at var(--theme-x, 100%) var(--theme-y, 0));
+  }
+}

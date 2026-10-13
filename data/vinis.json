@@ -1,0 +1,94 @@
+{
+  "exemplo": true,
+  "discos": [
+    {
+      "artista": "Milton Nascimento & Lô Borges",
+      "album": "Clube da Esquina",
+      "ano": 1972,
+      "genero": "MPB",
+      "cor": "#c8a26a",
+      "nota": "",
+      "capa": "assets/vinis/milton-nascimento-lo-borges-clube-da-esquina.jpg"
+    },
+    {
+      "artista": "Novos Baianos",
+      "album": "Acabou Chorare",
+      "ano": 1972,
+      "genero": "MPB",
+      "cor": "#e0b33d",
+      "nota": "",
+      "capa": "assets/vinis/novos-baianos-acabou-chorare.jpg"
+    },
+    {
+      "artista": "Chico Buarque",
+      "album": "Construção",
+      "ano": 1971,
+      "genero": "MPB",
+      "cor": "#1a1a1a",
+      "nota": "",
+      "capa": "assets/vinis/chico-buarque-construcao.jpg"
+    },
+    {
+      "artista": "Elis Regina & Tom Jobim",
+      "album": "Elis & Tom",
+      "ano": 1974,
+      "genero": "Bossa nova",
+      "cor": "#1a1a1a",
+      "nota": "",
+      "capa": "assets/vinis/elis-regina-tom-jobim-elis-tom.jpg"
+    },
+    {
+      "artista": "Cartola",
+      "album": "Cartola",
+      "ano": 1976,
+      "genero": "Samba",
+      "cor": "#2f6b3a",
+      "nota": "",
+      "capa": "assets/vinis/cartola-cartola.jpg"
+    },
+    {
+      "artista": "Tim Maia",
+      "album": "Racional Vol. 1",
+      "ano": 1975,
+      "genero": "Soul",
+      "cor": "#d9d2c1",
+      "nota": "",
+      "capa": "assets/vinis/tim-maia-racional-vol-1.jpg"
+    },
+    {
+      "artista": "Fleetwood Mac",
+      "album": "Rumours",
+      "ano": 1977,
+      "genero": "Rock",
+      "cor": "#1a1a1a",
+      "nota": "",
+      "capa": "assets/vinis/fleetwood-mac-rumours.jpg"
+    },
+    {
+      "artista": "Miles Davis",
+      "album": "Kind of Blue",
+      "ano": 1959,
+      "genero": "Jazz",
+      "cor": "#1d3f7a",
+      "nota": "",
+      "capa": "assets/vinis/miles-davis-kind-of-blue.jpg"
+    },
+    {
+      "artista": "Daft Punk",
+      "album": "Random Access Memories",
+      "ano": 2013,
+      "genero": "Eletrônica",
+      "cor": "#1a1a1a",
+      "nota": "",
+      "capa": "assets/vinis/daft-punk-random-access-memories.jpg"
+    },
+    {
+      "artista": "Tame Impala",
+      "album": "Currents",
+      "ano": 2015,
+      "genero": "Psicodelia",
+      "cor": "#7b3fa0",
+      "nota": ""
+    }
+  ]
+}

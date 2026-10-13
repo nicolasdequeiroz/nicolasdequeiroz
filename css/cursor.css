@@ -5,7 +5,9 @@
       body.custom-cursor-active, 
       body.custom-cursor-active a, 
       body.custom-cursor-active button, 
-      body.custom-cursor-active input {
+      body.custom-cursor-active input,
+      body.custom-cursor-active dialog.egg,
+      body.custom-cursor-active dialog.egg * {
           cursor: none !important;
       }
   }

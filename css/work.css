@@ -16,13 +16,17 @@
     min-height: 100svh;
     object-fit: cover;
     display: block;
-    background: #f5f5f5;
+    background: var(--surface);
+}
+
+.work-hero picture {
+    display: block;
 }
 
 .work-body {
     position: relative;
     z-index: 1;
-    background: #fff;
+    background: var(--bg);
 }
 
 /* Intro editorial: título display → meta em colunas → tagline + descrição. */
@@ -46,7 +50,7 @@
     grid-template-columns: repeat(4, 1fr);
     gap: 24px;
     padding-top: 20px;
-    border-top: 1px solid rgba(0, 0, 0, 0.12);
+    border-top: 1px solid var(--line);
     margin-bottom: clamp(48px, 7vw, 96px);
 }
 
@@ -78,7 +82,7 @@
     line-height: 1.1;
     letter-spacing: -0.01em;
     margin: 0;
-    max-width: 15ch;
+    max-width: 20ch;
     text-wrap: balance;
 }
 
@@ -87,15 +91,15 @@
     line-height: 1.6;
     opacity: 0.8;
     margin: 0;
+    max-width: 60ch;
+    text-wrap: pretty;
 }
 
 .work-website {
     display: inline-block;
     margin-top: 20px;
-    font-size: 12px;
+    font-size: 13px;
     font-weight: 600;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
     text-decoration: none;
     color: inherit;
     opacity: 0.6;
@@ -128,6 +132,12 @@
     object-fit: cover;
 }
 
+/* 7:5 — slides de manual de marca (1300×918) sem cortar nada. */
+.work-r-75 {
+    aspect-ratio: 7 / 5;
+    object-fit: cover;
+}
+
 .work-r-43 {
     aspect-ratio: 4 / 3;
     object-fit: cover;
@@ -140,9 +150,9 @@
 
 .work-block figcaption {
     font-size: 12px;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.06em;
     text-transform: uppercase;
-    opacity: 0.5;
+    opacity: 0.55;
     margin-top: 10px;
 }
 
@@ -150,9 +160,9 @@
     display: block;
     font-size: 12px;
     font-weight: 600;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.06em;
     text-transform: uppercase;
-    opacity: 0.6;
+    opacity: 0.55;
     margin-bottom: 14px;
 }
 
@@ -187,7 +197,8 @@
 .work-block--text p {
     font-size: 16px;
     line-height: 1.7;
-    max-width: 640px;
+    max-width: 60ch;
+    text-wrap: pretty;
     opacity: 0.85;
     margin: 0;
 }
@@ -220,9 +231,9 @@
     font-style: normal;
     font-size: 12px;
     font-weight: 600;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.06em;
     text-transform: uppercase;
-    opacity: 0.6;
+    opacity: 0.55;
 }
 
 .work-credits {
@@ -239,15 +250,15 @@
     justify-content: space-between;
     gap: 24px;
     padding: 10px 0;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    border-bottom: 1px solid var(--line-soft);
 }
 
 .work-credit dt {
     font-size: 12px;
     font-weight: 600;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.06em;
     text-transform: uppercase;
-    opacity: 0.6;
+    opacity: 0.55;
 }
 
 .work-credit dd {
@@ -307,8 +318,8 @@
 .work-next {
     position: relative;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-end;
+    justify-content: flex-start;
     min-height: 80svh;
     margin-top: clamp(48px, 8vw, 96px);
     background: #000;
@@ -326,12 +337,12 @@
     transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
-/* Filtro: véu preto a 40% sobre a imagem, garante leitura do título. */
+/* Filtro: véu preto sobre a imagem, garante leitura do título. */
 .work-next::after {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.45);
 }
 
 .work-next-content {
@@ -339,10 +350,12 @@
     z-index: 1;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 12px;
-    text-align: center;
-    padding: 32px;
+    align-items: flex-start;
+    gap: 8px;
+    text-align: left;
+    /* Título no canto inferior esquerdo: os heros têm o logo da marca no
+       centro, e um título centralizado brigava com ele. */
+    padding: 32px 32px clamp(56px, 8vw, 96px);
 }
 
 .work-next-content .work-block-label {
@@ -370,6 +383,12 @@
     color: inherit;
 }
 
+/* Nas páginas de work o copyright fixo ficava por cima do conteúdo o tempo
+   todo. Escondido (sem sair do fluxo, para o "Início" seguir à direita). */
+.work-page .site-copyright {
+    visibility: hidden;
+}
+
 /* Botão "back to home" — bubble pill no footer (work pages). */
 .back-home.bubble-back-home {
     display: inline-flex;
@@ -377,7 +396,7 @@
     gap: 6px;
     padding: 10px 16px;
     border-radius: 999px;
-    font-size: 12px;
+    font-size: 13px;
     font-weight: 700;
     letter-spacing: -0.025em;
     text-decoration: none;
@@ -437,5 +456,30 @@
         transform: none;
         -webkit-backdrop-filter: var(--nav-blur);
         backdrop-filter: var(--nav-blur);
+    }
+}
+
+/* Entrada dos blocos na rolagem (js/reveal.js). Só esconde com .js-reveal no
+   <html>, que o script põe; sem JS ou com "reduzir movimento", nada some.
+   Só transform e opacity — não mexe no layout. */
+.js-reveal [data-reveal] {
+    opacity: 0;
+    transform: translateY(24px);
+    transition:
+        opacity 0.5s ease,
+        transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+    transition-delay: var(--reveal-delay, 0ms);
+}
+
+.js-reveal [data-reveal].is-revealed {
+    opacity: 1;
+    transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .js-reveal [data-reveal] {
+        opacity: 1;
+        transform: none;
+        transition: none;
     }
 }

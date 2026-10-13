@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+# Arquivos de trabalho do repositório — não são páginas do site.
+Disallow: /.claude/
+Disallow: /.playwright/
+Disallow: /scripts/
+Disallow: /templates/
+Disallow: /data/
+Disallow: /CLAUDE.md
+Disallow: /README.md
+Disallow: /README.profile.md
+
+Sitemap: https://www.nicolasdequeiroz.com/sitemap.xml

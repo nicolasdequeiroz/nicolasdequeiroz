@@ -1,0 +1,819 @@
+/* =============================================================
+   PÁGINA SOBRE — mistura do layout das páginas de case (container de
+   1280px com 32px de margem, rótulos pequenos, ficha sob o título, frase
+   centrada, bloco escuro de ponta a ponta no fim) com o tratamento de texto
+   de portfólios de web designers seniores (frase de identidade, história
+   em duas colunas curtas, números grandes com uma linha de contexto).
+   Instrument Serif nos títulos grandes e números; DM Sans no resto.
+   Cores pelos tokens de nav.css (--bg, --fg, --line…), claro e escuro.
+   ============================================================= */
+
+.about-page {
+    --muted: color-mix(in srgb, var(--fg) 45%, transparent);
+    --soft: color-mix(in srgb, var(--fg) 72%, transparent);
+    --radius: 8px;
+}
+
+.about-page .site-copyright {
+    visibility: hidden;
+}
+
+/* A página é uma folha branca de ponta a ponta (acima do verso escuro do
+   contato). O conteúdo fica na mesma largura das páginas de case: 1280px
+   com 32px de margem, ou seja, 1216px de conteúdo. */
+.about {
+    position: relative;
+    z-index: 1;
+    background: var(--bg);
+    padding: 0 max(32px, calc((100% - 1216px) / 2)) clamp(120px, 14vw, 200px);
+    border-radius: 0 0 28px 28px;
+    box-shadow: 0 30px 60px -30px rgba(0, 0, 0, 0.45);
+}
+
+/* --- Tipos que se repetem --- */
+
+/* Rótulo igual ao das páginas de case (.work-block-label). */
+.ab-label {
+    display: block;
+    margin: 0;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--muted);
+}
+
+.ab-links {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 22px;
+    margin: 0;
+    padding: 0;
+}
+
+.ab-links a,
+.ab-links .egg-trigger {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 8px;
+    padding-bottom: 2px;
+    border-bottom: 1px solid currentColor;
+    color: inherit;
+    font: 600 15px/1.2 "DM Sans", sans-serif;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+}
+
+.ab-links a:hover,
+.ab-links .egg-trigger:hover {
+    opacity: 0.6;
+}
+
+.ab-links a:focus-visible,
+.ab-links .egg-trigger:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 4px;
+}
+
+/* Nos easter eggs o sublinhado pontilhado de .egg-trigger dá lugar à linha. */
+.ab-links .egg-trigger {
+    text-decoration: none;
+}
+
+/* =============================================================
+   QUEM SOU — título, ficha (como nos cases), duas colunas e a foto
+   ============================================================= */
+.ab-intro {
+    display: grid;
+    grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+    gap: clamp(32px, 6vw, 96px);
+    padding-top: clamp(120px, 14vw, 180px);
+}
+
+.ab-intro-text {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+.ab-title .sw {
+    white-space: nowrap;
+}
+
+.ab-title .sc {
+    display: inline-block;
+    text-align: center;
+}
+
+.ab-name {
+    font-style: italic;
+    color: color-mix(in srgb, var(--fg) 32%, transparent);
+}
+
+.ab-title {
+    margin: 0 0 clamp(32px, 5vw, 64px);
+    font-family: "Instrument Serif", serif;
+    font-size: clamp(42px, 5.6vw, 84px);
+    font-weight: 400;
+    line-height: 0.95;
+    letter-spacing: -0.02em;
+    text-wrap: balance;
+}
+
+/* Ficha: a mesma grade de 4 colunas com linha em cima dos cases. */
+.ab-meta {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 24px;
+    padding-top: 20px;
+    border-top: 1px solid var(--line);
+    margin-bottom: clamp(32px, 4vw, 48px);
+}
+
+.ab-meta .ab-label {
+    margin-bottom: 8px;
+}
+
+.ab-meta p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.ab-cols {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.ab-cols p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.6;
+    opacity: 0.85;
+    text-wrap: pretty;
+}
+
+.ab-cols a {
+    color: inherit;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+    transition: opacity 0.2s ease;
+}
+
+.ab-cols a:hover {
+    opacity: 0.6;
+}
+
+.ab-intro .ab-links {
+    margin-top: auto;
+    padding-top: 48px;
+}
+
+/* Foto: ocupa a altura toda do bloco de texto ao lado. */
+.ab-photo {
+    position: relative;
+    margin: 0;
+    align-self: stretch;
+    min-height: 420px;
+    overflow: hidden;
+    border-radius: var(--radius);
+    background: var(--surface);
+}
+
+.ab-photo img {
+    position: absolute;
+    inset: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 45% 30%;
+    transition: transform 1.2s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+/* Véu escuro embaixo, só para o rótulo do lugar ficar legível. */
+.ab-photo::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.55), transparent 45%);
+    opacity: 0;
+    transition: opacity 0.6s ease;
+    pointer-events: none;
+}
+
+/* O lugar: bandeira, nome e coordenadas, sobe do pé da foto. */
+.ab-photo-tag {
+    position: absolute;
+    left: 16px;
+    right: 16px;
+    bottom: 16px;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 2px 12px;
+    color: #fff;
+    opacity: 0;
+    transform: translateY(14px);
+    transition:
+        opacity 0.45s ease,
+        transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+/* Bandeira da Eslovênia, com o brasão simplificado (o Triglav e as três
+   estrelas) — sem ele, branco-azul-vermelho seria a bandeira da Rússia. */
+.ab-photo-flag {
+    grid-row: span 2;
+    display: block;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.35);
+}
+
+.ab-photo-place {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.ab-photo-coords {
+    font-size: 13px;
+    font-variant-numeric: tabular-nums;
+    color: rgba(255, 255, 255, 0.78);
+}
+
+.ab-photo:hover img {
+    transform: scale(1.05);
+}
+
+.ab-photo:hover::after,
+.ab-photo:hover .ab-photo-tag {
+    opacity: 1;
+}
+
+.ab-photo:hover .ab-photo-tag {
+    transform: none;
+}
+
+/* Telas de toque não têm hover: o lugar fica sempre à mostra. */
+@media (hover: none) {
+    .ab-photo::after,
+    .ab-photo-tag {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+/* =============================================================
+   SEÇÕES — rótulo pequeno sobre uma linha, como a ficha dos cases
+   ============================================================= */
+.ab-section {
+    margin-top: clamp(96px, 12vw, 176px);
+}
+
+.ab-section > .ab-label {
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--line);
+    margin-bottom: clamp(32px, 4vw, 48px);
+}
+
+/* Experiência: números grandes, cada um com uma linha de contexto. */
+.ab-stats {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 24px;
+    margin: 0;
+}
+
+.ab-stats dt {
+    font-family: "Instrument Serif", serif;
+    font-size: clamp(64px, 7.4vw, 112px);
+    font-weight: 400;
+    line-height: 0.85;
+    letter-spacing: -0.02em;
+    font-variant-numeric: tabular-nums;
+    margin-bottom: 16px;
+}
+
+.ab-stats dd {
+    margin: 0;
+    max-width: 24ch;
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--soft);
+}
+
+/* Valor ainda não informado: marcado para não ir ao ar por engano. */
+.ab-stats [data-pending] dt {
+    color: var(--muted);
+    text-decoration: underline wavy #e5484d;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 10px;
+}
+
+/* Abordagem: a frase sobre a imagem (como as mídias dos cases), depois as
+   listas por área. */
+.ab-banner {
+    position: relative;
+    margin: 0;
+    overflow: hidden;
+    border-radius: var(--radius);
+    aspect-ratio: 16 / 9;
+    background: #111;
+}
+
+.ab-banner img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Véu escuro só embaixo, onde mora o texto. */
+.ab-banner::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.55), transparent 55%);
+}
+
+.ab-banner-title {
+    position: absolute;
+    left: clamp(20px, 3vw, 40px);
+    bottom: clamp(20px, 3vw, 40px);
+    z-index: 1;
+    margin: 0;
+    max-width: 24ch;
+    color: #fff;
+    font-family: "Instrument Serif", serif;
+    font-size: clamp(36px, 4.6vw, 72px);
+    font-weight: 400;
+    line-height: 0.95;
+    letter-spacing: -0.015em;
+    text-wrap: balance;
+}
+
+.ab-stack {
+    display: block;
+    margin-top: clamp(32px, 4vw, 48px);
+    border-bottom: 1px solid var(--line);
+}
+.ab-stack > div {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 3fr);
+    gap: 12px 24px;
+    padding: 22px 0;
+    border-top: 1px solid var(--line);
+}
+.ab-stack h3 {
+    margin: 0;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--muted);
+    line-height: 1.7;
+}
+.ab-stack ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 32px;
+    font-size: 16px;
+}
+
+/* Marcas: frase centrada, como o "statement" das páginas de case. */
+.ab-brands {
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.ab-brands > .ab-label {
+    padding-bottom: 0;
+    border-bottom: 0;
+    margin-bottom: 20px;
+}
+
+.ab-brands-list {
+    margin: 0;
+    font-family: "Instrument Serif", serif;
+    font-size: clamp(34px, 4.6vw, 64px);
+    font-weight: 400;
+    line-height: 1.05;
+    letter-spacing: -0.015em;
+    text-wrap: balance;
+}
+
+.ab-muted {
+    color: var(--muted);
+}
+
+/* Fora da tela: a frase à esquerda, os dois easter eggs como cartões. */
+.ab-offscreen {
+    display: grid;
+    grid-template-columns: minmax(0, 4fr) minmax(0, 7fr);
+    gap: clamp(24px, 4vw, 64px);
+    align-items: stretch;
+    padding-top: 20px;
+    border-top: 1px solid var(--line);
+}
+
+.ab-offscreen-text .ab-label {
+    margin-bottom: 20px;
+}
+
+.ab-statement {
+    margin: 0;
+    max-width: 22ch;
+    font-family: "Instrument Serif", serif;
+    font-size: clamp(30px, 3vw, 44px);
+    font-weight: 400;
+    line-height: 1.05;
+    letter-spacing: -0.01em;
+    text-wrap: pretty;
+}
+
+.ab-eggs {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.ab-egg {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    min-height: 360px;
+    padding: 24px;
+    border: 0;
+    border-radius: var(--radius);
+    background: var(--surface);
+    color: inherit;
+    text-align: left;
+    font: inherit;
+    cursor: pointer;
+    overflow: hidden;
+    transition: background-color 0.3s ease;
+}
+
+.ab-egg:hover {
+    background: color-mix(in srgb, var(--surface) 86%, var(--fg));
+}
+
+.ab-egg:focus-visible {
+    outline: 2px solid var(--fg);
+    outline-offset: 3px;
+}
+
+.ab-egg-art {
+    position: relative;
+    flex: 1;
+    display: grid;
+    place-items: center;
+    min-height: 200px;
+}
+
+.ab-egg-text {
+    display: grid;
+    gap: 4px;
+}
+
+.ab-egg-title {
+    font-family: "Instrument Serif", serif;
+    font-size: clamp(26px, 2.2vw, 32px);
+    line-height: 1;
+}
+
+.ab-egg-sub {
+    font-size: 14px;
+    color: var(--soft);
+}
+
+.ab-egg-arrow {
+    position: absolute;
+    top: 20px;
+    right: 22px;
+    font-size: 18px;
+    transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.ab-egg:hover .ab-egg-arrow {
+    transform: translate(3px, -3px);
+}
+
+/* Prévia do caixote: três capas em leque e o vinil espiando atrás. */
+.ab-egg-covers {
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
+
+.ab-egg-covers img,
+.ab-egg-covers span {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 3px;
+    background: #222;
+    box-shadow: 0 12px 30px -12px rgba(0, 0, 0, 0.45);
+    transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.ab-egg-covers > :nth-child(1) { transform: translate(-30px, 6px) rotate(-9deg); }
+.ab-egg-covers > :nth-child(2) { transform: translate(-6px, -4px) rotate(-2deg); }
+.ab-egg-covers > :nth-child(3) { transform: translate(18px, 2px) rotate(6deg); }
+
+.ab-egg:hover .ab-egg-covers > :nth-child(1) { transform: translate(-44px, 10px) rotate(-14deg); }
+.ab-egg:hover .ab-egg-covers > :nth-child(3) { transform: translate(28px, 4px) rotate(10deg); }
+
+.ab-egg-disc {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 140px;
+    height: 140px;
+    margin: -70px 0 0 -40px;
+    border-radius: 50%;
+    background:
+        radial-gradient(circle, #2fbf71 0 17%, transparent 17.5%),
+        repeating-radial-gradient(circle, rgba(255, 255, 255, 0.06) 0 1px, transparent 1px 3px),
+        #141414;
+    transition: transform 0.8s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+/* Furo central. */
+.ab-egg-disc span {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 8px;
+    height: 8px;
+    margin: -4px 0 0 -4px;
+    border-radius: 50%;
+    background: var(--surface);
+}
+
+.ab-egg:hover .ab-egg-disc {
+    transform: translateX(46px) rotate(220deg);
+}
+
+/* Prévia do globo: um globo de verdade (cobe, montado por js/about.js) que gira
+   devagar e acelera no hover. O aramado em SVG é só o plano B (sem WebGL). */
+.ab-egg-globe {
+    width: 190px;
+    height: 190px;
+    color: var(--fg);
+    overflow: visible;
+}
+
+.ab-egg-live {
+    display: none;
+    width: 230px;
+    height: 230px;
+}
+
+/* O cobe embrulha o canvas num div de 100%: centraliza nos dois eixos. */
+.ab-egg-art--globo.is-live > div {
+    display: grid;
+    place-items: center;
+}
+
+.ab-egg-art--globo.is-live .ab-egg-live {
+    display: block;
+}
+
+.ab-egg-art--globo.is-live .ab-egg-globe {
+    display: none;
+}
+
+/* Contato: o "verso" escuro. Fica grudado no fundo da tela (sticky), numa
+   camada abaixo da folha branca — quando a folha acaba, ele está lá, parado.
+   Cabe numa tela: título e links em cima, o nome gigante e a linha final
+   embaixo. */
+.ab-contact {
+    position: sticky;
+    bottom: 0;
+    z-index: 0;
+    margin-top: -28px; /* fica por trás dos cantos arredondados da folha */
+    background: #101010;
+    color: #f2f2f2;
+    overflow: clip;
+}
+
+.ab-contact-sheet {
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+    padding-top: calc(28px + clamp(96px, 12vh, 140px));
+}
+
+.ab-contact-inner {
+    /* Mesma largura de conteúdo do container (1280 − 2×32), para a linha
+       alinhar com as das seções de cima. */
+    width: min(1216px, calc(100% - 64px));
+    margin: 0 auto;
+    padding: 20px 0 0;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+    gap: 24px;
+    border-top: 1px solid rgba(242, 242, 242, 0.16);
+}
+
+.ab-contact .ab-label {
+    color: rgba(242, 242, 242, 0.6);
+}
+
+.ab-contact-title {
+    margin: 0 0 32px;
+    max-width: 22ch;
+    font-family: "Instrument Serif", serif;
+    font-size: clamp(38px, min(5.4vw, 8vh), 84px);
+    font-weight: 400;
+    line-height: 0.95;
+    letter-spacing: -0.015em;
+    text-wrap: balance;
+}
+
+/* O verso: o nome de ponta a ponta, em itálico. */
+.ab-signature {
+    margin: auto 0 0;
+    padding-top: 48px;
+    padding: 0 16px;
+    font-family: "Instrument Serif", serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 15.2vw;
+    line-height: 0.85;
+    letter-spacing: -0.04em;
+    white-space: nowrap;
+    text-align: center;
+}
+
+.ab-closing {
+    width: min(1216px, calc(100% - 64px));
+    margin: 24px auto 0;
+    padding: 0 0 clamp(72px, 8vh, 96px);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 12px 24px;
+    font-size: 14px;
+    color: rgba(242, 242, 242, 0.62);
+}
+
+.ab-closing a {
+    color: #f2f2f2;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.ab-closing a:hover {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.ab-closing a:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 3px;
+}
+
+.ab-contact-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 48px 0 0;
+    font-size: 14px;
+    color: rgba(242, 242, 242, 0.62);
+}
+
+.ab-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #2fbf71;
+    animation: ab-pulse 2.4s ease-out infinite;
+}
+
+@keyframes ab-pulse {
+    0% { box-shadow: 0 0 0 0 rgba(47, 191, 113, 0.5); }
+    70%, 100% { box-shadow: 0 0 0 10px rgba(47, 191, 113, 0); }
+}
+
+/* =============================================================
+   TABLET E CELULAR — mesmas margens dos cases (20px no celular)
+   ============================================================= */
+@media (max-width: 1024px) {
+    .ab-stats {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 40px 24px;
+    }
+}
+
+@media (max-width: 900px) {
+    .ab-intro {
+        grid-template-columns: 1fr;
+        padding-top: 110px;
+    }
+
+    .ab-intro .ab-links {
+        padding-top: 32px;
+    }
+
+    .ab-photo {
+        align-self: auto;
+        min-height: 0;
+        aspect-ratio: 4 / 5;
+        max-width: 480px;
+    }
+
+    .ab-stack > div {
+        grid-template-columns: 1fr;
+    }
+
+    .ab-offscreen,
+    .ab-contact-inner {
+        grid-template-columns: 1fr;
+    }
+
+    .ab-egg {
+        min-height: 300px;
+    }
+
+    .ab-banner {
+        aspect-ratio: 4 / 3;
+    }
+}
+
+@media (max-width: 640px) {
+    .about {
+        padding-left: 20px;
+        padding-right: 20px;
+        border-radius: 0 0 20px 20px;
+    }
+
+    .ab-contact-inner,
+    .ab-closing {
+        width: calc(100% - 40px);
+    }
+
+    .ab-meta,
+    .ab-stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+    }
+
+    .ab-stats {
+        gap: 40px 20px;
+    }
+
+    .ab-cols {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .ab-title {
+        font-size: 42px;
+    }
+
+    .ab-br {
+        display: none;
+    }
+
+    .ab-stats dt {
+        font-size: 72px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .ab-dot {
+        animation: none;
+    }
+
+    .ab-photo img,
+    .ab-photo-tag {
+        transition: opacity 0.3s ease;
+    }
+
+    .ab-photo:hover img {
+        transform: none;
+    }
+
+    .ab-egg-disc,
+    .ab-egg-covers > * {
+        transition: none;
+    }
+}

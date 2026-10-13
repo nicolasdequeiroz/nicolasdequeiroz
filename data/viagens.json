@@ -1,0 +1,93 @@
+{
+  "exemplo": true,
+  "casa": {
+    "nome": "Curitiba",
+    "iso": "BR",
+    "local": [
+      -25.4284,
+      -49.2733
+    ]
+  },
+  "paises": [
+    {
+      "nome": "Brasil",
+      "iso": "BR",
+      "continente": "América do Sul",
+      "local": [
+        -14.235,
+        -51.9253
+      ],
+      "en": "Brazil"
+    },
+    {
+      "nome": "Argentina",
+      "iso": "AR",
+      "continente": "América do Sul",
+      "local": [
+        -34.6037,
+        -58.3816
+      ],
+      "en": "Argentina"
+    },
+    {
+      "nome": "Chile",
+      "iso": "CL",
+      "continente": "América do Sul",
+      "local": [
+        -33.4489,
+        -70.6693
+      ],
+      "en": "Chile"
+    },
+    {
+      "nome": "Estados Unidos",
+      "iso": "US",
+      "continente": "América do Norte",
+      "local": [
+        40.7128,
+        -74.006
+      ],
+      "en": "United States"
+    },
+    {
+      "nome": "Portugal",
+      "iso": "PT",
+      "continente": "Europa",
+      "local": [
+        38.7223,
+        -9.1393
+      ],
+      "en": "Portugal"
+    },
+    {
+      "nome": "Espanha",
+      "iso": "ES",
+      "continente": "Europa",
+      "local": [
+        40.4168,
+        -3.7038
+      ],
+      "en": "Spain"
+    },
+    {
+      "nome": "Itália",
+      "iso": "IT",
+      "continente": "Europa",
+      "local": [
+        41.9028,
+        12.4964
+      ],
+      "en": "Italy"
+    },
+    {
+      "nome": "Eslovênia",
+      "iso": "SI",
+      "continente": "Europa",
+      "local": [
+        46.0569,
+        14.5058
+      ],
+      "en": "Slovenia"
+    }
+  ]
+}

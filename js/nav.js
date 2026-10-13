@@ -13,6 +13,10 @@
 
   let isOpen = false;
 
+  const t = (en, pt) => (window.nqI18n ? window.nqI18n.t(en, pt) : en);
+  const toggleLabel = () => (isOpen ? t("Close menu", "Fechar menu") : t("Open menu", "Abrir menu"));
+  window.addEventListener("nq:langchange", () => toggle.setAttribute("aria-label", toggleLabel()));
+
   // Inicializa o estado oculto dos pills via GSAP (roda uma vez)
   function initPills() {
     if (!hasGsap()) return;
@@ -24,8 +28,8 @@
   function openMenu() {
     isOpen = true;
     toggle.classList.add("open");
-    toggle.setAttribute("aria-pressed", "true");
-    toggle.setAttribute("aria-label", "Fechar menu");
+    toggle.setAttribute("aria-expanded", "true");
+    toggle.setAttribute("aria-label", toggleLabel());
     overlay.style.display = "flex";
     overlay.setAttribute("aria-hidden", "false");
 
@@ -64,8 +68,8 @@
     if (!isOpen) return;
     isOpen = false;
     toggle.classList.remove("open");
-    toggle.setAttribute("aria-pressed", "false");
-    toggle.setAttribute("aria-label", "Abrir menu");
+    toggle.setAttribute("aria-expanded", "false");
+    toggle.setAttribute("aria-label", toggleLabel());
 
     if (!hasGsap()) {
       overlay.style.display = "none";

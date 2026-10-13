@@ -1,139 +1,173 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <script>
+    // Tema antes da pintura: escolha salva ou claro (padrão do site).
+    try { if (localStorage.getItem("nq:theme") === "dark") document.documentElement.dataset.theme = "dark"; } catch (e) {}
+  </script>
   <title>Mizzu Sushi — Nícolas de Queiróz</title>
-  <meta name="description" content="O Mizzu nasceu para traduzir a precisão da culinária japonesa em uma experiência descontraída. Entre o balcão do chef e a mesa compartilhada, o restaurante aposta em cortes autorais, ingredientes locais e um ambiente que mistura tradição e ruído urbano — um izakaya à brasileira.">
-  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/site/favicon.png">
-  <link rel="apple-touch-icon" sizes="256x256" href="../../assets/site/web-clip.png">
+  <meta name="description" content="Visual identity for a Japanese restaurant in Siqueira Campos, in the countryside of Paraná, Brazil." data-pt-content="Identidade visual para um restaurante japonês em Siqueira Campos, no interior do Paraná.">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/site/favicon.png?v=eb50665e">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../assets/site/web-clip.png?v=6ee28690">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Instrument+Serif:wght@400&display=swap">
-  <link rel="stylesheet" href="../../css/generated.css">
-  <link rel="stylesheet" href="../../css/main.css">
-  <link rel="stylesheet" href="../../css/cursor.css">
-  <link rel="stylesheet" href="../../css/nav.css">
-  <link rel="stylesheet" href="../../css/work.css">
-  <link rel="stylesheet" href="../../css/transitions.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700&family=Instrument+Serif:wght@400&display=swap">
+  <link rel="stylesheet" href="../../css/generated.css?v=df18f5aa">
+  <link rel="stylesheet" href="../../css/main.css?v=0a4d2854">
+  <link rel="stylesheet" href="../../css/cursor.css?v=a068ecc8">
+  <link rel="stylesheet" href="../../css/nav.css?v=3a0f122b">
+  <link rel="stylesheet" href="../../css/work.css?v=9d9e9f1b">
+  <link rel="stylesheet" href="../../css/transitions.css?v=4b78321a">
   <link rel="canonical" href="https://www.nicolasdequeiroz.com/work/mizzu-sushi/">
   <meta property="og:url" content="https://www.nicolasdequeiroz.com/work/mizzu-sushi/">
   <meta property="og:type" content="article">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:site_name" content="Nícolas de Queiróz">
   <meta property="og:title" content="Mizzu Sushi — Nícolas de Queiróz">
-  <meta property="og:description" content="O Mizzu nasceu para traduzir a precisão da culinária japonesa em uma experiência descontraída. Entre o balcão do chef e a mesa compartilhada, o restaurante aposta em cortes autorais, ingredientes locais e um ambiente que mistura tradição e ruído urbano — um izakaya à brasileira.">
-  <meta property="og:image" content="https://www.nicolasdequeiroz.com/assets/works/mizzu-sushi/hero.webp">
+  <meta property="og:description" content="Visual identity for a Japanese restaurant in Siqueira Campos, in the countryside of Paraná, Brazil." data-pt-content="Identidade visual para um restaurante japonês em Siqueira Campos, no interior do Paraná.">
+  <meta property="og:image" content="https://www.nicolasdequeiroz.com/assets/works/mizzu-sushi/og.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Mizzu Sushi">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Mizzu Sushi — Nícolas de Queiróz">
-  <meta name="twitter:description" content="O Mizzu nasceu para traduzir a precisão da culinária japonesa em uma experiência descontraída. Entre o balcão do chef e a mesa compartilhada, o restaurante aposta em cortes autorais, ingredientes locais e um ambiente que mistura tradição e ruído urbano — um izakaya à brasileira.">
-  <meta name="twitter:image" content="https://www.nicolasdequeiroz.com/assets/works/mizzu-sushi/hero.webp">
+  <meta name="twitter:description" content="Visual identity for a Japanese restaurant in Siqueira Campos, in the countryside of Paraná, Brazil." data-pt-content="Identidade visual para um restaurante japonês em Siqueira Campos, no interior do Paraná.">
+  <meta name="twitter:image" content="https://www.nicolasdequeiroz.com/assets/works/mizzu-sushi/og.jpg">
+  <meta name="twitter:image:alt" content="Mizzu Sushi">
 </head>
 <body class="min-h-[100%] antialiased font-dm-sans tracking-[0.025em] work-page">
-  <nav id="site-nav" class="nav--enter-pending" aria-label="Navegação principal">
-    <a href="../../" class="bubble-logo" aria-label="Nícolas de Queiróz — início">
+  <nav id="site-nav" class="nav--enter-pending" aria-label="Main navigation" data-pt-aria-label="Navegação principal">
+    <a href="../../" class="bubble-logo" aria-label="Nícolas de Queiróz — home" data-pt-aria-label="Nícolas de Queiróz — início">
       <span class="site-nav-logo">Nícolas de Queiróz</span>
     </a>
-    <button class="bubble-toggle" id="nav-toggle" type="button"
-            aria-label="Abrir menu" aria-pressed="false" aria-controls="nav-overlay">
-      <span class="menu-line"></span>
-      <span class="menu-line"></span>
-    </button>
+    <div class="nav-actions">
+      <button class="bubble-toggle bubble-lang" type="button" data-lang-toggle
+              aria-label="Mudar para português" aria-pressed="false">
+        <span class="lang-knob" aria-hidden="true"></span>
+        <span class="lang-opt" aria-hidden="true"><svg class="lang-flag" viewBox="0 0 24 24"><clipPath id="lf-us"><circle cx="12" cy="12" r="12"/></clipPath><g clip-path="url(#lf-us)"><rect width="24" height="24" fill="#fff"/><path fill="#d22f3a" d="M0 0h24v3.4H0zm0 6.9h24v3.4H0zm0 6.9h24v3.4H0zm0 6.9h24V24H0z"/><rect width="12.5" height="10.3" fill="#2b3b82"/><g fill="#fff"><circle cx="3" cy="2.6" r=".7"/><circle cx="6.2" cy="2.6" r=".7"/><circle cx="9.4" cy="2.6" r=".7"/><circle cx="4.6" cy="5.2" r=".7"/><circle cx="7.8" cy="5.2" r=".7"/><circle cx="3" cy="7.8" r=".7"/><circle cx="6.2" cy="7.8" r=".7"/><circle cx="9.4" cy="7.8" r=".7"/></g></g></svg></span>
+        <span class="lang-opt" aria-hidden="true"><svg class="lang-flag" viewBox="0 0 24 24"><clipPath id="lf-br"><circle cx="12" cy="12" r="12"/></clipPath><g clip-path="url(#lf-br)"><rect width="24" height="24" fill="#1f9a4b"/><path d="M12 3.6 21.4 12 12 20.4 2.6 12Z" fill="#f7d437"/><circle cx="12" cy="12" r="4.4" fill="#25459a"/><path d="M7.8 11.1c2.8-.7 5.6-.2 8.4 1.6" stroke="#fff" stroke-width=".9" fill="none"/></g></svg></span>
+      </button>
+      <button class="bubble-toggle bubble-theme" id="theme-toggle" type="button"
+              aria-label="Turn on dark mode" aria-pressed="false">
+        <svg class="theme-icon theme-icon--moon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"></path>
+        </svg>
+        <svg class="theme-icon theme-icon--sun" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8"></circle>
+          <path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path>
+        </svg>
+      </button>
+      <button class="bubble-toggle" id="nav-toggle" type="button"
+              aria-label="Open menu" aria-expanded="false" aria-controls="nav-overlay">
+        <span class="menu-line" aria-hidden="true"></span>
+        <span class="menu-line" aria-hidden="true"></span>
+      </button>
+    </div>
   </nav>
 
   <div id="nav-overlay" class="nav-overlay" aria-hidden="true">
-    <ul class="nav-pill-list" role="menu" aria-label="Links de navegação">
-      <li class="nav-pill-col" role="none">
-        <a href="../../#about" class="nav-pill-link" role="menuitem" data-rotation="-8">
-          <span class="nav-pill-label">about</span>
+    <ul class="nav-pill-list" aria-label="Navigation links" data-pt-aria-label="Links de navegação">
+      <li class="nav-pill-col">
+        <a href="../../sobre/" class="nav-pill-link" data-rotation="-8">
+          <span class="nav-pill-label" data-pt="sobre">about</span>
         </a>
       </li>
-      <li class="nav-pill-col" role="none">
-        <a href="../../#work" class="nav-pill-link" role="menuitem" data-rotation="8">
-          <span class="nav-pill-label">work</span>
+      <li class="nav-pill-col">
+        <a href="../../#trabalhos" class="nav-pill-link" data-rotation="8">
+          <span class="nav-pill-label" data-pt="trabalhos">work</span>
         </a>
       </li>
-      <li class="nav-pill-col" role="none">
-        <a href="../../#feed" class="nav-pill-link" role="menuitem" data-rotation="8">
+      <li class="nav-pill-col">
+        <a href="../../#feed" class="nav-pill-link" data-rotation="8">
           <span class="nav-pill-label">feed</span>
         </a>
       </li>
-      <li class="nav-pill-col" role="none">
-        <a href="../../#contact" class="nav-pill-link" role="menuitem" data-rotation="-8">
-          <span class="nav-pill-label">contact</span>
+      <li class="nav-pill-col">
+        <a href="../../sobre/#contato" class="nav-pill-link" data-rotation="-8">
+          <span class="nav-pill-label" data-pt="contato">contact</span>
         </a>
       </li>
     </ul>
   </div>
 
   <main class="work-main">
-    <div class="work-hero"><img class="work-media" style="view-transition-name: work-media" src="../../assets/works/mizzu-sushi/hero.webp" alt="Mizzu Sushi" fetchpriority="high" decoding="async"></div>
+    <div class="work-hero"><picture><source media="(max-width: 767.98px)" srcset="../../assets/works/mizzu-sushi/hero-mobile.webp"><img class="work-media" style="view-transition-name: work-media" src="../../assets/works/mizzu-sushi/hero.webp" alt="Mizzu Sushi logo over the Great Wave in dark red" data-pt-alt="Logotipo do Mizzu Sushi sobre a Grande Onda em vermelho escuro" fetchpriority="high" decoding="async"></picture></div>
     <div class="work-body">
       <section class="work-intro">
     <h1 class="work-title">Mizzu Sushi</h1>
     <div class="work-intro-meta">
-      <div class="work-meta-item"><span class="work-block-label">Serviços</span><p>Branding<br>Web Design</p></div>
-      <div class="work-meta-item"><span class="work-block-label">Setor</span><p>Restaurante</p></div>
-      <div class="work-meta-item"><span class="work-block-label">Local</span><p>Brasil</p></div>
-      <div class="work-meta-item"><span class="work-block-label">Ano</span><p>©2025</p></div>
+      <div class="work-meta-item"><span class="work-block-label" data-pt="Serviços">Services</span><p><span data-pt="Identidade visual">Visual identity</span><br><span data-pt="Embalagens">Packaging</span></p></div>
+      <div class="work-meta-item"><span class="work-block-label" data-pt="Setor">Industry</span><p><span data-pt="Restaurante japonês">Japanese restaurant</span></p></div>
+      <div class="work-meta-item"><span class="work-block-label" data-pt="Local">Location</span><p><span data-pt="Siqueira Campos, PR">Siqueira Campos, PR, Brazil</span></p></div>
+      <div class="work-meta-item"><span class="work-block-label" data-pt="Ano">Year</span><p>©2024</p></div>
     </div>
     <div class="work-intro-body">
-      <p class="work-tagline">Sushi contemporâneo com alma de izakaya.</p>
+      <p class="work-tagline" data-pt="O oceano em sua mesa.">The ocean on your table.</p>
       <div class="work-intro-text">
-        <p class="work-description">O Mizzu nasceu para traduzir a precisão da culinária japonesa em uma experiência descontraída. Entre o balcão do chef e a mesa compartilhada, o restaurante aposta em cortes autorais, ingredientes locais e um ambiente que mistura tradição e ruído urbano — um izakaya à brasileira.</p>
+        <p class="work-description" data-pt="Identidade visual para um restaurante japonês em Siqueira Campos, no interior do Paraná. O nome parte de mizu (水), água em japonês: a ligação entre a água e os frutos do mar, base da gastronomia japonesa, guia a marca. Uma adaptação da Grande Onda de Kanagawa (Hokusai, 1830) evoca a herança japonesa e traz a energia do oceano para cada aplicação.">Visual identity for a Japanese restaurant in Siqueira Campos, in the countryside of Paraná, Brazil. The name comes from mizu (水), Japanese for water: the link between water and seafood, the base of Japanese cuisine, guides the brand. An adaptation of The Great Wave off Kanagawa (Hokusai, 1830) evokes the Japanese heritage and brings the energy of the ocean to every application.</p>
       </div>
     </div>
   </section>
       <div class="work-blocks">
-    <figure class="work-block work-block--media"><img class="work-r-169" src="../../assets/site/placeholder-image.jpg" alt="Identidade visual do Mizzu aplicada" loading="lazy" decoding="async"></figure>
-    <div class="work-block work-block--text"><span class="work-block-label">Desafio</span><p>O Mizzu precisava se diferenciar em um mercado saturado de sushi delivery com estética genérica. O desafio era construir uma marca com personalidade própria — japonesa na essência, brasileira no tom — e um site que transformasse curiosidade em reserva, sem perder a leveza do ambiente físico.</p></div>
-    <div class="work-block work-block--pair"><figure><img class="work-r-45" src="../../assets/site/placeholder-image.jpg" alt="Cardápio impresso do Mizzu" loading="lazy" decoding="async"><figcaption>Cardápio</figcaption></figure><figure><img class="work-r-45" src="../../assets/site/placeholder-image.jpg" alt="Site do Mizzu em tela mobile" loading="lazy" decoding="async"><figcaption>Mobile</figcaption></figure></div>
-    <div class="work-block work-block--statement"><p>Uma marca servida em fatias precisas.</p></div>
-    <figure class="work-block work-block--media"><img class="work-r-43" src="../../assets/site/placeholder-image.jpg" alt="Fotografia do ambiente do restaurante" loading="lazy" decoding="async"></figure>
-    <div class="work-block work-block--text"><span class="work-block-label">Solução</span><p>A identidade parte de um sistema tipográfico de contraste — serifa expressiva para o discurso, sans para a operação — e uma paleta que troca o vermelho óbvio por tons de cerâmica e nori. No site, o cardápio vira navegação: cada categoria é uma seção, cada prato uma composição fotográfica em tela cheia.</p></div>
-    <figure class="work-block work-block--capture"><img src="../../assets/site/placeholder-image.jpg" alt="Página inicial do site do Mizzu, do topo ao rodapé" loading="lazy" decoding="async"><figcaption>Home completa</figcaption></figure>
+    <figure class="work-block work-block--media"><img class="work-r-169" src="../../assets/works/mizzu-sushi/assinaturas.webp" alt="Four versions of the Mizzu Sushi logo in red, black, cream and white" data-pt-alt="Quatro versões do logotipo do Mizzu Sushi em vermelho, preto, creme e branco" loading="lazy" decoding="async"><figcaption data-pt="Assinaturas">Signatures</figcaption></figure>
+    <div class="work-block work-block--text"><span class="work-block-label" data-pt="Conceito">Concept</span><p data-pt="Mizu (水) significa água. A palavra virou o ponto de partida: a água como elo entre o oceano e o prato. O ideograma assume o papel de símbolo, a tipografia serifada com espaçamento largo traz a calma da tradição, e o vermelho com o marrom quase preto remetem à laca e à cerâmica japonesas.">Mizu (水) means water. The word became the starting point: water as the link between the ocean and the plate. The ideogram takes the role of the symbol, the widely spaced serif typography brings the calm of tradition, and the red with a near-black brown recalls Japanese lacquer and ceramics.</p></div>
+    <figure class="work-block work-block--media"><video class="work-r-169" src="../../assets/works/mizzu-sushi/selo.mp4" autoplay muted loop playsinline preload="metadata" poster="../../assets/works/mizzu-sushi/selo-poster.webp" aria-label="Circular Mizzu Sushi seal spinning over a wave pattern" data-pt-aria-label="Selo circular do Mizzu Sushi girando sobre padrão de ondas"></video><figcaption data-pt="Selo">Seal</figcaption></figure>
+    <div class="work-block work-block--pair"><figure><img class="work-r-45" src="../../assets/works/mizzu-sushi/poster.webp" alt="Red poster with the Great Wave on an easel" data-pt-alt="Pôster vermelho com a Grande Onda em um cavalete" loading="lazy" decoding="async"><figcaption data-pt="Pôster">Poster</figcaption></figure><figure><img class="work-r-45" src="../../assets/works/mizzu-sushi/mizu-agua.webp" alt="The ideogram 水 with the words Mizu and Water" data-pt-alt="Ideograma 水 com as palavras Mizu e Água" loading="lazy" decoding="async"><figcaption data-pt="水 · Água">水 · Water</figcaption></figure></div>
+    <div class="work-block work-block--statement"><p data-pt="Uma onda de 1830 como assinatura.">A wave from 1830 as a signature.</p></div>
+    <figure class="work-block work-block--media"><img class="work-r-169" src="../../assets/works/mizzu-sushi/embalagem.webp" alt="Sushi tray with a red Mizzu band, soy sauce and chopsticks" data-pt-alt="Bandeja de sushi com cinta vermelha do Mizzu, molho shoyu e hashis" loading="lazy" decoding="async"><figcaption data-pt="Embalagem">Packaging</figcaption></figure>
+    <div class="work-block work-block--text"><span class="work-block-label" data-pt="Aplicações">Applications</span><p data-pt="O sistema se estende por todo o contato com o cliente: cinta das bandejas de delivery, envelope do hashi, ecobag, cartão, uniforme e o perfil no Instagram. Em cada peça, a onda e o selo aparecem com parcimônia, deixando o vermelho fazer o trabalho.">The system extends across every customer touchpoint: the band on delivery trays, the chopstick sleeve, tote bag, business card, uniform and the Instagram profile. On every piece, the wave and the seal appear sparingly, letting the red do the work.</p></div>
+    <div class="work-block work-block--pair"><figure><img class="work-r-45" src="../../assets/works/mizzu-sushi/ecobag.webp" alt="Cotton tote bag with the Great Wave in red" data-pt-alt="Ecobag de algodão com a Grande Onda em vermelho" loading="lazy" decoding="async"><figcaption data-pt="Ecobag">Tote bag</figcaption></figure><figure><img class="work-r-45" src="../../assets/works/mizzu-sushi/instagram.webp" alt="The Mizzu Sushi Instagram profile on a phone" data-pt-alt="Perfil do Mizzu Sushi no Instagram em um celular" loading="lazy" decoding="async"><figcaption>Instagram</figcaption></figure></div>
+    <figure class="work-block work-block--media"><img class="work-r-43" src="../../assets/works/mizzu-sushi/hashi.webp" alt="Chopsticks in a red Mizzu sleeve on a black plate" data-pt-alt="Hashis em envelope vermelho do Mizzu sobre prato preto" loading="lazy" decoding="async"><figcaption data-pt="Hashi">Chopsticks</figcaption></figure>
+    <figure class="work-block work-block--media"><img class="work-r-43" src="../../assets/works/mizzu-sushi/cartao.webp" alt="Black Mizzu business card among cherry blossoms" data-pt-alt="Cartão preto do Mizzu entre flores de cerejeira" loading="lazy" decoding="async"><figcaption data-pt="Cartão">Business card</figcaption></figure>
+    <figure class="work-block work-block--media"><img class="work-r-169" src="../../assets/works/mizzu-sushi/camiseta.webp" alt="White T-shirt with the Mizzu Sushi logo" data-pt-alt="Camiseta branca com o logotipo do Mizzu Sushi" loading="lazy" decoding="async"><figcaption data-pt="Uniforme">Uniform</figcaption></figure>
+    <figure class="work-block work-block--media"><img class="work-r-169" src="../../assets/works/mizzu-sushi/embalagem-2.webp" alt="Tray of assorted sushi with the Mizzu band" data-pt-alt="Bandeja de sushis variados com a cinta do Mizzu" loading="lazy" decoding="async"></figure>
   </div>
       <section class="work-outro">
-    <blockquote class="work-testimonial">
-      <p>“O processo foi direto e o resultado passou longe do que a gente via no mercado. A marca virou assunto entre os clientes.”</p>
-      <cite>Nome do Cliente · Sócio · Mizzu Sushi</cite>
-    </blockquote>
     <div class="work-credits">
-      <span class="work-block-label">Créditos</span>
+      <span class="work-block-label" data-pt="Créditos">Credits</span>
       <dl>
-        <div class="work-credit"><dt>Fotografia</dt><dd>Nome do Fotógrafo</dd></div>
-        <div class="work-credit"><dt>Desenvolvimento</dt><dd>Nícolas de Queiróz</dd></div>
+        <div class="work-credit"><dt data-pt="Design e aplicações">Design and applications</dt><dd>Nícolas de Queiróz</dd></div>
+        <div class="work-credit"><dt>Briefing</dt><dd>Matheus Morita</dd></div>
       </dl>
     </div>
   </section>
-      <a href="../jabutibar/" class="work-next" aria-label="Próximo projeto: JabutiBar">
+      <a href="../jabutibar/" class="work-next" aria-label="Next project: JabutiBar" data-pt-aria-label="Próximo projeto: JabutiBar">
     <img class="work-next-media" src="../../assets/works/jabutibar/hero.webp" alt="" loading="lazy" decoding="async">
     <span class="work-next-content">
-      <span class="work-block-label">Próximo projeto</span>
+      <span class="work-block-label" data-pt="Próximo projeto">Next project</span>
       <span class="work-next-title">JabutiBar</span>
     </span>
   </a>
     </div>
     <noscript>
       <p class="work-noscript">
-        <a href="../../">← Voltar ao portfólio</a> · Mizzu Sushi
+        <a href="../../">← Back to portfolio</a> · Mizzu Sushi
       </p>
     </noscript>
   </main>
 
   <footer>
     <span class="site-copyright">© 2026 Nícolas de Queiróz</span>
-    <a href="../../" class="back-home bubble-back-home" aria-label="Voltar para a home">
+    <a href="../../" class="back-home bubble-back-home" aria-label="Back to home" data-pt-aria-label="Voltar para o início">
       <svg class="back-home-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
         <path d="M13 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
       </svg>
-      <span>Home</span>
+      <span data-pt="Início">Home</span>
     </a>
   </footer>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
-  <script src="../../js/view-transitions.js" defer></script>
-  <script src="../../js/nav.js" defer></script>
-  <script src="../../js/nav-enter.js" defer></script>
-  <script src="../../js/nav-theme.js" defer></script>
-  <script src="../../js/cursor.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js" defer></script>
+  <script src="../../js/i18n.js?v=d36dfdb5" defer></script>
+  <script src="../../js/view-transitions.js?v=c40ef3f9" defer></script>
+  <script src="../../js/theme.js?v=4505fa4f" defer></script>
+  <script src="../../js/nav.js?v=14cecfbe" defer></script>
+  <script src="../../js/nav-enter.js?v=a631242b" defer></script>
+  <script src="../../js/nav-theme.js?v=aa9c5c32" defer></script>
+  <script src="../../js/cursor.js?v=2f59726e" defer></script>
+  <script src="../../js/reveal.js?v=264152c8" defer></script>
 </body>
 </html>

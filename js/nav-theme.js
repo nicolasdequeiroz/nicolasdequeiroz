@@ -5,6 +5,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const DARK_THRESHOLD = 0.42;
   const isWorkPage = document.body.classList.contains("work-page");
   const isHomePage = !isWorkPage && document.getElementById("carousel-target");
+  // Superfícies escuras fora dos cases (ex.: o contato da página sobre).
+  const darkBlocks = Array.from(document.querySelectorAll("[data-nav-dark]"));
+  // Folha que passa por cima dos blocos escuros (ex.: o verso sticky do sobre).
+  const sheet = document.querySelector("[data-nav-sheet]");
 
   let heroIsDark = false;
   let ticking = false;
@@ -57,13 +61,22 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  function isOverHero() {
-    const hero = document.querySelector(".work-hero");
-    if (!hero) return false;
-    const heroRect = hero.getBoundingClientRect();
+  const spans = (el, y) => {
+    if (!el) return false;
+    const r = el.getBoundingClientRect();
+    return r.top < y && r.bottom > y;
+  };
+
+  // O hero é sticky durante a página inteira, então o retângulo dele sempre
+  // cobre a nav. O que decide o tema é a superfície que está POR CIMA na altura
+  // da nav: o next case (escuro), o corpo branco ou, se nenhum, o hero.
+  function surfaceUnderNav() {
     const navRect = nav.getBoundingClientRect();
-    const sampleY = navRect.top + navRect.height * 0.5;
-    return heroRect.top < sampleY && heroRect.bottom > sampleY;
+    const y = navRect.top + navRect.height * 0.5;
+    if (spans(document.querySelector(".work-next"), y)) return "dark";
+    if (spans(document.querySelector(".work-body"), y)) return "light";
+    if (spans(document.querySelector(".work-hero"), y)) return "hero";
+    return "light";
   }
 
   function updateTheme() {
@@ -72,10 +85,14 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
     if (!isWorkPage) {
-      setTheme(false);
+      const navRect = nav.getBoundingClientRect();
+      const y = navRect.top + navRect.height * 0.5;
+      if (sheet && spans(sheet, y)) return setTheme(false);
+      setTheme(darkBlocks.some((el) => spans(el, y)));
       return;
     }
-    setTheme(isOverHero() ? heroIsDark : false);
+    const surface = surfaceUnderNav();
+    setTheme(surface === "dark" || (surface === "hero" && heroIsDark));
   }
 
   function onScrollOrResize() {
@@ -94,7 +111,11 @@ document.addEventListener("DOMContentLoaded", () => {
     window.addEventListener("scroll", onScrollOrResize, { passive: true });
     window.addEventListener("resize", onScrollOrResize);
   } else {
-    setTheme(false);
+    updateTheme();
+    if (darkBlocks.length) {
+      window.addEventListener("scroll", onScrollOrResize, { passive: true });
+      window.addEventListener("resize", onScrollOrResize);
+    }
   }
 
   window.addEventListener("pagereveal", () => {

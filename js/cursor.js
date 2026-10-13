@@ -44,6 +44,19 @@ document.addEventListener("DOMContentLoaded", function() {
         if (e.target.closest(targetSelector)) cursor.classList.remove('hovered');
     });
     
+    // Dialogs modais ficam na "top layer", acima de tudo — inclusive da
+    // bolinha no <body>. Enquanto um estiver aberto, a bolinha mora nele.
+    const syncLayer = () => {
+        const open = document.querySelector('dialog[open]');
+        const host = open || document.body;
+        if (cursor.parentElement !== host) host.appendChild(cursor);
+    };
+    new MutationObserver(syncLayer).observe(document.body, {
+        subtree: true,
+        attributes: true,
+        attributeFilter: ['open'],
+    });
+
     // Saiu da janela? Esconde.
     document.addEventListener('mouseleave', () => cursor.classList.remove('visible'));
     document.addEventListener('mouseenter', () => cursor.classList.add('visible'));
