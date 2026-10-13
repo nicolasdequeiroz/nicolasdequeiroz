@@ -21,7 +21,7 @@ Portfólio estático de **Nícolas de Queiróz** — Branding & Web Design.
 4. **Mantenha escopo mínimo** — não refatore CSS/JS não relacionados à tarefa.
 5. **Preserve URLs** — projetos ficam em `/work/{slug}/` (com barra final).
 6. **Use `assets/`** para imagens, vídeos e ícones. Caminhos no JSON são relativos à raiz (`assets/foo.webp`).
-7. **Teste localmente** com `python3 -m http.server` na raiz do repo (ex.: porta 9321).
+7. **Teste localmente** com `python3 -m http.server` na raiz do repo (ex.: porta 8321).
 
 ### Não faça
 
@@ -155,8 +155,8 @@ Se alterar só CSS/JS da home ou carrossel, build **não** é necessário. Se al
 
 ```bash
 # Na raiz do repo
-python3 -m http.server 9321 --bind 127.0.0.1
-# Abrir http://127.0.0.1:9321/
+python3 -m http.server 8321 --bind 127.0.0.1
+# Abrir http://127.0.0.1:8321/
 ```
 
 Após mudar `works.json` ou template, rode `npm run build` antes de testar páginas de work.

@@ -1,0 +1,4 @@
+.taste-skill/
+.DS_Store
+.playwright-cli/
+.claude/settings.local.json
