@@ -606,5 +606,169 @@
         "role": "Design"
       }
     ]
+  },
+  "tasty-nutrition": {
+    "tagline": "Flavor first. Always.",
+    "description": "Visual identity for Tasty Nutrition, a premium supplements brand rooted in health, well-being and lifestyle. Instead of the category’s aggressive look, a script lettering inside a soft container, a palette that comes from the pantry and a voice that invites rather than demands.",
+    "services": [
+      "Visual identity",
+      "Brand guidelines",
+      "Packaging"
+    ],
+    "industry": "Supplements",
+    "hero": {
+      "alt": "Tasty creatine tub with green lettering next to a glass of water and a scoop, on a green cube under a blue sky"
+    },
+    "blocks": [
+      {
+        "text": "It was all in the name."
+      },
+      {
+        "label": "Concept",
+        "text": "Tasty is not a word about performance, strength or pushing limits. It is a word about pleasure. The goal was a brand you could feel in your hand: with volume, weight and the softness of a surface that gives when pressed. Less like a symbol and more like food."
+      },
+      {
+        "alt": "Tasty logo, cream script lettering inside a cocoa-brown container with concave sides, on a vanilla background",
+        "caption": "Logo"
+      },
+      {
+        "label": "Positioning",
+        "text": "A premium supplements brand, rooted in health, well-being and lifestyle. Performance is there, but it does not drive the language. The core audience is adults over 35 with busy routines, people who have already tried things they could not keep up: for them, taste and convenience matter as much as the formula."
+      },
+      {
+        "label": "Construction",
+        "text": "The container comes from the intersection of circles and ellipses. Its concave sides and flared tips create a shape under tension, full in the center and squeezed at the edges, as if pressed from the outside in. The lettering came next, drawn on a grid of slanted lines, with a continuous gesture and soft terminals."
+      },
+      {
+        "items": [
+          {
+            "alt": "Circles and ellipses that give rise to the brand container",
+            "caption": "Circles and ellipses"
+          },
+          {
+            "alt": "Grid of slanted lines the lettering was drawn on",
+            "caption": "Lettering grid"
+          }
+        ]
+      },
+      {
+        "alt": "Tasty logo on mint green, plum and cocoa",
+        "caption": "Color versions"
+      },
+      {
+        "items": [
+          {
+            "alt": "Logo with the Nutrition and Health & Lifestyle descriptors",
+            "caption": "Signatures"
+          },
+          {
+            "alt": "Tasty lettering with Nutrition, cream on plum",
+            "caption": "Lettering"
+          }
+        ]
+      },
+      {
+        "label": "Colors",
+        "text": "The palette comes from the pantry, not the lab. Mint, pistachio and avocado anchor the brand in warm greens, far from the clinical pharmacy green, on a vanilla base. Plum, hazelnut, chocolate and cocoa translate what is inside the tub, and gold leaf, in fine lines and details, carries the premium feel."
+      },
+      {
+        "items": [
+          {
+            "name": "Mint"
+          },
+          {
+            "name": "Pistachio"
+          },
+          {
+            "name": "Avocado"
+          },
+          {
+            "name": "Plum"
+          },
+          {
+            "name": "Vanilla"
+          },
+          {
+            "name": "Hazelnut"
+          },
+          {
+            "name": "Chocolate"
+          },
+          {
+            "name": "Cocoa"
+          },
+          {
+            "name": "Gold leaf"
+          }
+        ]
+      },
+      {
+        "text": "A good supplement is the one you take every day."
+      },
+      {
+        "label": "Typography",
+        "text": "Ranade for headlines and highlights: geometric, with clean terminals, it balances the hand-drawn lettering with a rational structure. Instrument Sans for text and information, from captions to the nutrition table. The lettering never becomes a typeface: it is a signature."
+      },
+      {
+        "label": "Graphic system",
+        "text": "The shape that holds the lettering also stands on its own, as a frame, a tag or a crop. Repeated in a grid, it becomes the brand pattern. The script can also bleed off the edge: since the letters are unique, Tasty stays recognizable even when half of it is cut off."
+      },
+      {
+        "alt": "Green pattern made of the container shape repeated in a grid, on vanilla",
+        "caption": "Pattern"
+      },
+      {
+        "alt": "Plum Tasty lettering cut off at the edges, next to a photo with a plum bottle and a tennis ball",
+        "caption": "Bleeding lettering"
+      },
+      {
+        "label": "Photography",
+        "text": "Real people, in real movement, in everyday situations. Faces that show pleasure and rest, not strain. Natural light, sky, soft shadows and food nearby; no gym interiors, power poses or dark backgrounds."
+      },
+      {
+        "alt": "Three photos: a woman smiling on a yoga mat with a Tasty tub, a woman lying on the grass and someone holding a bottle on a court",
+        "caption": "Photography"
+      },
+      {
+        "alt": "A woman smiling as she eats and a plum card with the Tasty lettering held on a fork",
+        "caption": "Social media"
+      },
+      {
+        "alt": "Tasty tub among green apples and the Health, made tasty mark on green",
+        "caption": "Health, made tasty"
+      },
+      {
+        "alt": "Green polo shirt and black tank top with the Tasty logo, next to the embossed lettering on vanilla",
+        "caption": "Uniforms"
+      },
+      {
+        "label": "Packaging",
+        "text": "On the tub, the lettering spans the front edge to edge and is cut off by the curve, just as the guidelines allow. The color changes with each line, from mint to plum, without breaking the system, and the gold sits in the finishing line."
+      },
+      {
+        "alt": "Two Tasty creatine tubs, one with green lettering and one in plum",
+        "caption": "Creatine line"
+      },
+      {
+        "alt": "Someone taking a Tasty tub out of a tote bag and the same tub among green apples",
+        "caption": "Everyday use"
+      },
+      {
+        "alt": "Three Tasty capsule bottles in dark green, plum and light green",
+        "caption": "Capsules"
+      },
+      {
+        "alt": "Green Tasty capsule bottle tipped over, with capsules spilling on a pistachio background",
+        "caption": "Bottle"
+      },
+      {
+        "text": "A good brand is one you recognize without reading it."
+      }
+    ],
+    "credits": [
+      {
+        "role": "Design"
+      }
+    ]
   }
 }

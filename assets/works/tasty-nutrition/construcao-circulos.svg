@@ -1,0 +1,21 @@
+<svg overflow="visible" width="1920" height="1080" viewBox="0 0 1920 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Frame 115" clip-path="url(#clip0_0_4)">
+<rect width="1920" height="1080" fill="#F6EDE1"/>
+<circle id="Ellipse 3" cx="960" cy="-727" r="1132" stroke="black"/>
+<ellipse id="Ellipse 11" cx="960" cy="-716.731" rx="1011.61" ry="1142.27" stroke="black"/>
+<ellipse id="Ellipse 12" cx="960" cy="1796.63" rx="1011.61" ry="1142.27" stroke="black"/>
+<circle id="Ellipse 5" cx="960" cy="1807" r="1132" stroke="black"/>
+<circle id="Ellipse 2" cx="1601.5" cy="540" r="288.027" stroke="black"/>
+<ellipse id="Ellipse 6" cx="318.5" cy="540" rx="287.745" ry="288.027" stroke="black"/>
+<circle id="Ellipse 7" cx="549.533" cy="344.464" r="15.0461" stroke="black"/>
+<circle id="Ellipse 9" cx="549.533" cy="735.536" r="15.0461" stroke="black"/>
+<circle id="Ellipse 8" cx="1370.47" cy="344.464" r="15.0461" stroke="black"/>
+<circle id="Ellipse 10" cx="1370.47" cy="735.536" r="15.0461" stroke="black"/>
+<path id="Ellipse 13" d="M1212.89 597.82C1239.21 622.09 1235.58 669.114 1204.44 702.885C1173.3 736.657 1126.72 744.071 1100.4 719.801C1074.08 695.531 1077.71 648.508 1108.85 614.736C1140 580.964 1186.57 573.55 1212.89 597.82Z" stroke="black"/>
+</g>
+<defs>
+<clipPath id="clip0_0_4">
+<rect width="1920" height="1080" fill="white"/>
+</clipPath>
+</defs>
+</svg>

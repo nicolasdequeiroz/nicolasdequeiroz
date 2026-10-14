@@ -893,6 +893,245 @@
           "name": "Nícolas de Queiróz"
         }
       ]
+    },
+    {
+      "slug": "tasty-nutrition",
+      "title": "Tasty Nutrition",
+      "tagline": "Sabor primeiro. Sempre.",
+      "description": "Identidade visual para a Tasty Nutrition, marca premium de suplementos ancorada em saúde, bem-estar e lifestyle. No lugar da estética agressiva do segmento, um lettering script dentro de um contêiner macio, uma paleta que nasce da despensa e uma linguagem que convida em vez de cobrar.",
+      "year": 2026,
+      "services": [
+        "Identidade visual",
+        "Brandbook",
+        "Embalagens"
+      ],
+      "industry": "Suplementos",
+      "thumb": "assets/works/tasty-nutrition/hero.webp",
+      "hero": {
+        "type": "image",
+        "src": "assets/works/tasty-nutrition/hero.webp",
+        "mobile": "assets/works/tasty-nutrition/hero-mobile.webp",
+        "alt": "Pote de creatina Tasty com lettering verde ao lado de um copo d’água e um scoop, sobre um cubo verde e céu azul"
+      },
+      "blocks": [
+        {
+          "type": "statement",
+          "text": "Tudo já estava no nome."
+        },
+        {
+          "type": "text",
+          "label": "Conceito",
+          "text": "Tasty não é uma palavra sobre performance, força ou superação. É uma palavra sobre prazer. A busca foi por uma marca que se pudesse sentir com a mão: com volume, com peso, com a maciez de uma superfície que cede quando apertada. Menos parecida com um símbolo e mais parecida com um alimento."
+        },
+        {
+          "type": "image",
+          "src": "assets/works/tasty-nutrition/logotipo.svg",
+          "alt": "Logotipo Tasty em lettering creme dentro de um contêiner marrom-cacau de laterais côncavas, sobre fundo baunilha",
+          "ratio": "16:9",
+          "caption": "Logotipo"
+        },
+        {
+          "type": "text",
+          "label": "Posicionamento",
+          "text": "Uma marca de suplementos premium, ancorada em saúde, bem-estar e lifestyle. Performance existe, mas não comanda a linguagem. O público prioritário são adultos a partir dos 35 anos, com rotina cheia, que já tentaram o que não conseguiram manter: para eles, sabor e praticidade pesam tanto quanto a fórmula."
+        },
+        {
+          "type": "text",
+          "label": "Construção",
+          "text": "O contêiner nasce da interseção de círculos e elipses. As laterais côncavas e as pontas expandidas criam uma forma sob tensão, cheia no centro e comprimida nas bordas, como se fosse pressionada de fora para dentro. O lettering veio depois, sobre uma grade de linhas inclinadas, com gesto contínuo e terminais macios."
+        },
+        {
+          "type": "pair",
+          "items": [
+            {
+              "src": "assets/works/tasty-nutrition/construcao-circulos.svg",
+              "alt": "Círculos e elipses que dão origem ao contêiner da marca",
+              "caption": "Círculos e elipses",
+              "ratio": "16:9"
+            },
+            {
+              "src": "assets/works/tasty-nutrition/construcao-grade.svg",
+              "alt": "Grade de linhas inclinadas sobre a qual o lettering foi desenhado",
+              "caption": "Grade do lettering",
+              "ratio": "16:9"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "src": "assets/works/tasty-nutrition/versoes.webp",
+          "alt": "Logotipo Tasty sobre verde-hortelã, ameixa e cacau",
+          "ratio": "16:9",
+          "caption": "Versões de cor"
+        },
+        {
+          "type": "pair",
+          "items": [
+            {
+              "src": "assets/works/tasty-nutrition/assinaturas.webp",
+              "alt": "Logotipo com os descritivos Nutrition e Health & Lifestyle",
+              "caption": "Assinaturas",
+              "ratio": "16:9"
+            },
+            {
+              "src": "assets/works/tasty-nutrition/roxo.webp",
+              "alt": "Lettering Tasty com Nutrition, em creme sobre ameixa",
+              "caption": "Lettering",
+              "ratio": "16:9"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "label": "Cores",
+          "text": "A paleta nasce da despensa, não do laboratório. Hortelã, pistache e abacate ancoram a marca em verdes quentes, longe do verde clínico de farmácia, sobre uma base de baunilha. Ameixa, avelã, chocolate e cacau traduzem o que existe dentro do pote, e a folha de ouro, em filetes e detalhes, sustenta o premium."
+        },
+        {
+          "type": "palette",
+          "items": [
+            {
+              "name": "Hortelã",
+              "hex": "#4A7A31"
+            },
+            {
+              "name": "Pistache",
+              "hex": "#B9CF7C"
+            },
+            {
+              "name": "Abacate",
+              "hex": "#1F3A1E"
+            },
+            {
+              "name": "Ameixa",
+              "hex": "#73325A"
+            },
+            {
+              "name": "Baunilha",
+              "hex": "#F6EDE1"
+            },
+            {
+              "name": "Avelã",
+              "hex": "#C29A74"
+            },
+            {
+              "name": "Chocolate",
+              "hex": "#5E3823"
+            },
+            {
+              "name": "Cacau",
+              "hex": "#2A1A12"
+            },
+            {
+              "name": "Folha de ouro",
+              "hex": "#C9AE70"
+            }
+          ]
+        },
+        {
+          "type": "statement",
+          "text": "Suplemento bom é o que a pessoa toma todo dia."
+        },
+        {
+          "type": "text",
+          "label": "Tipografia",
+          "text": "Ranade nos títulos e destaques: geométrica, de terminais limpos, equilibra o gesto manual do lettering com uma estrutura racional. Instrument Sans no texto e na informação, da legenda à tabela nutricional. O lettering nunca vira fonte: ele é assinatura."
+        },
+        {
+          "type": "text",
+          "label": "Sistema gráfico",
+          "text": "A forma que abriga o lettering também vive sozinha, como moldura, etiqueta ou recorte. Repetida em grade, vira o padrão da marca. E o script pode sangrar para fora da peça: como as letras são únicas, a Tasty continua reconhecível mesmo pela metade."
+        },
+        {
+          "type": "image",
+          "src": "assets/works/tasty-nutrition/padrao.webp",
+          "alt": "Padrão verde formado pela forma do contêiner repetida em grade, sobre baunilha",
+          "ratio": "16:9",
+          "caption": "Padrão"
+        },
+        {
+          "type": "image",
+          "src": "assets/works/tasty-nutrition/sangra.webp",
+          "alt": "Lettering Tasty em ameixa cortado nas bordas, ao lado de uma foto com garrafa ameixa e bola de tênis",
+          "ratio": "16:9",
+          "caption": "Lettering em sangramento"
+        },
+        {
+          "type": "text",
+          "label": "Fotografia",
+          "text": "Pessoas reais, em movimento real, em situações do dia a dia. Rostos que expressam prazer e descanso, não esforço. Luz natural, céu, sombras suaves e alimento por perto; nada de interior de academia, pose de força ou fundo escuro."
+        },
+        {
+          "type": "image",
+          "src": "assets/works/tasty-nutrition/pessoas.webp",
+          "alt": "Três fotos: mulher sorrindo em um tapete de yoga com o pote Tasty, mulher deitada na grama e alguém segurando uma garrafa na quadra",
+          "ratio": "16:9",
+          "caption": "Fotografia"
+        },
+        {
+          "type": "image",
+          "src": "assets/works/tasty-nutrition/comendo.webp",
+          "alt": "Mulher sorrindo ao comer e um cartão ameixa com o lettering Tasty preso a um garfo",
+          "ratio": "16:9",
+          "caption": "Redes sociais"
+        },
+        {
+          "type": "image",
+          "src": "assets/works/tasty-nutrition/macas.webp",
+          "alt": "Pote Tasty entre maçãs verdes e o selo Health, made tasty sobre verde",
+          "ratio": "16:9",
+          "caption": "Health, made tasty"
+        },
+        {
+          "type": "image",
+          "src": "assets/works/tasty-nutrition/uniformes.webp",
+          "alt": "Camisa polo verde e regata preta com o logotipo Tasty, ao lado do lettering em relevo sobre baunilha",
+          "ratio": "16:9",
+          "caption": "Uniformes"
+        },
+        {
+          "type": "text",
+          "label": "Embalagens",
+          "text": "No pote, o lettering ocupa a frente de ponta a ponta e é cortado pela curvatura, como o manual prevê. A cor muda com a linha, do hortelã à ameixa, sem quebrar a unidade, e o dourado fica no filete de acabamento."
+        },
+        {
+          "type": "image",
+          "src": "assets/works/tasty-nutrition/potes.webp",
+          "alt": "Dois potes de creatina Tasty, um com lettering verde e outro ameixa",
+          "ratio": "16:9",
+          "caption": "Linha de creatina"
+        },
+        {
+          "type": "image",
+          "src": "assets/works/tasty-nutrition/sacola.webp",
+          "alt": "Pessoa tirando um pote Tasty de uma ecobag e o mesmo pote entre maçãs verdes",
+          "ratio": "16:9",
+          "caption": "No dia a dia"
+        },
+        {
+          "type": "image",
+          "src": "assets/works/tasty-nutrition/frascos.webp",
+          "alt": "Três frascos de cápsulas Tasty em verde-escuro, ameixa e verde-claro",
+          "ratio": "16:9",
+          "caption": "Cápsulas"
+        },
+        {
+          "type": "image",
+          "src": "assets/works/tasty-nutrition/capsulas.webp",
+          "alt": "Frasco verde de cápsulas Tasty tombado, com cápsulas espalhadas sobre fundo pistache",
+          "ratio": "16:9",
+          "caption": "Frasco"
+        },
+        {
+          "type": "statement",
+          "text": "Marca boa é a que a pessoa reconhece sem precisar ler."
+        }
+      ],
+      "credits": [
+        {
+          "role": "Design",
+          "name": "Nícolas de Queiróz"
+        }
+      ]
     }
   ]
 }
