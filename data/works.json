@@ -845,7 +845,7 @@
         {
           "type": "text",
           "label": "Aplicações",
-          "text": "A identidade ganha corpo no papel: o dourado em relevo sobre o verde profundo, a coruja em marca d’água e o monograma como assinatura, onde o nome completo não cabe."
+          "text": "A identidade ganha corpo no papel, no tecido e na tela: o dourado em relevo sobre o verde profundo, a coruja em marca d’água e o monograma como assinatura, onde o nome completo não cabe."
         },
         {
           "type": "image",
@@ -860,6 +860,27 @@
           "alt": "Dois cartões de visita verdes, um com o logotipo dourado e outro com os dados de contato e a coruja em marca d’água",
           "ratio": "16:9",
           "caption": "Cartões de visita"
+        },
+        {
+          "type": "image",
+          "src": "assets/works/frias-constantino/pecas-impressas.webp",
+          "alt": "Três peças impressas: uma página areia com o logotipo e uma foto de escritório, um retrato da advogada sobre fundo verde e uma página escura com a coruja e uma frase",
+          "ratio": "16:9",
+          "caption": "Peças impressas"
+        },
+        {
+          "type": "image",
+          "src": "assets/works/frias-constantino/uniformes.webp",
+          "alt": "Uniformes: uma polo verde-clara com o monograma FC bordado, o monograma em relevo seco sobre papel areia e uma camisa verde-escura com o logotipo",
+          "ratio": "16:9",
+          "caption": "Uniformes"
+        },
+        {
+          "type": "image",
+          "src": "assets/works/frias-constantino/perfil.webp",
+          "alt": "Perfil da Frias Constantino Advocacia em uma rede social, com capa verde, o monograma como foto e a bio Advocacia tributária preventiva e estratégica",
+          "ratio": "16:9",
+          "caption": "Perfil nas redes"
         },
         {
           "type": "statement",
