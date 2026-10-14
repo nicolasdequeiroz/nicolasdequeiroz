@@ -177,17 +177,144 @@
     ]
   },
   "move": {
-    "description": "Urban mobility platform with a dynamic identity and digital interface.",
+    "tagline": "More technique. More control. More movement.",
+    "description": "Visual identity for Move+, a conditioning and strength training center. A slanted logo, in dark olive green with a lime-green +, conveys speed and progress, and is applied from the icon on a watch to a T-shirt, with a direct voice that promises more technique, more control and more movement.",
     "services": [
-      "Branding",
-      "Product Design"
+      "Visual identity",
+      "Applications"
+    ],
+    "industry": "Training center",
+    "hero": {
+      "alt": "Move+: conditioning and strength"
+    },
+    "blocks": [
+      {
+        "label": "About the brand",
+        "text": "Move+ is a conditioning and strength training center. It offers professional guidance, focus on goals and a path built on consistency. The brand translates that into slanted letters that keep moving forward and a lime-green + sign: always one step more."
+      },
+      {
+        "alt": "Woman in a push-up position on a studio floor, with the Move+ logo and the line Conditioning and Strength",
+        "caption": "Cover"
+      },
+      {
+        "label": "Logo",
+        "text": "The logo is fully slanted, with diagonal cuts in the letters, to give speed. The dark olive green brings firmness and the lime-green + is the only spot of color, the sign of progress. The version with “Training center” goes with the brand across materials."
+      },
+      {
+        "items": [
+          {
+            "alt": "Move+ logo in olive green with a lime-green + and the line Training center, on a white background",
+            "caption": "Light version"
+          },
+          {
+            "alt": "Move+ logo in white with a lime-green + and the line Training center, on a dark background",
+            "caption": "Dark version"
+          }
+        ]
+      },
+      {
+        "alt": "M+ icon in white on olive green and in dark olive on lime green",
+        "caption": "Icon"
+      },
+      {
+        "label": "Icon",
+        "text": "The icon reduces the brand to the M and the +: a slanted shape, in motion, that fits in an app, on a watch or in a profile picture."
+      },
+      {
+        "text": "More technique. More control. More movement."
+      },
+      {
+        "alt": "Move+ logo in light and dark versions next to an athlete with a kettlebell, with the name outlined and repeated over the photo",
+        "caption": "Brand over photography"
+      },
+      {
+        "label": "Colors",
+        "text": "Dark olive green gives the base, sober and firm, and lime green comes in as energy, in small doses."
+      },
+      {
+        "label": "",
+        "items": [
+          {
+            "name": "Darkest green"
+          },
+          {
+            "name": "Olive green"
+          },
+          {
+            "name": "Medium green"
+          },
+          {
+            "name": "Lime green"
+          },
+          {
+            "name": "White"
+          }
+        ]
+      },
+      {
+        "alt": "Athlete leaning on a slam ball during a workout, in a gym",
+        "title": [
+          "More than training.",
+          "It is transformation."
+        ],
+        "text": "Here you find professional guidance, focus on your goals and a path built on consistency. Here, every step forward is an achievement — physical, mental and personal."
+      },
+      {
+        "alt": "Athlete doing a battle rope workout, focused, against a neutral background",
+        "title": [
+          "Training with purpose.",
+          "Results with precision."
+        ],
+        "text": "At Move+, every movement is planned to take you further. With technical guidance and attention to your needs, we turn effort into progress — with efficiency, safety and real results."
+      },
+      {
+        "label": "Applications",
+        "text": "The brand takes shape on the everyday gear: what you wear, carry and use on your wrist. The logo and the icon change size and background without losing presence."
+      },
+      {
+        "items": [
+          {
+            "alt": "Black sports drawstring bag with the Move+ logo and lime-green cords",
+            "caption": "Bag"
+          },
+          {
+            "alt": "Olive-green zip hoodie with the Move+ logo on the chest",
+            "caption": "Hoodie"
+          },
+          {
+            "alt": "Olive-green T-shirt with the Move+ logo on the chest",
+            "caption": "T-shirt"
+          },
+          {
+            "alt": "Dark green thermal bottle with the Move+ logo placed vertically",
+            "caption": "Bottle"
+          },
+          {
+            "alt": "Watch with a braided olive-green strap and the M+ icon on a lime-green screen",
+            "caption": "Watch"
+          }
+        ]
+      },
+      {
+        "alt": "Person lifting a kettlebell, with the white Move+ logo beside it",
+        "caption": "Signature on photo"
+      },
+      {
+        "text": "More movement."
+      }
+    ],
+    "credits": [
+      {
+        "role": "Design"
+      }
     ]
   },
   "topfit": {
     "tagline": "Supplements to help you reach the top.",
-    "description": "Complete visual identity for TOPFIT, a concept supplements brand from Ribeirão Preto (SP). Raw, blocky letters, an intense red and an arrow-shaped icon that goes up hold together a brand that sells attitude and positioning, from the e-commerce to the physical store.",
+    "description": "Complete visual identity for TOPFIT, a concept supplements brand from Ribeirão Preto (SP) that wants to represent attitude, beyond selling products. Raw, blocky letters, an intense red and an arrow-shaped icon that goes up hold the brand together, from the e-commerce to the packaging.",
     "services": [
       "Visual identity",
+      "Packaging",
       "E-commerce"
     ],
     "industry": "Supplements",
@@ -200,8 +327,16 @@
         "text": "TOPFIT was not born to be just another supplements store. It runs a physical store, its own e-commerce, marketplaces and distribution, and it sells more than product: it sells attitude, curation and positioning. A brand with its own voice: provocative, raw, direct and authentic."
       },
       {
-        "alt": "TOPFIT logo family in red: primary logo, arrow icon, logo with tagline, box logo, vertical, isometric and stylized versions",
-        "caption": "Logo family"
+        "label": "Scope",
+        "text": "The work went through the brand’s strategic build: logo, typography, color palette, concept, icon, variations and tone of voice, always direct, high contrast and built on the rebel archetype. From there, the identity moved on to the e-commerce, the packaging and the digital content, prints and physical media."
+      },
+      {
+        "alt": "Main TOPFIT logos in red: primary logo, arrow icon and logo with tagline",
+        "caption": "Main logos"
+      },
+      {
+        "alt": "TOPFIT logo variations: box logo, vertical, isometric and stylized",
+        "caption": "Variations"
       },
       {
         "label": "Logo",
@@ -215,7 +350,7 @@
         "text": "Symbols that shout, not whisper."
       },
       {
-        "alt": "TOPFIT icon: a white isometric arrow over a red background, with construction lines, and applied to a corner",
+        "alt": "TOPFIT icon: a white isometric arrow over a red background, with construction lines",
         "caption": "Icon"
       },
       {
@@ -223,20 +358,53 @@
         "text": "Built from the brand’s “T”, symmetrically distorted, split into two blocks and tilted by 30 degrees, it creates an isometric view that recalls a solid corner. It can be read as a disguised arrow pointing up, the corner of an e-commerce box, or a geometric seal that marks territory."
       },
       {
-        "alt": "Red TOPFIT icon, Instagram profile with the icon as the picture, and an app icon",
-        "caption": "Profile and app"
-      },
-      {
         "label": "Colors",
         "text": "Intense red (#C21819) is the main tone: strength, movement and power. White and light gray give room to breathe and legibility, especially on digital, while wine and black come in sparingly, as colors of quiet strength."
       },
       {
-        "alt": "TOPFIT palette: intense red, supporting reds, beige, white, light gray, wine and black",
-        "caption": "Color palette"
+        "label": "",
+        "items": [
+          {
+            "name": "Intense red"
+          },
+          {
+            "name": "Dark red"
+          },
+          {
+            "name": "Medium red"
+          },
+          {
+            "name": "Light beige"
+          },
+          {
+            "name": "Pure white"
+          },
+          {
+            "name": "Light gray"
+          },
+          {
+            "name": "Wine"
+          },
+          {
+            "name": "Pure black"
+          }
+        ]
       },
       {
         "label": "Typography",
         "text": "Gasoek One, ultra-bold with straight terminals, imposes on headlines, taglines and statements. When the content needs to breathe, Figtree comes in, versatile and legible, for descriptions and running text."
+      },
+      {
+        "items": [
+          {
+            "alt": "Specimens of the Gasoek One typeface in red: the font name and the alphabet, numbers and symbols",
+            "caption": "Gasoek One"
+          },
+          {
+            "alt": "Cracked rock texture in black and white",
+            "caption": "Brand texture"
+          }
+        ]
       },
       {
         "alt": "Type specimens of TOPFIT’s typefaces: Gasoek One as primary and Figtree as secondary",
@@ -259,18 +427,6 @@
         ]
       },
       {
-        "items": [
-          {
-            "alt": "Black cap with the TOPFIT icon in white and a red underside on the brim",
-            "caption": "Cap"
-          },
-          {
-            "alt": "Round red sticker with the isometric logo and the tagline around it",
-            "caption": "Sticker"
-          }
-        ]
-      },
-      {
         "text": "We sell supplements. But also attitude."
       },
       {
@@ -286,12 +442,32 @@
         "caption": "Site home"
       },
       {
-        "label": "Physical store",
-        "text": "The concept store, in Ribeirão Preto, takes the brand into space: a red wall with the repeated logo, the arrow icon over the counter and dark shelving. An environment that expresses the premium, urban, high-performance positioning."
+        "label": "Packaging",
+        "text": "I designed all the packaging for the brand’s own products. The brand becomes the label: raw typography, geometric icons and red as the protagonist, in contrast with the minimalism of white, so TOPFIT stands out on any shelf."
       },
       {
-        "alt": "Four images of the TOPFIT concept store, with a stamped red wall, a wooden counter with the arrow icon and dark shelves",
-        "caption": "Concept store"
+        "items": [
+          {
+            "alt": "Tub of Whey Protein, white with a red label and a mountain in the background",
+            "caption": "Whey Protein"
+          },
+          {
+            "alt": "Tub of monohydrate Creatine with a white and red label and the arrow seal",
+            "caption": "Creatine"
+          },
+          {
+            "alt": "Black Shock Boost pre-workout tub with a green label and a jaguar",
+            "caption": "Pre-workout"
+          },
+          {
+            "alt": "Thermo Fit&Lean capsule bottle with a white and red label",
+            "caption": "Thermogenic"
+          },
+          {
+            "alt": "NAC capsule bottle with a white and red label",
+            "caption": "NAC"
+          }
+        ]
       },
       {
         "text": "To reach the top."
@@ -302,16 +478,121 @@
         "role": "Design"
       },
       {
+        "role": "Agency"
+      },
+      {
         "role": "Founder"
       }
     ],
     "location": "Ribeirão Preto, SP, Brazil"
   },
-  "sd-digital": {
-    "description": "Identity and digital presence for an e-commerce agency.",
+  "frias-constantino": {
+    "tagline": "Preventive and strategic tax law.",
+    "description": "Visual identity for Frias Constantino Advocacia, a tax law firm in Tatuapé, São Paulo. An owl in an engraving line, an FC monogram of overlapping initials and a palette of green, sand and gold communicate precision before the very first conversation.",
     "services": [
-      "Branding",
-      "Web Design"
+      "Visual identity",
+      "Stationery"
+    ],
+    "industry": "Tax law",
+    "location": "Tatuapé, São Paulo, Brazil",
+    "hero": {
+      "alt": "Frias Constantino Advocacia logo in gold on green paper"
+    },
+    "blocks": [
+      {
+        "text": "A brand built with the same rigor it stands for."
+      },
+      {
+        "label": "Concept",
+        "text": "Every choice, from the line to the typography, answers to an intention: to communicate precision before the very first conversation."
+      },
+      {
+        "alt": "Frias Constantino Advocacia logo in green on a sand background",
+        "caption": "Logo"
+      },
+      {
+        "label": "The owl",
+        "text": "The owl crosses cultures as a symbol of wisdom. It is the companion of Athena, the Greek goddess of strategy. But what makes it right for this brand is its behavior: it sees where others do not, flies in absolute silence and acts with surgical precision. Observation, discretion and precision: the same triad that defines good tax law. Drawn in an engraving line, it recalls the legal and editorial tradition; in flight, it conveys a practice that does not wait for the problem: it anticipates."
+      },
+      {
+        "alt": "Six versions of the brand owl: in flight from the front, in flight from the side, perched, and with the Frias Constantino name",
+        "caption": "Owl family"
+      },
+      {
+        "label": "Monogram",
+        "text": "The FC monogram is born from the overlap of the initials, not side by side, but crossed. The F rests on the structure of the C, and the C embraces the stem of the F. It is a construction that only works because the two shapes were drawn for each other, just as a good argument only holds when each point ties into the next. The design comes from the tradition of seal monograms: the stamp that, long before digital signatures, validated documents and vouched for what was written. On its own, the monogram is the most condensed form of the brand: where the full name does not fit, it answers."
+      },
+      {
+        "items": [
+          {
+            "alt": "FC monogram embossed on a green background",
+            "caption": "Embossed monogram"
+          },
+          {
+            "alt": "Owl perched on the FC monogram, in green on a sand background",
+            "caption": "Owl on the monogram"
+          }
+        ]
+      },
+      {
+        "label": "Colors",
+        "text": "The palette starts from green, the color of stability, balance and prosperity, in a family that goes from deep to serene, holding the brand with the same constancy expected from good counsel. Over it, sand and browns bring the warmth of paper and leather, a repertoire inherited from the world of documents and legal libraries. Gold, always in a precise dose, is the point of value: it appears where the brand wants to lead the eye, like a thread of emphasis amid sobriety."
+      },
+      {
+        "label": "",
+        "items": [
+          {
+            "name": "Green"
+          },
+          {
+            "name": "Light green"
+          },
+          {
+            "name": "Dark green"
+          },
+          {
+            "name": "Sand"
+          },
+          {
+            "name": "Light brown"
+          },
+          {
+            "name": "Dark brown"
+          },
+          {
+            "name": "Light gold"
+          },
+          {
+            "name": "Gold"
+          },
+          {
+            "name": "Dark gold"
+          }
+        ]
+      },
+      {
+        "text": "No color shouts; all of them assert."
+      },
+      {
+        "label": "Applications",
+        "text": "The identity takes shape on paper: gold in relief over deep green, the owl as a watermark and the monogram as a signature, where the full name does not fit."
+      },
+      {
+        "alt": "Hands holding a green brochure with the gold logo and the owl as a watermark",
+        "caption": "Brochure"
+      },
+      {
+        "alt": "Two green business cards, one with the gold logo and another with contact details and the owl as a watermark",
+        "caption": "Business cards"
+      },
+      {
+        "text": "Precision before the first conversation."
+      }
+    ],
+    "credits": [
+      {
+        "role": "Design"
+      }
     ]
   }
 }

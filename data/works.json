@@ -277,28 +277,200 @@
     {
       "slug": "move",
       "title": "Move+",
-      "description": "Plataforma de mobilidade urbana com identidade dinâmica e interface digital.",
+      "description": "Identidade visual para a Move+, centro de treinamento de condicionamento e força. Um logotipo inclinado, em verde-oliva escuro com um + em verde-limão, passa velocidade e evolução, e se aplica do ícone no relógio à camiseta, com uma voz direta que promete mais técnica, mais controle e mais movimento.",
       "year": 2025,
       "services": [
-        "Branding",
-        "Product Design"
+        "Identidade visual",
+        "Aplicações"
       ],
       "thumb": "assets/works/move/hero.gif",
       "hero": {
         "type": "image",
         "src": "assets/works/move/hero.gif",
         "mobile": "assets/works/move/hero-mobile.gif",
-        "alt": "Move+"
+        "alt": "Move+: condicionamento e força"
       },
-      "blocks": []
+      "blocks": [
+        {
+          "type": "text",
+          "label": "Sobre a marca",
+          "text": "A Move+ é um centro de treinamento de condicionamento e força. Oferece orientação profissional, foco nos objetivos e um caminho construído com consistência. A marca traduz isso em letras inclinadas, que seguem para a frente, e um sinal de + em verde-limão: sempre um passo a mais."
+        },
+        {
+          "type": "image",
+          "src": "assets/works/move/capa-treino.webp",
+          "alt": "Mulher em posição de flexão no chão de um estúdio, com o logotipo Move+ e a frase Condicionamento e Força",
+          "ratio": "4:3",
+          "caption": "Capa"
+        },
+        {
+          "type": "text",
+          "label": "Logotipo",
+          "text": "O logotipo é todo inclinado, com cortes diagonais nas letras, para dar velocidade. O verde-oliva escuro traz firmeza e o + em verde-limão é o único ponto de cor, o sinal de evolução. A versão com “Centro de treinamento” acompanha a marca nos materiais."
+        },
+        {
+          "type": "pair",
+          "items": [
+            {
+              "src": "assets/works/move/logo-claro.svg",
+              "alt": "Logotipo Move+ em verde-oliva com o + em verde-limão e a legenda Centro de treinamento, sobre fundo branco",
+              "caption": "Versão clara",
+              "ratio": "auto"
+            },
+            {
+              "src": "assets/works/move/logo-escuro.svg",
+              "alt": "Logotipo Move+ em branco com o + em verde-limão e a legenda Centro de treinamento, sobre fundo escuro",
+              "caption": "Versão escura",
+              "ratio": "auto"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "src": "assets/works/move/icones.svg",
+          "alt": "Ícone M+ em branco sobre verde-oliva e em verde-oliva escuro sobre verde-limão",
+          "ratio": "auto",
+          "caption": "Ícone"
+        },
+        {
+          "type": "text",
+          "label": "Ícone",
+          "text": "O ícone reduz a marca ao M e ao +: uma forma inclinada, em movimento, que cabe num aplicativo, num relógio ou numa foto de perfil."
+        },
+        {
+          "type": "statement",
+          "text": "Mais técnica. Mais controle. Mais movimento."
+        },
+        {
+          "type": "image",
+          "src": "assets/works/move/tipografia-contorno.webp",
+          "alt": "Logotipo Move+ nas versões clara e escura ao lado de uma atleta com kettlebell, com o nome em contorno repetido sobre a foto",
+          "ratio": "4:3",
+          "caption": "Marca sobre fotografia"
+        },
+        {
+          "type": "text",
+          "label": "Cores",
+          "text": "O verde-oliva escuro dá a base, sóbria e firme, e o verde-limão entra como energia, em pequenas doses."
+        },
+        {
+          "type": "palette",
+          "items": [
+            {
+              "name": "Verde mais escuro",
+              "hex": "#212514"
+            },
+            {
+              "name": "Verde-oliva",
+              "hex": "#404725"
+            },
+            {
+              "name": "Verde médio",
+              "hex": "#556B2B"
+            },
+            {
+              "name": "Verde-limão",
+              "hex": "#C5DE63"
+            },
+            {
+              "name": "Branco",
+              "hex": "#FFFFFF"
+            }
+          ]
+        },
+        {
+          "type": "slide",
+          "src": "assets/works/move/foto-transformacao.webp",
+          "alt": "Atleta apoiada em uma bola de peso em um treino, em uma academia",
+          "logo": "assets/works/move/logo-branco.svg",
+          "logoAlt": "Move+",
+          "title": [
+            "Mais do que treino.",
+            "É transformação."
+          ],
+          "text": "Aqui você encontra orientação profissional, foco nos seus objetivos e um caminho construído com consistência. Aqui, cada avanço é conquista — física, mental e pessoal."
+        },
+        {
+          "type": "slide",
+          "src": "assets/works/move/foto-precisao.webp",
+          "alt": "Atleta fazendo um treino com cordas navais, concentrada, em um fundo neutro",
+          "logo": "assets/works/move/logo-branco.svg",
+          "logoAlt": "Move+",
+          "title": [
+            "Treino com propósito.",
+            "Resultado com precisão."
+          ],
+          "text": "Na Move+, cada movimento é planejado para levar você mais longe. Com acompanhamento técnico e atenção às suas necessidades, transformamos esforço em evolução — com eficiência, segurança e resultado real."
+        },
+        {
+          "type": "text",
+          "label": "Aplicações",
+          "text": "A marca ganha corpo nas peças do dia a dia do treino: o que se veste, se carrega e se usa no pulso. O logotipo e o ícone mudam de tamanho e de fundo sem perder a presença."
+        },
+        {
+          "type": "gallery",
+          "items": [
+            {
+              "src": "assets/works/move/sacola.webp",
+              "alt": "Sacola esportiva preta com o logotipo Move+ e cordões em verde-limão",
+              "caption": "Sacola",
+              "ratio": "4:5"
+            },
+            {
+              "src": "assets/works/move/moletom.webp",
+              "alt": "Moletom verde-oliva com zíper e o logotipo Move+ no peito",
+              "caption": "Moletom",
+              "ratio": "4:5"
+            },
+            {
+              "src": "assets/works/move/camiseta.webp",
+              "alt": "Camiseta verde-oliva com o logotipo Move+ no peito",
+              "caption": "Camiseta",
+              "ratio": "4:5"
+            },
+            {
+              "src": "assets/works/move/garrafa.webp",
+              "alt": "Garrafa térmica verde-escura com o logotipo Move+ na vertical",
+              "caption": "Garrafa",
+              "ratio": "4:5"
+            },
+            {
+              "src": "assets/works/move/relogio.webp",
+              "alt": "Relógio com pulseira verde-oliva trançada e o ícone M+ na tela em verde-limão",
+              "caption": "Relógio",
+              "ratio": "4:5"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "src": "assets/works/move/kettlebell.webp",
+          "alt": "Pessoa levantando um kettlebell, com o logotipo Move+ em branco ao lado",
+          "ratio": "4:3",
+          "caption": "Assinatura em foto"
+        },
+        {
+          "type": "statement",
+          "text": "Mais movimento."
+        }
+      ],
+      "tagline": "Mais técnica. Mais controle. Mais movimento.",
+      "industry": "Centro de treinamento",
+      "credits": [
+        {
+          "role": "Design",
+          "name": "Nícolas de Queiróz"
+        }
+      ]
     },
     {
       "slug": "topfit",
       "title": "TOPFIT",
-      "description": "Identidade visual completa para a TOPFIT, marca conceito de suplementos de Ribeirão Preto (SP). Letras brutas e blocadas, um vermelho intenso e um ícone em forma de seta, que sobe, sustentam uma marca que vende atitude e posicionamento, do e-commerce à loja física.",
+      "description": "Identidade visual completa para a TOPFIT, marca conceito de suplementos de Ribeirão Preto (SP) que quer representar atitude, além de vender produtos. Letras brutas e blocadas, um vermelho intenso e um ícone em forma de seta, que sobe, sustentam a marca do e-commerce às embalagens.",
       "year": 2025,
       "services": [
         "Identidade visual",
+        "Embalagens",
         "E-commerce"
       ],
       "thumb": "assets/works/topfit/hero.webp",
@@ -315,11 +487,23 @@
           "text": "A TOPFIT não nasceu para ser só mais uma loja de suplementos. Atua com loja física, e-commerce próprio, marketplaces e distribuição, e vende mais do que produto: vende atitude, curadoria e posicionamento. Uma marca com voz própria, provocadora, bruta, direta e autêntica."
         },
         {
+          "type": "text",
+          "label": "Escopo",
+          "text": "O trabalho passou pela construção estratégica da marca: logotipo, tipografia, paleta de cores, conceito, ícone, variações e tom de voz, sempre direto, de alto contraste e com o arquétipo do rebelde. Dali, a identidade seguiu para o e-commerce, as embalagens e o conteúdo digital, estampas e meios físicos."
+        },
+        {
           "type": "image",
-          "src": "assets/works/topfit/familia-logos.webp",
-          "alt": "Família de logotipos TOPFIT em vermelho: logo primária, ícone de seta, logo com slogan, box logo, versão vertical, isométrica e estilizada",
-          "ratio": "7:5",
-          "caption": "Família de logotipos"
+          "src": "assets/works/topfit/logos-principais.svg",
+          "alt": "Logotipos principais da TOPFIT em vermelho: logo primária, ícone de seta e logo com slogan",
+          "ratio": "auto",
+          "caption": "Logotipos principais"
+        },
+        {
+          "type": "image",
+          "src": "assets/works/topfit/logos-variacoes.svg",
+          "alt": "Variações da logo TOPFIT: box logo, vertical, isométrica e estilizada",
+          "ratio": "auto",
+          "caption": "Variações"
         },
         {
           "type": "text",
@@ -339,9 +523,9 @@
         },
         {
           "type": "image",
-          "src": "assets/works/topfit/icone.webp",
-          "alt": "Ícone da TOPFIT: uma seta isométrica branca sobre fundo vermelho, com linhas de construção, e aplicada em uma quina",
-          "ratio": "7:5",
+          "src": "assets/works/topfit/icone.svg",
+          "alt": "Ícone da TOPFIT: uma seta isométrica branca sobre fundo vermelho, com linhas de construção",
+          "ratio": "auto",
           "caption": "Ícone"
         },
         {
@@ -350,23 +534,46 @@
           "text": "Construído a partir do “T” da marca, distorcido simetricamente, separado em dois blocos e inclinado em 30 graus, cria uma vista isométrica que lembra uma quina sólida. Pode ser lido como uma seta disfarçada apontando para cima, a quina de uma caixa de e-commerce ou um selo geométrico que marca território."
         },
         {
-          "type": "image",
-          "src": "assets/works/topfit/perfil-instagram.webp",
-          "alt": "Ícone vermelho da TOPFIT, perfil do Instagram com o ícone como foto e ícone de aplicativo",
-          "ratio": "7:5",
-          "caption": "Perfil e aplicativo"
-        },
-        {
           "type": "text",
           "label": "Cores",
           "text": "O vermelho intenso (#C21819) é o tom principal: força, movimento e potência. Branco e cinza claro dão respiro e legibilidade, principalmente no digital, enquanto o vinho e o preto entram com moderação, como cores de força silenciosa."
         },
         {
-          "type": "image",
-          "src": "assets/works/topfit/paleta.webp",
-          "alt": "Paleta da TOPFIT: vermelho intenso, vermelhos de apoio, bege, branco, cinza claro, vinho e preto",
-          "ratio": "7:5",
-          "caption": "Paleta de cores"
+          "type": "palette",
+          "items": [
+            {
+              "name": "Vermelho intenso",
+              "hex": "#C21819"
+            },
+            {
+              "name": "Vermelho escuro",
+              "hex": "#A6111F"
+            },
+            {
+              "name": "Vermelho médio",
+              "hex": "#DA564A"
+            },
+            {
+              "name": "Bege claro",
+              "hex": "#F8B7A1"
+            },
+            {
+              "name": "Branco puro",
+              "hex": "#FFFFFF"
+            },
+            {
+              "name": "Cinza claro",
+              "hex": "#F1F1F1"
+            },
+            {
+              "name": "Vinho",
+              "hex": "#2E0506"
+            },
+            {
+              "name": "Preto puro",
+              "hex": "#000000"
+            }
+          ]
         },
         {
           "type": "text",
@@ -374,11 +581,21 @@
           "text": "A Gasoek One, ultra-bold e de terminal reto, impõe nos títulos, slogans e frases de impacto. Quando o conteúdo precisa respirar, entra a Figtree, versátil e legível, em descrições e textos corridos."
         },
         {
-          "type": "image",
-          "src": "assets/works/topfit/tipografia.webp",
-          "alt": "Especimes das tipografias da TOPFIT: Gasoek One como primária e Figtree como secundária",
-          "ratio": "7:5",
-          "caption": "Tipografia"
+          "type": "pair",
+          "items": [
+            {
+              "src": "assets/works/topfit/tipografia-gasoek.svg",
+              "alt": "Especimes da tipografia Gasoek One em vermelho: o nome da fonte e o alfabeto, números e símbolos",
+              "caption": "Gasoek One",
+              "ratio": "auto"
+            },
+            {
+              "src": "assets/works/topfit/tipografia-textura.webp",
+              "alt": "Textura de rocha rachada em preto e branco",
+              "caption": "Textura da marca",
+              "ratio": "auto"
+            }
+          ]
         },
         {
           "type": "text",
@@ -392,13 +609,13 @@
               "src": "assets/works/topfit/embalagem.webp",
               "alt": "Embalagem vermelha com o logotipo TOPFIT em branco",
               "caption": "Embalagem",
-              "ratio": "7:5"
+              "ratio": "1:1"
             },
             {
               "src": "assets/works/topfit/moletom.webp",
               "alt": "Moletom preto com a logo isométrica da TOPFIT em branco",
               "caption": "Moletom",
-              "ratio": "7:5"
+              "ratio": "1:1"
             }
           ]
         },
@@ -409,13 +626,13 @@
               "src": "assets/works/topfit/bone.webp",
               "alt": "Boné preto com o ícone da TOPFIT em branco e aba vermelha por baixo",
               "caption": "Boné",
-              "ratio": "7:5"
+              "ratio": "1:1"
             },
             {
               "src": "assets/works/topfit/adesivo.webp",
               "alt": "Adesivo redondo vermelho com a logo isométrica e o slogan em volta",
               "caption": "Adesivo",
-              "ratio": "7:5"
+              "ratio": "1:1"
             }
           ]
         },
@@ -427,7 +644,7 @@
           "type": "image",
           "src": "assets/works/topfit/ecommerce-mobile.webp",
           "alt": "Vários celulares mostrando a loja virtual da TOPFIT, com páginas de categorias, produtos e campanhas",
-          "ratio": "7:5",
+          "ratio": "4:3",
           "caption": "E-commerce no celular"
         },
         {
@@ -439,20 +656,48 @@
           "type": "image",
           "src": "assets/works/topfit/ecommerce-desktop.webp",
           "alt": "Notebook mostrando a home da loja virtual TOPFIT, com o slogan sobre uma foto de treino",
-          "ratio": "7:5",
+          "ratio": "4:3",
           "caption": "Home do site"
         },
         {
           "type": "text",
-          "label": "Loja física",
-          "text": "A loja conceito, em Ribeirão Preto, leva a marca para o espaço: parede vermelha com a logo repetida, o ícone em seta sobre o balcão e as prateleiras escuras. Um ambiente que expressa o posicionamento premium, urbano e de alta performance."
+          "label": "Embalagens",
+          "text": "Todas as embalagens dos produtos próprios foram desenhadas por mim. A marca vira rótulo: tipografia bruta, ícones geométricos e o vermelho como protagonista, em contraste com o minimalismo do branco, para a TOPFIT se destacar em qualquer prateleira."
         },
         {
-          "type": "image",
-          "src": "assets/works/topfit/loja.webp",
-          "alt": "Quatro imagens da loja conceito TOPFIT, com parede vermelha estampada, balcão de madeira com o ícone em seta e prateleiras escuras",
-          "ratio": "7:5",
-          "caption": "Loja conceito"
+          "type": "gallery",
+          "items": [
+            {
+              "src": "assets/works/topfit/emb-whey.webp",
+              "alt": "Pote de Whey Protein branco com rótulo vermelho e a montanha ao fundo",
+              "caption": "Whey Protein",
+              "ratio": "4:5"
+            },
+            {
+              "src": "assets/works/topfit/emb-creatina.webp",
+              "alt": "Pote de Creatina monohidratada com rótulo branco e vermelho e o selo com a seta",
+              "caption": "Creatina",
+              "ratio": "4:5"
+            },
+            {
+              "src": "assets/works/topfit/emb-pre-treino.webp",
+              "alt": "Pote preto de pré-treino Shock Boost com rótulo verde e uma onça",
+              "caption": "Pré-treino",
+              "ratio": "4:5"
+            },
+            {
+              "src": "assets/works/topfit/emb-termogenico.webp",
+              "alt": "Frasco de cápsulas Thermo Fit&Lean com rótulo branco e vermelho",
+              "caption": "Termogênico",
+              "ratio": "4:5"
+            },
+            {
+              "src": "assets/works/topfit/emb-nac.webp",
+              "alt": "Frasco de cápsulas de NAC com rótulo branco e vermelho",
+              "caption": "NAC",
+              "ratio": "4:5"
+            }
+          ]
         },
         {
           "type": "statement",
@@ -467,30 +712,166 @@
           "name": "Nícolas de Queiróz"
         },
         {
+          "role": "Agência",
+          "name": "SD Digital"
+        },
+        {
           "role": "Fundador",
           "name": "Luiz Arlindo"
         }
       ],
-      "location": "Ribeirão Preto, SP",
-      "website": "https://topfitsuplementos.com.br"
+      "location": "Ribeirão Preto, SP"
     },
     {
-      "slug": "sd-digital",
-      "title": "SD Digital",
-      "description": "Identidade e presença digital para agência de comércio eletrônico.",
-      "year": 2025,
+      "slug": "frias-constantino",
+      "title": "Frias Constantino",
+      "tagline": "Advocacia tributária preventiva e estratégica.",
+      "description": "Identidade visual para a Frias Constantino Advocacia, escritório de advocacia tributária no Tatuapé, em São Paulo. Uma coruja em traço de gravura, um monograma FC de iniciais sobrepostas e uma paleta de verde, areia e ouro comunicam precisão antes mesmo da primeira conversa.",
+      "year": 2026,
       "services": [
-        "Branding",
-        "Web Design"
+        "Identidade visual",
+        "Papelaria"
       ],
-      "thumb": "assets/works/sd-digital/hero.webp",
+      "industry": "Advocacia tributária",
+      "location": "Tatuapé, São Paulo",
+      "thumb": "assets/works/frias-constantino/hero.webp",
       "hero": {
         "type": "image",
-        "src": "assets/works/sd-digital/hero.webp",
-        "mobile": "assets/works/sd-digital/hero-mobile.webp",
-        "alt": "SD Digital"
+        "src": "assets/works/frias-constantino/hero.webp",
+        "mobile": "assets/works/frias-constantino/hero-mobile.webp",
+        "alt": "Logotipo Frias Constantino Advocacia em dourado sobre papel verde"
       },
-      "blocks": []
+      "blocks": [
+        {
+          "type": "statement",
+          "text": "Uma marca construída com o mesmo critério que ela representa."
+        },
+        {
+          "type": "text",
+          "label": "Conceito",
+          "text": "Cada escolha, do traço à tipografia, responde a uma intenção: comunicar precisão antes mesmo da primeira conversa."
+        },
+        {
+          "type": "image",
+          "src": "assets/works/frias-constantino/logotipo.svg",
+          "alt": "Logotipo Frias Constantino Advocacia em verde sobre fundo areia",
+          "ratio": "auto",
+          "caption": "Logotipo"
+        },
+        {
+          "type": "text",
+          "label": "A coruja",
+          "text": "A coruja atravessa culturas como símbolo de sabedoria. É a companheira de Atena, deusa grega da estratégia. Mas o que a torna precisa para esta marca é o seu comportamento: ela enxerga onde os outros não veem, voa em silêncio absoluto e age com exatidão cirúrgica. Observação, discrição e precisão: a mesma tríade que define uma boa advocacia tributária. Representada em traço de gravura, remete à tradição jurídica e editorial; em movimento de voo, comunica uma prática que não espera o problema: antecipa."
+        },
+        {
+          "type": "image",
+          "src": "assets/works/frias-constantino/coruja-familia.svg",
+          "alt": "Seis versões da coruja da marca: em voo de frente, em voo de lado, pousada e com o nome Frias Constantino",
+          "ratio": "16:9",
+          "caption": "Família de corujas"
+        },
+        {
+          "type": "text",
+          "label": "Monograma",
+          "text": "O monograma FC nasce da sobreposição das iniciais, não lado a lado, mas atravessadas. O F se apoia na estrutura do C, e o C abraça a haste do F. É uma construção que só funciona porque as duas formas foram desenhadas uma para a outra, do mesmo modo que uma boa tese só se sustenta quando cada argumento amarra no seguinte. O desenho parte da tradição dos monogramas de selo: a chancela que, muito antes das assinaturas digitais, validava documentos e dava fé ao que estava escrito. Sozinho, o monograma é a forma mais condensada da marca: onde o nome completo não cabe, ele responde."
+        },
+        {
+          "type": "pair",
+          "items": [
+            {
+              "src": "assets/works/frias-constantino/monograma.webp",
+              "alt": "Monograma FC em relevo sobre fundo verde",
+              "caption": "Monograma em relevo",
+              "ratio": "4:3"
+            },
+            {
+              "src": "assets/works/frias-constantino/marca-final.svg",
+              "alt": "Coruja pousada sobre o monograma FC, em verde sobre fundo areia",
+              "caption": "Coruja sobre o monograma",
+              "ratio": "4:3"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "label": "Cores",
+          "text": "A paleta parte do verde, cor da estabilidade, do equilíbrio e da prosperidade, em uma família que vai do profundo ao sereno, sustentando a marca com a mesma constância que se espera de uma boa assessoria. Sobre ela, o areia e os marrons trazem o calor do papel e do couro, um repertório herdado do universo dos documentos e das bibliotecas jurídicas. O ouro, sempre em dose precisa, é o ponto de valor: aparece onde a marca quer conduzir o olhar, como um fio de destaque em meio à sobriedade."
+        },
+        {
+          "type": "palette",
+          "items": [
+            {
+              "name": "Verde",
+              "hex": "#324036"
+            },
+            {
+              "name": "Verde claro",
+              "hex": "#92A673"
+            },
+            {
+              "name": "Verde escuro",
+              "hex": "#111512"
+            },
+            {
+              "name": "Areia",
+              "hex": "#F3EDDF"
+            },
+            {
+              "name": "Marrom claro",
+              "hex": "#AF9061"
+            },
+            {
+              "name": "Marrom escuro",
+              "hex": "#2E2216"
+            },
+            {
+              "name": "Ouro claro",
+              "hex": "#F1DEB5"
+            },
+            {
+              "name": "Ouro",
+              "hex": "#D0AC64"
+            },
+            {
+              "name": "Ouro escuro",
+              "hex": "#97733D"
+            }
+          ]
+        },
+        {
+          "type": "statement",
+          "text": "Nenhuma cor grita; todas afirmam."
+        },
+        {
+          "type": "text",
+          "label": "Aplicações",
+          "text": "A identidade ganha corpo no papel: o dourado em relevo sobre o verde profundo, a coruja em marca d’água e o monograma como assinatura, onde o nome completo não cabe."
+        },
+        {
+          "type": "image",
+          "src": "assets/works/frias-constantino/brochura.webp",
+          "alt": "Mãos segurando uma brochura verde com o logotipo dourado e a coruja em marca d’água",
+          "ratio": "16:9",
+          "caption": "Brochura"
+        },
+        {
+          "type": "image",
+          "src": "assets/works/frias-constantino/cartoes.webp",
+          "alt": "Dois cartões de visita verdes, um com o logotipo dourado e outro com os dados de contato e a coruja em marca d’água",
+          "ratio": "16:9",
+          "caption": "Cartões de visita"
+        },
+        {
+          "type": "statement",
+          "text": "Precisão antes da primeira conversa."
+        }
+      ],
+      "credits": [
+        {
+          "role": "Design",
+          "name": "Nícolas de Queiróz"
+        }
+      ]
     }
   ]
 }

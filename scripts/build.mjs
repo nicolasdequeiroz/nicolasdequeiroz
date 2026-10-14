@@ -124,7 +124,9 @@ const RATIO_CLASS = {
   "16:9": "work-r-169",
   "4:3": "work-r-43",
   "7:5": "work-r-75",
+  "1:1": "work-r-11",
   "4:5": "work-r-45",
+  auto: "work-r-auto", // proporção do próprio arquivo (faixas de logotipos, recortes)
 };
 
 function ratioClass(ratio, fallback) {
@@ -176,6 +178,33 @@ function renderBlocks(blocks, enBlocks = [], assetPrefix) {
           const t = tx(e.text, block.text);
           return `<div class="work-block work-block--${block.type}">${renderLabel(block.label, e.label)}<p${t.attr}>${t.text}</p></div>`;
         }
+        case "slide": {
+          // Slide de apresentação recriado em código: foto de fundo + logo + título
+          // (2ª linha em destaque) + texto, todos traduzíveis.
+          const t1 = tx(e.title?.[0], block.title[0]);
+          const t2 = tx(e.title?.[1], block.title[1]);
+          const body = tx(e.text, block.text);
+          const logo = block.logo ? `<img class="slide-logo" src="${assetPrefix}${block.logo}" alt="${escapeHtml(block.logoAlt || "")}">` : "";
+          return `<div class="work-block work-block--slide"><div class="slide"><img class="slide-photo" src="${assetPrefix}${block.src}"${at("alt", e.alt, block.alt || "")} loading="lazy" decoding="async"><span class="slide-shade" aria-hidden="true"></span>${logo}<div class="slide-copy"><h3 class="slide-title"><span${t1.attr}>${t1.text}</span> <span class="slide-accent"${t2.attr}>${t2.text}</span></h3><p class="slide-text"${body.attr}>${body.text}</p></div></div></div>`;
+        }
+        case "gallery":
+          return `<div class="work-block work-block--gallery">${block.items
+            .map(
+              (item, j) =>
+                `<figure>${renderMediaEl(item, e.items?.[j], assetPrefix, "4:5")}${renderCaption(item.caption, e.items?.[j]?.caption)}</figure>`
+            )
+            .join("")}</div>`;
+        case "palette":
+          // Colunas equilibradas: até 8 por linha, linhas do mesmo tamanho (9 cores
+          // viram 5 + 4, não 8 + 1).
+          const rows = Math.ceil(block.items.length / 8);
+          const cols = Math.ceil(block.items.length / rows);
+          return `<div class="work-block work-block--palette">${renderLabel(block.label, e.label)}<ul style="--cols:${cols}">${block.items
+            .map((c, j) => {
+              const name = tx(e.items?.[j]?.name, c.name);
+              return `<li><span class="work-swatch" style="background:${escapeHtml(c.hex)}"></span><span class="work-swatch-name"${name.attr}>${name.text}</span><span class="work-swatch-hex">${escapeHtml(c.hex.toUpperCase())}</span></li>`;
+            })
+            .join("")}</ul></div>`;
         case "capture":
           return `<figure class="work-block work-block--capture"><img src="${assetPrefix}${block.src}"${at("alt", e.alt, block.alt || "")} loading="lazy" decoding="async">${renderCaption(block.caption, e.caption)}</figure>`;
         default:
@@ -244,7 +273,7 @@ function renderNextCase(next, assetPrefix) {
   </a>`;
 }
 
-const BLOCK_TYPES = new Set(["image", "video", "pair", "statement", "text", "capture"]);
+const BLOCK_TYPES = new Set(["image", "video", "pair", "gallery", "statement", "text", "capture", "palette", "slide"]);
 
 function validateWorks(data) {
   const slugs = new Set();
@@ -265,7 +294,7 @@ function validateWorks(data) {
         throw new Error(`Bloco "pair" em ${work.slug} precisa de exatamente 2 items`);
       }
       if (block.ratio && !RATIO_CLASS[block.ratio]) {
-        throw new Error(`Ratio "${block.ratio}" inválido em ${work.slug} (use 16:9, 4:3, 7:5 ou 4:5)`);
+        throw new Error(`Ratio "${block.ratio}" inválido em ${work.slug} (use 16:9, 4:3, 7:5, 4:5, 1:1 ou auto)`);
       }
     }
   }

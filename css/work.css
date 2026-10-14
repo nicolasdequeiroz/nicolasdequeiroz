@@ -138,6 +138,56 @@
     object-fit: cover;
 }
 
+.work-r-11 {
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+/* Proporção do próprio arquivo: sem corte e sem faixa vazia. */
+.work-r-auto {
+    aspect-ratio: auto;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Paleta: amostras de cor com nome e código, nome traduzível. */
+.work-block--palette ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(132px, 1fr));
+    gap: 24px 16px;
+}
+
+@media (min-width: 901px) {
+    .work-block--palette ul {
+        grid-template-columns: repeat(var(--cols, 8), minmax(0, 1fr));
+    }
+}
+
+.work-swatch {
+    display: block;
+    aspect-ratio: 1;
+    border-radius: 8px;
+    box-shadow: inset 0 0 0 1px var(--line);
+}
+
+.work-swatch-name {
+    display: block;
+    margin-top: 12px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.work-swatch-hex {
+    display: block;
+    margin-top: 2px;
+    font-size: 13px;
+    color: color-mix(in srgb, var(--fg) 55%, transparent);
+    letter-spacing: 0.04em;
+}
+
 .work-r-43 {
     aspect-ratio: 4 / 3;
     object-fit: cover;
@@ -175,6 +225,50 @@
 
 .work-block--pair figure {
     margin: 0;
+}
+
+/* Galeria: a linha de produtos numa "prateleira" (fundo suave), cada peça recortada
+   sem fundo, com a legenda centralizada embaixo. Quebra em 3 e depois em 2 por linha;
+   a última linha fica centralizada. */
+.work-block--gallery {
+    --gap: clamp(8px, 2vw, 24px);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: clamp(24px, 3vw, 40px) var(--gap);
+    padding: clamp(20px, 4vw, 56px) clamp(12px, 3vw, 40px);
+    background: var(--surface);
+    border-radius: 8px;
+}
+
+.work-block--gallery figure {
+    margin: 0;
+    width: calc((100% - 4 * var(--gap)) / 5);
+}
+
+.work-block--gallery img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 5;
+    object-fit: contain;
+    border-radius: 0;
+}
+
+.work-block--gallery figcaption {
+    margin-top: 8px;
+    text-align: center;
+}
+
+@media (max-width: 900px) {
+    .work-block--gallery figure {
+        width: calc((100% - 2 * var(--gap)) / 3);
+    }
+}
+
+@media (max-width: 560px) {
+    .work-block--gallery figure {
+        width: calc((100% - var(--gap)) / 2);
+    }
 }
 
 .work-block--statement {
@@ -481,5 +575,107 @@
         opacity: 1;
         transform: none;
         transition: none;
+    }
+}
+
+
+/* Slide: foto de fundo, logo no alto, título e texto embaixo à esquerda. Tudo é
+   dimensionado pela largura do próprio bloco (container query), como o slide. */
+.work-block--slide {
+    container-type: inline-size;
+    --lime: #c5de63;
+}
+
+.work-block--slide .slide {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 4 / 3;
+    border-radius: 8px;
+    color: #fff;
+    background: #2a2e1e;
+}
+
+.work-block--slide .slide-photo {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slide-shade {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(to top, rgba(10, 12, 6, 0.78) 0%, rgba(10, 12, 6, 0.35) 42%, transparent 68%),
+        linear-gradient(to bottom, rgba(10, 12, 6, 0.35) 0%, transparent 28%);
+}
+
+.work-block--slide .slide-logo {
+    position: absolute;
+    left: 10%;
+    top: 11%;
+    width: 24%;
+    height: auto;
+}
+
+.slide-copy {
+    position: absolute;
+    left: 10%;
+    bottom: 9%;
+    max-width: min(62%, 900px);
+}
+
+.slide-title {
+    margin: 0;
+    font-family: "DM Sans", sans-serif;
+    font-size: clamp(20px, 3.7cqw, 72px);
+    font-weight: 500;
+    line-height: 1.12;
+    letter-spacing: -0.01em;
+}
+
+.slide-title span {
+    display: block;
+}
+
+.slide-accent {
+    color: var(--lime);
+}
+
+.slide-text {
+    margin: clamp(10px, 1.6cqw, 28px) 0 0;
+    max-width: min(66%, 620px);
+    font-size: clamp(11px, 1.45cqw, 28px);
+    line-height: 1.5;
+    opacity: 0.92;
+}
+
+@container (max-width: 640px) {
+    .work-block--slide .slide {
+        aspect-ratio: 4 / 5;
+    }
+
+    .work-block--slide .slide-logo {
+        left: 8%;
+        top: 7%;
+        width: 36%;
+    }
+
+    .slide-copy {
+        left: 8%;
+        right: 8%;
+        bottom: 6%;
+        max-width: none;
+    }
+
+    .slide-title {
+        font-size: clamp(22px, 7cqw, 40px);
+    }
+
+    .slide-text {
+        max-width: none;
+        margin-top: 12px;
+        font-size: clamp(12px, 3.3cqw, 17px);
     }
 }
