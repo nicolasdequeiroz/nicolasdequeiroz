@@ -24,7 +24,9 @@ const pad = (n) => String(n).padStart(2, "0");
 let sealId = 0;
 function sealText(kind) {
   const t = window.nqI18n?.t ?? ((en) => en);
-  return (kind === "first" ? t("FIRST RECORD ✦ ", "PRIMEIRO DISCO ✦ ") : t("FAVORITE ✦ ", "DESTAQUE ✦ ")).repeat(2);
+  // Dois espaços fixos de cada lado da estrela: as letras não encostam no separador.
+  const word = kind === "first" ? t("FIRST RECORD", "PRIMEIRO DISCO") : t("FAVORITE", "DESTAQUE");
+  return `${word}\u00a0\u00a0✦\u00a0\u00a0`.repeat(2);
 }
 function sealHTML(kind) {
   const id = `seal-${sealId++}`;

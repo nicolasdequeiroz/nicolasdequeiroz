@@ -95,11 +95,11 @@
     "industry": "Bar and lounge",
     "location": "Itaporanga, SP, Brazil",
     "hero": {
-      "alt": "Green Kombi van with the JabutiBar tortoise parked among trees"
+      "alt": "JabutiBar logo with the tortoise, framed by illustrated foliage"
     },
     "blocks": [
       {
-        "alt": "JabutiBar logo with the tortoise, framed by illustrated foliage"
+        "alt": "Green Kombi van with the JabutiBar tortoise parked among trees"
       },
       {
         "label": "Concept",
@@ -174,7 +174,21 @@
     "services": [
       "Branding",
       "Web Design"
-    ]
+    ],
+    "credits": [
+      {
+        "role": "Design"
+      },
+      {
+        "role": "Motion graphics"
+      },
+      {
+        "role": "Briefing"
+      }
+    ],
+    "hero": {
+      "alt": "Animation of the isa logotype in beige on a deep teal background"
+    }
   },
   "move": {
     "tagline": "More technique. More control. More movement.",
@@ -300,12 +314,21 @@
         "caption": "Signature on photo"
       },
       {
+        "alt": "Move+ showreel: animated logo, kettlebell photo with outlined type and the brand applications"
+      },
+      {
         "text": "More movement."
       }
     ],
     "credits": [
       {
         "role": "Design"
+      },
+      {
+        "role": "Motion graphics"
+      },
+      {
+        "role": "Briefing"
       }
     ]
   },
@@ -481,7 +504,7 @@
         "role": "Agency"
       },
       {
-        "role": "Founder"
+        "role": "Briefing"
       }
     ],
     "location": "Ribeirão Preto, SP, Brazil"
@@ -494,7 +517,7 @@
       "Stationery"
     ],
     "industry": "Tax law",
-    "location": "Tatuapé, São Paulo, Brazil",
+    "location": "São Paulo, Brazil",
     "hero": {
       "alt": "Spine of a green book with the Frias Constantino Advocacia logo in gold"
     },
@@ -604,6 +627,9 @@
     "credits": [
       {
         "role": "Design"
+      },
+      {
+        "role": "Briefing"
       }
     ]
   },
@@ -617,7 +643,7 @@
     ],
     "industry": "Supplements",
     "hero": {
-      "alt": "Tasty creatine tub with green lettering next to a glass of water and a scoop, on a green cube under a blue sky"
+      "alt": "Cream Tasty logotype over two smiling women lying on the grass"
     },
     "blocks": [
       {
@@ -726,16 +752,61 @@
         "text": "Real people, in real movement, in everyday situations. Faces that show pleasure and rest, not strain. Natural light, sky, soft shadows and food nearby; no gym interiors, power poses or dark backgrounds."
       },
       {
-        "alt": "Three photos: a woman smiling on a yoga mat with a Tasty tub, a woman lying on the grass and someone holding a bottle on a court",
-        "caption": "Photography"
+        "items": [
+          {
+            "alt": "Smiling woman lying on a yoga mat, with the Tasty creatine jar on a green towel"
+          },
+          {
+            "alt": "Smiling woman lying on the grass in a purple top, with the outlined tasty lettering over her"
+          },
+          {
+            "alt": "Green bottle with the brand icon on a tennis court, with a player in motion behind it"
+          }
+        ]
       },
       {
-        "alt": "A woman smiling as she eats and a plum card with the Tasty lettering held on a fork",
-        "caption": "Social media"
+        "alt": "Purple ad with a hand holding a capsule and the line “Suplemento bom é o que você repete”"
+      },
+      {
+        "items": [
+          {
+            "alt": "Story with a man lifting a dumbbell against the sky and the line “Comece o dia tasty”"
+          },
+          {
+            "alt": "Green story with a hanging sign: “A gente levou o nome a sério. Porque saúde também pode ser gostosa.”"
+          },
+          {
+            "alt": "Story with a woman stretching against the sky and the line “Comece o dia tasty” in purple"
+          }
+        ]
+      },
+      {
+        "alt": "Green ad with the line “Muito sabor em cada scoop” and a scoop pouring powder inside the brand shape"
+      },
+      {
+        "items": [
+          {
+            "alt": "Two women laughing with yoga mats beneath the cream tasty lettering on a wall with a blue sky"
+          },
+          {
+            "alt": "Tasty Nutrition social profile with a green apples cover, the logotype and the brand icon",
+            "caption": "Social profile"
+          }
+        ]
       },
       {
         "alt": "Tasty tub among green apples and the Health, made tasty mark on green",
         "caption": "Health, made tasty"
+      },
+      {
+        "items": [
+          {
+            "alt": "Outlined tasty lettering over two smiling women lying on the grass"
+          },
+          {
+            "alt": "Smiling man in a green tank top with the brand icon on the chest"
+          }
+        ]
       },
       {
         "alt": "Green polo shirt and black tank top with the Tasty logo, next to the embossed lettering on vanilla",
@@ -758,8 +829,8 @@
         "caption": "Capsules"
       },
       {
-        "alt": "Green Tasty capsule bottle tipped over, with capsules spilling on a pistachio background",
-        "caption": "Bottle"
+        "alt": "Tasty creatine jar with green lettering beside a glass of water and a scoop, on a green cube against a blue sky",
+        "caption": "Creatine jar"
       },
       {
         "text": "A good brand is one you recognize without reading it."
@@ -768,6 +839,159 @@
     "credits": [
       {
         "role": "Design"
+      },
+      {
+        "role": "Intermediation"
+      }
+    ]
+  },
+  "karolinne-hartung": {
+    "tagline": "Psychoanalysis with purpose.",
+    "description": "Visual identity and website for psychoanalyst Karolinne Hartung, in Campinas, Brazil. A mature, welcoming brand that steps away from the clinical look of healthcare to embrace the deeply human side of psychoanalysis: a serif logotype with a floral icon, a KH monogram and a palette of warm tones.",
+    "services": [
+      "Visual identity",
+      "Web design"
+    ],
+    "industry": "Psychoanalysis",
+    "location": "Campinas, SP, Brazil",
+    "hero": {
+      "alt": "Karolinne Hartung logotype in cream, with a floral icon, on a bordeaux background"
+    },
+    "blocks": [
+      {
+        "label": "Concept",
+        "text": "The idea is to create a mature, confident visual identity that steps away from the traditional clinical look and embraces the deeply human side of psychoanalysis."
+      },
+      {
+        "label": "Logotype",
+        "text": "The Karolinne Hartung logotype joins elegance and warmth through a serif typeface that blends the stability of a classic font with the organic fluidity of the italic, reflecting the movement of the psychoanalytic process itself. The first name is set in roman and the surname in italic, with a floral icon beside it; “psicanalista” appears in uppercase, sans serif and widely tracked."
+      },
+      {
+        "alt": "Karolinne Hartung logotype in bordeaux, with a floral icon and the word psicanalista, on a sand background",
+        "caption": "Logotype"
+      },
+      {
+        "alt": "Three vertical logotype versions: cream on bordeaux, bordeaux on white and cream on deep moss green",
+        "caption": "Versions"
+      },
+      {
+        "items": [
+          {
+            "alt": "Horizontal logotype in cream on a deep moss green background"
+          },
+          {
+            "alt": "Stacked logotype in cream on a terracotta background"
+          }
+        ]
+      },
+      {
+        "label": "Colors",
+        "text": "This palette was chosen strategically to move away from the cold, overly clinical tones traditional in healthcare. The goal is a visual environment that conveys warmth, depth and active listening right away."
+      },
+      {
+        "items": [
+          {
+            "name": "Sand"
+          },
+          {
+            "name": "White"
+          },
+          {
+            "name": "Deep Moss"
+          },
+          {
+            "name": "Terracotta"
+          },
+          {
+            "name": "Bordeaux"
+          }
+        ]
+      },
+      {
+        "label": "Icons",
+        "text": "The conscious awakening of the mind, the blossoming of self-knowledge and the recovery of fluidity in life. Three circular icons give shape to each of these movements."
+      },
+      {
+        "items": [
+          {
+            "alt": "Awaken icon: a sand circle with a star shape in bordeaux",
+            "caption": "Awaken"
+          },
+          {
+            "alt": "Blossom icon: a bordeaux circle with a petaled flower in sand",
+            "caption": "Blossom"
+          },
+          {
+            "alt": "Flow icon: a bordeaux circle with a sun rising over field lines",
+            "caption": "Flow"
+          }
+        ]
+      },
+      {
+        "alt": "Fine-line flower pattern on a bordeaux background",
+        "caption": "Pattern"
+      },
+      {
+        "label": "Monogram",
+        "text": "The “KH” monogram was created to work as the brand’s signature seal, bringing a sense of exclusivity, closeness and haute couture to the visual identity. More than a simple abbreviation, it acts as the brand’s intimate signature, visually translating the essence of the psychoanalytic process. It is ideal for more delicate uses, such as social media avatars, stamps, watermarks or the site footer."
+      },
+      {
+        "items": [
+          {
+            "alt": "KH monogram in bordeaux inside an oval frame, on a sand background"
+          },
+          {
+            "alt": "KH monogram in cream inside an oval frame, on a terracotta background"
+          }
+        ]
+      },
+      {
+        "text": "Deep care for real transformation."
+      },
+      {
+        "items": [
+          {
+            "alt": "Karolinne Hartung seated in a green armchair in a room with deep moss green walls"
+          },
+          {
+            "alt": "Karolinne Hartung seated by a window, with the logotype in the bottom corner"
+          },
+          {
+            "alt": "KH monogram in cream over the bordeaux flower pattern"
+          }
+        ]
+      },
+      {
+        "alt": "Karolinne Hartung logotype in gold relief on textured bordeaux paper",
+        "caption": "Application"
+      },
+      {
+        "label": "Website",
+        "text": "The website takes the identity into the digital space: the warm palette, the serif typography with italic highlights and the three icons — awaken, blossom and flow — organize the page, from the opening invitation to the consulting space."
+      },
+      {
+        "alt": "Home page of karolinnehartung.com.br on a MacBook, on a bordeaux background",
+        "caption": "Home page"
+      },
+      {
+        "alt": "Three white iPhones on a dark bordeaux background showing the website: the home page scrolling in video, the specialties section on a light screen and the quote about welcoming care",
+        "caption": "Mobile version"
+      },
+      {
+        "alt": "Two sections of the website in overlapping browser windows on a deep moss green background: the consulting space in bordeaux and the clinical differential in sand",
+        "caption": "Sections"
+      },
+      {
+        "alt": "Black-and-white portraits of diverse people in a grid on a sand background, fading in and swapping places in a continuous animation",
+        "caption": "Contact"
+      }
+    ],
+    "credits": [
+      {
+        "role": "Design"
+      },
+      {
+        "role": "Intermediation"
       }
     ]
   }

@@ -309,7 +309,8 @@
       "capa": "assets/vinis/linkin-park-meteora.jpg",
       "estrelas": 4,
       "curiosidade": "O nome vem dos mosteiros de Meteora, na Grécia. O álbum estreou em 1º lugar na Billboard 200.",
-      "curiosidade_en": "The name comes from the Meteora monasteries in Greece. The album debuted at No. 1 on the Billboard 200."
+      "curiosidade_en": "The name comes from the Meteora monasteries in Greece. The album debuted at No. 1 on the Billboard 200.",
+      "vinil": "linear-gradient(135deg, #f2a9c6 0%, #d9739f 45%, #cfa24f 100%)"
     },
     {
       "artista": "Marcelo D2",

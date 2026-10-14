@@ -27,6 +27,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     autoplayDelay: 5, // s
     resumeAfter: 6, // s sem interação até o autoplay voltar
     introSpinDuration: 2.5, // s
+    startSlug: "tasty-nutrition", // card em que o carrossel estaciona ao carregar
     stepDuration: 1, // s
     wheelStep: 40, // px acumulados para girar um card
     wheelCooldown: 450, // ms: trava após um passo (inércia do trackpad)
@@ -53,6 +54,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   const isMobile = () => mobileQuery.matches;
 
   let currentIndex = 0;
+  let startIndex = 0; // card inicial (CONFIG.startSlug); definido depois de montar os cards
   let itemCount = 0;
 
   const t = (en, pt) => (window.nqI18n ? window.nqI18n.t(en, pt) : en);
@@ -79,9 +81,15 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   // --- Movimento (GSAP, com fallback instantâneo se a CDN falhar) ---------
 
+  // Fase: o contêiner gira meio passo à frente e cada card volta meio passo.
+  // O resultado visual é o mesmo, mas o contêiner nunca para a ~90° (de lado
+  // para a câmera), onde o Chrome erra o hit-test 3D e o card central deixa de
+  // receber o clique (acontecia com Tasty e studioisa).
+  const phase = () => theta / 2;
+
   function setRotation(deg) {
-    if (hasGsap) gsap.set(carousel, { rotationY: deg });
-    else carousel.style.transform = `rotateY(${deg}deg)`;
+    if (hasGsap) gsap.set(carousel, { rotationY: deg + phase() });
+    else carousel.style.transform = `rotateY(${deg + phase()}deg)`;
   }
 
   function tweenRotation(deg, duration, ease) {
@@ -90,11 +98,11 @@ document.addEventListener("DOMContentLoaded", async () => {
       setRotation(deg);
       return;
     }
-    gsap.to(carousel, { rotationY: deg, duration, ease, overwrite: true });
+    gsap.to(carousel, { rotationY: deg + phase(), duration, ease, overwrite: true });
   }
 
   const getRotation = () =>
-    hasGsap ? Number(gsap.getProperty(carousel, "rotationY")) : -currentIndex * theta;
+    hasGsap ? Number(gsap.getProperty(carousel, "rotationY")) - phase() : -currentIndex * theta;
 
   function setSceneTilt(rx) {
     if (!scene) return;
@@ -226,7 +234,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   function applyRadius() {
     const radius = isMobile() ? CONFIG.radius.mobile : CONFIG.radius.desktop;
     cards.forEach((card, i) => {
-      card.style.transform = `rotateY(${theta * i}deg) translateZ(${radius}px)`;
+      card.style.transform = `rotateY(${theta * i - phase()}deg) translateZ(${radius}px)`;
     });
   }
 
@@ -635,13 +643,13 @@ document.addEventListener("DOMContentLoaded", async () => {
       return;
     }
     introRunning = true;
-    currentIndex = itemCount; // uma volta inteira; o card ativo é o mesmo
+    currentIndex = itemCount + startIndex; // uma volta inteira; termina no card inicial
     syncState();
     gsap.fromTo(
       carousel,
-      { rotationY: 0 },
+      { rotationY: -startIndex * theta + phase() },
       {
-        rotationY: -360,
+        rotationY: -(360 + startIndex * theta) + phase(),
         duration: CONFIG.introSpinDuration,
         ease: "power3.out",
         onComplete() {
@@ -687,7 +695,9 @@ document.addEventListener("DOMContentLoaded", async () => {
   });
   applyRadius();
   setSceneTilt(baseTilt());
-  setRotation(0);
+  startIndex = Math.max(0, works.findIndex((w) => w.slug === CONFIG.startSlug));
+  currentIndex = startIndex;
+  setRotation(-startIndex * theta);
   syncState();
 
   mobileQuery.addEventListener("change", () => {

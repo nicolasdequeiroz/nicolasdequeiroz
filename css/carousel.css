@@ -34,7 +34,15 @@
     height: 260px;
 }
 
+/* Só os cards recebem ponteiro: a cena e o contêiner, quando quase de lado,
+   viram uma faixa fina no centro que roubava o clique do card central. */
+.scene-container,
+.carousel-3d {
+    pointer-events: none;
+}
+
 .carousel-item {
+    pointer-events: auto;
     position: absolute;
     inset: 0;
     margin: 0;

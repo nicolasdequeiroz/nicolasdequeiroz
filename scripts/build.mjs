@@ -55,6 +55,11 @@ function renderHero(hero, enHero, assetPrefix) {
   // view-transition-name "work-media" casa com o card central do carrossel.
   const vt = ' style="view-transition-name: work-media"';
   const alt = at("alt", enHero?.alt, hero.alt);
+  if (hero.type === "video" && hero.mobile) {
+    // Vídeo no desktop; abaixo de 768px, a capa vertical (imagem) — a mesma do card do carrossel.
+    const poster = hero.poster ? ` poster="${assetPrefix}${hero.poster}"` : "";
+    return `<div class="work-hero"><video class="work-media work-hero-video"${vt} src="${assetPrefix}${hero.src}" autoplay muted loop playsinline${poster}${at("aria-label", enHero?.alt, hero.alt)}></video><img class="work-media work-hero-mobile"${vt} src="${assetPrefix}${hero.mobile}"${alt} decoding="async"></div>`;
+  }
   if (hero.type === "video") {
     return `<div class="work-hero"><video class="work-media"${vt} src="${assetPrefix}${hero.src}" autoplay muted loop playsinline${at("aria-label", enHero?.alt, hero.alt)}></video></div>`;
   }
@@ -126,6 +131,7 @@ const RATIO_CLASS = {
   "7:5": "work-r-75",
   "1:1": "work-r-11",
   "4:5": "work-r-45",
+  "9:16": "work-r-916", // vídeo vertical: estreito e centralizado
   auto: "work-r-auto", // proporção do próprio arquivo (faixas de logotipos, recortes)
 };
 
@@ -151,6 +157,10 @@ function renderMediaEl(item, enItem, assetPrefix, fallbackRatio) {
   const isVideo = item.type === "video" || /\.(mp4|webm)$/i.test(item.src);
   if (isVideo) {
     const poster = item.poster ? ` poster="${assetPrefix}${item.poster}"` : "";
+    // `mobile`: versão vertical (9:16) servida abaixo de 768px via <source media>.
+    if (item.mobile) {
+      return `<video class="work-r-vswap" autoplay muted loop playsinline preload="metadata"${poster}${at("aria-label", enItem?.alt, item.alt || "")}><source media="(max-width: 767px)" src="${assetPrefix}${item.mobile}"><source src="${assetPrefix}${item.src}"></video>`;
+    }
     return `<video${classAttr} src="${assetPrefix}${item.src}" autoplay muted loop playsinline preload="metadata"${poster}${at("aria-label", enItem?.alt, item.alt || "")}></video>`;
   }
   return `<img${classAttr} src="${assetPrefix}${item.src}"${at("alt", enItem?.alt, item.alt || "")} loading="lazy" decoding="async">`;
@@ -265,7 +275,7 @@ function renderNextCase(next, assetPrefix) {
   if (!next) return "";
   const label = ui("next");
   return `<a href="../${next.slug}/" class="work-next" aria-label="${label.text}: ${escapeHtml(next.title)}" data-pt-aria-label="${escapeHtml(UI.next[1])}: ${escapeHtml(next.title)}">
-    <img class="work-next-media" src="${assetPrefix}${next.hero.src}" alt="" loading="lazy" decoding="async">
+    <img class="work-next-media" src="${assetPrefix}${next.hero.type === "video" ? next.thumb : next.hero.src}" alt="" loading="lazy" decoding="async">
     <span class="work-next-content">
       <span class="work-block-label"${label.attr}>${label.text}</span>
       <span class="work-next-title">${escapeHtml(next.title)}</span>
@@ -290,8 +300,8 @@ function validateWorks(data) {
       if (!BLOCK_TYPES.has(block.type)) {
         throw new Error(`Bloco desconhecido "${block.type}" em ${work.slug}`);
       }
-      if (block.type === "pair" && block.items?.length !== 2) {
-        throw new Error(`Bloco "pair" em ${work.slug} precisa de exatamente 2 items`);
+      if (block.type === "pair" && ![2, 3].includes(block.items?.length)) {
+        throw new Error(`Bloco "pair" em ${work.slug} precisa de 2 ou 3 items (3 = trio, lado a lado)`);
       }
       if (block.ratio && !RATIO_CLASS[block.ratio]) {
         throw new Error(`Ratio "${block.ratio}" inválido em ${work.slug} (use 16:9, 4:3, 7:5, 4:5, 1:1 ou auto)`);

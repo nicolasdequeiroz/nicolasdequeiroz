@@ -19,6 +19,21 @@
     background: var(--surface);
 }
 
+/* Hero em vídeo (desktop) + capa vertical em imagem (celular): só um renderiza. */
+.work-hero-mobile {
+    display: none;
+}
+
+@media (max-width: 767.98px) {
+    .work-hero-video {
+        display: none;
+    }
+
+    .work-hero-mobile {
+        display: block;
+    }
+}
+
 .work-hero picture {
     display: block;
 }
@@ -30,9 +45,11 @@
 }
 
 /* Intro editorial: título display → meta em colunas → tagline + descrição. */
+/* 1344 = 1280 de conteúdo + 2×32 de respiro: título, meta, texto e créditos
+   ficam na mesma coluna (e margens) dos blocos (.work-blocks > .work-block). */
 .work-intro {
     padding: clamp(40px, 6vw, 80px) 32px 0;
-    max-width: 1280px;
+    max-width: 1344px;
     margin: 0 auto;
 }
 
@@ -150,6 +167,26 @@
     object-fit: contain;
 }
 
+/* 9:16 — vídeo vertical: largura de um celular, centralizado (em 1280px ficaria com 2k de altura). */
+.work-block video.work-r-916 {
+    aspect-ratio: 9 / 16;
+    object-fit: cover;
+    width: min(100%, 420px);
+    margin: 0 auto;
+}
+
+/* Vídeo com versão vertical: 16:9 no desktop, 9:16 abaixo de 768px. */
+.work-r-vswap {
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+
+@media (max-width: 767px) {
+    .work-r-vswap {
+        aspect-ratio: 9 / 16;
+    }
+}
+
 /* Paleta: amostras de cor com nome e código, nome traduzível. */
 .work-block--palette ul {
     list-style: none;
@@ -166,26 +203,45 @@
     }
 }
 
+/* Cada amostra é um cartão no estilo Pantone: moldura clara em volta da cor,
+   nome e código no rodapé do próprio cartão. */
+.work-block--palette li {
+    background: var(--bg);
+    padding: 10px 10px 16px;
+    border-radius: 4px;
+    box-shadow:
+        0 1px 2px rgba(0, 0, 0, 0.08),
+        0 10px 22px -10px rgba(0, 0, 0, 0.22),
+        inset 0 0 0 1px var(--line-soft);
+}
+
+:root[data-theme="dark"] .work-block--palette li {
+    background: var(--surface);
+}
+
 .work-swatch {
     display: block;
-    aspect-ratio: 1;
-    border-radius: 8px;
-    box-shadow: inset 0 0 0 1px var(--line);
+    aspect-ratio: 1 / 1.08;
+    border-radius: 2px;
+    box-shadow: inset 0 0 0 1px var(--line-soft);
 }
 
 .work-swatch-name {
     display: block;
-    margin-top: 12px;
-    font-size: 14px;
-    font-weight: 600;
+    margin-top: 14px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
 }
 
 .work-swatch-hex {
     display: block;
-    margin-top: 2px;
-    font-size: 13px;
+    margin-top: 3px;
+    font-size: 11px;
+    text-transform: uppercase;
     color: color-mix(in srgb, var(--fg) 55%, transparent);
-    letter-spacing: 0.04em;
+    letter-spacing: 0.08em;
 }
 
 .work-r-43 {
@@ -227,6 +283,20 @@
     margin: 0;
 }
 
+/* Dupla de peças horizontais (16:9, 4:3, 7:5): no celular vira uma abaixo da outra.
+   Duplas de peças verticais continuam lado a lado. */
+@media (max-width: 767.98px) {
+    .work-block--pair:has(:is(.work-r-169, .work-r-43, .work-r-75)) {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+}
+
+/* Três peças verticais lado a lado (stories, fotos 9:16). */
+.work-block--pair:has(figure:nth-child(3)) {
+    grid-template-columns: repeat(3, 1fr);
+}
+
 /* Galeria: a linha de produtos numa "prateleira" (fundo suave), cada peça recortada
    sem fundo, com a legenda centralizada embaixo. Quebra em 3 e depois em 2 por linha;
    a última linha fica centralizada. */
@@ -252,6 +322,12 @@
     aspect-ratio: 4 / 5;
     object-fit: contain;
     border-radius: 0;
+}
+
+/* ícones animados: o SVG tem folga de 20px em volta do círculo (a flor gira e
+   as pontas das pétalas passam do círculo); a escala devolve o tamanho original */
+.work-block--gallery img[src$=".svg"] {
+    transform: scale(1.131);
 }
 
 .work-block--gallery figcaption {
@@ -304,7 +380,7 @@
 
 .work-outro {
     padding: 0 32px;
-    max-width: 1280px;
+    max-width: 1344px;
     margin: 0 auto;
 }
 
@@ -395,8 +471,8 @@
     }
 
     .work-blocks {
-        padding-left: 16px;
-        padding-right: 16px;
+        padding-left: 20px;
+        padding-right: 20px;
     }
 
     .work-outro {

@@ -1,0 +1,37 @@
+<svg class="aperture-mark" width="345" height="345" viewBox="0 0 345 345" fill="none" xmlns="http://www.w3.org/2000/svg">
+<style>
+.aperture-mark g[class^="c-"]{transform-box:view-box}
+.aperture-mark .c-tr{animation:am-tr 3.2s ease-in-out infinite}
+.aperture-mark .c-tl{animation:am-tl 3.2s ease-in-out infinite}
+.aperture-mark .c-br{animation:am-br 3.2s ease-in-out infinite}
+.aperture-mark .c-bl{animation:am-bl 3.2s ease-in-out infinite}
+@keyframes am-tr{0%,100%{transform:translate(0,0)}50%{transform:translate(17px,-17px)}}
+@keyframes am-tl{0%,100%{transform:translate(0,0)}50%{transform:translate(-17px,-17px)}}
+@keyframes am-br{0%,100%{transform:translate(0,0)}50%{transform:translate(17px,17px)}}
+@keyframes am-bl{0%,100%{transform:translate(0,0)}50%{transform:translate(-17px,17px)}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}
+</style>
+<circle cx="172.5" cy="172.5" r="152.5" fill="#EDE3D2"/>
+<mask id="mask0_121_32" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="20" y="20" width="305" height="305">
+<circle cx="172.5" cy="172.5" r="152.5" fill="#D9D9D9"/>
+</mask>
+<g mask="url(#mask0_121_32)">
+<g class="c-tr">
+<circle cx="331.781" cy="9.83594" r="152.5" fill="#590526"/>
+<circle cx="332" cy="10" r="173" stroke="#590526" stroke-width="10"/>
+</g>
+<g class="c-tl">
+<circle cx="13.2246" cy="9.83545" r="152.5" fill="#590526"/>
+<circle cx="13" cy="10" r="173" stroke="#590526" stroke-width="10"/>
+</g>
+<g class="c-br">
+<circle cx="331.783" cy="331.78" r="152.5" fill="#590526"/>
+<circle cx="332" cy="332" r="173" stroke="#590526" stroke-width="10"/>
+</g>
+<g class="c-bl">
+<circle cx="13.2266" cy="331.78" r="152.5" fill="#590526"/>
+<circle cx="13" cy="332" r="173" stroke="#590526" stroke-width="10"/>
+</g>
+</g>
+<circle cx="172.5" cy="172.5" r="147.5" stroke="#590526" stroke-width="10"/>
+</svg>

@@ -1,0 +1,21 @@
+<svg class="anim-mark" width="345" height="345" viewBox="0 0 345 345" fill="none" xmlns="http://www.w3.org/2000/svg">
+<style>
+.anim-mark .band{transform-box:view-box;transform-origin:172.389px 447.699px}
+.anim-mark .band1{animation:am-swell 2.6s ease-in-out infinite}
+.anim-mark .band2{animation:am-swell 2.6s ease-in-out infinite .3s}
+.anim-mark .band3{animation:am-swell 2.6s ease-in-out infinite .6s}
+@keyframes am-swell{0%,100%{transform:translateY(0) scale(1)}50%{transform:translateY(-8px) scale(1.018)}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}
+</style>
+<circle cx="172.5" cy="172.5" r="152.5" fill="#590526"/>
+<mask id="mask0_121_55" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="20" y="20" width="305" height="305">
+<circle cx="172.5" cy="172.5" r="152.5" fill="#D9D9D9"/>
+</mask>
+<g mask="url(#mask0_121_55)">
+<circle class="sun" cx="172.5" cy="172.5" r="77.5" fill="#EDE3D2"/>
+<circle class="band band1" cx="172.389" cy="447.699" r="270.31" fill="#EDE3D2" stroke="#590526" stroke-width="10"/>
+<path class="band band2" d="M172.389 217.389C299.586 217.389 402.699 320.502 402.699 447.699L402.694 449.188C401.893 575.7 299.089 678.01 172.389 678.01C45.1917 678.01 -57.9218 574.896 -57.9219 447.699C-57.9219 320.502 45.1917 217.389 172.389 217.389Z" fill="#EDE3D2" stroke="#590526" stroke-width="10"/>
+<path class="band band3" d="M173.62 257.392V257.393C278.159 258.055 362.699 343.004 362.699 447.699L362.695 448.925C362.041 552.648 278.41 636.685 174.844 637.994L173.62 638.006L172.381 638.009C68.0984 638.005 -16.5921 554.125 -17.9062 450.154L-17.918 448.931L-17.9219 447.699C-17.9219 342.596 67.2789 257.393 172.381 257.389L173.62 257.392Z" fill="#EDE3D2" stroke="#590526" stroke-width="10"/>
+</g>
+<circle cx="172.5" cy="172.5" r="147.5" stroke="#590526" stroke-width="10"/>
+</svg>
