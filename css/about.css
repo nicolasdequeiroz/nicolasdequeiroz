@@ -191,6 +191,7 @@
     height: 100%;
     object-fit: cover;
     object-position: 45% 30%;
+    filter: grayscale(1);
     transition: transform 1.2s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
@@ -247,26 +248,23 @@
     color: rgba(255, 255, 255, 0.78);
 }
 
-.ab-photo:hover img {
-    transform: scale(1.05);
-}
+/* Desktop: o lugar aparece no hover. Toque e telas estreitas: ao tocar na foto (alterna). */
+@media (hover: hover) and (min-width: 769px) {
+    .ab-photo:hover img {
+        transform: scale(1.05);
+    }
 
-.ab-photo:hover::after,
-.ab-photo:hover .ab-photo-tag {
-    opacity: 1;
-}
-
-.ab-photo:hover .ab-photo-tag {
-    transform: none;
-}
-
-/* Telas de toque não têm hover: o lugar fica sempre à mostra. */
-@media (hover: none) {
-    .ab-photo::after,
-    .ab-photo-tag {
+    .ab-photo:hover::after,
+    .ab-photo:hover .ab-photo-tag {
         opacity: 1;
         transform: none;
     }
+}
+
+.ab-photo.is-tapped::after,
+.ab-photo.is-tapped .ab-photo-tag {
+    opacity: 1;
+    transform: none;
 }
 
 /* =============================================================
@@ -609,9 +607,24 @@
     bottom: 0;
     z-index: 0;
     margin-top: -28px; /* fica por trás dos cantos arredondados da folha */
-    background: #101010;
-    color: #f2f2f2;
+    /* Tema claro: verso escuro. Tema escuro: inverte e vira claro. */
+    --ct-bg: #101010;
+    --ct-fg: #f2f2f2;
+    --ct-line: rgba(242, 242, 242, 0.16);
+    --ct-dim: rgba(242, 242, 242, 0.6);
+    --ct-dim-2: rgba(242, 242, 242, 0.62);
+    background: var(--ct-bg);
+    color: var(--ct-fg);
     overflow: clip;
+    transition: background-color 0.35s ease, color 0.35s ease;
+}
+
+:root[data-theme="dark"] .ab-contact {
+    --ct-bg: #f2f2f2;
+    --ct-fg: #111111;
+    --ct-line: rgba(17, 17, 17, 0.16);
+    --ct-dim: rgba(17, 17, 17, 0.6);
+    --ct-dim-2: rgba(17, 17, 17, 0.62);
 }
 
 .ab-contact-sheet {
@@ -630,11 +643,11 @@
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
     gap: 24px;
-    border-top: 1px solid rgba(242, 242, 242, 0.16);
+    border-top: 1px solid var(--ct-line);
 }
 
 .ab-contact .ab-label {
-    color: rgba(242, 242, 242, 0.6);
+    color: var(--ct-dim);
 }
 
 .ab-contact-title {
@@ -672,11 +685,11 @@
     justify-content: space-between;
     gap: 12px 24px;
     font-size: 14px;
-    color: rgba(242, 242, 242, 0.62);
+    color: var(--ct-dim-2);
 }
 
 .ab-closing a {
-    color: #f2f2f2;
+    color: var(--ct-fg);
     font-weight: 600;
     text-decoration: none;
 }
@@ -697,7 +710,7 @@
     gap: 10px;
     margin: 48px 0 0;
     font-size: 14px;
-    color: rgba(242, 242, 242, 0.62);
+    color: var(--ct-dim-2);
 }
 
 .ab-dot {
@@ -736,8 +749,8 @@
     .ab-photo {
         align-self: auto;
         min-height: 0;
-        aspect-ratio: 4 / 5;
-        max-width: 480px;
+        aspect-ratio: 1 / 1;
+        order: -1;
     }
 
     .ab-stack > div {

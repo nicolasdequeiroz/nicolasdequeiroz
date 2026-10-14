@@ -141,7 +141,9 @@ html.is-home {
 .bubble-logo {
   display: inline-flex;
   align-items: center;
-  padding: 10px 20px;
+  box-sizing: border-box;
+  height: 48px;
+  padding: 0 20px;
   border-radius: 999px;
   text-decoration: none;
   color: inherit;
@@ -515,4 +517,21 @@ body > footer > * {
   letter-spacing: -0.025em;
   opacity: 0.3;
   line-height: 1;
+}
+
+/* Idioma no mobile: sai da barra e vai para dentro do menu */
+.nav-lang-col {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .nav-actions > .bubble-lang {
+    display: none;
+  }
+
+  .nav-lang-col {
+    display: flex;
+    justify-content: center;
+    margin-top: 6px;
+  }
 }

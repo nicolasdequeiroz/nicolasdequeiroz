@@ -102,7 +102,7 @@
 
   // Clique fora dos pills fecha o menu
   overlay.addEventListener("click", (e) => {
-    if (!e.target.closest(".nav-pill-link")) closeMenu();
+    if (!e.target.closest(".nav-pill-link, [data-lang-toggle]")) closeMenu();
   });
 
   // Escape fecha o menu

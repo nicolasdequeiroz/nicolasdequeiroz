@@ -1,8 +1,7 @@
 // Easter egg: globo dos países visitados.
 //
-// Globo de pontos em WebGL (cobe, ~13 kB) com um marcador por país, arcos
-// saindo de casa (Curitiba) e rótulos com bandeira presos aos marcadores por
-// CSS Anchor Positioning. Gira sozinho devagar, dá para arrastar, e clicar num
+// Globo de pontos em WebGL (cobe, ~13 kB) com um marcador por cidade e
+// rótulos com bandeira presos aos marcadores por CSS Anchor Positioning. Gira sozinho devagar, dá para arrastar, e clicar num
 // país da lista leva o globo até ele.
 
 import createGlobe from "https://cdn.jsdelivr.net/npm/cobe@2.0.1/dist/index.esm.js";
@@ -38,17 +37,20 @@ export async function init(dialog) {
   const data = await res.json();
   const casa = data.casa;
   const paises = data.paises ?? [];
-  const continentes = new Set(paises.map((p) => p.continente)).size;
-  const longe = paises.reduce((m, p) => Math.max(m, km(casa.local, p.local)), 0);
+  // Cada país tem uma lista de cidades; o "centro" do país (média) serve de foco e de âncora do rótulo.
+  paises.forEach((p) => {
+    const n = p.cidades.length;
+    p.local = [p.cidades.reduce((a, c) => a + c.local[0], 0) / n, p.cidades.reduce((a, c) => a + c.local[1], 0) / n];
+  });
+  const cidades = paises.flatMap((p) => p.cidades);
+  const longe = cidades.reduce((m, c) => Math.max(m, km(casa.local, c.local)), 0);
   const id = (p) => p.iso.toLowerCase();
+  const sep = (list, key) => list.map((c) => c[key] ?? c.nome).join(" · ");
 
   dialog.innerHTML = `
     <div class="egg-inner egg-globo">
       <header class="egg-head">
-        <div>
-          <h2 class="egg-title" id="egg-globo-title" data-pt="Por onde passei">Where I have been</h2>
-          <p class="egg-sub" data-pt="Arraste o globo ou escolha um país">Drag the globe or pick a country</p>
-        </div>
+        <h2 class="visually-hidden" id="egg-globo-title" data-pt="Passaporte">Passport</h2>
         <div class="egg-actions">
           <button type="button" class="egg-close" data-egg-close aria-label="Close globe" data-pt-aria-label="Fechar globo">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
@@ -58,10 +60,10 @@ export async function init(dialog) {
 
       <div class="globe-layout">
         <div class="globe-wrap">
-          <canvas class="globe-canvas" aria-label="Globe with ${paises.length} countries marked" data-pt-aria-label="Globo com ${paises.length} países marcados" role="img"></canvas>
+          <canvas class="globe-canvas" aria-label="Globe with ${cidades.length} cities in ${paises.length} countries marked" data-pt-aria-label="Globo com ${cidades.length} cidades em ${paises.length} países marcadas" role="img"></canvas>
           ${paises
             .map(
-              (p) => `<span class="globe-label" style="position-anchor:--cobe-${id(p)};opacity:var(--cobe-visible-${id(p)},0)" aria-hidden="true">${flag(p.iso)} <span data-pt="${esc(p.nome)}">${esc(p.en ?? p.nome)}</span></span>`
+              (p) => `<span class="globe-label" data-iso="${id(p)}" style="position-anchor:--cobe-${id(p)}-0;opacity:var(--cobe-visible-${id(p)}-0,0)" aria-hidden="true">${flag(p.iso)} <span data-pt="${esc(p.nome)}">${esc(p.en ?? p.nome)}</span></span>`
             )
             .join("")}
         </div>
@@ -69,7 +71,7 @@ export async function init(dialog) {
         <aside class="globe-panel">
           <dl class="globe-stats">
             <div><dt data-pt="Países">Countries</dt><dd>${paises.length}</dd></div>
-            <div><dt data-pt="Continentes">Continents</dt><dd>${continentes}</dd></div>
+            <div><dt data-pt="Cidades">Cities</dt><dd>${cidades.length}</dd></div>
             <div><dt data-pt="Mais longe de casa">Farthest from home</dt><dd data-pt="${longe.toLocaleString("pt-BR")} km">${longe.toLocaleString("en-US")} km</dd></div>
           </dl>
           <ul class="globe-list">
@@ -77,7 +79,10 @@ export async function init(dialog) {
               .map(
                 (p, i) => `<li><button type="button" class="globe-country" data-i="${i}">
                   <span class="globe-flag" aria-hidden="true">${flag(p.iso)}</span>
-                  <span class="globe-name" data-pt="${esc(p.nome)}">${esc(p.en ?? p.nome)}</span>
+                  <span class="globe-info">
+                    <span class="globe-name" data-pt="${esc(p.nome)}">${esc(p.en ?? p.nome)}</span>
+                    <span class="globe-cities" data-pt="${esc(sep(p.cidades, "nome"))}">${esc(sep(p.cidades, "en"))}</span>
+                  </span>
                   <span class="globe-km" data-pt="${p.iso === casa.iso ? "casa" : `${km(casa.local, p.local).toLocaleString("pt-BR")} km`}">${p.iso === casa.iso ? "home" : `${km(casa.local, p.local).toLocaleString("en-US")} km`}</span>
                 </button></li>`
               )
@@ -86,7 +91,6 @@ export async function init(dialog) {
         </aside>
       </div>
 
-      ${data.exemplo ? `<p class="egg-sample" data-pt="Países de exemplo — a lista de verdade entra aqui.">Sample countries — the real list goes here.</p>` : ""}
     </div>`;
 
   window.nqI18n?.translate(dialog);
@@ -96,7 +100,15 @@ export async function init(dialog) {
   const buttons = Array.from(dialog.querySelectorAll(".globe-country"));
 
   // Estado da câmera: começa olhando para casa.
-  const view = { ...focusOf(casa.local), theta: 0.3 };
+  // Começa olhando para a Itália (o país com mais cidades); só o rótulo do país ativo aparece.
+  const start = Math.max(0, paises.findIndex((p) => p.iso === "IT"));
+  const view = { ...focusOf(paises[start].local) };
+  const labels = Array.from(dialog.querySelectorAll(".globe-label"));
+  const markActive = (i) => {
+    buttons.forEach((b, j) => b.classList.toggle("is-active", j === i));
+    labels.forEach((l, j) => l.classList.toggle("is-on", j === i));
+  };
+  markActive(start);
   let globe = null;
   let raf = 0;
   let dragging = false;
@@ -108,11 +120,9 @@ export async function init(dialog) {
   const markers = [
     // Casa: um ponto maior na cor do texto.
     { location: casa.local, size: 0.09, color: isDark() ? [1, 1, 1] : [0.07, 0.07, 0.07] },
-    ...paises.map((p) => ({ location: p.local, size: 0.055, id: id(p) })),
+    // Uma bolinha por cidade; o rótulo do país prende na primeira.
+    ...paises.flatMap((p) => p.cidades.map((c, k) => ({ location: c.local, size: 0.045, id: `${id(p)}-${k}` }))),
   ];
-  const arcs = paises
-    .filter((p) => p.iso !== casa.iso)
-    .map((p) => ({ from: casa.local, to: p.local, id: `casa-${id(p)}` }));
 
   function build() {
     globe?.destroy();
@@ -136,12 +146,8 @@ export async function init(dialog) {
       baseColor: dark ? [0.22, 0.22, 0.22] : [1, 1, 1],
       markerColor: ACCENT,
       glowColor: dark ? [0.12, 0.12, 0.12] : [0.94, 0.94, 0.94],
-      arcColor: ACCENT,
-      arcWidth: 0.6,
-      arcHeight: 0.25,
       markerElevation: 0.01,
       markers,
-      arcs,
     });
   }
 
@@ -158,7 +164,7 @@ export async function init(dialog) {
     let dphi = (target.phi - view.phi) % twoPi;
     if (dphi > Math.PI) dphi -= twoPi;
     if (dphi < -Math.PI) dphi += twoPi;
-    buttons.forEach((b, j) => b.classList.toggle("is-active", j === i));
+    markActive(i);
     focusTween?.kill();
     if (reduce()) {
       view.phi += dphi;

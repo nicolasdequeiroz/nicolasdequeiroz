@@ -1,5 +1,4 @@
 {
-  "exemplo": true,
   "casa": {
     "nome": "Curitiba",
     "iso": "BR",
@@ -11,83 +10,275 @@
   "paises": [
     {
       "nome": "Brasil",
+      "en": "Brazil",
       "iso": "BR",
       "continente": "América do Sul",
-      "local": [
-        -14.235,
-        -51.9253
-      ],
-      "en": "Brazil"
+      "cidades": [
+        {
+          "nome": "Curitiba",
+          "en": "Curitiba",
+          "local": [
+            -25.4284,
+            -49.2733
+          ]
+        },
+        {
+          "nome": "São Paulo",
+          "en": "São Paulo",
+          "local": [
+            -23.5505,
+            -46.6333
+          ]
+        },
+        {
+          "nome": "Rio de Janeiro",
+          "en": "Rio de Janeiro",
+          "local": [
+            -22.9068,
+            -43.1729
+          ]
+        }
+      ]
     },
     {
       "nome": "Argentina",
+      "en": "Argentina",
       "iso": "AR",
       "continente": "América do Sul",
-      "local": [
-        -34.6037,
-        -58.3816
-      ],
-      "en": "Argentina"
-    },
-    {
-      "nome": "Chile",
-      "iso": "CL",
-      "continente": "América do Sul",
-      "local": [
-        -33.4489,
-        -70.6693
-      ],
-      "en": "Chile"
-    },
-    {
-      "nome": "Estados Unidos",
-      "iso": "US",
-      "continente": "América do Norte",
-      "local": [
-        40.7128,
-        -74.006
-      ],
-      "en": "United States"
-    },
-    {
-      "nome": "Portugal",
-      "iso": "PT",
-      "continente": "Europa",
-      "local": [
-        38.7223,
-        -9.1393
-      ],
-      "en": "Portugal"
-    },
-    {
-      "nome": "Espanha",
-      "iso": "ES",
-      "continente": "Europa",
-      "local": [
-        40.4168,
-        -3.7038
-      ],
-      "en": "Spain"
+      "cidades": [
+        {
+          "nome": "Buenos Aires",
+          "en": "Buenos Aires",
+          "local": [
+            -34.6037,
+            -58.3816
+          ]
+        },
+        {
+          "nome": "Tigre",
+          "en": "Tigre",
+          "local": [
+            -34.426,
+            -58.5797
+          ]
+        }
+      ]
     },
     {
       "nome": "Itália",
+      "en": "Italy",
       "iso": "IT",
       "continente": "Europa",
-      "local": [
-        41.9028,
-        12.4964
-      ],
-      "en": "Italy"
+      "cidades": [
+        {
+          "nome": "Roma",
+          "en": "Rome",
+          "local": [
+            41.9028,
+            12.4964
+          ]
+        },
+        {
+          "nome": "Positano",
+          "en": "Positano",
+          "local": [
+            40.6281,
+            14.485
+          ]
+        },
+        {
+          "nome": "Amalfi",
+          "en": "Amalfi",
+          "local": [
+            40.634,
+            14.6027
+          ]
+        },
+        {
+          "nome": "Florença",
+          "en": "Florence",
+          "local": [
+            43.7696,
+            11.2558
+          ]
+        },
+        {
+          "nome": "Pisa",
+          "en": "Pisa",
+          "local": [
+            43.7228,
+            10.4017
+          ]
+        },
+        {
+          "nome": "Siena",
+          "en": "Siena",
+          "local": [
+            43.3188,
+            11.3308
+          ]
+        },
+        {
+          "nome": "San Gimignano",
+          "en": "San Gimignano",
+          "local": [
+            43.4677,
+            11.0432
+          ]
+        },
+        {
+          "nome": "Milão",
+          "en": "Milan",
+          "local": [
+            45.4642,
+            9.19
+          ]
+        },
+        {
+          "nome": "Como",
+          "en": "Como",
+          "local": [
+            45.8081,
+            9.0852
+          ]
+        }
+      ]
+    },
+    {
+      "nome": "Suíça",
+      "en": "Switzerland",
+      "iso": "CH",
+      "continente": "Europa",
+      "cidades": [
+        {
+          "nome": "St. Moritz",
+          "en": "St. Moritz",
+          "local": [
+            46.4908,
+            9.8355
+          ]
+        }
+      ]
+    },
+    {
+      "nome": "França",
+      "en": "France",
+      "iso": "FR",
+      "continente": "Europa",
+      "cidades": [
+        {
+          "nome": "Paris",
+          "en": "Paris",
+          "local": [
+            48.8566,
+            2.3522
+          ]
+        }
+      ]
+    },
+    {
+      "nome": "Holanda",
+      "en": "Netherlands",
+      "iso": "NL",
+      "continente": "Europa",
+      "cidades": [
+        {
+          "nome": "Amsterdam",
+          "en": "Amsterdam",
+          "local": [
+            52.3676,
+            4.9041
+          ]
+        }
+      ]
     },
     {
       "nome": "Eslovênia",
+      "en": "Slovenia",
       "iso": "SI",
       "continente": "Europa",
-      "local": [
-        46.0569,
-        14.5058
-      ],
-      "en": "Slovenia"
+      "cidades": [
+        {
+          "nome": "Ljubljana",
+          "en": "Ljubljana",
+          "local": [
+            46.0569,
+            14.5058
+          ]
+        },
+        {
+          "nome": "Bled",
+          "en": "Bled",
+          "local": [
+            46.3683,
+            14.1146
+          ]
+        }
+      ]
+    },
+    {
+      "nome": "Croácia",
+      "en": "Croatia",
+      "iso": "HR",
+      "continente": "Europa",
+      "cidades": [
+        {
+          "nome": "Dubrovnik",
+          "en": "Dubrovnik",
+          "local": [
+            42.6507,
+            18.0944
+          ]
+        }
+      ]
+    },
+    {
+      "nome": "Bósnia e Herzegovina",
+      "en": "Bosnia and Herzegovina",
+      "iso": "BA",
+      "continente": "Europa",
+      "cidades": [
+        {
+          "nome": "Mostar",
+          "en": "Mostar",
+          "local": [
+            43.3438,
+            17.8078
+          ]
+        },
+        {
+          "nome": "Počitelj",
+          "en": "Počitelj",
+          "local": [
+            43.1345,
+            17.7195
+          ]
+        }
+      ]
+    },
+    {
+      "nome": "Montenegro",
+      "en": "Montenegro",
+      "iso": "ME",
+      "continente": "Europa",
+      "cidades": [
+        {
+          "nome": "Kotor",
+          "en": "Kotor",
+          "local": [
+            42.4247,
+            18.7712
+          ]
+        },
+        {
+          "nome": "Budva",
+          "en": "Budva",
+          "local": [
+            42.2911,
+            18.84
+          ]
+        }
+      ]
     }
   ]
 }

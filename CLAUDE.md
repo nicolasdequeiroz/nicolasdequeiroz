@@ -39,7 +39,7 @@ Não mude estes pontos sem pedido explícito, mesmo que uma skill ou o inspetor 
   em qualquer bloco escuro faz a nav escurecer sobre ele (`js/nav-theme.js`). O site tem
   `scroll-behavior: smooth`: em testes, role com `behavior: 'instant'`.
   A nav é repetida em `index.html`, `templates/work.html` e `sobre/index.html` — mudou uma, mude as três.
-- **Easter eggs (sobre)**: "coleciono vinil" e "geografia, bandeiras e mapas" abrem dialogs
+- **Easter eggs (sobre)**: "coleciono vinil" (hoje uma marquee vertical em `js/egg-vinis.js`, sem GSAP no movimento; campos de `data/vinis.json`: artista, album, ano, genero, selo, edicao[], estrelas, condicao, capa) e "geografia, bandeiras e mapas" abrem dialogs
   (`js/easter-eggs.js` carrega `js/egg-vinis.js` / `js/egg-globo.js` sob demanda). Dados em
   `data/vinis.json` e `data/viagens.json` (`"exemplo": true` mostra o aviso de lista de exemplo —
   tire quando os dados forem reais). Capas: `node scripts/vinis-capas.mjs` (iTunes Search API).

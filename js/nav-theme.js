@@ -88,7 +88,9 @@ document.addEventListener("DOMContentLoaded", () => {
       const navRect = nav.getBoundingClientRect();
       const y = navRect.top + navRect.height * 0.5;
       if (sheet && spans(sheet, y)) return setTheme(false);
-      setTheme(darkBlocks.some((el) => spans(el, y)));
+      // No tema escuro o contato vira claro: a nav segue o estilo do tema.
+      const darkTheme = document.documentElement.dataset.theme === "dark";
+      setTheme(!darkTheme && darkBlocks.some((el) => spans(el, y)));
       return;
     }
     const surface = surfaceUnderNav();
@@ -117,6 +119,10 @@ document.addEventListener("DOMContentLoaded", () => {
       window.addEventListener("resize", onScrollOrResize);
     }
   }
+
+  new MutationObserver(() => {
+    if (!isWorkPage) updateTheme();
+  }).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
 
   window.addEventListener("pagereveal", () => {
     if (isWorkPage) sampleHero();

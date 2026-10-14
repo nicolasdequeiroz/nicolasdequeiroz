@@ -24,6 +24,7 @@
   const figure = document.querySelector("[data-photo-place]");
   const coords = figure?.querySelector("[data-coords]");
   if (!figure || !coords) return;
+  figure.addEventListener("click", () => figure.classList.toggle("is-tapped"));
   if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
   let timer = null;
@@ -61,7 +62,13 @@
   fetch("../data/vinis.json", { cache: "no-cache" })
     .then((r) => r.json())
     .then((data) => {
-      const comCapa = (data.discos ?? []).filter((d) => d.capa).slice(0, 3);
+      // Três capas sorteadas a cada carregamento da página.
+      const comCapa = (data.discos ?? []).filter((d) => d.capa);
+      for (let i = comCapa.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [comCapa[i], comCapa[j]] = [comCapa[j], comCapa[i]];
+      }
+      comCapa.length = Math.min(3, comCapa.length);
       covers.innerHTML = comCapa.length
         ? comCapa.map((d) => `<img src="../${d.capa}" alt="" loading="lazy" decoding="async">`).join("")
         : "<span></span><span></span><span></span>";

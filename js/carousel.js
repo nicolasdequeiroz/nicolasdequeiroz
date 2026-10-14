@@ -31,9 +31,10 @@ document.addEventListener("DOMContentLoaded", async () => {
     wheelStep: 40, // px acumulados para girar um card
     wheelCooldown: 450, // ms: trava após um passo (inércia do trackpad)
     wheelIdle: 140, // ms sem eventos = gesto terminou
-    dragRotateFactor: 0.5, // graus por px arrastado
-    touchTiltFactor: 0.3,
+    dragRotateFactor: { desktop: 0.5, mobile: 0.26 }, // graus por px arrastado (celular: mais calmo)
+    touchTiltFactor: { desktop: 0.3, mobile: 0.14 },
     touchTiltRange: { min: -40, max: 30 },
+    throwResistance: { desktop: 1000, mobile: 2600 }, // maior = a inércia do arremesso morre mais rápido
     mouseTilt: { rotateX: -8, rotateY: 12, translateX: 30, translateY: 20 },
     mobileQuery: "(max-width: 767.98px)",
     pointerFineQuery: "(hover: hover) and (pointer: fine) and (min-width: 768px)",
@@ -405,7 +406,9 @@ document.addEventListener("DOMContentLoaded", async () => {
     let startY = 0;
     let touchTilt = false;
 
-    const rotFromX = (x) => startRot + x * CONFIG.dragRotateFactor;
+    const pick = (o) => (isMobile() ? o.mobile : o.desktop);
+    const factor = () => pick(CONFIG.dragRotateFactor);
+    const rotFromX = (x) => startRot + x * factor();
     const snapRot = (rot) => Math.round(rot / theta) * theta;
 
     function settleTo(rot) {
@@ -422,8 +425,9 @@ document.addEventListener("DOMContentLoaded", async () => {
       allowContextMenu: true,
       inertia: hasInertia && !reduceMotion(),
       maxDuration: 1.2,
+      throwResistance: pick(CONFIG.throwResistance),
       snap: {
-        x: (endX) => (snapRot(rotFromX(endX)) - startRot) / CONFIG.dragRotateFactor,
+        x: (endX) => (snapRot(rotFromX(endX)) - startRot) / factor(),
       },
       onPress(e) {
         // Um clique simples não pode congelar um giro em andamento: o tween
@@ -437,7 +441,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         gsap.killTweensOf(carousel);
         pauseThenResume();
         // O gesto já andou minimumMovement px; a rotação parte de onde está.
-        startRot = getRotation() - this.x * CONFIG.dragRotateFactor;
+        startRot = getRotation() - this.x * factor();
       },
       onDrag() {
         const rot = rotFromX(this.x);
@@ -446,7 +450,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         syncDots();
         if (touchTilt && scene) {
           const { min, max } = CONFIG.touchTiltRange;
-          const tilt = baseTilt() + (startY - this.pointerY) * CONFIG.touchTiltFactor;
+          const tilt = baseTilt() + (startY - this.pointerY) * pick(CONFIG.touchTiltFactor);
           setSceneTilt(Math.max(min, Math.min(max, tilt)));
         }
       },
