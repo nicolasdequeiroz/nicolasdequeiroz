@@ -63,7 +63,8 @@
     transform-style: preserve-3d;
 }
 
-.carousel-item img {
+.carousel-item img,
+.carousel-item video {
     position: absolute;
     inset: 0;
     width: 100%;
@@ -76,7 +77,8 @@
 
 /* Zoom no hover apenas em ponteiros finos (desktop) */
 @media (hover: hover) and (pointer: fine) {
-    .carousel-item:hover img { transform: scale(1.05); }
+    .carousel-item:hover img,
+    .carousel-item:hover video { transform: scale(1.05); }
 }
 
 /* --- INDICADOR DE POSIÇÃO ---
@@ -116,7 +118,8 @@
         height: 260px;
     }
     .scene-container { transform: rotateX(-10deg); }
-    .carousel-item img {
+    .carousel-item img,
+    .carousel-item video {
         transform: none;
         transition: none;
     }
@@ -124,7 +127,8 @@
 
 /* --- MOVIMENTO REDUZIDO --- */
 @media (prefers-reduced-motion: reduce) {
-    .carousel-item img {
+    .carousel-item img,
+    .carousel-item video {
         transition: none !important;
     }
 }

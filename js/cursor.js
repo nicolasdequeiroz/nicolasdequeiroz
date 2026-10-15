@@ -25,17 +25,27 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
-    // Loop de Animação
-    function animateCursor() {
+    // Hover
+    // '.drift-wall[data-hovering]': mural do Feed — o quadro erguido não é o alvo do hit-test.
+    const hoverTargets = ['a', 'button', 'input[type="submit"]', '.carousel-link-wrapper', '.drift-wall[data-hovering]'];
+    const targetSelector = hoverTargets.join(', ');
+
+    // Loop de Animação. Com conteúdo que anda sob o mouse parado (o mural do Feed,
+    // o carrossel), mouseover/mouseout não disparam: a cada ~120ms conferimos o que
+    // está sob o ponteiro para o estado "hover" nunca ficar preso ou atrasado.
+    let lastCheck = 0;
+    function animateCursor(ts) {
         cursor.style.left = mouseX + 'px';
         cursor.style.top = mouseY + 'px';
+        if (!isFirstMove && ts - lastCheck > 120) {
+            lastCheck = ts;
+            const el = document.elementFromPoint(mouseX, mouseY);
+            // [data-grab]: o crachá (lanyard) da Sobre marca quando o mouse está sobre ele.
+            cursor.classList.toggle('hovered', !!(el && el.closest(targetSelector)) || !!document.querySelector('[data-grab]'));
+        }
         requestAnimationFrame(animateCursor);
     }
-    animateCursor();
-
-    // Hover
-    const hoverTargets = ['a', 'button', 'input[type="submit"]', '.carousel-link-wrapper'];
-    const targetSelector = hoverTargets.join(', ');
+    requestAnimationFrame(animateCursor);
 
     document.addEventListener('mouseover', (e) => {
         if (e.target.closest(targetSelector)) cursor.classList.add('hovered');

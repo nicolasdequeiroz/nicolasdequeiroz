@@ -1,0 +1,311 @@
+/* =============================================================
+   PÁGINA CONTATO — uma tela (100svh) com um único Reflective Card
+   (React Bits, MIT, reactbits.dev; port em js/reflective-card.js) que
+   reúne os links de contato. O cartão segue o tema do site: grafite no
+   claro e prata no escuro. Os estilos do cartão são os do componente.
+   ============================================================= */
+
+html:has(.contato-page),
+.contato-page {
+    height: 100%;
+    overflow: hidden;
+}
+
+.contato-page .site-copyright {
+    visibility: hidden;
+}
+
+.contato {
+    position: fixed;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    padding: 88px 20px 72px;
+    background: var(--bg);
+}
+
+/* Nome gigante, bem apagado, atrás do cartão — mesma letra do verso da Sobre. */
+.contato-signature {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    margin: 0;
+    padding: 0 16px;
+    font-family: "Instrument Serif", serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 15.2vw;
+    line-height: 0.85;
+    letter-spacing: -0.04em;
+    white-space: nowrap;
+    color: color-mix(in srgb, var(--fg) 7%, transparent);
+    pointer-events: none;
+    user-select: none;
+}
+
+.contato .reflective-card {
+    z-index: 1;
+}
+
+.contato-title {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+}
+
+/* --- Reflective Card (estilos do componente) --- */
+
+/* Valores iniciais (antes do JS): grafite no tema claro, prata no escuro — os mesmos que o JS aplica. */
+.contato .reflective-card {
+    --rc-base: #1d1c22;
+    --rc-shadow: 0 22px 44px -20px rgba(0, 0, 0, 0.8), 0 6px 16px -8px rgba(0, 0, 0, 0.5);
+    --rc-ink: #f4f4f5;
+    --rc-muted: rgba(244, 244, 245, 0.6);
+    --rc-tile: linear-gradient(180deg, #3a3644 0%, #27242f 100%);
+    --rc-tile-edge: rgba(255, 255, 255, 0.07);
+    --rc-tile-highlight: rgba(255, 255, 255, 0.12);
+    --rc-tile-shadow: 0 4px 10px -4px rgba(0, 0, 0, 0.7);
+    --rc-rim: rgba(255, 255, 255, 0.07);
+    --rc-rim-highlight: rgba(255, 255, 255, 0.1);
+    --rc-radius: 24px;
+    --rc-pad: 19px;
+    --rc-tile-radius: 12px;
+}
+
+:root[data-theme="dark"] .contato .reflective-card {
+    --rc-base: #e7e7ea;
+    --rc-shadow: 0 22px 44px -22px rgba(24, 24, 27, 0.3), 0 6px 16px -10px rgba(24, 24, 27, 0.16);
+    --rc-ink: #18181b;
+    --rc-muted: rgba(24, 24, 27, 0.6);
+    --rc-tile: linear-gradient(180deg, #ffffff 0%, #f6f6f8 100%);
+    --rc-tile-edge: rgba(24, 24, 27, 0.08);
+    --rc-tile-highlight: rgba(255, 255, 255, 1);
+    --rc-tile-shadow: 0 4px 10px -5px rgba(24, 24, 27, 0.25);
+    --rc-rim: rgba(24, 24, 27, 0.08);
+    --rc-rim-highlight: rgba(255, 255, 255, 0.8);
+}
+
+.reflective-card {
+    position: relative;
+    box-sizing: border-box;
+    width: min(380px, 100%);
+    height: min(580px, 100%);
+    perspective: 900px;
+    color: var(--rc-ink);
+    touch-action: pan-y;
+}
+
+.reflective-card__body {
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: var(--rc-radius);
+    background: var(--rc-base);
+    box-shadow: var(--rc-shadow);
+    transform: translate3d(0, var(--rc-lift, 0px), 0) rotateX(var(--rc-rotate-x, 0deg)) rotateY(var(--rc-rotate-y, 0deg));
+    opacity: var(--rc-presence, 1);
+    isolation: isolate;
+    will-change: transform;
+}
+
+.reflective-card__canvas {
+    position: absolute;
+    inset: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.reflective-card__content {
+    position: relative;
+    z-index: 1;
+    box-sizing: border-box;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    padding: var(--rc-pad);
+}
+
+.reflective-card__rim {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    border-radius: inherit;
+    box-shadow:
+        inset 0 0 0 1px var(--rc-rim),
+        inset 0 1px 0 var(--rc-rim-highlight);
+    pointer-events: none;
+}
+
+/* --- Conteúdo do cartão --- */
+
+.rc-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 13px;
+    line-height: 20px;
+}
+
+.rc-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 500;
+}
+
+.rc-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-left: auto;
+    color: var(--rc-muted);
+}
+
+.rc-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #22c55e;
+    animation: rc-pulse 2.4s ease-out infinite;
+}
+
+@keyframes rc-pulse {
+    0% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.5); }
+    70%, 100% { box-shadow: 0 0 0 8px rgba(34, 197, 94, 0); }
+}
+
+.rc-identity {
+    margin-top: auto;
+}
+
+.rc-name {
+    margin: 0;
+    font-family: "Instrument Serif", serif;
+    font-size: clamp(34px, 9vw, 42px);
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: -0.015em;
+    text-wrap: balance;
+}
+
+.rc-role {
+    margin: 8px 0 0;
+    color: var(--rc-muted);
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.rc-links {
+    list-style: none;
+    display: grid;
+    gap: 8px;
+    margin: 24px 0 0;
+    padding: 0;
+}
+
+.rc-link {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 14px;
+    border-radius: var(--rc-tile-radius);
+    background: transparent;
+    color: var(--rc-ink);
+    text-decoration: none;
+    transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.rc-link::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    box-shadow: inset 0 0 0 1px var(--rc-tile-edge);
+    pointer-events: none;
+}
+
+.rc-link:hover {
+    transform: translateY(-2px);
+}
+
+.rc-link:focus-visible {
+    outline: 2px solid var(--rc-ink);
+    outline-offset: 2px;
+}
+
+.rc-link-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    min-width: 0;
+}
+
+.rc-link-label {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.rc-link-sub {
+    color: var(--rc-muted);
+    font-size: 12px;
+    line-height: 1.3;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.rc-link-arrow {
+    color: var(--rc-muted);
+    transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), color 0.2s ease;
+}
+
+.rc-link:hover .rc-link-arrow {
+    color: var(--rc-ink);
+    transform: translate(2px, -2px);
+}
+
+.rc-footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    margin-top: 20px;
+    color: var(--rc-muted);
+    font-size: 12px;
+    line-height: 16px;
+    font-variant-numeric: tabular-nums;
+}
+
+@media (max-width: 767.98px) {
+    .contato {
+        padding: 84px 16px 80px;
+    }
+
+    .reflective-card {
+        height: min(560px, 100%);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .rc-dot {
+        animation: none;
+    }
+
+    .reflective-card__body {
+        will-change: auto;
+    }
+
+    .rc-link,
+    .rc-link-arrow {
+        transition: none;
+    }
+}

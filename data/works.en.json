@@ -9,7 +9,7 @@
     "industry": "Japanese restaurant",
     "location": "Siqueira Campos, PR, Brazil",
     "hero": {
-      "alt": "Mizzu Sushi logo over the Great Wave in dark red"
+      "alt": "Circular Mizzu Sushi seal spinning over a wave pattern"
     },
     "blocks": [
       {
@@ -19,10 +19,6 @@
       {
         "label": "Concept",
         "text": "Mizu (水) means water. The word became the starting point: water as the link between the ocean and the plate. The ideogram takes the role of the symbol, the widely spaced serif typography brings the calm of tradition, and the red with a near-black brown recalls Japanese lacquer and ceramics."
-      },
-      {
-        "alt": "Circular Mizzu Sushi seal spinning over a wave pattern",
-        "caption": "Seal"
       },
       {
         "items": [
@@ -82,7 +78,11 @@
       {
         "role": "Briefing"
       }
-    ]
+    ],
+    "seo": {
+      "title": "Mizzu Sushi — Sushi restaurant branding",
+      "description": "Visual identity and packaging for Mizzu Sushi, a Japanese restaurant in Paraná, built on water (mizu) and an adaptation of Hokusai’s Great Wave."
+    }
   },
   "jabutibar": {
     "tagline": "An oasis of relaxation in the countryside of São Paulo.",
@@ -167,10 +167,14 @@
       {
         "role": "Briefing"
       }
-    ]
+    ],
+    "seo": {
+      "title": "JabutiBar — Bar visual identity",
+      "description": "Visual identity, illustration and menu for JabutiBar, an open-air bar in Itaporanga (SP) that celebrates nature, good food and the local culture."
+    }
   },
   "studioisa": {
-    "description": "Brand and website for a pilates studio focused on well-being and movement.",
+    "description": "Brand for Studio Isa, a pilates studio in Itaporanga (SP) focused on well-being and movement. A two-voice logotype, a circular seal and a palette of deep teal and peach beige express care, detail and welcome, from the studio to social media.",
     "services": [
       "Branding",
       "Web Design"
@@ -188,6 +192,206 @@
     ],
     "hero": {
       "alt": "Animation of the isa logotype in beige on a deep teal background"
+    },
+    "blocks": [
+      {
+        "text": "A new name, the same essence."
+      },
+      {
+        "label": "About the brand",
+        "text": "Studio Isa is a pilates studio in Itaporanga, in the countryside of São Paulo, focused on well-being and movement. The brand is born from a turn: a new name that carries the same essence as always, care, attention to detail and welcome, now with an identity of its own, light and recognizable."
+      },
+      {
+        "alt": "Composition with the bottle, the watch and the T-shirt with the brand, the color palette, a pilates class with the line Encontre a liberdade de se movimentar com studio isa and the circular seal",
+        "caption": "The brand in use"
+      },
+      {
+        "label": "Logotype",
+        "text": "The name in two voices: “studio” in light italic and “isa” in weight, in the same serif drawing. The contrast between the thin and the thick stroke is the brand’s movement: the calm of stretching and the firmness of exercise. The version with “pilates” in sans accompanies the name when it is necessary to say what the studio does."
+      },
+      {
+        "items": [
+          {
+            "alt": "Isa monogram in blue on a beige background",
+            "caption": "Monogram"
+          },
+          {
+            "alt": "Circular seal with the isa monogram and the line Pilates Studio repeated around it",
+            "caption": "Seal"
+          }
+        ]
+      },
+      {
+        "label": "Colors",
+        "text": "Deep teal is the base: serene and deep, it conveys trust. Peach beige brings the warmth of welcome, and white opens room to breathe. Between them, lighter and darker blues add depth to the system without losing lightness."
+      },
+      {
+        "label": "",
+        "items": [
+          {
+            "name": "Midnight blue"
+          },
+          {
+            "name": "Deep teal"
+          },
+          {
+            "name": "Mid blue"
+          },
+          {
+            "name": "Peach beige"
+          },
+          {
+            "name": "White"
+          }
+        ]
+      },
+      {
+        "text": "Pilates made with soul, detail & welcome."
+      },
+      {
+        "label": "Applications",
+        "text": "The brand leaves the page and fills the studio: from the facade and the window to signs, T-shirts, tote bags and everyday pieces. The circular seal becomes a signature, and the brand line wraps around the monogram."
+      },
+      {
+        "alt": "Studio facade in deep teal with the studio isa logotype in relief, over a window with lit glass doors",
+        "caption": "Facade"
+      },
+      {
+        "alt": "Studio window with frosted decals: the circular seal with the brand line, the logotype on the sides and, in the variations, the contact and Instagram",
+        "caption": "Window"
+      },
+      {
+        "items": [
+          {
+            "alt": "Circular wall sign, blue, with the isa monogram and the line Pilates Studio",
+            "caption": "Blue sign"
+          },
+          {
+            "alt": "Circular wall sign, beige, with the isa monogram and the line Pilates Studio",
+            "caption": "Beige sign"
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "alt": "Charcoal T-shirt with the circular seal and the studio isa logotype on the chest",
+            "caption": "T-shirt"
+          },
+          {
+            "alt": "Charcoal T-shirt with the studio isa logotype and the pilates label",
+            "caption": "T-shirt with label"
+          }
+        ]
+      },
+      {
+        "label": "Wellness Era",
+        "text": "A line of T-shirts takes the brand to the body: the phrase “Welcome to My Wellness Era” on the back, the “Pilates & Gym” seal and a discreet logotype on the front, in beige and brown. A piece to train in and to wear around, telling the same story as the studio."
+      },
+      {
+        "items": [
+          {
+            "alt": "Woman seen from behind holding a medicine ball overhead, wearing the brown Welcome to My Wellness Era T-shirt",
+            "caption": "Brown T-shirt"
+          },
+          {
+            "alt": "Woman seen from behind with an orange resistance band, wearing the beige Welcome to My Wellness Era T-shirt",
+            "caption": "Beige T-shirt"
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "alt": "Woman standing with a hand on her hip and an orange band, wearing a brown T-shirt with the studio isa logotype on the front",
+            "caption": "Front, brown"
+          },
+          {
+            "alt": "Woman in profile with an orange band around the neck, wearing a beige T-shirt with the line My Wellness Era",
+            "caption": "Front, beige"
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "alt": "Artwork with the studio isa logotype, the line Welcome to My Wellness Era and the Pilates & Gym seal",
+            "caption": "The line"
+          },
+          {
+            "alt": "Back of a beige T-shirt with the line Welcome to My Wellness Era and the Pilates & Gym seal",
+            "caption": "Back, beige"
+          },
+          {
+            "alt": "Back of a brown T-shirt with the line Welcome to My Wellness Era in beige",
+            "caption": "Back, brown"
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "alt": "Story with three smiling women on blue and the text studio isa, um novo nome, a mesma essência",
+            "caption": "A new name"
+          },
+          {
+            "alt": "Woman in profile holding a raw cotton tote bag with the circular seal Pilates feito com alma, detalhe & acolhimento and the studio isa logotype in blue",
+            "caption": "Tote bag"
+          }
+        ]
+      },
+      {
+        "alt": "Two women practicing pilates on reformer machines, in blue tones, with the studio isa logotype in beige at the center"
+      },
+      {
+        "text": "Find the freedom to move."
+      },
+      {
+        "label": "Communication",
+        "text": "In digital, the identity gets a voice: team posts, special dates, invitations and studio announcements. Blue and beige hold the language together, and the tone is always close, like a conversation in the classroom."
+      },
+      {
+        "items": [
+          {
+            "alt": "Portrait of Isa in a team post, with the line Prazer, Isa"
+          },
+          {
+            "alt": "Post with the title Conheça a nossa equipe on a beige background"
+          },
+          {
+            "alt": "Portrait of Bianca in a team post, with the line Prazer, Bianca"
+          },
+          {
+            "alt": "Portrait of Rayane in a team post, with the line Prazer, Rayane"
+          },
+          {
+            "alt": "Portrait of Bruna in a team post, with the line Prazer, Bruna"
+          },
+          {
+            "alt": "Portrait of Thainá in a team post, with the line Prazer, Thainá"
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "alt": "Studio isa logotype in beige on a blue gradient",
+            "caption": "Signature on blue"
+          },
+          {
+            "alt": "Studio isa logotype on two lines, in beige on a blue gradient",
+            "caption": "Stacked signature"
+          }
+        ]
+      },
+      {
+        "text": "Care that moves with you."
+      }
+    ],
+    "location": "Itaporanga, SP, Brazil",
+    "seo": {
+      "title": "Studio Isa — Pilates studio branding",
+      "description": "Brand for Studio Isa, a pilates studio in Itaporanga (SP): a two-voice logotype, a circular seal and a deep teal and peach palette, from studio to social media."
     }
   },
   "move": {
@@ -330,7 +534,11 @@
       {
         "role": "Briefing"
       }
-    ]
+    ],
+    "seo": {
+      "title": "Move+ — Training center identity",
+      "description": "Visual identity for Move+, a conditioning and strength training center: a slanted olive-green logotype with a lime plus sign, from the watch to the T-shirt."
+    }
   },
   "topfit": {
     "tagline": "Supplements to help you reach the top.",
@@ -348,6 +556,18 @@
       {
         "label": "About the brand",
         "text": "TOPFIT was not born to be just another supplements store. It runs a physical store, its own e-commerce, marketplaces and distribution, and it sells more than product: it sells attitude, curation and positioning. A brand with its own voice: provocative, raw, direct and authentic."
+      },
+      {
+        "label": "Mission and vision",
+        "text": "To deliver the best supplements on the market with curation, personality and impact, and to help customers reach the top, whether physical, mental, aesthetic or in life, no beating around the bush. The vision is to be the most remembered brand among supplement stores in Brazil: not for variety, but for attitude. For delivery. For identity."
+      },
+      {
+        "alt": "Black-and-white portrait of an athlete with a towel in a locker room, next to a dark stone texture",
+        "caption": "Mission and vision"
+      },
+      {
+        "label": "Personality",
+        "text": "Provocative, raw, direct and authentic. TOPFIT pokes, challenges and does not soften what it thinks: provocation is the call to action. It is dense and solid, visually and verbally, and the impact is in the foundation. Focus on what is needed: it says what matters, period. It has a face, a tone and a presence, a visual and verbal statement."
       },
       {
         "label": "Scope",
@@ -370,6 +590,22 @@
         "caption": "Logo and tagline"
       },
       {
+        "label": "Exclusion zone",
+        "text": "The brand was made to be seen, with impact, clarity and respect for its space. The exclusion zone defines the minimum breathing room around the logo, ensuring legibility and presence even in busy visual environments. The base measure is the width of the letter “I” (X), and the free space around the brand must be at least 2X."
+      },
+      {
+        "items": [
+          {
+            "alt": "TOPFIT logotype over a grid, with almost no letter spacing to reinforce the idea of a block",
+            "caption": "Logotype construction"
+          },
+          {
+            "alt": "TOPFIT logotype surrounded by the exclusion zone, with the X measure and the minimum 2X space",
+            "caption": "Exclusion zone"
+          }
+        ]
+      },
+      {
         "text": "Symbols that shout, not whisper."
       },
       {
@@ -379,6 +615,10 @@
       {
         "label": "Icon",
         "text": "Built from the brand’s “T”, symmetrically distorted, split into two blocks and tilted by 30 degrees, it creates an isometric view that recalls a solid corner. It can be read as a disguised arrow pointing up, the corner of an e-commerce box, or a geometric seal that marks territory."
+      },
+      {
+        "alt": "TOPFIT social profile with the arrow icon as the picture, and the icon as an app on a red background",
+        "caption": "The icon on the profile"
       },
       {
         "label": "Colors",
@@ -420,8 +660,7 @@
       {
         "items": [
           {
-            "alt": "Specimens of the Gasoek One typeface in red: the font name and the alphabet, numbers and symbols",
-            "caption": "Gasoek One"
+            "alt": "Specimens of the Gasoek One typeface in red: the font name and the alphabet, numbers and symbols"
           },
           {
             "alt": "Cracked rock texture in black and white",
@@ -446,6 +685,54 @@
           {
             "alt": "Black hoodie with the isometric TOPFIT logo in white",
             "caption": "Hoodie"
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "alt": "Black T-shirt with the red TOPFIT box logo on the chest",
+            "caption": "T-shirt"
+          },
+          {
+            "alt": "Red plastic bag with the TOPFIT logotype in white",
+            "caption": "Plastic bag"
+          }
+        ]
+      },
+      {
+        "alt": "Ad with a bent-over athlete, a towel around the neck, and the line Força não se improvisa. Se constrói.",
+        "caption": "Ad"
+      },
+      {
+        "label": "Patterns and seals",
+        "text": "The brand also becomes a pattern: the rising arrow, the name repeated as a print, the circular seal with the slogan and the icon outline over a mountain, a reminder that the top is the destination."
+      },
+      {
+        "alt": "Pattern of white arrows on red, next to a photo of an athlete and the red box logo on a wine background",
+        "caption": "Arrow pattern"
+      },
+      {
+        "items": [
+          {
+            "alt": "Print with the TOPFIT name repeated in red on wine",
+            "caption": "Name print"
+          },
+          {
+            "alt": "Circular seal with the arrow icon and the text Suplementos para você chegar ao topo, in white on red",
+            "caption": "Circular seal"
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "alt": "Outline of the arrow icon in white over a black-and-white mountain, with the line Você não veio até aqui pra ser mais um",
+            "caption": "Icon and mountain"
+          },
+          {
+            "alt": "TOPFIT logotype in red and in white next to a pink mountain, with the name set vertically",
+            "caption": "Logotype and mountain"
           }
         ]
       },
@@ -493,6 +780,10 @@
         ]
       },
       {
+        "alt": "The TOPFIT logotype in relief on a red stone block, on cracked ground under a dark sky",
+        "caption": "The logotype in stone"
+      },
+      {
         "text": "To reach the top."
       }
     ],
@@ -507,7 +798,11 @@
         "role": "Briefing"
       }
     ],
-    "location": "Ribeirão Preto, SP, Brazil"
+    "location": "Ribeirão Preto, SP, Brazil",
+    "seo": {
+      "title": "TOPFIT — Supplement brand identity",
+      "description": "Visual identity for TOPFIT, a supplement brand from Ribeirão Preto (SP): raw block lettering, intense red and an upward arrow, from e-commerce to packaging."
+    }
   },
   "frias-constantino": {
     "tagline": "Preventive and strategic tax law.",
@@ -534,12 +829,40 @@
         "caption": "Logo"
       },
       {
+        "alt": "Frias Constantino Advocacia logo in embossed gold on textured dark-green paper",
+        "caption": "Gold on green"
+      },
+      {
         "label": "The owl",
         "text": "The owl crosses cultures as a symbol of wisdom. It is the companion of Athena, the Greek goddess of strategy. But what makes it right for this brand is its behavior: it sees where others do not, flies in absolute silence and acts with surgical precision. Observation, discretion and precision: the same triad that defines good tax law. Drawn in an engraving line, it recalls the legal and editorial tradition; in flight, it conveys a practice that does not wait for the problem: it anticipates."
       },
       {
+        "alt": "Owl perched above the logo, with red handwritten notes: why an owl? Clarity, focus, keen sight, perception, vigilance and wisdom",
+        "caption": "Why an owl?"
+      },
+      {
         "alt": "Six versions of the brand owl: in flight from the front, in flight from the side, perched, and with the Frias Constantino name",
         "caption": "Owl family"
+      },
+      {
+        "label": "Signatures",
+        "text": "The two-line name is the main signature and adapts to each background: gold on green or black, green on sand. When there is room, the flying owl or the diamond FC seal joins the name to form the full signatures."
+      },
+      {
+        "alt": "Three logo versions: gold on green, green on sand and gold on black",
+        "caption": "Color versions"
+      },
+      {
+        "items": [
+          {
+            "alt": "Vertical signature with the owl in flight above the Frias Constantino Advocacia name",
+            "caption": "With the owl"
+          },
+          {
+            "alt": "Vertical signature with the diamond FC seal above the Frias Constantino Advocacia name",
+            "caption": "With the FC seal"
+          }
+        ]
       },
       {
         "label": "Monogram",
@@ -554,6 +877,22 @@
           {
             "alt": "Owl perched on the FC monogram, in green on a sand background",
             "caption": "Owl on the monogram"
+          }
+        ]
+      },
+      {
+        "alt": "FC monogram in sand on green and in green on sand",
+        "caption": "Monogram"
+      },
+      {
+        "items": [
+          {
+            "alt": "Compact monogram icon in sand on green and in green on sand",
+            "caption": "Icon"
+          },
+          {
+            "alt": "Diamond FC seal, in sand on green and in green on sand",
+            "caption": "FC seal"
           }
         ]
       },
@@ -613,12 +952,20 @@
         "caption": "Printed pieces"
       },
       {
+        "alt": "Two posters: one with an engraving of a classic bust and the line Tranquilidade fiscal se constrói com método, another with a portrait of a lawyer and the line Segurança jurídica é o solo onde negócios crescem",
+        "caption": "Posters"
+      },
+      {
         "alt": "Uniforms: a light-green polo with the embroidered FC monogram, the monogram in blind emboss on sand paper and a dark-green shirt with the logo",
         "caption": "Uniforms"
       },
       {
         "alt": "Frias Constantino Advocacia profile on a social network, with a green cover, the monogram as the picture and the bio Preventive and strategic tax law",
         "caption": "Social profile"
+      },
+      {
+        "alt": "Frias Constantino Advocacia profile in a dark version, with a green striped cover and the FC seal as the picture",
+        "caption": "Social profile, dark version"
       },
       {
         "text": "Precision before the first conversation."
@@ -631,7 +978,11 @@
       {
         "role": "Briefing"
       }
-    ]
+    ],
+    "seo": {
+      "title": "Frias Constantino — Law firm branding",
+      "description": "Visual identity for Frias Constantino Advocacia, a tax law firm in São Paulo: an engraved owl, an FC monogram and a green, sand and gold palette."
+    }
   },
   "tasty-nutrition": {
     "tagline": "Flavor first. Always.",
@@ -843,7 +1194,11 @@
       {
         "role": "Intermediation"
       }
-    ]
+    ],
+    "seo": {
+      "title": "Tasty Nutrition — Supplement branding",
+      "description": "Visual identity and brandbook for Tasty Nutrition, a premium supplement brand: script lettering in a soft container and a palette born in the pantry."
+    }
   },
   "karolinne-hartung": {
     "tagline": "Psychoanalysis with purpose.",
@@ -993,6 +1348,10 @@
       {
         "role": "Intermediation"
       }
-    ]
+    ],
+    "seo": {
+      "title": "Karolinne Hartung — Psychoanalyst brand",
+      "description": "Visual identity and website for psychoanalyst Karolinne Hartung, in Campinas (SP): a serif logotype with a floral icon, a KH monogram and warm tones."
+    }
   }
 }

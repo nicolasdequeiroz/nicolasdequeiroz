@@ -2,7 +2,7 @@
   "site": {
     "name": "Nícolas de Queiróz",
     "title": "Nícolas de Queiróz — Branding e Web Design",
-    "description": "Crio marcas, interfaces e sites de alta performance, do conceito ao lançamento.",
+    "description": "Designer de branding e web design em Curitiba. Crio marcas, interfaces e sites de alta performance, do conceito ao lançamento.",
     "url": "https://www.nicolasdequeiroz.com",
     "ogImage": "assets/site/og-home.jpg"
   },
@@ -19,12 +19,15 @@
       ],
       "industry": "Restaurante japonês",
       "location": "Siqueira Campos, PR",
-      "thumb": "assets/works/mizzu-sushi/hero.webp",
+      "thumb": "assets/works/mizzu-sushi/selo-poster.webp",
+      "thumbVideo": "assets/works/mizzu-sushi/selo.mp4",
       "hero": {
-        "type": "image",
-        "src": "assets/works/mizzu-sushi/hero.webp",
-        "mobile": "assets/works/mizzu-sushi/hero-mobile.webp",
-        "alt": "Logotipo do Mizzu Sushi sobre a Grande Onda em vermelho escuro"
+        "type": "video",
+        "src": "assets/works/mizzu-sushi/selo.mp4",
+        "poster": "assets/works/mizzu-sushi/selo-poster.webp",
+        "mobile": "assets/works/mizzu-sushi/hero-mobile-selo.webp",
+        "mobileVideo": "assets/works/mizzu-sushi/hero-mobile.mp4",
+        "alt": "Selo circular do Mizzu Sushi girando sobre padrão de ondas"
       },
       "blocks": [
         {
@@ -38,14 +41,6 @@
           "type": "text",
           "label": "Conceito",
           "text": "Mizu (水) significa água. A palavra virou o ponto de partida: a água como elo entre o oceano e o prato. O ideograma assume o papel de símbolo, a tipografia serifada com espaçamento largo traz a calma da tradição, e o vermelho com o marrom quase preto remetem à laca e à cerâmica japonesas."
-        },
-        {
-          "type": "video",
-          "src": "assets/works/mizzu-sushi/selo.mp4",
-          "poster": "assets/works/mizzu-sushi/selo-poster.webp",
-          "alt": "Selo circular do Mizzu Sushi girando sobre padrão de ondas",
-          "ratio": "16:9",
-          "caption": "Selo"
         },
         {
           "type": "pair",
@@ -130,6 +125,20 @@
           "role": "Briefing",
           "name": "Matheus Morita"
         }
+      ],
+      "seo": {
+        "title": "Mizzu Sushi — Identidade para restaurante japonês",
+        "description": "Identidade visual e embalagens para o Mizzu Sushi, restaurante japonês no Paraná, criada a partir da água (mizu) e de uma adaptação da Grande Onda de Hokusai."
+      },
+      "trail": [
+        "assets/works/mizzu-sushi/selo-poster.webp",
+        "assets/works/mizzu-sushi/mizu-agua.webp",
+        "assets/works/mizzu-sushi/ecobag.webp",
+        "assets/works/mizzu-sushi/instagram.webp",
+        "assets/works/mizzu-sushi/hashi.webp",
+        "assets/works/mizzu-sushi/cartao.webp",
+        "assets/works/mizzu-sushi/embalagem.webp",
+        "assets/works/mizzu-sushi/embalagem-2.webp"
       ]
     },
     {
@@ -149,7 +158,7 @@
       "hero": {
         "type": "image",
         "src": "assets/works/jabutibar/hero.webp",
-        "mobile": "assets/works/jabutibar/hero-mobile.webp",
+        "mobile": "assets/works/jabutibar/hero-mobile-tote.webp",
         "alt": "Logotipo do JabutiBar com o jabuti, emoldurado por folhagens ilustradas"
       },
       "blocks": [
@@ -254,12 +263,26 @@
           "role": "Briefing",
           "name": "Leonardo Diniz e Nelson Fiuza"
         }
+      ],
+      "seo": {
+        "title": "JabutiBar — Identidade visual para bar",
+        "description": "Identidade visual, ilustração e cardápio para o JabutiBar, bar ao ar livre em Itaporanga (SP) que celebra a natureza, a boa mesa e a cultura local."
+      },
+      "trail": [
+        "assets/works/jabutibar/hero.webp",
+        "assets/works/jabutibar/kombi.webp",
+        "assets/works/jabutibar/cartao.webp",
+        "assets/works/jabutibar/comanda.webp",
+        "assets/works/jabutibar/ecobag.webp",
+        "assets/works/jabutibar/garrafa.webp",
+        "assets/works/jabutibar/cavalete.webp",
+        "assets/works/jabutibar/posteres.webp"
       ]
     },
     {
       "slug": "studioisa",
-      "title": "studioisa",
-      "description": "Marca e site para estúdio de pilates com foco em bem-estar e movimento.",
+      "title": "Studio Isa",
+      "description": "Marca para o Studio Isa, estúdio de pilates em Itaporanga (SP) com foco em bem-estar e movimento. Um logotipo em duas vozes, um selo circular e uma paleta de azul-petróleo e bege-pêssego traduzem o cuidado, o detalhe e o acolhimento, do estúdio às redes.",
       "year": 2025,
       "services": [
         "Branding",
@@ -273,7 +296,285 @@
         "mobile": "assets/works/studioisa/hero-mobile.webp",
         "alt": "Animação do logotipo isa em bege sobre fundo azul-petróleo"
       },
-      "blocks": [],
+      "blocks": [
+        {
+          "type": "statement",
+          "text": "Um novo nome, a mesma essência."
+        },
+        {
+          "type": "text",
+          "label": "Sobre a marca",
+          "text": "O Studio Isa é um estúdio de pilates em Itaporanga, no interior de São Paulo, com foco em bem-estar e movimento. A marca nasce de uma virada: um novo nome que carrega a mesma essência de sempre, o cuidado, a atenção ao detalhe e o acolhimento, agora com uma identidade própria, leve e reconhecível."
+        },
+        {
+          "type": "image",
+          "src": "assets/works/studioisa/moodboard.webp",
+          "alt": "Composição com a garrafa, o relógio e a camiseta com a marca, a paleta de cores, uma aula de pilates com a frase Encontre a liberdade de se movimentar com studio isa e o selo circular",
+          "ratio": "4:3",
+          "caption": "A marca em uso"
+        },
+        {
+          "type": "text",
+          "label": "Logotipo",
+          "text": "O nome em duas vozes: “studio” em itálico leve e “isa” em peso, no mesmo desenho serifado. O contraste entre o traço fino e o grosso é o movimento da marca: a calma do alongamento e a firmeza do exercício. A versão com “pilates” em sans acompanha o nome quando é preciso dizer o que o estúdio faz."
+        },
+        {
+          "type": "pair",
+          "items": [
+            {
+              "src": "assets/works/studioisa/monograma.webp",
+              "alt": "Monograma isa em azul sobre fundo bege",
+              "caption": "Monograma",
+              "ratio": "1:1"
+            },
+            {
+              "src": "assets/works/studioisa/selo.webp",
+              "alt": "Selo circular com o monograma isa e a frase Pilates Studio repetida em volta",
+              "caption": "Selo",
+              "ratio": "1:1"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "label": "Cores",
+          "text": "O azul-petróleo é a base: sereno e profundo, passa confiança. O bege-pêssego traz o calor do acolhimento, e o branco abre espaço para respirar. Entre eles, tons de azul mais claro e escuro dão profundidade ao sistema sem tirar a leveza."
+        },
+        {
+          "type": "palette",
+          "items": [
+            {
+              "name": "Azul noite",
+              "hex": "#1B2935"
+            },
+            {
+              "name": "Azul-petróleo",
+              "hex": "#2D4356"
+            },
+            {
+              "name": "Azul médio",
+              "hex": "#4B7192"
+            },
+            {
+              "name": "Bege-pêssego",
+              "hex": "#F7DCC1"
+            },
+            {
+              "name": "Branco",
+              "hex": "#FFFFFF"
+            }
+          ]
+        },
+        {
+          "type": "statement",
+          "text": "Pilates feito com alma, detalhe & acolhimento."
+        },
+        {
+          "type": "text",
+          "label": "Aplicações",
+          "text": "A marca sai do papel e ocupa o estúdio: da fachada e da vitrine às placas, camisetas, sacolas e peças do dia a dia. O selo circular vira assinatura, e a frase da marca gira em volta do monograma."
+        },
+        {
+          "type": "image",
+          "src": "assets/works/studioisa/fachada.webp",
+          "alt": "Fachada do estúdio em azul-petróleo com o logotipo studio isa em relevo, sobre uma vitrine com portas de vidro iluminadas",
+          "ratio": "16:9",
+          "caption": "Fachada"
+        },
+        {
+          "type": "image",
+          "src": "assets/works/studioisa/vitrine.webp",
+          "alt": "Vitrine do estúdio com adesivos jateados: o selo circular com a frase da marca, o logotipo nas laterais e, nas variações, o contato e o Instagram",
+          "ratio": "16:9",
+          "caption": "Vitrine"
+        },
+        {
+          "type": "pair",
+          "items": [
+            {
+              "src": "assets/works/studioisa/placa-azul.webp",
+              "alt": "Placa circular de parede, azul, com o monograma isa e a frase Pilates Studio",
+              "caption": "Placa azul",
+              "ratio": "1:1"
+            },
+            {
+              "src": "assets/works/studioisa/placa-bege.webp",
+              "alt": "Placa circular de parede, bege, com o monograma isa e a frase Pilates Studio",
+              "caption": "Placa bege",
+              "ratio": "1:1"
+            }
+          ]
+        },
+        {
+          "type": "pair",
+          "items": [
+            {
+              "src": "assets/works/studioisa/camiseta-1.webp",
+              "alt": "Camiseta cinza-chumbo com o selo circular e o logotipo studio isa no peito",
+              "caption": "Camiseta",
+              "ratio": "1:1"
+            },
+            {
+              "src": "assets/works/studioisa/camiseta-2.webp",
+              "alt": "Camiseta cinza-chumbo com o logotipo studio isa e o rótulo pilates",
+              "caption": "Camiseta com rótulo",
+              "ratio": "1:1"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "label": "Wellness Era",
+          "text": "Uma linha de camisetas leva a marca para o corpo: a frase “Welcome to My Wellness Era” nas costas, o selo “Pilates & Gym” e o logotipo discreto na frente, em bege e marrom. É uma peça para treinar e para circular, que conta a mesma história do estúdio."
+        },
+        {
+          "type": "pair",
+          "items": [
+            {
+              "src": "assets/works/studioisa/wellness-bola.webp",
+              "alt": "Mulher de costas segurando uma bola de peso sobre a cabeça, com a camiseta marrom Welcome to My Wellness Era",
+              "caption": "Camiseta marrom",
+              "ratio": "4:5"
+            },
+            {
+              "src": "assets/works/studioisa/wellness-banda.webp",
+              "alt": "Mulher de costas com uma faixa elástica laranja, com a camiseta bege Welcome to My Wellness Era",
+              "caption": "Camiseta bege",
+              "ratio": "4:5"
+            }
+          ]
+        },
+        {
+          "type": "pair",
+          "items": [
+            {
+              "src": "assets/works/studioisa/wellness-bege.webp",
+              "alt": "Mulher de pé com a mão na cintura e uma faixa laranja, com camiseta marrom e o logotipo studio isa na frente",
+              "caption": "Frente, marrom",
+              "ratio": "auto"
+            },
+            {
+              "src": "assets/works/studioisa/wellness-marrom.webp",
+              "alt": "Mulher de perfil com uma faixa laranja no pescoço, com camiseta bege com a frase My Wellness Era",
+              "caption": "Frente, bege",
+              "ratio": "auto"
+            }
+          ]
+        },
+        {
+          "type": "pair",
+          "items": [
+            {
+              "src": "assets/works/studioisa/wellness-frase.webp",
+              "alt": "Arte com o logotipo studio isa, a frase Welcome to My Wellness Era e o selo Pilates & Gym",
+              "caption": "A frase",
+              "ratio": "1:1"
+            },
+            {
+              "src": "assets/works/studioisa/wellness-camiseta-bege.webp",
+              "alt": "Costas de uma camiseta bege com a frase Welcome to My Wellness Era e o selo Pilates & Gym",
+              "caption": "Costas, bege",
+              "ratio": "1:1"
+            },
+            {
+              "src": "assets/works/studioisa/wellness-camiseta-marrom.webp",
+              "alt": "Costas de uma camiseta marrom com a frase Welcome to My Wellness Era em bege",
+              "caption": "Costas, marrom",
+              "ratio": "1:1"
+            }
+          ]
+        },
+        {
+          "type": "pair",
+          "items": [
+            {
+              "src": "assets/works/studioisa/story-novo-nome-2.webp",
+              "alt": "Story com três mulheres sorrindo sobre azul e o texto studio isa, um novo nome, a mesma essência",
+              "caption": "Um novo nome",
+              "ratio": "auto"
+            },
+            {
+              "src": "assets/works/studioisa/sacola-2.webp",
+              "alt": "Mulher de perfil segurando uma sacola de algodão cru com o selo circular Pilates feito com alma, detalhe & acolhimento e o logotipo studio isa em azul",
+              "caption": "Sacola",
+              "ratio": "auto"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "src": "assets/works/studioisa/studio-reformer.webp",
+          "alt": "Duas mulheres praticando pilates em aparelhos reformer, em tons de azul, com o logotipo studio isa em bege no centro",
+          "ratio": "16:9"
+        },
+        {
+          "type": "statement",
+          "text": "Encontre a liberdade de se movimentar."
+        },
+        {
+          "type": "text",
+          "label": "Comunicação",
+          "text": "No digital, a identidade ganha voz: posts de equipe, datas especiais, convites e avisos do estúdio. O azul e o bege seguram a linguagem, e o tom é sempre próximo, como uma conversa na sala de aula."
+        },
+        {
+          "type": "pair",
+          "items": [
+            {
+              "src": "assets/works/studioisa/equipe-isa.webp",
+              "alt": "Retrato da Isa em um post da equipe, com a frase Prazer, Isa",
+              "ratio": "4:5"
+            },
+            {
+              "src": "assets/works/studioisa/equipe-conheca.webp",
+              "alt": "Post com o título Conheça a nossa equipe sobre fundo bege",
+              "ratio": "4:5"
+            },
+            {
+              "src": "assets/works/studioisa/equipe-bianca.webp",
+              "alt": "Retrato da Bianca em um post da equipe, com a frase Prazer, Bianca",
+              "ratio": "4:5"
+            },
+            {
+              "src": "assets/works/studioisa/equipe-rayane.webp",
+              "alt": "Retrato da Rayane em um post da equipe, com a frase Prazer, Rayane",
+              "ratio": "4:5"
+            },
+            {
+              "src": "assets/works/studioisa/equipe-bruna.webp",
+              "alt": "Retrato da Bruna em um post da equipe, com a frase Prazer, Bruna",
+              "ratio": "4:5"
+            },
+            {
+              "src": "assets/works/studioisa/equipe-thaina.webp",
+              "alt": "Retrato da Thainá em um post da equipe, com a frase Prazer, Thainá",
+              "ratio": "4:5"
+            }
+          ],
+          "feed": false
+        },
+        {
+          "type": "pair",
+          "items": [
+            {
+              "src": "assets/works/studioisa/perfil-1.webp",
+              "alt": "Logotipo studio isa em bege sobre um degradê de azul",
+              "caption": "Assinatura sobre azul",
+              "ratio": "1:1"
+            },
+            {
+              "src": "assets/works/studioisa/perfil-2.webp",
+              "alt": "Logotipo studio isa em duas linhas, em bege sobre um degradê de azul",
+              "caption": "Assinatura vertical",
+              "ratio": "1:1"
+            }
+          ],
+          "feed": false
+        },
+        {
+          "type": "statement",
+          "text": "Cuidado que se movimenta com você."
+        }
+      ],
       "credits": [
         {
           "role": "Design",
@@ -287,6 +588,21 @@
           "role": "Briefing",
           "name": "Isabelly Azevedo"
         }
+      ],
+      "location": "Itaporanga, SP",
+      "seo": {
+        "title": "Studio Isa — Marca para estúdio de pilates",
+        "description": "Marca para o Studio Isa, estúdio de pilates em Itaporanga (SP): logotipo em duas vozes, selo circular e paleta azul-petróleo e pêssego, do estúdio às redes."
+      },
+      "trail": [
+        "assets/works/studioisa/moodboard.webp",
+        "assets/works/studioisa/monograma.webp",
+        "assets/works/studioisa/selo.webp",
+        "assets/works/studioisa/fachada.webp",
+        "assets/works/studioisa/vitrine.webp",
+        "assets/works/studioisa/wellness-banda.webp",
+        "assets/works/studioisa/wellness-bola.webp",
+        "assets/works/studioisa/wellness-bege.webp"
       ]
     },
     {
@@ -492,6 +808,19 @@
           "role": "Briefing",
           "name": "Maria Carolina S. Prestes"
         }
+      ],
+      "seo": {
+        "title": "Move+ — Identidade para centro de treinamento",
+        "description": "Identidade visual da Move+, centro de treinamento de condicionamento e força: logotipo inclinado em verde-oliva com um + verde-limão, do relógio à camiseta."
+      },
+      "trail": [
+        "assets/works/move/hero-card.webp",
+        "assets/works/move/capa-treino.webp",
+        "assets/works/move/moletom.webp",
+        "assets/works/move/camiseta.webp",
+        "assets/works/move/garrafa.webp",
+        "assets/works/move/relogio.webp",
+        "assets/works/move/kettlebell.webp"
       ]
     },
     {
@@ -508,7 +837,7 @@
       "hero": {
         "type": "image",
         "src": "assets/works/topfit/hero.webp",
-        "mobile": "assets/works/topfit/hero-mobile.webp",
+        "mobile": "assets/works/topfit/hero-mobile-selo.webp",
         "alt": "Camiseta preta com a etiqueta vermelha do logotipo TOPFIT"
       },
       "blocks": [
@@ -516,6 +845,23 @@
           "type": "text",
           "label": "Sobre a marca",
           "text": "A TOPFIT não nasceu para ser só mais uma loja de suplementos. Atua com loja física, e-commerce próprio, marketplaces e distribuição, e vende mais do que produto: vende atitude, curadoria e posicionamento. Uma marca com voz própria, provocadora, bruta, direta e autêntica."
+        },
+        {
+          "type": "text",
+          "label": "Missão e visão",
+          "text": "Entregar os melhores suplementos do mercado com curadoria, personalidade e impacto, e ajudar os clientes a chegarem no topo, seja físico, mental, estético ou de vida, sem enrolação. A visão é ser a marca mais lembrada entre as lojas de suplemento no Brasil: não pela variedade, mas pela postura. Pela entrega. Pela identidade."
+        },
+        {
+          "type": "image",
+          "src": "assets/works/topfit/missao-visao-foto.webp",
+          "alt": "Retrato em preto e branco de uma atleta com uma toalha no vestiário, ao lado de uma textura de pedra escura",
+          "ratio": "auto",
+          "caption": "Missão e visão"
+        },
+        {
+          "type": "text",
+          "label": "Personalidade",
+          "text": "Provocadora, bruta, direta e autêntica. A TOPFIT cutuca, contesta e não suaviza o que pensa: a provocação é o chamado à ação. É densa e sólida, no visual e no verbal, e o impacto está na base. Foco no necessário: diz o que importa, e ponto. Tem cara, tom e presença, um statement visual e verbal."
         },
         {
           "type": "text",
@@ -549,6 +895,28 @@
           "caption": "Logotipo e slogan"
         },
         {
+          "type": "text",
+          "label": "Área de exclusão",
+          "text": "A marca foi feita pra ser vista, com impacto, clareza e respeito ao seu espaço. A área de exclusão define o respiro mínimo ao redor da logo, garantindo legibilidade e presença mesmo em ambientes visuais carregados. A medida base é a largura da letra “I” (X), e o espaço livre ao redor da marca deve ser de, no mínimo, 2X."
+        },
+        {
+          "type": "pair",
+          "items": [
+            {
+              "src": "assets/works/topfit/construcao-logotipo.webp",
+              "alt": "Logotipo TOPFIT sobre uma grade, com a tipografia quase sem espaçamento para reforçar a ideia de bloco",
+              "caption": "Construção do logotipo",
+              "ratio": "auto"
+            },
+            {
+              "src": "assets/works/topfit/area-exclusao.webp",
+              "alt": "Logotipo TOPFIT cercado pela área de exclusão, com a medida X e o espaço mínimo de 2X",
+              "caption": "Área de exclusão",
+              "ratio": "auto"
+            }
+          ]
+        },
+        {
           "type": "statement",
           "text": "Símbolos que gritam, não sussurram."
         },
@@ -563,6 +931,13 @@
           "type": "text",
           "label": "Ícone",
           "text": "Construído a partir do “T” da marca, distorcido simetricamente, separado em dois blocos e inclinado em 30 graus, cria uma vista isométrica que lembra uma quina sólida. Pode ser lido como uma seta disfarçada apontando para cima, a quina de uma caixa de e-commerce ou um selo geométrico que marca território."
+        },
+        {
+          "type": "image",
+          "src": "assets/works/topfit/perfil-icone.webp",
+          "alt": "Perfil da TOPFIT em uma rede social, com o ícone em seta como foto, e o ícone como app em um fundo vermelho",
+          "ratio": "16:9",
+          "caption": "O ícone no perfil"
         },
         {
           "type": "text",
@@ -615,9 +990,8 @@
           "type": "pair",
           "items": [
             {
-              "src": "assets/works/topfit/tipografia-gasoek.svg",
+              "src": "assets/works/topfit/tipografia-gasoek-vermelho.svg",
               "alt": "Especimes da tipografia Gasoek One em vermelho: o nome da fonte e o alfabeto, números e símbolos",
-              "caption": "Gasoek One",
               "ratio": "auto"
             },
             {
@@ -664,6 +1038,76 @@
               "alt": "Adesivo redondo vermelho com a logo isométrica e o slogan em volta",
               "caption": "Adesivo",
               "ratio": "1:1"
+            }
+          ]
+        },
+        {
+          "type": "pair",
+          "items": [
+            {
+              "src": "assets/works/topfit/camiseta.webp",
+              "alt": "Camiseta preta com a box logo vermelha da TOPFIT no peito",
+              "caption": "Camiseta",
+              "ratio": "auto"
+            },
+            {
+              "src": "assets/works/topfit/sacola-vermelha.webp",
+              "alt": "Embalagem plástica vermelha com o logotipo TOPFIT em branco",
+              "caption": "Embalagem plástica",
+              "ratio": "auto"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "src": "assets/works/topfit/anuncio-forca.webp",
+          "alt": "Anúncio com um atleta curvado, de toalha no pescoço, e a frase Força não se improvisa. Se constrói.",
+          "ratio": "16:9",
+          "caption": "Anúncio"
+        },
+        {
+          "type": "text",
+          "label": "Padrões e selos",
+          "text": "A marca também vira padrão: a seta que sobe, o nome repetido como estampa, o selo circular com o slogan e o contorno do ícone sobre uma montanha, que lembra que o topo é o destino."
+        },
+        {
+          "type": "image",
+          "src": "assets/works/topfit/padrao-setas.webp",
+          "alt": "Padrão de setas brancas sobre vermelho, ao lado de uma foto de um atleta e da box logo vermelha sobre fundo vinho",
+          "ratio": "auto",
+          "caption": "Padrão de setas"
+        },
+        {
+          "type": "pair",
+          "items": [
+            {
+              "src": "assets/works/topfit/padrao-wordmark.webp",
+              "alt": "Estampa com o nome TOPFIT repetido em vermelho sobre vinho",
+              "caption": "Estampa do nome",
+              "ratio": "auto"
+            },
+            {
+              "src": "assets/works/topfit/selo-circular.webp",
+              "alt": "Selo circular com o ícone em seta e o texto Suplementos para você chegar ao topo, em branco sobre vermelho",
+              "caption": "Selo circular",
+              "ratio": "auto"
+            }
+          ]
+        },
+        {
+          "type": "pair",
+          "items": [
+            {
+              "src": "assets/works/topfit/montanha-icone.webp",
+              "alt": "Contorno do ícone em seta, em branco, sobre uma montanha em preto e branco, com a frase Você não veio até aqui pra ser mais um",
+              "caption": "Ícone e montanha",
+              "ratio": "auto"
+            },
+            {
+              "src": "assets/works/topfit/logo-montanha.webp",
+              "alt": "Logotipo TOPFIT em vermelho e em branco ao lado de uma montanha rosada, com o nome na vertical",
+              "caption": "Logotipo e montanha",
+              "ratio": "auto"
             }
           ]
         },
@@ -728,7 +1172,15 @@
               "caption": "NAC",
               "ratio": "4:5"
             }
-          ]
+          ],
+          "feed": false
+        },
+        {
+          "type": "image",
+          "src": "assets/works/topfit/bloco-pedra.webp",
+          "alt": "O logotipo TOPFIT em relevo em um bloco de pedra vermelha, sobre um terreno rachado e um céu escuro",
+          "ratio": "16:9",
+          "caption": "O logotipo em pedra"
         },
         {
           "type": "statement",
@@ -751,7 +1203,21 @@
           "name": "Luiz Arlindo"
         }
       ],
-      "location": "Ribeirão Preto, SP"
+      "location": "Ribeirão Preto, SP",
+      "seo": {
+        "title": "TOPFIT — Identidade para suplementos",
+        "description": "Identidade visual da TOPFIT, marca de suplementos de Ribeirão Preto (SP): letras blocadas, vermelho intenso e uma seta que sobe, do e-commerce às embalagens."
+      },
+      "trail": [
+        "assets/works/topfit/tipografia-textura.webp",
+        "assets/works/topfit/anuncio-forca.webp",
+        "assets/works/topfit/padrao-setas.webp",
+        "assets/works/topfit/padrao-wordmark.webp",
+        "assets/works/topfit/selo-circular.webp",
+        "assets/works/topfit/montanha-icone.webp",
+        "assets/works/topfit/logo-montanha.webp",
+        "assets/works/topfit/bloco-pedra.webp"
+      ]
     },
     {
       "slug": "frias-constantino",
@@ -769,7 +1235,7 @@
       "hero": {
         "type": "image",
         "src": "assets/works/frias-constantino/hero.webp",
-        "mobile": "assets/works/frias-constantino/hero-mobile.webp",
+        "mobile": "assets/works/frias-constantino/hero-mobile-logo.webp",
         "alt": "Lombada de um livro verde com o logotipo Frias Constantino Advocacia em dourado"
       },
       "blocks": [
@@ -790,9 +1256,23 @@
           "caption": "Logotipo"
         },
         {
+          "type": "image",
+          "src": "assets/works/frias-constantino/logotipo-dourado.webp",
+          "alt": "Logotipo Frias Constantino Advocacia em dourado em relevo sobre papel verde-escuro texturizado",
+          "ratio": "16:9",
+          "caption": "Dourado sobre verde"
+        },
+        {
           "type": "text",
           "label": "A coruja",
           "text": "A coruja atravessa culturas como símbolo de sabedoria. É a companheira de Atena, deusa grega da estratégia. Mas o que a torna precisa para esta marca é o seu comportamento: ela enxerga onde os outros não veem, voa em silêncio absoluto e age com exatidão cirúrgica. Observação, discrição e precisão: a mesma tríade que define uma boa advocacia tributária. Representada em traço de gravura, remete à tradição jurídica e editorial; em movimento de voo, comunica uma prática que não espera o problema: antecipa."
+        },
+        {
+          "type": "image",
+          "src": "assets/works/frias-constantino/coruja-por-que.webp",
+          "alt": "Coruja pousada sobre o logotipo, com anotações à mão em vermelho: por que uma coruja? Clareza, foco, visão aguçada, percepção, vigilância e sabedoria",
+          "ratio": "16:9",
+          "caption": "Por que uma coruja?"
         },
         {
           "type": "image",
@@ -800,6 +1280,35 @@
           "alt": "Seis versões da coruja da marca: em voo de frente, em voo de lado, pousada e com o nome Frias Constantino",
           "ratio": "16:9",
           "caption": "Família de corujas"
+        },
+        {
+          "type": "text",
+          "label": "Assinaturas",
+          "text": "O nome em duas linhas é a assinatura principal e se adapta a cada fundo: dourado sobre verde ou preto, verde sobre areia. Quando há espaço, a coruja em voo ou o selo FC em losango se juntam ao nome e formam as assinaturas completas."
+        },
+        {
+          "type": "image",
+          "src": "assets/works/frias-constantino/assinaturas-cores.webp",
+          "alt": "Três versões do logotipo: dourado sobre verde, verde sobre areia e dourado sobre preto",
+          "ratio": "16:9",
+          "caption": "Versões de cor"
+        },
+        {
+          "type": "pair",
+          "items": [
+            {
+              "src": "assets/works/frias-constantino/assinatura-coruja.webp",
+              "alt": "Assinatura vertical com a coruja em voo sobre o nome Frias Constantino Advocacia",
+              "caption": "Com a coruja",
+              "ratio": "16:9"
+            },
+            {
+              "src": "assets/works/frias-constantino/assinatura-selo.webp",
+              "alt": "Assinatura vertical com o selo FC em losango sobre o nome Frias Constantino Advocacia",
+              "caption": "Com o selo FC",
+              "ratio": "16:9"
+            }
+          ]
         },
         {
           "type": "text",
@@ -820,6 +1329,30 @@
               "alt": "Coruja pousada sobre o monograma FC, em verde sobre fundo areia",
               "caption": "Coruja sobre o monograma",
               "ratio": "4:3"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "src": "assets/works/frias-constantino/monograma-versoes.webp",
+          "alt": "Monograma FC em areia sobre verde e em verde sobre areia",
+          "ratio": "16:9",
+          "caption": "Monograma"
+        },
+        {
+          "type": "pair",
+          "items": [
+            {
+              "src": "assets/works/frias-constantino/icone-versoes.webp",
+              "alt": "Ícone compacto do monograma em areia sobre verde e em verde sobre areia",
+              "caption": "Ícone",
+              "ratio": "16:9"
+            },
+            {
+              "src": "assets/works/frias-constantino/selo-versoes.webp",
+              "alt": "Selo FC em losango, em areia sobre verde e em verde sobre areia",
+              "caption": "Selo FC",
+              "ratio": "16:9"
             }
           ]
         },
@@ -901,6 +1434,13 @@
         },
         {
           "type": "image",
+          "src": "assets/works/frias-constantino/cartazes.webp",
+          "alt": "Dois cartazes: um com a gravura de um busto clássico e a frase Tranquilidade fiscal se constrói com método, outro com o retrato de uma advogada e a frase Segurança jurídica é o solo onde negócios crescem",
+          "ratio": "16:9",
+          "caption": "Cartazes"
+        },
+        {
+          "type": "image",
           "src": "assets/works/frias-constantino/uniformes.webp",
           "alt": "Uniformes: uma polo verde-clara com o monograma FC bordado, o monograma em relevo seco sobre papel areia e uma camisa verde-escura com o logotipo",
           "ratio": "16:9",
@@ -912,6 +1452,13 @@
           "alt": "Perfil da Frias Constantino Advocacia em uma rede social, com capa verde, o monograma como foto e a bio Advocacia tributária preventiva e estratégica",
           "ratio": "16:9",
           "caption": "Perfil nas redes"
+        },
+        {
+          "type": "image",
+          "src": "assets/works/frias-constantino/perfil-escuro.webp",
+          "alt": "Perfil da Frias Constantino Advocacia em versão escura, com capa de listras em verde e o selo FC como foto",
+          "ratio": "16:9",
+          "caption": "Perfil nas redes, versão escura"
         },
         {
           "type": "statement",
@@ -927,6 +1474,20 @@
           "role": "Briefing",
           "name": "Carolina Frias Constantino"
         }
+      ],
+      "seo": {
+        "title": "Frias Constantino — Identidade para advocacia",
+        "description": "Identidade visual da Frias Constantino, advocacia tributária em São Paulo: coruja em traço de gravura, monograma FC e paleta de verde, areia e ouro."
+      },
+      "trail": [
+        "assets/works/frias-constantino/hero.webp",
+        "assets/works/frias-constantino/logotipo-dourado.webp",
+        "assets/works/frias-constantino/monograma.webp",
+        "assets/works/frias-constantino/brochura.webp",
+        "assets/works/frias-constantino/cartoes.webp",
+        "assets/works/frias-constantino/pecas-impressas.webp",
+        "assets/works/frias-constantino/uniformes.webp",
+        "assets/works/frias-constantino/monograma-versoes.webp"
       ]
     },
     {
@@ -1239,6 +1800,20 @@
           "role": "Intermediação",
           "name": "SD Digital"
         }
+      ],
+      "seo": {
+        "title": "Tasty Nutrition — Identidade para suplementos",
+        "description": "Identidade visual e brandbook da Tasty Nutrition, marca premium de suplementos: lettering script em um contêiner macio e uma paleta que nasce da despensa."
+      },
+      "trail": [
+        "assets/works/tasty-nutrition/capa-grama.webp",
+        "assets/works/tasty-nutrition/pessoa-tapete.webp",
+        "assets/works/tasty-nutrition/pessoa-grama.webp",
+        "assets/works/tasty-nutrition/foto-garrafa.webp",
+        "assets/works/tasty-nutrition/foto-treino.webp",
+        "assets/works/tasty-nutrition/macas.webp",
+        "assets/works/tasty-nutrition/campanha-scoop.webp",
+        "assets/works/tasty-nutrition/pote-ceu.webp"
       ]
     },
     {
@@ -1432,6 +2007,7 @@
         {
           "type": "video",
           "src": "assets/works/karolinne-hartung/mobile.mp4",
+          "mobile": "assets/works/karolinne-hartung/mobile-vertical-v2.mp4",
           "poster": "assets/works/karolinne-hartung/mobile-poster.webp",
           "alt": "Três iPhones brancos sobre fundo bordô escuro mostrando o site: a página inicial rolando em vídeo, a seção de especialidades em tela clara e a citação sobre acolhimento",
           "ratio": "16:9",
@@ -1462,6 +2038,20 @@
           "role": "Intermediação",
           "name": "SD Digital"
         }
+      ],
+      "seo": {
+        "title": "Karolinne Hartung — Marca para psicanalista",
+        "description": "Identidade visual e site da psicanalista Karolinne Hartung, em Campinas (SP): logotipo serifado com ícone floral, monograma KH e paleta de tons quentes."
+      },
+      "trail": [
+        "assets/works/karolinne-hartung/capa.webp",
+        "assets/works/karolinne-hartung/logo-musgo.webp",
+        "assets/works/karolinne-hartung/logo-terracota.webp",
+        "assets/works/karolinne-hartung/padrao.webp",
+        "assets/works/karolinne-hartung/monograma-terracota.webp",
+        "assets/works/karolinne-hartung/retrato-sala.webp",
+        "assets/works/karolinne-hartung/retrato-janela.webp",
+        "assets/works/karolinne-hartung/mockup.webp"
       ]
     }
   ]

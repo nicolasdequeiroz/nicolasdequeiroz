@@ -1,0 +1,323 @@
+/* =============================================================
+   PÁGINA FEED — uma tela (100svh) só com o mural "Drift Wall"
+   (React Bits, MIT, reactbits.dev), em JS puro: colunas de quadros que
+   derivam em perspectiva, com imagens de todos os cases do site. O quadro
+   sob o mouse vem para a frente e leva ao case. Cores pelos tokens de
+   nav.css (o fundo e a névoa das bordas seguem o tema).
+   ============================================================= */
+
+html:has(.feed-page),
+.feed-page {
+    height: 100%;
+    overflow: hidden;
+}
+
+.feed-page .site-copyright {
+    visibility: hidden;
+}
+
+.feed {
+    position: fixed;
+    inset: 0;
+    height: 100svh;
+    background: var(--bg);
+}
+
+.feed-title {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+}
+
+.drift-wall {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    perspective: var(--dw-perspective, 1200px);
+    perspective-origin: 50% 50%;
+    --dw-tile-w: 260px;
+    --dw-tile-h: 176px;
+    --dw-gap: 18px;
+    --dw-radius: 12px;
+    --dw-lift: 64px;
+    --dw-dim: 0.55;
+    --dw-edge: 40%;
+    -webkit-mask-image:
+        radial-gradient(ellipse 78% 82% at 50% 46%, #000 var(--dw-edge), transparent 100%),
+        linear-gradient(to top, #000 var(--dw-edge), transparent 100%);
+    -webkit-mask-composite: source-in;
+    mask-image:
+        radial-gradient(ellipse 78% 82% at 50% 46%, #000 var(--dw-edge), transparent 100%),
+        linear-gradient(to top, #000 var(--dw-edge), transparent 100%);
+    mask-composite: intersect;
+}
+
+.drift-wall__plane {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    flex-direction: row;
+    transform-style: preserve-3d;
+    transform-origin: 50% 50%;
+    will-change: transform;
+}
+
+.drift-wall__col {
+    position: relative;
+    width: calc(var(--dw-tile-w) + var(--dw-gap));
+    transform-style: preserve-3d;
+}
+
+.drift-wall__track {
+    display: flex;
+    flex-direction: column;
+    will-change: transform;
+    transform-style: preserve-3d;
+}
+
+.drift-wall__tile {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: calc(var(--dw-tile-h) + var(--dw-gap));
+    flex: 0 0 auto;
+    outline: none;
+    transform-style: preserve-3d;
+    color: inherit;
+}
+
+.drift-wall__inner {
+    position: absolute;
+    inset: calc(var(--dw-gap) / 2);
+    display: block;
+    border-radius: var(--dw-radius);
+    overflow: hidden;
+    background: var(--surface);
+    opacity: var(--dw-dim);
+    transform: translateZ(0);
+    pointer-events: none;
+    transition:
+        transform 0.42s cubic-bezier(0.22, 1, 0.36, 1),
+        opacity 0.42s cubic-bezier(0.22, 1, 0.36, 1),
+        box-shadow 0.42s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.drift-wall__tile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+.drift-wall__tile img.is-loaded {
+    opacity: 1;
+}
+
+/* Imagem que não carregou: o quadro sai em vez de ficar em branco. */
+.drift-wall__tile.is-broken {
+    visibility: hidden;
+}
+
+/* Névoa na cor do fundo sobre os quadros em repouso; some no hover. */
+.drift-wall__overlay {
+    position: absolute;
+    inset: 0;
+    background: var(--bg);
+    opacity: 0.35;
+    pointer-events: none;
+    transition: opacity 0.42s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.drift-wall__tile.is-active .drift-wall__inner,
+.drift-wall__tile:focus-visible .drift-wall__inner {
+    opacity: 1;
+    transform: translateZ(var(--dw-lift));
+    box-shadow: 0 24px 60px -18px rgba(0, 0, 0, 0.55);
+}
+
+.drift-wall__tile.is-active .drift-wall__overlay,
+.drift-wall__tile:focus-visible .drift-wall__overlay {
+    opacity: 0;
+}
+
+.drift-wall__tile:focus-visible .drift-wall__inner {
+    box-shadow:
+        0 24px 60px -18px rgba(0, 0, 0, 0.55),
+        0 0 0 2px var(--fg);
+}
+
+@media (max-width: 767.98px) {
+    .drift-wall {
+        --dw-tile-w: 150px;
+        --dw-tile-h: 150px;
+        --dw-gap: 12px;
+        --dw-radius: 10px;
+        --dw-lift: 36px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .drift-wall__plane,
+    .drift-wall__track {
+        will-change: auto;
+    }
+}
+
+/* --- Lightbox: o quadro clicado abre inteiro, com o atalho para o case --- */
+
+.feed-lightbox {
+    width: 100vw;
+    max-width: 100vw;
+    height: 100svh;
+    max-height: 100svh;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: var(--fg);
+    overflow: hidden;
+}
+
+.feed-lightbox::backdrop {
+    /* O mural continua visível atrás: só um véu leve e um desfoque curto. */
+    background: color-mix(in srgb, var(--bg) 38%, transparent);
+    -webkit-backdrop-filter: blur(3px);
+    backdrop-filter: blur(3px);
+}
+
+.feed-lightbox[open] {
+    display: grid;
+    place-items: center;
+    animation: feed-lb-in 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.feed-lightbox[open]::backdrop {
+    animation: feed-lb-fade 0.35s ease;
+}
+
+@keyframes feed-lb-in {
+    from { opacity: 0; transform: scale(0.96); }
+    to { opacity: 1; transform: none; }
+}
+
+@keyframes feed-lb-fade {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.feed-lb-figure {
+    position: relative;
+    margin: 0;
+    max-width: min(92vw, 1400px);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 40px 80px -30px rgba(0, 0, 0, 0.6);
+    line-height: 0;
+}
+
+.feed-lb-img {
+    display: block;
+    max-width: min(92vw, 1400px);
+    max-height: calc(100svh - 96px);
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    background: var(--surface);
+}
+
+/* Título e botão sobre a imagem, no rodapé, com um fade escuro para dar contraste. */
+.feed-lb-bar {
+    position: absolute;
+    inset: auto 0 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+    padding: 72px clamp(18px, 3vw, 32px) clamp(18px, 2.4vw, 28px);
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.72) 0%, rgba(0, 0, 0, 0.38) 55%, rgba(0, 0, 0, 0) 100%);
+    color: #fff;
+    line-height: 1;
+}
+
+.feed-lb-title {
+    font-family: "Instrument Serif", serif;
+    font-size: clamp(24px, 3.4vw, 40px);
+    line-height: 1;
+    text-shadow: 0 1px 12px rgba(0, 0, 0, 0.35);
+}
+
+.feed-lb-case {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 20px;
+    border-radius: 999px;
+    background: #fff;
+    color: #111;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.2;
+    text-decoration: none;
+    transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.feed-lb-case svg {
+    transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.feed-lb-case:hover svg {
+    transform: translateX(4px);
+}
+
+.feed-lb-case:focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: 3px;
+}
+
+.feed-lb-close:focus-visible {
+    outline: 2px solid var(--fg);
+    outline-offset: 3px;
+}
+
+.feed-lb-close {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    width: 46px;
+    height: 46px;
+    display: grid;
+    place-items: center;
+    border: 0;
+    border-radius: 50%;
+    background: var(--bg);
+    color: var(--fg);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.18);
+    cursor: pointer;
+}
+
+@media (max-width: 767.98px) {
+    .feed-lb-img {
+        max-height: calc(100svh - 120px);
+    }
+
+    .feed-lb-bar {
+        padding-top: 56px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .feed-lightbox[open],
+    .feed-lightbox[open]::backdrop {
+        animation: none;
+    }
+}

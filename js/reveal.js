@@ -10,6 +10,9 @@
 
   const SELECTOR = [
     ".work-title",
+    ".tr-head",
+    ".tr-row",
+    ".tr-foot",
     ".work-intro-meta",
     ".work-tagline",
     ".work-intro-text",

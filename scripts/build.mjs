@@ -56,9 +56,13 @@ function renderHero(hero, enHero, assetPrefix) {
   const vt = ' style="view-transition-name: work-media"';
   const alt = at("alt", enHero?.alt, hero.alt);
   if (hero.type === "video" && hero.mobile) {
-    // Vídeo no desktop; abaixo de 768px, a capa vertical (imagem) — a mesma do card do carrossel.
+    // Vídeo no desktop; abaixo de 768px, a capa vertical — imagem, ou vídeo vertical
+    // (hero.mobileVideo, com hero.mobile de poster). A imagem é a mesma do card do carrossel.
     const poster = hero.poster ? ` poster="${assetPrefix}${hero.poster}"` : "";
-    return `<div class="work-hero"><video class="work-media work-hero-video"${vt} src="${assetPrefix}${hero.src}" autoplay muted loop playsinline${poster}${at("aria-label", enHero?.alt, hero.alt)}></video><img class="work-media work-hero-mobile"${vt} src="${assetPrefix}${hero.mobile}"${alt} decoding="async"></div>`;
+    const mobile = hero.mobileVideo
+      ? `<video class="work-media work-hero-mobile"${vt} src="${assetPrefix}${hero.mobileVideo}" autoplay muted loop playsinline poster="${assetPrefix}${hero.mobile}"${at("aria-label", enHero?.alt, hero.alt)}></video>`
+      : `<img class="work-media work-hero-mobile"${vt} src="${assetPrefix}${hero.mobile}"${alt} decoding="async">`;
+    return `<div class="work-hero"><video class="work-media work-hero-video"${vt} src="${assetPrefix}${hero.src}" autoplay muted loop playsinline${poster}${at("aria-label", enHero?.alt, hero.alt)}></video>${mobile}</div>`;
   }
   if (hero.type === "video") {
     return `<div class="work-hero"><video class="work-media"${vt} src="${assetPrefix}${hero.src}" autoplay muted loop playsinline${at("aria-label", enHero?.alt, hero.alt)}></video></div>`;
@@ -204,17 +208,17 @@ function renderBlocks(blocks, enBlocks = [], assetPrefix) {
                 `<figure>${renderMediaEl(item, e.items?.[j], assetPrefix, "4:5")}${renderCaption(item.caption, e.items?.[j]?.caption)}</figure>`
             )
             .join("")}</div>`;
-        case "palette":
-          // Colunas equilibradas: até 8 por linha, linhas do mesmo tamanho (9 cores
-          // viram 5 + 4, não 8 + 1).
-          const rows = Math.ceil(block.items.length / 8);
-          const cols = Math.ceil(block.items.length / rows);
-          return `<div class="work-block work-block--palette">${renderLabel(block.label, e.label)}<ul style="--cols:${cols}">${block.items
+        case "palette": {
+          // Marquee: a lista aparece duas vezes (a cópia fica escondida para leitores de
+          // tela) e a faixa anda metade da largura em loop, sem emenda.
+          const swatches = block.items
             .map((c, j) => {
               const name = tx(e.items?.[j]?.name, c.name);
               return `<li><span class="work-swatch" style="background:${escapeHtml(c.hex)}"></span><span class="work-swatch-name"${name.attr}>${name.text}</span><span class="work-swatch-hex">${escapeHtml(c.hex.toUpperCase())}</span></li>`;
             })
-            .join("")}</ul></div>`;
+            .join("");
+          return `<div class="work-block work-block--palette">${renderLabel(block.label, e.label)}<div class="work-marquee" style="--n:${block.items.length}"><div class="work-marquee-inner"><ul>${swatches}</ul><ul aria-hidden="true">${swatches}</ul></div></div></div>`;
+        }
         case "capture":
           return `<figure class="work-block work-block--capture"><img src="${assetPrefix}${block.src}"${at("alt", e.alt, block.alt || "")} loading="lazy" decoding="async">${renderCaption(block.caption, e.caption)}</figure>`;
         default:
@@ -300,8 +304,8 @@ function validateWorks(data) {
       if (!BLOCK_TYPES.has(block.type)) {
         throw new Error(`Bloco desconhecido "${block.type}" em ${work.slug}`);
       }
-      if (block.type === "pair" && ![2, 3].includes(block.items?.length)) {
-        throw new Error(`Bloco "pair" em ${work.slug} precisa de 2 ou 3 items (3 = trio, lado a lado)`);
+      if (block.type === "pair" && ![2, 3, 6].includes(block.items?.length)) {
+        throw new Error(`Bloco "pair" em ${work.slug} precisa de 2, 3 ou 6 items (3 = trio, 6 = grade 3×2)`);
       }
       if (block.ratio && !RATIO_CLASS[block.ratio]) {
         throw new Error(`Ratio "${block.ratio}" inválido em ${work.slug} (use 16:9, 4:3, 7:5, 4:5, 1:1 ou auto)`);
@@ -329,10 +333,44 @@ function buildWorkPages(data, enOverlay) {
     const ogImage = `${data.site.url}/${fs.existsSync(path.join(root, ogFile)) ? ogFile : work.hero.src}`;
 
     const en = enOverlay[work.slug] ?? {};
-    const desc = summarize(en.description ?? work.description);
-    const descPt = summarize(work.description);
+    // SEO: título e descrição próprios (work.seo / en.seo) quando existirem; senão,
+    // caem no título e no resumo da descrição do case.
+    const seoTitle = en.seo?.title ?? work.seo?.title ?? work.title;
+    const seoTitlePt = work.seo?.title ?? work.title;
+    const desc = summarize(en.seo?.description ?? en.description ?? work.seo?.description ?? work.description);
+    const descPt = summarize(work.seo?.description ?? work.description);
+    const ogAlt = en.hero?.alt ?? work.hero.alt ?? work.title;
+    const ogAltPt = work.hero.alt ?? work.title;
+    const jsonLd = JSON.stringify([
+      {
+        "@context": "https://schema.org",
+        "@type": "CreativeWork",
+        name: work.title,
+        description: desc,
+        url: canonical,
+        image: ogImage,
+        dateCreated: String(work.year),
+        genre: (en.services ?? work.services).join(", "),
+        creator: { "@type": "Person", name: data.site.name, url: `${data.site.url}/` },
+        inLanguage: ["en", "pt-BR"],
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: data.site.name, item: `${data.site.url}/` },
+          { "@type": "ListItem", position: 2, name: work.title, item: canonical },
+        ],
+      },
+    ]).replaceAll("<", "\\u003c");
     const html = renderTemplate(template, {
       title: escapeHtml(work.title),
+      seoTitle: escapeHtml(seoTitle),
+      titlePt: seoTitle === seoTitlePt ? "" : ` data-pt="${escapeHtml(seoTitlePt)} | Nícolas de Queiróz"`,
+      titlePtContent: seoTitle === seoTitlePt ? "" : ` data-pt-content="${escapeHtml(seoTitlePt)} | Nícolas de Queiróz"`,
+      ogAlt: escapeHtml(ogAlt),
+      ogAltPt: ogAlt === ogAltPt ? "" : ` data-pt-content="${escapeHtml(ogAltPt)}"`,
+      jsonLd,
       description: escapeHtml(desc),
       descriptionPt: desc === descPt ? "" : ` data-pt-content="${escapeHtml(descPt)}"`,
       canonical,
@@ -351,9 +389,9 @@ function buildWorkPages(data, enOverlay) {
   });
 }
 
-// Meta description: buscadores e previews cortam por volta de 155 caracteres,
+// Meta description: buscadores e previews cortam por volta de 155–160 caracteres,
 // então encurtamos na última palavra inteira.
-function summarize(text, max = 155) {
+function summarize(text, max = 160) {
   if (text.length <= max) return text;
   const cut = text.slice(0, max - 1);
   // Prefere terminar numa frase inteira, se houver uma longa o bastante.
@@ -365,7 +403,7 @@ function summarize(text, max = 155) {
 // sitemap.xml com a home e todas as páginas de work (sem lastmod: mudaria a
 // cada build e sujaria o diff).
 function writeSitemap(data) {
-  const urls = [`${data.site.url}/`, `${data.site.url}/sobre/`, ...data.works.map((w) => `${data.site.url}/work/${w.slug}/`)];
+  const urls = [`${data.site.url}/`, `${data.site.url}/sobre/`, `${data.site.url}/trabalhos/`, `${data.site.url}/feed/`, `${data.site.url}/contato/`, ...data.works.map((w) => `${data.site.url}/work/${w.slug}/`)];
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${urls.map((u) => `  <url><loc>${u}</loc></url>`).join("\n")}
@@ -401,8 +439,107 @@ function versionAssets(html) {
   );
 }
 
+// Imagens de um case para o rastro da página Trabalhos: a capa e as imagens estáticas
+// (sem SVG nem vídeo) dos blocos, espalhadas de forma uniforme, até `max`.
+function trailImages(work, max = 8) {
+  const isStill = (src) => typeof src === "string" && /\.(webp|jpe?g|png)$/i.test(src);
+  const all = [work.thumb];
+  for (const b of work.blocks ?? []) {
+    if (b.type === "image" && b.src) all.push(b.src);
+    for (const it of b.items ?? []) if (it.src) all.push(it.src);
+  }
+  const unique = [...new Set(all.filter(isStill))];
+  if (unique.length <= max) return unique;
+  return Array.from({ length: max }, (_, i) => unique[Math.round((i * (unique.length - 1)) / (max - 1))]);
+}
+
+// Página Trabalhos: a lista de cases (mesma ordem de works.json) é gerada aqui,
+// entre os marcadores <!-- works:start --> e <!-- works:end --> de trabalhos/index.html,
+// com títulos, tags e miniaturas; o JSON-LD (ItemList) vai junto.
+function injectTrabalhos(data, enOverlay) {
+  const file = path.join(root, "trabalhos", "index.html");
+  if (!fs.existsSync(file)) return false;
+  const rows = data.works
+    .map((work, i) => {
+      const en = enOverlay[work.slug] ?? {};
+      const tags = work.services
+        .map((svc, j) => {
+          const t = tx(en.services?.[j], svc);
+          return `<span${t.attr}>${t.text}</span>`;
+        })
+        .join("");
+      const thumb = `../${work.thumb}`;
+      // Seleção curada em works.json ("trail"); sem ela, cai na escolha automática.
+      const trail = (work.trail ?? trailImages(work)).map((src) => `../${src}`).join("|");
+      const n = String(i + 1).padStart(2, "0");
+      return `      <li class="tr-row" data-reveal style="--reveal-delay: ${Math.min(i, 6) * 60}ms">
+        <a class="tr-link" href="../work/${work.slug}/" data-trail="${trail}">
+          <span class="tr-num">${n}</span>
+          <span class="tr-title">${escapeHtml(work.title)}</span>
+          <span class="tr-tags">${tags}</span>
+          <span class="tr-year">${work.year}</span>
+          <img class="tr-thumb" src="${thumb}" alt="" loading="lazy" decoding="async">
+        </a>
+      </li>`;
+    })
+    .join("\n");
+  const list = `<ol class="tr-list">\n${rows}\n    </ol>`;
+  const ld = JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: "Work — Nícolas de Queiróz",
+    url: `${data.site.url}/trabalhos/`,
+    inLanguage: ["en", "pt-BR"],
+    mainEntity: {
+      "@type": "ItemList",
+      itemListElement: data.works.map((w, i) => ({
+        "@type": "ListItem",
+        position: i + 1,
+        name: w.title,
+        url: `${data.site.url}/work/${w.slug}/`,
+      })),
+    },
+  }).replaceAll("<", "\\u003c");
+  let html = fs.readFileSync(file, "utf8");
+  html = html.replace(/<!-- works:start -->[\s\S]*?<!-- works:end -->/, `<!-- works:start -->\n    ${list}\n    <!-- works:end -->`);
+  html = html.replace(/<!-- ld:start -->[\s\S]*?<!-- ld:end -->/, `<!-- ld:start -->${ld}<!-- ld:end -->`);
+  fs.writeFileSync(file, html);
+  return true;
+}
+
+// Página Feed: o mural recebe, (JSON em #feed-data, entre <!-- feed:start --> e <!-- feed:end -->) todas as
+// imagens estáticas dos cases (capa, hero e blocos; sem SVG, vídeo, og nem versões mobile).
+function injectFeed(data) {
+  const file = path.join(root, "feed", "index.html");
+  if (!fs.existsSync(file)) return 0;
+  const isStill = (src) => typeof src === "string" && /\.(webp|jpe?g|png)$/i.test(src);
+  const items = [];
+  for (const work of data.works) {
+    const srcs = new Set();
+    const add = (src) => isStill(src) && fs.existsSync(path.join(root, src)) && srcs.add(src);
+    add(work.thumb);
+    if (work.hero?.type === "image") add(work.hero.src);
+    for (const b of work.blocks ?? []) {
+      if (b.feed === false) continue; // bloco fora do mural (ex.: comunicação, galeria de embalagens)
+      add(b.src);
+      for (const it of b.items ?? []) add(it.src);
+    }
+    for (const src of srcs) {
+      // Miniatura de assets/feed/ (npm run feed-thumbs); sem ela, a imagem original.
+      const thumb = `assets/feed/${src.replace(/^assets\/works\//, "").replace(/\//g, "__").replace(/\.\w+$/, ".webp")}`;
+      const image = fs.existsSync(path.join(root, thumb)) ? thumb : src;
+      items.push({ image: `../${image}`, full: `../${src}`, title: work.title, href: `../work/${work.slug}/` });
+    }
+  }
+  const json = JSON.stringify(items).replaceAll("<", "\\u003c");
+  let html = fs.readFileSync(file, "utf8");
+  html = html.replace(/<!-- feed:start -->[\s\S]*?<!-- feed:end -->/, `<!-- feed:start --><script type="application/json" id="feed-data">${json}</script><!-- feed:end -->`);
+  fs.writeFileSync(file, html);
+  return items.length;
+}
+
 // Páginas estáticas (não saem do template) recebem o versionamento no lugar.
-const STATIC_PAGES = ["index.html", "sobre/index.html", "404.html"];
+const STATIC_PAGES = ["index.html", "sobre/index.html", "trabalhos/index.html", "feed/index.html", "contato/index.html", "404.html"];
 
 function versionStaticPages() {
   let count = 0;
@@ -444,11 +581,14 @@ function main() {
   validateWorks(data);
   buildWorkPages(data, enOverlay);
   const injected = injectHomeData(data);
+  injectTrabalhos(data, enOverlay);
+  const feedCount = injectFeed(data);
   const sitemapCount = writeSitemap(data);
   const versioned = versionStaticPages();
 
   console.log(`✓ ${data.works.length} páginas geradas em work/`);
   console.log(injected ? "✓ works-data inline sincronizado no index.html" : "⚠ index.html sem bloco works-data");
+  console.log(`✓ feed com ${feedCount} imagens`);
   console.log(`✓ sitemap.xml com ${sitemapCount} URLs`);
   console.log(`✓ CSS/JS versionados (?v=hash) em ${versioned} páginas estáticas + work/`);
 }

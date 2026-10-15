@@ -187,19 +187,66 @@
     }
 }
 
-/* Paleta: amostras de cor com nome e código, nome traduzível. */
-.work-block--palette ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(132px, 1fr));
-    gap: 24px 16px;
+/* Paleta: marquee de amostras de cor (nome traduzível). A faixa tem duas cópias da
+   lista e anda metade da largura em loop; para ao passar o mouse. */
+.work-marquee {
+    overflow: hidden;
+    /* folga para a sombra dos cartões não ser cortada */
+    margin: -12px 0 -32px;
+    padding: 12px 0 32px;
+    -webkit-mask-image: linear-gradient(90deg, transparent, #000 4%, #000 96%, transparent);
+    mask-image: linear-gradient(90deg, transparent, #000 4%, #000 96%, transparent);
 }
 
-@media (min-width: 901px) {
-    .work-block--palette ul {
-        grid-template-columns: repeat(var(--cols, 8), minmax(0, 1fr));
+.work-marquee-inner {
+    display: flex;
+    width: max-content;
+    animation: work-marquee calc(var(--n, 8) * 5s) linear infinite;
+}
+
+.work-marquee:hover .work-marquee-inner {
+    animation-play-state: paused;
+}
+
+.work-marquee ul {
+    list-style: none;
+    margin: 0;
+    padding: 0 16px 0 0;
+    display: flex;
+    gap: 16px;
+    flex: none;
+}
+
+.work-marquee li {
+    flex: none;
+    width: 176px;
+}
+
+@keyframes work-marquee {
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+@media (max-width: 767.98px) {
+    .work-marquee li {
+        width: 148px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .work-marquee {
+        overflow-x: auto;
+        -webkit-mask-image: none;
+        mask-image: none;
+    }
+
+    .work-marquee-inner {
+        animation: none;
+    }
+
+    .work-marquee ul[aria-hidden="true"] {
+        display: none;
     }
 }
 
@@ -272,7 +319,7 @@
     margin-bottom: 14px;
 }
 
-/* Dupla retrato — permanece lado a lado também no mobile (padrão Ravi Klaassens). */
+/* Dupla de peças lado a lado (no celular, ver regra mais abaixo). */
 .work-block--pair {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -283,18 +330,31 @@
     margin: 0;
 }
 
-/* Dupla de peças horizontais (16:9, 4:3, 7:5): no celular vira uma abaixo da outra.
-   Duplas de peças verticais continuam lado a lado. */
+/* Três peças verticais lado a lado (stories, fotos 9:16). */
+.work-block--pair:has(figure:nth-child(3)) {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/* Dupla ou trio (lado a lado no desktop): no celular vira uma peça abaixo da outra,
+   seja qual for a proporção. */
 @media (max-width: 767.98px) {
-    .work-block--pair:has(:is(.work-r-169, .work-r-43, .work-r-75)) {
+    .work-block--pair,
+    .work-block--pair:has(figure:nth-child(3)) {
         grid-template-columns: 1fr;
         gap: 24px;
     }
 }
 
-/* Três peças verticais lado a lado (stories, fotos 9:16). */
-.work-block--pair:has(figure:nth-child(3)) {
+/* Grade de seis peças (ex.: posts da equipe): 3 colunas no desktop e 2 no celular. */
+.work-block--pair:has(figure:nth-child(6)) {
     grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 767.98px) {
+    .work-block--pair:has(figure:nth-child(6)) {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+    }
 }
 
 /* Galeria: a linha de produtos numa "prateleira" (fundo suave), cada peça recortada
@@ -347,6 +407,18 @@
     }
 }
 
+/* Galeria de até 3 peças (ex.: os três ícones): no celular, uma abaixo da outra. */
+@media (max-width: 767.98px) {
+    .work-block--gallery:not(:has(figure:nth-child(4))) {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .work-block--gallery:not(:has(figure:nth-child(4))) figure {
+        width: min(100%, 240px);
+    }
+}
+
 .work-block--statement {
     max-width: 960px;
     text-align: center;
@@ -362,6 +434,14 @@
     font-size: clamp(28px, 4.5vw, 56px);
     line-height: 1.15;
     margin: 0;
+}
+
+/* No celular, frase de destaque e depoimento seguem o alinhamento à esquerda dos demais textos. */
+@media (max-width: 767.98px) {
+    .work-block--statement,
+    .work-testimonial {
+        text-align: left;
+    }
 }
 
 .work-block--text p {
@@ -415,25 +495,41 @@
     margin: 0;
 }
 
+/* Créditos: rótulo à esquerda e valor ao lado, alinhados à esquerda; aguenta
+   nomes e funções longos (quebram em várias linhas) e vira uma coluna no celular. */
 .work-credit {
-    display: flex;
-    justify-content: space-between;
-    gap: 24px;
-    padding: 10px 0;
+    display: grid;
+    grid-template-columns: minmax(0, 210px) minmax(0, 1fr);
+    gap: 4px 24px;
+    align-items: baseline;
+    padding: 14px 0;
     border-bottom: 1px solid var(--line-soft);
 }
 
 .work-credit dt {
     font-size: 12px;
     font-weight: 600;
+    line-height: 1.5;
     letter-spacing: 0.06em;
     text-transform: uppercase;
     opacity: 0.55;
+    overflow-wrap: anywhere;
 }
 
 .work-credit dd {
     margin: 0;
     font-size: 14px;
+    line-height: 1.55;
+    overflow-wrap: anywhere;
+    text-wrap: pretty;
+}
+
+@media (max-width: 560px) {
+    .work-credit {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 6px;
+        padding: 16px 0;
+    }
 }
 
 .work-visit {

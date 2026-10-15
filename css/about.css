@@ -32,55 +32,6 @@
 
 /* --- Tipos que se repetem --- */
 
-/* Rótulo igual ao das páginas de case (.work-block-label). */
-.ab-label {
-    display: block;
-    margin: 0;
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    color: var(--muted);
-}
-
-.ab-links {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px 22px;
-    margin: 0;
-    padding: 0;
-}
-
-.ab-links a,
-.ab-links .egg-trigger {
-    display: inline-flex;
-    align-items: baseline;
-    gap: 8px;
-    padding-bottom: 2px;
-    border-bottom: 1px solid currentColor;
-    color: inherit;
-    font: 600 15px/1.2 "DM Sans", sans-serif;
-    text-decoration: none;
-    transition: opacity 0.2s ease;
-}
-
-.ab-links a:hover,
-.ab-links .egg-trigger:hover {
-    opacity: 0.6;
-}
-
-.ab-links a:focus-visible,
-.ab-links .egg-trigger:focus-visible {
-    outline: 2px solid currentColor;
-    outline-offset: 4px;
-}
-
-/* Nos easter eggs o sublinhado pontilhado de .egg-trigger dá lugar à linha. */
-.ab-links .egg-trigger {
-    text-decoration: none;
-}
-
 /* =============================================================
    QUEM SOU — título, ficha (como nos cases), duas colunas e a foto
    ============================================================= */
@@ -141,6 +92,20 @@
     line-height: 1.5;
 }
 
+.ab-country {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.ab-flag {
+    flex: none;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px var(--line);
+}
+
 .ab-cols {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -172,15 +137,14 @@
     padding-top: 48px;
 }
 
-/* Foto: ocupa a altura toda do bloco de texto ao lado. */
+/* Foto: reserva o espaço do bloco ao lado (a altura do texto). Hoje quem aparece é o
+   crachá (lanyard) que cai exatamente nesse espaço; a foto fica oculta e serve de
+   plano B sem WebGL. */
 .ab-photo {
     position: relative;
     margin: 0;
     align-self: stretch;
     min-height: 420px;
-    overflow: hidden;
-    border-radius: var(--radius);
-    background: var(--surface);
 }
 
 .ab-photo img {
@@ -192,79 +156,35 @@
     object-fit: cover;
     object-position: 45% 30%;
     filter: grayscale(1);
-    transition: transform 1.2s cubic-bezier(0.2, 0.8, 0.2, 1);
+    border-radius: var(--radius);
 }
 
-/* Véu escuro embaixo, só para o rótulo do lugar ficar legível. */
-.ab-photo::after {
-    content: "";
+.ab-photo.is-lanyard img {
+    visibility: hidden;
+}
+
+/* A camada do lanyard cobre da borda do topo da página até abaixo da foto; ela e
+   a posição são calculadas em js/about-lanyard.js. Não captura cliques: o crachá
+   é "pego" por raycast. */
+.ab-lanyard {
     position: absolute;
-    inset: 0;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.55), transparent 45%);
-    opacity: 0;
-    transition: opacity 0.6s ease;
+    z-index: 5;
     pointer-events: none;
 }
 
-/* O lugar: bandeira, nome e coordenadas, sobe do pé da foto. */
-.ab-photo-tag {
-    position: absolute;
-    left: 16px;
-    right: 16px;
-    bottom: 16px;
-    z-index: 1;
-    display: grid;
-    grid-template-columns: auto 1fr;
-    align-items: center;
-    gap: 2px 12px;
-    color: #fff;
-    opacity: 0;
-    transform: translateY(14px);
-    transition:
-        opacity 0.45s ease,
-        transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
-}
-
-/* Bandeira da Eslovênia, com o brasão simplificado (o Triglav e as três
-   estrelas) — sem ele, branco-azul-vermelho seria a bandeira da Rússia. */
-.ab-photo-flag {
-    grid-row: span 2;
+.ab-lanyard .lanyard-canvas {
     display: block;
-    width: 28px;
-    height: 28px;
-    border-radius: 50%;
-    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.35);
+    width: 100%;
+    height: 100%;
 }
 
-.ab-photo-place {
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 1.2;
+/* A bolinha do site é o cursor sobre o crachá. */
+body.custom-cursor-active .ab-lanyard {
+    cursor: none;
 }
 
-.ab-photo-coords {
-    font-size: 13px;
-    font-variant-numeric: tabular-nums;
-    color: rgba(255, 255, 255, 0.78);
-}
-
-/* Desktop: o lugar aparece no hover. Toque e telas estreitas: ao tocar na foto (alterna). */
-@media (hover: hover) and (min-width: 769px) {
-    .ab-photo:hover img {
-        transform: scale(1.05);
-    }
-
-    .ab-photo:hover::after,
-    .ab-photo:hover .ab-photo-tag {
-        opacity: 1;
-        transform: none;
-    }
-}
-
-.ab-photo.is-tapped::after,
-.ab-photo.is-tapped .ab-photo-tag {
-    opacity: 1;
-    transform: none;
+.about-page .about {
+    overflow-x: clip; /* a camada do lanyard é mais larga que a foto */
 }
 
 /* =============================================================
@@ -598,134 +518,6 @@
     display: none;
 }
 
-/* Contato: o "verso" escuro. Fica grudado no fundo da tela (sticky), numa
-   camada abaixo da folha branca — quando a folha acaba, ele está lá, parado.
-   Cabe numa tela: título e links em cima, o nome gigante e a linha final
-   embaixo. */
-.ab-contact {
-    position: sticky;
-    bottom: 0;
-    z-index: 0;
-    margin-top: -28px; /* fica por trás dos cantos arredondados da folha */
-    /* Tema claro: verso escuro. Tema escuro: inverte e vira claro. */
-    --ct-bg: #101010;
-    --ct-fg: #f2f2f2;
-    --ct-line: rgba(242, 242, 242, 0.16);
-    --ct-dim: rgba(242, 242, 242, 0.6);
-    --ct-dim-2: rgba(242, 242, 242, 0.62);
-    background: var(--ct-bg);
-    color: var(--ct-fg);
-    overflow: clip;
-    transition: background-color 0.35s ease, color 0.35s ease;
-}
-
-:root[data-theme="dark"] .ab-contact {
-    --ct-bg: #f2f2f2;
-    --ct-fg: #111111;
-    --ct-line: rgba(17, 17, 17, 0.16);
-    --ct-dim: rgba(17, 17, 17, 0.6);
-    --ct-dim-2: rgba(17, 17, 17, 0.62);
-}
-
-.ab-contact-sheet {
-    min-height: 100svh;
-    display: flex;
-    flex-direction: column;
-    padding-top: calc(28px + clamp(96px, 12vh, 140px));
-}
-
-.ab-contact-inner {
-    /* Mesma largura de conteúdo do container (1280 − 2×32), para a linha
-       alinhar com as das seções de cima. */
-    width: min(1216px, calc(100% - 64px));
-    margin: 0 auto;
-    padding: 20px 0 0;
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
-    gap: 24px;
-    border-top: 1px solid var(--ct-line);
-}
-
-.ab-contact .ab-label {
-    color: var(--ct-dim);
-}
-
-.ab-contact-title {
-    margin: 0 0 32px;
-    max-width: 22ch;
-    font-family: "Instrument Serif", serif;
-    font-size: clamp(38px, min(5.4vw, 8vh), 84px);
-    font-weight: 400;
-    line-height: 0.95;
-    letter-spacing: -0.015em;
-    text-wrap: balance;
-}
-
-/* O verso: o nome de ponta a ponta, em itálico. */
-.ab-signature {
-    margin: auto 0 0;
-    padding-top: 48px;
-    padding: 0 16px;
-    font-family: "Instrument Serif", serif;
-    font-style: italic;
-    font-weight: 400;
-    font-size: 15.2vw;
-    line-height: 0.85;
-    letter-spacing: -0.04em;
-    white-space: nowrap;
-    text-align: center;
-}
-
-.ab-closing {
-    width: min(1216px, calc(100% - 64px));
-    margin: 24px auto 0;
-    padding: 0 0 clamp(72px, 8vh, 96px);
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 12px 24px;
-    font-size: 14px;
-    color: var(--ct-dim-2);
-}
-
-.ab-closing a {
-    color: var(--ct-fg);
-    font-weight: 600;
-    text-decoration: none;
-}
-
-.ab-closing a:hover {
-    text-decoration: underline;
-    text-underline-offset: 4px;
-}
-
-.ab-closing a:focus-visible {
-    outline: 2px solid currentColor;
-    outline-offset: 3px;
-}
-
-.ab-contact-meta {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin: 48px 0 0;
-    font-size: 14px;
-    color: var(--ct-dim-2);
-}
-
-.ab-dot {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: #2fbf71;
-    animation: ab-pulse 2.4s ease-out infinite;
-}
-
-@keyframes ab-pulse {
-    0% { box-shadow: 0 0 0 0 rgba(47, 191, 113, 0.5); }
-    70%, 100% { box-shadow: 0 0 0 10px rgba(47, 191, 113, 0); }
-}
-
 /* =============================================================
    TABLET E CELULAR — mesmas margens dos cases (20px no celular)
    ============================================================= */
@@ -749,7 +541,7 @@
     .ab-photo {
         align-self: auto;
         min-height: 0;
-        aspect-ratio: 1 / 1;
+        aspect-ratio: 4 / 5;
         order: -1;
     }
 
@@ -757,8 +549,7 @@
         grid-template-columns: 1fr;
     }
 
-    .ab-offscreen,
-    .ab-contact-inner {
+    .ab-offscreen {
         grid-template-columns: 1fr;
     }
 
@@ -776,11 +567,6 @@
         padding-left: 20px;
         padding-right: 20px;
         border-radius: 0 0 20px 20px;
-    }
-
-    .ab-contact-inner,
-    .ab-closing {
-        width: calc(100% - 40px);
     }
 
     .ab-meta,
@@ -812,19 +598,6 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .ab-dot {
-        animation: none;
-    }
-
-    .ab-photo img,
-    .ab-photo-tag {
-        transition: opacity 0.3s ease;
-    }
-
-    .ab-photo:hover img {
-        transform: none;
-    }
-
     .ab-egg-disc,
     .ab-egg-covers > * {
         transition: none;

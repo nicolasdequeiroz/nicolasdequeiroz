@@ -142,6 +142,24 @@ document.addEventListener("DOMContentLoaded", async () => {
       link.href = `work/${work.slug}/`;
       link.draggable = false; // sem "fantasma" de link ao arrastar com o mouse
 
+      // Capa em vídeo (work.thumbVideo): o card toca o vídeo (no celular, a versão
+      // vertical hero.mobileVideo) e usa a imagem como poster.
+      if (work.thumbVideo) {
+        const video = document.createElement("video");
+        video.src = isMobile() && work.hero?.mobileVideo ? work.hero.mobileVideo : work.thumbVideo;
+        video.poster = isMobile() && work.hero?.mobile ? work.hero.mobile : work.thumb;
+        video.muted = true;
+        video.loop = true;
+        video.autoplay = true;
+        video.playsInline = true;
+        video.preload = "auto";
+        video.setAttribute("aria-label", work.title);
+        link.appendChild(video);
+        card.appendChild(link);
+        carousel.appendChild(card);
+        return card;
+      }
+
       const img = document.createElement("img");
       img.src = work.thumb;
       img.alt = work.title;
@@ -199,8 +217,9 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   function announce() {
     if (!liveRegion) return;
-    const img = cards[activeIndex()]?.querySelector("img");
-    liveRegion.textContent = `${t("Project", "Projeto")} ${activeIndex() + 1} ${t("of", "de")} ${itemCount}: ${img?.alt ?? ""}`;
+    const media = cards[activeIndex()]?.querySelector("img, video");
+    const title = media?.alt || media?.getAttribute("aria-label") || "";
+    liveRegion.textContent = `${t("Project", "Projeto")} ${activeIndex() + 1} ${t("of", "de")} ${itemCount}: ${title}`;
   }
 
   function syncDots() {
@@ -226,7 +245,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       if (link) link.tabIndex = isActive ? 0 : -1;
       if (isActive) card.removeAttribute("aria-hidden");
       else card.setAttribute("aria-hidden", "true");
-      const img = card.querySelector("img");
+      const img = card.querySelector("img, video");
       if (img) img.style.viewTransitionName = isActive ? "work-media" : "";
     });
   }

@@ -38,7 +38,13 @@ Não mude estes pontos sem pedido explícito, mesmo que uma skill ou o inspetor 
   (`<main data-nav-sheet>`) sobe por cima dele — tudo em CSS (`.ab-contact`). `data-nav-dark`
   em qualquer bloco escuro faz a nav escurecer sobre ele (`js/nav-theme.js`). O site tem
   `scroll-behavior: smooth`: em testes, role com `behavior: 'instant'`.
-  A nav é repetida em `index.html`, `templates/work.html` e `sobre/index.html` — mudou uma, mude as três.
+  A nav é repetida em `index.html`, `templates/work.html`, `sobre/index.html` e `trabalhos/index.html` — mudou uma, mude todas.
+- **Lanyard (sobre)**: no lugar da foto, o crachá do React Bits (MIT) portado para JS puro em `js/lanyard.js`
+  (three.js 0.170 via jsDelivr, módulo ES; física Verlet, arrastar e clique para virar). `js/about-lanyard.js`
+  dimensiona a camada (largura da tela, do topo da página até abaixo da foto) para o cartão cair na área da
+  foto e gera a frente (foto em P&B) e a fita (nome repetido) em canvas. A `<img>` fica como reserva de
+  espaço e plano B sem WebGL (`.is-lanyard` a oculta). A camada não captura cliques; o crachá é pego por
+  raycast. Sem a "paradinha da Eslovênia" (rótulo e coordenadas foram removidos).
 - **Easter eggs (sobre)**: "coleciono vinil" (hoje uma marquee vertical em `js/egg-vinis.js`, sem GSAP no movimento; campos de `data/vinis.json`: artista, album, ano, genero, selo, edicao[], estrelas, condicao, capa) e "geografia, bandeiras e mapas" abrem dialogs
   (`js/easter-eggs.js` carrega `js/egg-vinis.js` / `js/egg-globo.js` sob demanda). Dados em
   `data/vinis.json` e `data/viagens.json` (`"exemplo": true` mostra o aviso de lista de exemplo —
@@ -53,8 +59,29 @@ Não mude estes pontos sem pedido explícito, mesmo que uma skill ou o inspetor 
   easter eggs) chama `nqI18n.translate(escopo)`. Cases: `data/works.json` guarda o português e
   `data/works.en.json` a tradução por slug (blocks/credits alinhados por posição) — case novo precisa
   das duas. Texto novo em qualquer página = inglês no HTML + `data-pt`. A nav (com o botão de idioma)
-  é repetida em `index.html`, `templates/work.html` e `sobre/index.html`. `sitemap.xml` é gerado pelo
+  é repetida em `index.html`, `templates/work.html`, `sobre/index.html` e `trabalhos/index.html` e `feed/index.html`. `sitemap.xml` é gerado pelo
   build; `robots.txt` é estático. Previews de link e SEO ficam em inglês (padrão).
+
+- **Página trabalhos**: `trabalhos/index.html` é estática, com a lista de cases gerada pelo build entre
+  `<!-- works:start -->` e `<!-- works:end -->` (ordem de `works.json`; tags = `services`; miniatura = `thumb`).
+  Estilo em `css/trabalhos.css`, prévia que segue o cursor em `js/trabalhos.js` (GSAP `quickTo`, só mouse;
+  no toque, miniatura em cada linha). O link "work" da nav aponta para ela em todas as páginas.
+  O contato (verso escuro com o nome gigante) é o mesmo da Sobre: `css/contact.css` + `js/contact.js`
+  (relógio de Curitiba), carregados pelas duas páginas; mudou um, mudou o outro.
+
+- **Página feed**: `feed/index.html` é uma tela de 100svh só com o mural Drift Wall (React Bits, portado
+  para JS puro em `js/feed.js`, estilo em `css/feed.css`). O build injeta em `#feed-data` todas as imagens
+  estáticas dos cases (capa, hero e blocos); o JS sorteia ~10 por coluna a cada visita e cada quadro leva ao
+  case. Cores pelos tokens (a névoa das bordas e dos quadros em repouso usa `--bg`).
+  Os quadros usam miniaturas de 640px em `assets/feed/` (`npm run feed-thumbs`, precisa de ffmpeg e cwebp;
+  rode ao adicionar imagens a um case — sem miniatura, o build usa o original). A faixa de cada coluna
+  tem cópias de sobra para cobrir a tela inclinada: não reduza `span` em `build()` de `js/feed.js`.
+
+- **Página contato**: `contato/index.html` é uma tela de 100svh só com um Reflective Card (React Bits, MIT)
+  com os links de contato (WhatsApp, Instagram, LinkedIn — novo link entra no HTML do cartão). Port em JS puro
+  em `js/reflective-card.js` (WebGL2; sem o reflexo de vídeo/câmera), montagem e tema em `js/contato.js`
+  (grafite no tema claro, prata no escuro), estilo em `css/contato.css`. O link "contact" da nav aponta para
+  ela em todas as páginas; a seção de contato da Sobre continua existindo.
 
 ## Rodar o site
 
