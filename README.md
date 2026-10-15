@@ -28,7 +28,7 @@ Portfólio estático de **Nícolas de Queiróz** — Branding & Web Design.
 1. **Não recrie o fake CMS** (`#cms-list` no HTML) — foi removido; o carrossel lê JSON.
 2. **Não edite `css/generated.css` nem `css/main.css`** — são saída de ferramenta (Tailwind/utilitários). Prefira `css/work.css`, `css/carousel.css`, `css/nav.css`, `css/cursor.css`, `css/transitions.css`.
 3. **Não coloque `padding-top` no `body` de páginas de work** — quebra nav `fixed` (ver seção Nav abaixo).
-4. **Não invente seções** (`about`, `feed`, `contact`) sem pedido explícito — os links existem na nav mas as âncoras ainda não foram implementadas.
+4. **Não invente seções ou páginas** além das existentes (home, `sobre/`, `trabalhos/`, `feed/`, `contato/`) sem pedido explícito.
 5. **Não use a pasta `nicolas-de-queiroz/`** — é legado/obsoleta; o site vive na raiz do repo.
 6. **Não adicione setas prev/next no carrossel 3D** — decisão de design do autor.
 7. **Não aplique `view-transition-name` em mais de um card** — o nome `work-media` deve existir só no card central do carrossel e no hero da página de destino (ver seção Transição de página).
@@ -257,7 +257,6 @@ Estilos em `css/work.css`. Hero full-bleed (`100svh`); nav fixa sobrepõe a imag
 
 ## Pendências conhecidas (não resolver sem pedido)
 
-- Links da nav `#about`, `#feed`, `#contact` não têm seções na home
 - `README.profile.md` é o readme do perfil GitHub (separado deste doc de projeto)
 
 ---

@@ -38,7 +38,7 @@ Não mude estes pontos sem pedido explícito, mesmo que uma skill ou o inspetor 
   (`<main data-nav-sheet>`) sobe por cima dele — tudo em CSS (`.ab-contact`). `data-nav-dark`
   em qualquer bloco escuro faz a nav escurecer sobre ele (`js/nav-theme.js`). O site tem
   `scroll-behavior: smooth`: em testes, role com `behavior: 'instant'`.
-  A nav é repetida em `index.html`, `templates/work.html`, `sobre/index.html` e `trabalhos/index.html` — mudou uma, mude todas.
+  A nav é repetida em `index.html`, `templates/work.html`, `sobre/index.html`, `trabalhos/index.html`, `feed/index.html` e `contato/index.html` — mudou uma, mude todas.
 - **Lanyard (sobre)**: no lugar da foto, o crachá do React Bits (MIT) portado para JS puro em `js/lanyard.js`
   (three.js 0.170 via jsDelivr, módulo ES; física Verlet, arrastar e clique para virar). `js/about-lanyard.js`
   dimensiona a camada (largura da tela, do topo da página até abaixo da foto) para o cartão cair na área da
@@ -59,7 +59,7 @@ Não mude estes pontos sem pedido explícito, mesmo que uma skill ou o inspetor 
   easter eggs) chama `nqI18n.translate(escopo)`. Cases: `data/works.json` guarda o português e
   `data/works.en.json` a tradução por slug (blocks/credits alinhados por posição) — case novo precisa
   das duas. Texto novo em qualquer página = inglês no HTML + `data-pt`. A nav (com o botão de idioma)
-  é repetida em `index.html`, `templates/work.html`, `sobre/index.html` e `trabalhos/index.html` e `feed/index.html`. `sitemap.xml` é gerado pelo
+  é repetida em `index.html`, `templates/work.html`, `sobre/index.html`, `trabalhos/index.html`, `feed/index.html` e `contato/index.html`. `sitemap.xml` é gerado pelo
   build; `robots.txt` é estático. Previews de link e SEO ficam em inglês (padrão).
 
 - **Página trabalhos**: `trabalhos/index.html` é estática, com a lista de cases gerada pelo build entre
