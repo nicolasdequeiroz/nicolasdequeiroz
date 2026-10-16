@@ -118,6 +118,7 @@ Adicione ou altere um objeto em `works[]`:
 | `thumb` | sim | Imagem do card no carrossel |
 | `hero` | sim | `type`: `"image"` ou `"video"`; `src`, `alt` |
 | `blocks` | não | Conteúdo extra abaixo do hero |
+| `home` | não | `false` deixa o case só na lista de Trabalhos: fora do carrossel da home, do mural do Feed e do "próximo projeto" dos outros cases. A home mostra os cases sem essa marca (hoje 8) |
 | `blocks[].feed` | não | `false` tira as imagens daquele bloco do mural da página Feed (ex.: peças de comunicação, galerias de embalagens) |
 | `trail` | não | Lista de imagens (WebP/JPG) do rastro de imagens da página Trabalhos. Escolha só imagens quase quadradas ou que aguentem recorte ~1,1:1, sem fundo branco chapado e sem peças de comunicação. Sem ela, o build escolhe sozinho |
 | `seo` | não | `{ "title", "description" }` para `<title>`, meta description e OG/Twitter. Título até ~39 caracteres (o build soma ` \| Nícolas de Queiróz`, total ≤ 60) e descrição de 120–160. Em `works.en.json`, a versão em inglês (padrão do HTML). Sem `seo`, cai em `title` e no resumo de `description` |

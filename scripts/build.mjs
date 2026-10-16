@@ -273,13 +273,23 @@ function renderOutro(work, en) {
   return `<section class="work-outro">\n    ${parts.join("\n    ")}\n  </section>`;
 }
 
+// Mídia do "próximo projeto": o vídeo do case (thumbVideo, ou o hero em vídeo) toca
+// em loop quando o bloco entra na tela (js/next-video.js); a capa é o poster.
+// Sem vídeo, é só a imagem.
+function renderNextMedia(next, assetPrefix) {
+  const video = next.thumbVideo ?? (next.hero.type === "video" ? next.hero.src : null);
+  if (!video) return `<img class="work-next-media" src="${assetPrefix}${next.hero.src}" alt="" loading="lazy" decoding="async">`;
+  const mobile = next.hero.mobileVideo ? ` data-src-mobile="${assetPrefix}${next.hero.mobileVideo}"` : "";
+  return `<video class="work-next-media" poster="${assetPrefix}${next.thumb}" data-src="${assetPrefix}${video}"${mobile} muted loop playsinline preload="none" aria-hidden="true"></video>`;
+}
+
 // Next case fullscreen (referência Locomotive): hero do próximo projeto em
 // fundo preto, com overlay escuro e o título por cima.
 function renderNextCase(next, assetPrefix) {
   if (!next) return "";
   const label = ui("next");
   return `<a href="../${next.slug}/" class="work-next" aria-label="${label.text}: ${escapeHtml(next.title)}" data-pt-aria-label="${escapeHtml(UI.next[1])}: ${escapeHtml(next.title)}">
-    <img class="work-next-media" src="${assetPrefix}${next.hero.type === "video" ? next.thumb : next.hero.src}" alt="" loading="lazy" decoding="async">
+    ${renderNextMedia(next, assetPrefix)}
     <span class="work-next-content">
       <span class="work-block-label"${label.attr}>${label.text}</span>
       <span class="work-next-title">${escapeHtml(next.title)}</span>
@@ -322,9 +332,13 @@ function buildWorkPages(data, enOverlay) {
   const assetPrefix = "../../";
   const year = new Date().getFullYear();
 
-  data.works.forEach((work, index) => {
+  // Cases com "home": false só aparecem na lista de Trabalhos: ficam fora do
+  // carrossel, do mural do Feed e do "próximo projeto" dos demais.
+  const featured = data.works.filter((w) => w.home !== false);
+  data.works.forEach((work) => {
     // Cíclico: o último case aponta de volta para o primeiro.
-    const nextWork = data.works[(index + 1) % data.works.length];
+    const fi = featured.indexOf(work);
+    const nextWork = featured[(fi + 1) % featured.length];
     const next = nextWork.slug === work.slug ? null : nextWork;
     const canonical = `${data.site.url}/work/${work.slug}/`;
     // Preview de link: JPG 1200×630 do case (og.jpg) — webp e GIF não aparecem
@@ -459,7 +473,9 @@ function trailImages(work, max = 8) {
 function injectTrabalhos(data, enOverlay) {
   const file = path.join(root, "trabalhos", "index.html");
   if (!fs.existsSync(file)) return false;
-  const rows = data.works
+  // A lista segue a data do projeto (mais recente primeiro); o carrossel mantém a ordem do JSON.
+  const byYear = [...data.works].sort((x, y) => y.year - x.year);
+  const rows = byYear
     .map((work, i) => {
       const en = enOverlay[work.slug] ?? {};
       const tags = work.services
@@ -492,7 +508,7 @@ function injectTrabalhos(data, enOverlay) {
     inLanguage: ["en", "pt-BR"],
     mainEntity: {
       "@type": "ItemList",
-      itemListElement: data.works.map((w, i) => ({
+      itemListElement: byYear.map((w, i) => ({
         "@type": "ListItem",
         position: i + 1,
         name: w.title,
@@ -515,6 +531,7 @@ function injectFeed(data) {
   const isStill = (src) => typeof src === "string" && /\.(webp|jpe?g|png)$/i.test(src);
   const items = [];
   for (const work of data.works) {
+    if (work.home === false) continue; // só na lista de Trabalhos
     const srcs = new Set();
     const add = (src) => isStill(src) && fs.existsSync(path.join(root, src)) && srcs.add(src);
     add(work.thumb);
@@ -561,7 +578,7 @@ function injectHomeData(data) {
   const indexPath = path.join(root, "index.html");
   if (!fs.existsSync(indexPath)) return false;
 
-  const json = JSON.stringify({ site: data.site, works: data.works });
+  const json = JSON.stringify({ site: data.site, works: data.works.filter((w) => w.home !== false) });
   const re = /(<script type="application\/json" id="works-data">)[\s\S]*?(<\/script>)/;
   let html = fs.readFileSync(indexPath, "utf8");
   if (!re.test(html)) return false;

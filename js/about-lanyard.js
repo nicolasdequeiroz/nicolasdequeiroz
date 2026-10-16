@@ -29,7 +29,9 @@ async function init() {
     const layerW = vw;
     cardW = Math.min(cardW, layerW * 0.72);
     const cardH = cardW / ratio;
-    const layerH = docTop + f.height + 90; // de cima da página até um respiro abaixo da foto
+    // De cima da página até bem abaixo da foto: o crachá puxado para baixo não pode bater na
+    // borda da camada (seria cortado). A camada não captura cliques, então cobrir o texto não atrapalha.
+    const layerH = docTop + f.height + Math.max(420, window.innerHeight * 0.7);
     const cardTop = docTop + (f.height - cardH) / 2;
     const frac = cardTop / layerH;
     layer.style.width = `${layerW}px`;

@@ -119,7 +119,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     const inline = document.getElementById("works-data");
     if (inline && inline.textContent.trim()) {
       try {
-        return JSON.parse(inline.textContent).works ?? [];
+        return (JSON.parse(inline.textContent).works ?? []).filter((w) => w.home !== false);
       } catch (err) {
         console.warn("Carrossel: works-data inline inválido, usando fetch.", err);
       }
@@ -127,7 +127,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     const res = await fetch(CONFIG.worksUrl);
     if (!res.ok) throw new Error(`Falha ao carregar ${CONFIG.worksUrl}`);
     const data = await res.json();
-    return data.works ?? [];
+    return (data.works ?? []).filter((w) => w.home !== false);
   }
 
   function buildCards(works) {

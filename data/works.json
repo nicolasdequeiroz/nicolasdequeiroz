@@ -20,13 +20,13 @@
       "industry": "Restaurante japonês",
       "location": "Siqueira Campos, PR",
       "thumb": "assets/works/mizzu-sushi/selo-poster.webp",
-      "thumbVideo": "assets/works/mizzu-sushi/selo.mp4",
+      "thumbVideo": "assets/works/mizzu-sushi/selo-behance.mp4",
       "hero": {
         "type": "video",
-        "src": "assets/works/mizzu-sushi/selo.mp4",
+        "src": "assets/works/mizzu-sushi/selo-behance.mp4",
         "poster": "assets/works/mizzu-sushi/selo-poster.webp",
         "mobile": "assets/works/mizzu-sushi/hero-mobile-selo.webp",
-        "mobileVideo": "assets/works/mizzu-sushi/hero-mobile.mp4",
+        "mobileVideo": "assets/works/mizzu-sushi/hero-mobile-hq.mp4",
         "alt": "Selo circular do Mizzu Sushi girando sobre padrão de ondas"
       },
       "blocks": [
@@ -285,8 +285,7 @@
       "description": "Marca para o Studio Isa, estúdio de pilates em Itaporanga (SP) com foco em bem-estar e movimento. Um logotipo em duas vozes, um selo circular e uma paleta de azul-petróleo e bege-pêssego traduzem o cuidado, o detalhe e o acolhimento, do estúdio às redes.",
       "year": 2025,
       "services": [
-        "Branding",
-        "Web Design"
+        "Branding"
       ],
       "thumb": "assets/works/studioisa/hero-card.webp",
       "hero": {
@@ -603,224 +602,6 @@
         "assets/works/studioisa/wellness-banda.webp",
         "assets/works/studioisa/wellness-bola.webp",
         "assets/works/studioisa/wellness-bege.webp"
-      ]
-    },
-    {
-      "slug": "move",
-      "title": "Move+",
-      "description": "Identidade visual para a Move+, centro de treinamento de condicionamento e força. Um logotipo inclinado, em verde-oliva escuro com um + em verde-limão, passa velocidade e evolução, e se aplica do ícone no relógio à camiseta, com uma voz direta que promete mais técnica, mais controle e mais movimento.",
-      "year": 2025,
-      "services": [
-        "Identidade visual",
-        "Aplicações"
-      ],
-      "thumb": "assets/works/move/hero-card.webp",
-      "hero": {
-        "type": "video",
-        "src": "assets/works/move/hero.mp4",
-        "poster": "assets/works/move/hero-poster.webp",
-        "mobile": "assets/works/move/hero-mobile.webp",
-        "alt": "Move+: condicionamento e força"
-      },
-      "blocks": [
-        {
-          "type": "text",
-          "label": "Sobre a marca",
-          "text": "A Move+ é um centro de treinamento de condicionamento e força. Oferece orientação profissional, foco nos objetivos e um caminho construído com consistência. A marca traduz isso em letras inclinadas, que seguem para a frente, e um sinal de + em verde-limão: sempre um passo a mais."
-        },
-        {
-          "type": "image",
-          "src": "assets/works/move/capa-treino.webp",
-          "alt": "Mulher em posição de flexão no chão de um estúdio, com o logotipo Move+ e a frase Condicionamento e Força",
-          "ratio": "4:3",
-          "caption": "Capa"
-        },
-        {
-          "type": "text",
-          "label": "Logotipo",
-          "text": "O logotipo é todo inclinado, com cortes diagonais nas letras, para dar velocidade. O verde-oliva escuro traz firmeza e o + em verde-limão é o único ponto de cor, o sinal de evolução. A versão com “Centro de treinamento” acompanha a marca nos materiais."
-        },
-        {
-          "type": "pair",
-          "items": [
-            {
-              "src": "assets/works/move/logo-claro.svg",
-              "alt": "Logotipo Move+ em verde-oliva com o + em verde-limão e a legenda Centro de treinamento, sobre fundo branco",
-              "caption": "Versão clara",
-              "ratio": "auto"
-            },
-            {
-              "src": "assets/works/move/logo-escuro.svg",
-              "alt": "Logotipo Move+ em branco com o + em verde-limão e a legenda Centro de treinamento, sobre fundo escuro",
-              "caption": "Versão escura",
-              "ratio": "auto"
-            }
-          ]
-        },
-        {
-          "type": "image",
-          "src": "assets/works/move/icones.svg",
-          "alt": "Ícone M+ em branco sobre verde-oliva e em verde-oliva escuro sobre verde-limão",
-          "ratio": "auto",
-          "caption": "Ícone"
-        },
-        {
-          "type": "text",
-          "label": "Ícone",
-          "text": "O ícone reduz a marca ao M e ao +: uma forma inclinada, em movimento, que cabe num aplicativo, num relógio ou numa foto de perfil."
-        },
-        {
-          "type": "statement",
-          "text": "Mais técnica. Mais controle. Mais movimento."
-        },
-        {
-          "type": "image",
-          "src": "assets/works/move/tipografia-contorno.webp",
-          "alt": "Logotipo Move+ nas versões clara e escura ao lado de uma atleta com kettlebell, com o nome em contorno repetido sobre a foto",
-          "ratio": "4:3",
-          "caption": "Marca sobre fotografia"
-        },
-        {
-          "type": "text",
-          "label": "Cores",
-          "text": "O verde-oliva escuro dá a base, sóbria e firme, e o verde-limão entra como energia, em pequenas doses."
-        },
-        {
-          "type": "palette",
-          "items": [
-            {
-              "name": "Verde mais escuro",
-              "hex": "#212514"
-            },
-            {
-              "name": "Verde-oliva",
-              "hex": "#404725"
-            },
-            {
-              "name": "Verde médio",
-              "hex": "#556B2B"
-            },
-            {
-              "name": "Verde-limão",
-              "hex": "#C5DE63"
-            },
-            {
-              "name": "Branco",
-              "hex": "#FFFFFF"
-            }
-          ]
-        },
-        {
-          "type": "slide",
-          "src": "assets/works/move/foto-transformacao.webp",
-          "alt": "Atleta apoiada em uma bola de peso em um treino, em uma academia",
-          "logo": "assets/works/move/logo-branco.svg",
-          "logoAlt": "Move+",
-          "title": [
-            "Mais do que treino.",
-            "É transformação."
-          ],
-          "text": "Aqui você encontra orientação profissional, foco nos seus objetivos e um caminho construído com consistência. Aqui, cada avanço é conquista — física, mental e pessoal."
-        },
-        {
-          "type": "slide",
-          "src": "assets/works/move/foto-precisao.webp",
-          "alt": "Atleta fazendo um treino com cordas navais, concentrada, em um fundo neutro",
-          "logo": "assets/works/move/logo-branco.svg",
-          "logoAlt": "Move+",
-          "title": [
-            "Treino com propósito.",
-            "Resultado com precisão."
-          ],
-          "text": "Na Move+, cada movimento é planejado para levar você mais longe. Com acompanhamento técnico e atenção às suas necessidades, transformamos esforço em evolução — com eficiência, segurança e resultado real."
-        },
-        {
-          "type": "text",
-          "label": "Aplicações",
-          "text": "A marca ganha corpo nas peças do dia a dia do treino: o que se veste, se carrega e se usa no pulso. O logotipo e o ícone mudam de tamanho e de fundo sem perder a presença."
-        },
-        {
-          "type": "gallery",
-          "items": [
-            {
-              "src": "assets/works/move/sacola.webp",
-              "alt": "Sacola esportiva preta com o logotipo Move+ e cordões em verde-limão",
-              "caption": "Sacola",
-              "ratio": "4:5"
-            },
-            {
-              "src": "assets/works/move/moletom.webp",
-              "alt": "Moletom verde-oliva com zíper e o logotipo Move+ no peito",
-              "caption": "Moletom",
-              "ratio": "4:5"
-            },
-            {
-              "src": "assets/works/move/camiseta.webp",
-              "alt": "Camiseta verde-oliva com o logotipo Move+ no peito",
-              "caption": "Camiseta",
-              "ratio": "4:5"
-            },
-            {
-              "src": "assets/works/move/garrafa.webp",
-              "alt": "Garrafa térmica verde-escura com o logotipo Move+ na vertical",
-              "caption": "Garrafa",
-              "ratio": "4:5"
-            },
-            {
-              "src": "assets/works/move/relogio.webp",
-              "alt": "Relógio com pulseira verde-oliva trançada e o ícone M+ na tela em verde-limão",
-              "caption": "Relógio",
-              "ratio": "4:5"
-            }
-          ]
-        },
-        {
-          "type": "image",
-          "src": "assets/works/move/kettlebell.webp",
-          "alt": "Pessoa levantando um kettlebell, com o logotipo Move+ em branco ao lado",
-          "ratio": "4:3",
-          "caption": "Assinatura em foto"
-        },
-        {
-          "type": "video",
-          "src": "assets/works/move/showreel.mp4",
-          "poster": "assets/works/move/showreel-poster.webp",
-          "ratio": "9:16",
-          "alt": "Showreel da Move+: logotipo animado, foto com kettlebell e tipografia em contorno e as aplicações da marca"
-        },
-        {
-          "type": "statement",
-          "text": "Mais movimento."
-        }
-      ],
-      "tagline": "Mais técnica. Mais controle. Mais movimento.",
-      "industry": "Centro de treinamento",
-      "credits": [
-        {
-          "role": "Design",
-          "name": "Nícolas de Queiróz"
-        },
-        {
-          "role": "Motion graphics",
-          "name": "Lucas de Santi"
-        },
-        {
-          "role": "Briefing",
-          "name": "Maria Carolina S. Prestes"
-        }
-      ],
-      "seo": {
-        "title": "Move+ — Identidade para centro de treinamento",
-        "description": "Identidade visual da Move+, centro de treinamento de condicionamento e força: logotipo inclinado em verde-oliva com um + verde-limão, do relógio à camiseta."
-      },
-      "trail": [
-        "assets/works/move/hero-card.webp",
-        "assets/works/move/capa-treino.webp",
-        "assets/works/move/moletom.webp",
-        "assets/works/move/camiseta.webp",
-        "assets/works/move/garrafa.webp",
-        "assets/works/move/relogio.webp",
-        "assets/works/move/kettlebell.webp"
       ]
     },
     {
@@ -1217,6 +998,224 @@
         "assets/works/topfit/montanha-icone.webp",
         "assets/works/topfit/logo-montanha.webp",
         "assets/works/topfit/bloco-pedra.webp"
+      ]
+    },
+    {
+      "slug": "move",
+      "title": "Move+",
+      "description": "Identidade visual para a Move+, centro de treinamento de condicionamento e força. Um logotipo inclinado, em verde-oliva escuro com um + em verde-limão, passa velocidade e evolução, e se aplica do ícone no relógio à camiseta, com uma voz direta que promete mais técnica, mais controle e mais movimento.",
+      "year": 2025,
+      "services": [
+        "Identidade visual",
+        "Aplicações"
+      ],
+      "thumb": "assets/works/move/hero-card.webp",
+      "hero": {
+        "type": "video",
+        "src": "assets/works/move/hero.mp4",
+        "poster": "assets/works/move/hero-poster.webp",
+        "mobile": "assets/works/move/hero-mobile.webp",
+        "alt": "Move+: condicionamento e força"
+      },
+      "blocks": [
+        {
+          "type": "text",
+          "label": "Sobre a marca",
+          "text": "A Move+ é um centro de treinamento de condicionamento e força. Oferece orientação profissional, foco nos objetivos e um caminho construído com consistência. A marca traduz isso em letras inclinadas, que seguem para a frente, e um sinal de + em verde-limão: sempre um passo a mais."
+        },
+        {
+          "type": "image",
+          "src": "assets/works/move/capa-treino.webp",
+          "alt": "Mulher em posição de flexão no chão de um estúdio, com o logotipo Move+ e a frase Condicionamento e Força",
+          "ratio": "4:3",
+          "caption": "Capa"
+        },
+        {
+          "type": "text",
+          "label": "Logotipo",
+          "text": "O logotipo é todo inclinado, com cortes diagonais nas letras, para dar velocidade. O verde-oliva escuro traz firmeza e o + em verde-limão é o único ponto de cor, o sinal de evolução. A versão com “Centro de treinamento” acompanha a marca nos materiais."
+        },
+        {
+          "type": "pair",
+          "items": [
+            {
+              "src": "assets/works/move/logo-claro.svg",
+              "alt": "Logotipo Move+ em verde-oliva com o + em verde-limão e a legenda Centro de treinamento, sobre fundo branco",
+              "caption": "Versão clara",
+              "ratio": "auto"
+            },
+            {
+              "src": "assets/works/move/logo-escuro.svg",
+              "alt": "Logotipo Move+ em branco com o + em verde-limão e a legenda Centro de treinamento, sobre fundo escuro",
+              "caption": "Versão escura",
+              "ratio": "auto"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "src": "assets/works/move/icones.svg",
+          "alt": "Ícone M+ em branco sobre verde-oliva e em verde-oliva escuro sobre verde-limão",
+          "ratio": "auto",
+          "caption": "Ícone"
+        },
+        {
+          "type": "text",
+          "label": "Ícone",
+          "text": "O ícone reduz a marca ao M e ao +: uma forma inclinada, em movimento, que cabe num aplicativo, num relógio ou numa foto de perfil."
+        },
+        {
+          "type": "statement",
+          "text": "Mais técnica. Mais controle. Mais movimento."
+        },
+        {
+          "type": "image",
+          "src": "assets/works/move/tipografia-contorno.webp",
+          "alt": "Logotipo Move+ nas versões clara e escura ao lado de uma atleta com kettlebell, com o nome em contorno repetido sobre a foto",
+          "ratio": "4:3",
+          "caption": "Marca sobre fotografia"
+        },
+        {
+          "type": "text",
+          "label": "Cores",
+          "text": "O verde-oliva escuro dá a base, sóbria e firme, e o verde-limão entra como energia, em pequenas doses."
+        },
+        {
+          "type": "palette",
+          "items": [
+            {
+              "name": "Verde mais escuro",
+              "hex": "#212514"
+            },
+            {
+              "name": "Verde-oliva",
+              "hex": "#404725"
+            },
+            {
+              "name": "Verde médio",
+              "hex": "#556B2B"
+            },
+            {
+              "name": "Verde-limão",
+              "hex": "#C5DE63"
+            },
+            {
+              "name": "Branco",
+              "hex": "#FFFFFF"
+            }
+          ]
+        },
+        {
+          "type": "slide",
+          "src": "assets/works/move/foto-transformacao.webp",
+          "alt": "Atleta apoiada em uma bola de peso em um treino, em uma academia",
+          "logo": "assets/works/move/logo-branco.svg",
+          "logoAlt": "Move+",
+          "title": [
+            "Mais do que treino.",
+            "É transformação."
+          ],
+          "text": "Aqui você encontra orientação profissional, foco nos seus objetivos e um caminho construído com consistência. Aqui, cada avanço é conquista — física, mental e pessoal."
+        },
+        {
+          "type": "slide",
+          "src": "assets/works/move/foto-precisao.webp",
+          "alt": "Atleta fazendo um treino com cordas navais, concentrada, em um fundo neutro",
+          "logo": "assets/works/move/logo-branco.svg",
+          "logoAlt": "Move+",
+          "title": [
+            "Treino com propósito.",
+            "Resultado com precisão."
+          ],
+          "text": "Na Move+, cada movimento é planejado para levar você mais longe. Com acompanhamento técnico e atenção às suas necessidades, transformamos esforço em evolução — com eficiência, segurança e resultado real."
+        },
+        {
+          "type": "text",
+          "label": "Aplicações",
+          "text": "A marca ganha corpo nas peças do dia a dia do treino: o que se veste, se carrega e se usa no pulso. O logotipo e o ícone mudam de tamanho e de fundo sem perder a presença."
+        },
+        {
+          "type": "gallery",
+          "items": [
+            {
+              "src": "assets/works/move/sacola.webp",
+              "alt": "Sacola esportiva preta com o logotipo Move+ e cordões em verde-limão",
+              "caption": "Sacola",
+              "ratio": "4:5"
+            },
+            {
+              "src": "assets/works/move/moletom.webp",
+              "alt": "Moletom verde-oliva com zíper e o logotipo Move+ no peito",
+              "caption": "Moletom",
+              "ratio": "4:5"
+            },
+            {
+              "src": "assets/works/move/camiseta.webp",
+              "alt": "Camiseta verde-oliva com o logotipo Move+ no peito",
+              "caption": "Camiseta",
+              "ratio": "4:5"
+            },
+            {
+              "src": "assets/works/move/garrafa.webp",
+              "alt": "Garrafa térmica verde-escura com o logotipo Move+ na vertical",
+              "caption": "Garrafa",
+              "ratio": "4:5"
+            },
+            {
+              "src": "assets/works/move/relogio.webp",
+              "alt": "Relógio com pulseira verde-oliva trançada e o ícone M+ na tela em verde-limão",
+              "caption": "Relógio",
+              "ratio": "4:5"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "src": "assets/works/move/kettlebell.webp",
+          "alt": "Pessoa levantando um kettlebell, com o logotipo Move+ em branco ao lado",
+          "ratio": "4:3",
+          "caption": "Assinatura em foto"
+        },
+        {
+          "type": "video",
+          "src": "assets/works/move/showreel.mp4",
+          "poster": "assets/works/move/showreel-poster.webp",
+          "ratio": "9:16",
+          "alt": "Showreel da Move+: logotipo animado, foto com kettlebell e tipografia em contorno e as aplicações da marca"
+        },
+        {
+          "type": "statement",
+          "text": "Mais movimento."
+        }
+      ],
+      "tagline": "Mais técnica. Mais controle. Mais movimento.",
+      "industry": "Centro de treinamento",
+      "credits": [
+        {
+          "role": "Design",
+          "name": "Nícolas de Queiróz"
+        },
+        {
+          "role": "Motion graphics",
+          "name": "Lucas de Santi"
+        },
+        {
+          "role": "Briefing",
+          "name": "Maria Carolina S. Prestes"
+        }
+      ],
+      "seo": {
+        "title": "Move+ — Identidade para centro de treinamento",
+        "description": "Identidade visual da Move+, centro de treinamento de condicionamento e força: logotipo inclinado em verde-oliva com um + verde-limão, do relógio à camiseta."
+      },
+      "trail": [
+        "assets/works/move/hero-card.webp",
+        "assets/works/move/capa-treino.webp",
+        "assets/works/move/moletom.webp",
+        "assets/works/move/camiseta.webp",
+        "assets/works/move/garrafa.webp",
+        "assets/works/move/relogio.webp",
+        "assets/works/move/kettlebell.webp"
       ]
     },
     {
@@ -2052,6 +2051,359 @@
         "assets/works/karolinne-hartung/retrato-sala.webp",
         "assets/works/karolinne-hartung/retrato-janela.webp",
         "assets/works/karolinne-hartung/mockup.webp"
+      ]
+    },
+    {
+      "slug": "ed-italia-pizzaria",
+      "title": "Ed' Italia Pizzaria",
+      "home": false,
+      "tagline": "Um pedacinho da Itália no interior de São Paulo.",
+      "description": "Para comemorar os 10 anos de inauguração, a nova identidade visual da Ed’ Italia Pizzaria nasce em Itaporanga, no interior de São Paulo. A proposta foca em tradicionalidade e requinte, com encaixes de modernidade: apenas a escrita “Ed’ Italia Pizzaria” e a referência de 2010, ano de abertura, para trazer a noção de um ambiente tradicional, com um quê de Europa em suas curvas.",
+      "year": 2023,
+      "services": [
+        "Identidade visual",
+        "Embalagens",
+        "Cardápio"
+      ],
+      "industry": "Pizzaria",
+      "location": "Itaporanga, SP",
+      "thumb": "assets/works/ed-italia-pizzaria/hero.webp",
+      "hero": {
+        "type": "image",
+        "src": "assets/works/ed-italia-pizzaria/hero.webp",
+        "mobile": "assets/works/ed-italia-pizzaria/hero-mobile.webp",
+        "alt": "Logotipo da Ed' Italia Pizzaria sobre uma fatia de pizza, com a faixa verde, branca e vermelha"
+      },
+      "blocks": [
+        {
+          "type": "text",
+          "label": "Conceito",
+          "text": "Optamos por uma logo sem desenhos, sem pizzas ou brasões italianos, a fim de focar no nome: algo de fácil leitura e assimilação. A escrita traz a referência de 2010, o ano de abertura da casa, e um quê de Europa nas curvas."
+        },
+        {
+          "type": "image",
+          "src": "assets/works/ed-italia-pizzaria/assinatura.webp",
+          "alt": "Logotipo Ed' Italia Pizzaria com anotações sobre escrita tradicional, ano de abertura, fontes maiúsculas e sofisticação das formas",
+          "ratio": "16:9",
+          "caption": "Logotipo"
+        },
+        {
+          "type": "text",
+          "label": "Detalhe",
+          "text": "Para melhor alinhar os elementos do logotipo, removemos o acento de “Itália”, para que não houvesse conflito visual com o “Ed’”. Vale lembrar que, em italiano, a palavra não leva acento."
+        },
+        {
+          "type": "image",
+          "src": "assets/works/ed-italia-pizzaria/logotipo-bandeira.webp",
+          "alt": "Logotipo Ed' Italia Pizzaria entre dois painéis, verde e vermelho, sobre o monograma Ed",
+          "ratio": "16:9",
+          "caption": "Assinatura"
+        },
+        {
+          "type": "image",
+          "src": "assets/works/ed-italia-pizzaria/paleta.webp",
+          "alt": "Paleta de cores da Ed' Italia Pizzaria: verde, branco, vermelho e grafite, com valores RGB, CMYK e HEX",
+          "ratio": "16:9",
+          "caption": "Paleta"
+        },
+        {
+          "type": "image",
+          "src": "assets/works/ed-italia-pizzaria/caixa.webp",
+          "alt": "Caixa octogonal preta da Ed' Italia Pizzaria aberta, com uma pizza de manjericão dentro",
+          "ratio": "auto",
+          "caption": "Embalagem"
+        },
+        {
+          "type": "image",
+          "src": "assets/works/ed-italia-pizzaria/caixas-empilhadas.webp",
+          "alt": "Pilhas de caixas pretas de pizza com o logotipo da Ed' Italia Pizzaria",
+          "ratio": "auto"
+        },
+        {
+          "type": "image",
+          "src": "assets/works/ed-italia-pizzaria/bag.webp",
+          "alt": "Bolsa térmica preta de entrega com o logotipo da Ed' Italia Pizzaria e a faixa verde, branca e vermelha",
+          "ratio": "16:9",
+          "caption": "Delivery"
+        },
+        {
+          "type": "image",
+          "src": "assets/works/ed-italia-pizzaria/polo.webp",
+          "alt": "Camisa polo preta com gola em verde, branco e vermelho e o logotipo bordado",
+          "ratio": "16:9",
+          "caption": "Uniforme"
+        },
+        {
+          "type": "image",
+          "src": "assets/works/ed-italia-pizzaria/cavalete.webp",
+          "alt": "Cavalete de madeira com lousa preta: Conheça a nossa nova casa!",
+          "ratio": "16:9",
+          "caption": "Comunicação"
+        },
+        {
+          "type": "image",
+          "src": "assets/works/ed-italia-pizzaria/cardapio.webp",
+          "alt": "Cardápio de couro preto fechado e aberto na página das pizzas mais pedidas da casa",
+          "ratio": "auto",
+          "caption": "Cardápio"
+        },
+        {
+          "type": "image",
+          "src": "assets/works/ed-italia-pizzaria/cardapios.webp",
+          "alt": "Duas aberturas do cardápio: pizzas tradicionais e italianinhas",
+          "ratio": "auto"
+        },
+        {
+          "type": "image",
+          "src": "assets/works/ed-italia-pizzaria/colagem.webp",
+          "alt": "Colagem com o logotipo, o garçom de avental, uma pizza e a versão ITA·LIA em vermelho",
+          "ratio": "16:9"
+        },
+        {
+          "type": "image",
+          "src": "assets/works/ed-italia-pizzaria/instagram.webp",
+          "alt": "Perfil do Instagram da Ed' Italia Pizzaria num celular sobre fundo escuro",
+          "ratio": "16:9",
+          "caption": "Redes sociais"
+        }
+      ],
+      "credits": [
+        {
+          "role": "Design",
+          "name": "Marcos Castilho e Nícolas Azevedo"
+        },
+        {
+          "role": "Vídeo",
+          "name": "Lucas Santi"
+        },
+        {
+          "role": "Projeto",
+          "name": "Blend Studio"
+        }
+      ],
+      "seo": {
+        "title": "Ed' Italia — Identidade visual",
+        "description": "Identidade visual, embalagens e cardápio para a Ed' Italia Pizzaria, em Itaporanga (SP): uma marca tradicional e sofisticada que celebra 10 anos de casa."
+      },
+      "trail": [
+        "assets/works/ed-italia-pizzaria/caixa.webp",
+        "assets/works/ed-italia-pizzaria/polo.webp",
+        "assets/works/ed-italia-pizzaria/caixas-empilhadas.webp",
+        "assets/works/ed-italia-pizzaria/cardapio.webp",
+        "assets/works/ed-italia-pizzaria/instagram.webp",
+        "assets/works/ed-italia-pizzaria/bag.webp"
+      ]
+    },
+    {
+      "slug": "desenhe",
+      "title": "Desenhe",
+      "home": false,
+      "tagline": "Uma escola de tradição que não envelheceu.",
+      "description": "Manual da marca e site da Desenhe, escola de desenho e pintura de Curitiba que ensina arte desde 1988. A identidade parte da própria palavra: uma logo condensada de terminais arredondados, uma família de laranjas, a máquina de escrever nos títulos e versões para cada momento, do selo de carimbo à assinatura à mão livre.",
+      "year": 2026,
+      "services": [
+        "Identidade visual",
+        "Manual da marca",
+        "Web design"
+      ],
+      "industry": "Escola de arte",
+      "location": "Curitiba, PR",
+      "website": "https://www.desenhe.com.br/",
+      "thumb": "assets/works/desenhe/capa.webp",
+      "hero": {
+        "type": "image",
+        "src": "assets/works/desenhe/capa.webp",
+        "mobile": "assets/works/desenhe/capa-mobile.webp",
+        "alt": "Logotipo DESENHE em branco sobre fundo laranja"
+      },
+      "blocks": [
+        {
+          "type": "text",
+          "label": "Conceito",
+          "text": "Mais do que um conjunto de regras visuais, o manual documenta as escolhas da Desenhe: quem ela é, no que acredita, com quem fala e como fala. A ideia é que, num cartão, num certificado, no Instagram ou na porta da escola, as pessoas sintam que é sempre a mesma Desenhe falando."
+        },
+        {
+          "type": "text",
+          "label": "Logotipo",
+          "text": "A logo é, antes de tudo, uma palavra: DESENHE. O esqueleto é condensado e funcional, e os terminais arredondados o tornam humano e contemporâneo, a tradução de uma escola de tradição que não envelheceu. Não há um símbolo separado: é a própria tipografia que dá a personalidade."
+        },
+        {
+          "type": "image",
+          "src": "assets/works/desenhe/logotipo.webp",
+          "alt": "Logotipo DESENHE em preto, de letras condensadas com terminais arredondados, sobre fundo creme",
+          "ratio": "16:9",
+          "caption": "Logotipo"
+        },
+        {
+          "type": "image",
+          "src": "assets/works/desenhe/versoes.webp",
+          "alt": "Três versões da logo: branca sobre laranja, creme sobre grafite e laranja sobre creme",
+          "ratio": "16:9",
+          "caption": "Versões de cor"
+        },
+        {
+          "type": "text",
+          "label": "Versões",
+          "text": "Além da logo primária, a marca tem uma versão para cada momento: a box logo, de maior impacto, para produtos e redes sociais; o monograma DSN, para os espaços mínimos; o selo e o lockup com tagline, que trazem a memória de 1988; e uma assinatura à mão livre, solta e humana."
+        },
+        {
+          "type": "pair",
+          "items": [
+            {
+              "src": "assets/works/desenhe/box-logo.webp",
+              "alt": "Box logo: o nome DESENHE vazado em creme dentro de uma faixa grafite de cantos arredondados, sobre laranja",
+              "ratio": "1:1",
+              "caption": "Box logo"
+            },
+            {
+              "src": "assets/works/desenhe/monograma.webp",
+              "alt": "Monograma DSN em branco sobre fundo grafite",
+              "ratio": "1:1",
+              "caption": "Monograma"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "src": "assets/works/desenhe/selos.webp",
+          "alt": "Três assinaturas em preto sobre cinza claro: o selo oval com Escola de Desenho & Pintura a Mão Livre, o selo vertical Escola de Arte desde 1988 e o lockup com Desde 88 e Escola de Arte",
+          "ratio": "16:9",
+          "caption": "Selo e lockup"
+        },
+        {
+          "type": "image",
+          "src": "assets/works/desenhe/assinatura.webp",
+          "alt": "A palavra desenhe escrita à mão livre, em preto sobre laranja, com as bordas cortando as letras",
+          "ratio": "16:9",
+          "caption": "Assinatura à mão livre"
+        },
+        {
+          "type": "text",
+          "label": "Cores",
+          "text": "A paleta nasce do gesto de pintar. O laranja é o coração da marca, a cor da energia, do calor e da tinta fresca, e vai do tom mais aberto ao mais quente e à terracota. Ao redor dele, os neutros dão base e equilíbrio: o bege traz a memória do papel e do ateliê, o café conecta a paleta à madeira e à matéria do fazer manual."
+        },
+        {
+          "type": "palette",
+          "items": [
+            {
+              "name": "Desenhe",
+              "hex": "#DF7400"
+            },
+            {
+              "name": "Web",
+              "hex": "#F67800"
+            },
+            {
+              "name": "Quente",
+              "hex": "#D55415"
+            },
+            {
+              "name": "Terracota",
+              "hex": "#A3471A"
+            },
+            {
+              "name": "Vermelho",
+              "hex": "#CD3E28"
+            },
+            {
+              "name": "Amarelo",
+              "hex": "#F6A12B"
+            }
+          ]
+        },
+        {
+          "type": "palette",
+          "items": [
+            {
+              "name": "Bege",
+              "hex": "#FFF4E0"
+            },
+            {
+              "name": "Café",
+              "hex": "#552A15"
+            },
+            {
+              "name": "Chumbo",
+              "hex": "#1E1E1E"
+            },
+            {
+              "name": "Preto",
+              "hex": "#000000"
+            },
+            {
+              "name": "Turquesa",
+              "hex": "#6BAAA1"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "label": "Tipografia",
+          "text": "Duas famílias acompanham a logo: Courier Prime, de máquina de escrever, nos títulos e destaques, e Manrope, limpa e legível, nos textos e nas interfaces. As letras da logo são próprias, desenhadas só para ela, e devem sempre sair do arquivo original, nunca ser redigitadas."
+        },
+        {
+          "type": "image",
+          "src": "assets/works/desenhe/tipografia.webp",
+          "alt": "Amostras das tipografias Courier Prime e Manrope, com o alfabeto, ao lado da logo DESENHE",
+          "ratio": "16:9",
+          "caption": "Tipografia"
+        },
+        {
+          "type": "text",
+          "label": "Aplicações",
+          "text": "A identidade chega ao papel. O cartão de visitas leva o pincel e o lápis ilustrados sobre o laranja, com o contato e o QR code no verso, e o certificado de conclusão de curso, em creme, traz uma aquarela no topo e o carimbo da escola."
+        },
+        {
+          "type": "image",
+          "src": "assets/works/desenhe/cartoes.webp",
+          "alt": "Frente e verso do cartão de visitas, laranja e verde-acinzentado, ao lado do certificado de conclusão de curso em creme, sobre fundo marrom",
+          "ratio": "16:9",
+          "caption": "Cartão de visitas e certificado"
+        },
+        {
+          "type": "text",
+          "label": "Site",
+          "text": "O site leva a identidade para o digital: a máquina de escrever nos títulos, o laranja nos botões e nos destaques e uma base escura que deixa as fotos da escola em primeiro plano. Dos cursos ao espaço, dos depoimentos ao rodapé, onde cada visitante pode deixar um desenho."
+        },
+        {
+          "type": "image",
+          "src": "assets/works/desenhe/site-macbook.webp",
+          "alt": "Página inicial do site desenhe.com.br em um MacBook, sobre fundo laranja",
+          "ratio": "16:9",
+          "caption": "Página inicial"
+        },
+        {
+          "type": "image",
+          "src": "assets/works/desenhe/site-mobile.webp",
+          "alt": "Três iPhones brancos sobre fundo creme mostrando o site: a página inicial, a lista de cursos e a seção do espaço",
+          "ratio": "16:9",
+          "caption": "Versão mobile"
+        },
+        {
+          "type": "image",
+          "src": "assets/works/desenhe/site-secoes.webp",
+          "alt": "Duas janelas de navegador sobrepostas, sobre fundo terracota: a lista de cursos em destaque e a chamada para matrícula com o rodapé de desenhos",
+          "ratio": "16:9",
+          "caption": "Seções"
+        }
+      ],
+      "credits": [
+        {
+          "role": "Design e site",
+          "name": "Nícolas de Queiróz"
+        }
+      ],
+      "seo": {
+        "title": "Desenhe — Identidade visual e site",
+        "description": "Manual da marca e site da Desenhe, escola de desenho e pintura de Curitiba desde 1988: logo, versões, cores laranja, tipografia, papelaria e site."
+      },
+      "trail": [
+        "assets/works/desenhe/box-logo.webp",
+        "assets/works/desenhe/monograma.webp",
+        "assets/works/desenhe/assinatura.webp",
+        "assets/works/desenhe/cartoes.webp",
+        "assets/works/desenhe/site-secoes.webp",
+        "assets/works/desenhe/capa.webp"
       ]
     }
   ]

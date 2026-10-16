@@ -176,8 +176,7 @@
   "studioisa": {
     "description": "Brand for Studio Isa, a pilates studio in Itaporanga (SP) focused on well-being and movement. A two-voice logotype, a circular seal and a palette of deep teal and peach beige express care, detail and welcome, from the studio to social media.",
     "services": [
-      "Branding",
-      "Web Design"
+      "Branding"
     ],
     "credits": [
       {
@@ -1352,6 +1351,232 @@
     "seo": {
       "title": "Karolinne Hartung — Psychoanalyst brand",
       "description": "Visual identity and website for psychoanalyst Karolinne Hartung, in Campinas (SP): a serif logotype with a floral icon, a KH monogram and warm tones."
+    }
+  },
+  "ed-italia-pizzaria": {
+    "tagline": "A little piece of Italy in the countryside of São Paulo.",
+    "description": "To celebrate ten years since opening, the new visual identity of Ed’ Italia Pizzeria is born in Itaporanga, in the countryside of São Paulo. It leans on tradition and refinement with touches of modernity: just the name “Ed’ Italia Pizzeria” and a nod to 2010, the year it opened, to evoke a traditional setting with a hint of Europe in its curves.",
+    "services": [
+      "Visual identity",
+      "Packaging",
+      "Menu"
+    ],
+    "industry": "Pizzeria",
+    "location": "Itaporanga, SP, Brazil",
+    "hero": {
+      "alt": "Ed' Italia Pizzeria logo over a slice of pizza, with the green, white and red stripe"
+    },
+    "blocks": [
+      {
+        "label": "Concept",
+        "text": "We chose a logo with no drawings, no pizzas or Italian crests, to focus on the name: easy to read and remember. The lettering carries a nod to 2010, the year the house opened, and a hint of Europe in its curves."
+      },
+      {
+        "alt": "Ed' Italia Pizzeria logo with notes on traditional lettering, opening year, uppercase fonts and refined shapes",
+        "caption": "Logo"
+      },
+      {
+        "label": "Detail",
+        "text": "To align the logo elements better, we removed the accent from “Itália” so it would not clash visually with the “Ed’”. In Italian, the word takes no accent."
+      },
+      {
+        "alt": "Ed' Italia Pizzeria logo between two panels, green and red, over the Ed monogram",
+        "caption": "Signature"
+      },
+      {
+        "alt": "Ed' Italia Pizzeria color palette: green, white, red and charcoal, with RGB, CMYK and HEX values",
+        "caption": "Palette"
+      },
+      {
+        "alt": "Black octagonal Ed' Italia Pizzeria box, open, with a basil pizza inside",
+        "caption": "Packaging"
+      },
+      {
+        "alt": "Stacks of black pizza boxes with the Ed' Italia Pizzeria logo"
+      },
+      {
+        "alt": "Black insulated delivery bag with the Ed' Italia Pizzeria logo and the green, white and red stripe",
+        "caption": "Delivery"
+      },
+      {
+        "alt": "Black polo shirt with green, white and red collar and the embroidered logo",
+        "caption": "Uniform"
+      },
+      {
+        "alt": "Wooden A-frame with a black chalkboard: Meet our new home!",
+        "caption": "Communication"
+      },
+      {
+        "alt": "Closed black leather menu and an open page with the house's most ordered pizzas",
+        "caption": "Menu"
+      },
+      {
+        "alt": "Two menu spreads: traditional pizzas and italianinhas"
+      },
+      {
+        "alt": "Collage with the logo, a waiter in an apron, a pizza and the red ITA·LIA version"
+      },
+      {
+        "alt": "Ed' Italia Pizzeria Instagram profile on a phone over a dark background",
+        "caption": "Social media"
+      }
+    ],
+    "credits": [
+      {
+        "role": "Design"
+      },
+      {
+        "role": "Video"
+      },
+      {
+        "role": "Project"
+      }
+    ],
+    "seo": {
+      "title": "Ed' Italia — Visual identity",
+      "description": "Visual identity, packaging and menu for Ed' Italia Pizzeria in Itaporanga (SP): a traditional, refined brand celebrating ten years in business."
+    }
+  },
+  "desenhe": {
+    "tagline": "A school of tradition that never grew old.",
+    "description": "Brand manual and website for Desenhe, a drawing and painting school in Curitiba, Brazil, teaching art since 1988. The identity starts from the word itself: a condensed logo with rounded terminals, a family of oranges, a typewriter face for headlines and a version for every moment, from the stamp seal to the freehand signature.",
+    "services": [
+      "Visual identity",
+      "Brand manual",
+      "Web design"
+    ],
+    "industry": "Art school",
+    "location": "Curitiba, PR, Brazil",
+    "hero": {
+      "alt": "DESENHE logo in white on an orange background"
+    },
+    "blocks": [
+      {
+        "label": "Concept",
+        "text": "More than a set of visual rules, the manual documents Desenhe's choices: who it is, what it believes in, who it talks to and how. The idea is that, on a card, a certificate, Instagram or the school's front door, people feel it is always the same Desenhe speaking."
+      },
+      {
+        "label": "Logotype",
+        "text": "The logo is, above all, a word: DESENHE. The skeleton is condensed and functional, and the rounded terminals make it human and contemporary, a translation of a school of tradition that never grew old. There is no separate symbol: the typography itself carries the personality."
+      },
+      {
+        "alt": "DESENHE logo in black, with condensed letters and rounded terminals, on a cream background",
+        "caption": "Logotype"
+      },
+      {
+        "alt": "Three versions of the logo: white on orange, cream on charcoal and orange on cream",
+        "caption": "Color versions"
+      },
+      {
+        "label": "Versions",
+        "text": "Besides the primary logo, the brand has a version for every moment: the box logo, with the most impact, for products and social media; the DSN monogram, for the smallest spaces; the seal and the tagline lockup, which carry the memory of 1988; and a freehand signature, loose and human."
+      },
+      {
+        "items": [
+          {
+            "alt": "Box logo: the name DESENHE knocked out in cream inside a charcoal band with rounded corners, on orange",
+            "caption": "Box logo"
+          },
+          {
+            "alt": "DSN monogram in white on a charcoal background",
+            "caption": "Monogram"
+          }
+        ]
+      },
+      {
+        "alt": "Three signatures in black on light gray: the oval seal reading Drawing and Freehand Painting School, the vertical seal Art School since 1988 and the lockup with Since 88 and Art School",
+        "caption": "Seal and lockup"
+      },
+      {
+        "alt": "The word desenhe written freehand in black on orange, with the edges cutting the letters",
+        "caption": "Freehand signature"
+      },
+      {
+        "label": "Colors",
+        "text": "The palette is born from the gesture of painting. Orange is the heart of the brand, the color of energy, warmth and fresh paint, running from the lightest tone to the warmest and the terracotta. Around it, the neutrals give base and balance: beige brings the memory of paper and the studio, coffee ties the palette to wood and the matter of making by hand."
+      },
+      {
+        "items": [
+          {
+            "name": "Desenhe"
+          },
+          {
+            "name": "Web"
+          },
+          {
+            "name": "Warm"
+          },
+          {
+            "name": "Terracotta"
+          },
+          {
+            "name": "Red"
+          },
+          {
+            "name": "Yellow"
+          }
+        ]
+      },
+      {
+        "items": [
+          {
+            "name": "Beige"
+          },
+          {
+            "name": "Coffee"
+          },
+          {
+            "name": "Charcoal"
+          },
+          {
+            "name": "Black"
+          },
+          {
+            "name": "Turquoise"
+          }
+        ]
+      },
+      {
+        "label": "Typography",
+        "text": "Two families accompany the logo: Courier Prime, a typewriter face, for headlines and highlights, and Manrope, clean and legible, for text and interfaces. The logo letters are custom, drawn only for it, and must always come from the original file, never be retyped."
+      },
+      {
+        "alt": "Specimens of the Courier Prime and Manrope typefaces, with the alphabet, next to the DESENHE logo",
+        "caption": "Typography"
+      },
+      {
+        "label": "Applications",
+        "text": "The identity reaches paper. The business card carries an illustrated brush and pencil on orange, with the contact and a QR code on the back, and the course completion certificate, in cream, has a watercolor on top and the school's stamp."
+      },
+      {
+        "alt": "Front and back of the business card, orange and gray-green, next to the cream course completion certificate, on a brown background",
+        "caption": "Business card and certificate"
+      },
+      {
+        "label": "Website",
+        "text": "The website takes the identity to digital: the typewriter in headlines, orange in buttons and highlights and a dark base that keeps the school's photos in the foreground. From courses to the space, from testimonials to the footer, where each visitor can leave a drawing."
+      },
+      {
+        "alt": "Home page of desenhe.com.br on a MacBook, on an orange background",
+        "caption": "Home page"
+      },
+      {
+        "alt": "Three white iPhones on a cream background showing the site: the home page, the course list and the space section",
+        "caption": "Mobile version"
+      },
+      {
+        "alt": "Two overlapping browser windows on a terracotta background: the featured course list and the enrollment call with the drawing footer",
+        "caption": "Sections"
+      }
+    ],
+    "credits": [
+      {
+        "role": "Design and website"
+      }
+    ],
+    "seo": {
+      "title": "Desenhe — Visual identity and website",
+      "description": "Brand manual and website for Desenhe, a drawing and painting school in Curitiba since 1988: logo, versions, orange palette, typography, stationery and website."
     }
   }
 }

@@ -7,6 +7,8 @@
 
   const pills  = Array.from(overlay.querySelectorAll(".nav-pill-link"));
   const labels = Array.from(overlay.querySelectorAll(".nav-pill-label"));
+  // Seletor de idioma do menu mobile: entra e sai junto com os pills.
+  const langBtn = overlay.querySelector(".nav-lang-col [data-lang-toggle]");
 
   const isDesktop = () => window.innerWidth >= 900;
   const hasGsap   = () => typeof gsap !== "undefined";
@@ -22,6 +24,7 @@
     if (!hasGsap()) return;
     gsap.set(pills,  { scale: 0, transformOrigin: "50% 50%" });
     gsap.set(labels, { y: 20, autoAlpha: 0 });
+    if (langBtn) gsap.set(langBtn, { scale: 0, transformOrigin: "50% 50%" });
   }
 
   // Abre o overlay com stagger dos pills
@@ -39,9 +42,10 @@
 
     if (!hasGsap()) return;
 
-    gsap.killTweensOf([...pills, ...labels]);
+    gsap.killTweensOf([...pills, ...labels, ...(langBtn ? [langBtn] : [])]);
     gsap.set(pills,  { scale: 0 });
     gsap.set(labels, { y: 20, autoAlpha: 0 });
+    if (langBtn) gsap.set(langBtn, { scale: 0, transformOrigin: "50% 50%" });
 
     pills.forEach((pill, i) => {
       const rot   = isDesktop() ? parseFloat(pill.dataset.rotation || 0) : 0;
@@ -61,6 +65,16 @@
           ease: "power3.out",
         }, "-=0.38");
     });
+
+    // O seletor de idioma entra como o último "pill" da fila.
+    if (langBtn) {
+      gsap.to(langBtn, {
+        scale: 1,
+        duration: 0.5,
+        delay: pills.length * 0.1,
+        ease: "back.out(1.5)",
+      });
+    }
   }
 
   // Fecha o overlay
@@ -78,9 +92,9 @@
       return;
     }
 
-    gsap.killTweensOf([...pills, ...labels]);
+    gsap.killTweensOf([...pills, ...labels, ...(langBtn ? [langBtn] : [])]);
     gsap.to(labels, { y: 20, autoAlpha: 0, duration: 0.15, ease: "power3.in" });
-    gsap.to(pills,  {
+    gsap.to([...pills, ...(langBtn ? [langBtn] : [])],  {
       scale: 0,
       rotation: 0,
       duration: 0.22,
