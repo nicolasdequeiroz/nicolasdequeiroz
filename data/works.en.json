@@ -1484,8 +1484,20 @@
         ]
       },
       {
-        "alt": "Three signatures in black on light gray: the oval seal reading Drawing and Freehand Painting School, the vertical seal Art School since 1988 and the lockup with Since 88 and Art School",
-        "caption": "Seal and lockup"
+        "items": [
+          {
+            "alt": "Oval seal in black on light gray, with Drawing and Freehand Painting School around the name DESENHE and the year 1988",
+            "caption": "Oval seal"
+          },
+          {
+            "alt": "Vertical seal in black on light gray: Art School in an arc above the name DESENHE and, below, Since 1988",
+            "caption": "Vertical seal"
+          },
+          {
+            "alt": "Lockup in black on light gray: Since 88 above the name DESENHE and Art School below",
+            "caption": "Tagline lockup"
+          }
+        ]
       },
       {
         "alt": "The word desenhe written freehand in black on orange, with the edges cutting the letters",

@@ -2264,11 +2264,27 @@
           ]
         },
         {
-          "type": "image",
-          "src": "assets/works/desenhe/selos.webp",
-          "alt": "Três assinaturas em preto sobre cinza claro: o selo oval com Escola de Desenho & Pintura a Mão Livre, o selo vertical Escola de Arte desde 1988 e o lockup com Desde 88 e Escola de Arte",
-          "ratio": "16:9",
-          "caption": "Selo e lockup"
+          "type": "gallery",
+          "items": [
+            {
+              "src": "assets/works/desenhe/selo-oval-3.webp",
+              "alt": "Selo oval em preto sobre cinza claro, com Escola de Desenho & Pintura a Mão Livre em volta do nome DESENHE e do ano 1988",
+              "ratio": "1:1",
+              "caption": "Selo oval"
+            },
+            {
+              "src": "assets/works/desenhe/selo-vertical-3.webp",
+              "alt": "Selo vertical em preto sobre cinza claro: Escola de Arte em arco acima do nome DESENHE e, embaixo, Desde 1988",
+              "ratio": "1:1",
+              "caption": "Selo vertical"
+            },
+            {
+              "src": "assets/works/desenhe/lockup-3.webp",
+              "alt": "Lockup em preto sobre cinza claro: Desde 88 acima do nome DESENHE e Escola de Arte abaixo",
+              "ratio": "1:1",
+              "caption": "Lockup com tagline"
+            }
+          ]
         },
         {
           "type": "image",
