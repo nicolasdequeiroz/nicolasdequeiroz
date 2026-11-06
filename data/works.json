@@ -2288,8 +2288,8 @@
         },
         {
           "type": "image",
-          "src": "assets/works/desenhe/assinatura.webp",
-          "alt": "A palavra desenhe escrita à mão livre, em preto sobre laranja, com as bordas cortando as letras",
+          "src": "assets/works/desenhe/assinatura-2.webp",
+          "alt": "A palavra desenhe escrita à mão livre, em branco sobre laranja, com as bordas cortando as letras",
           "ratio": "16:9",
           "caption": "Assinatura à mão livre"
         },
@@ -2359,8 +2359,8 @@
         },
         {
           "type": "image",
-          "src": "assets/works/desenhe/tipografia.webp",
-          "alt": "Amostras das tipografias Courier Prime e Manrope, com o alfabeto, ao lado da logo DESENHE",
+          "src": "assets/works/desenhe/tipografia-2.webp",
+          "alt": "Amostras das tipografias Courier Prime e Manrope, com o alfabeto e os números",
           "ratio": "16:9",
           "caption": "Tipografia"
         },
@@ -2383,15 +2383,15 @@
         },
         {
           "type": "image",
-          "src": "assets/works/desenhe/site-macbook.webp",
+          "src": "assets/works/desenhe/site-macbook-2.webp",
           "alt": "Página inicial do site desenhe.com.br em um MacBook, sobre fundo laranja",
           "ratio": "16:9",
           "caption": "Página inicial"
         },
         {
           "type": "image",
-          "src": "assets/works/desenhe/site-mobile.webp",
-          "alt": "Três iPhones brancos sobre fundo creme mostrando o site: a página inicial, a lista de cursos e a seção do espaço",
+          "src": "assets/works/desenhe/site-mobile-2.webp",
+          "alt": "Quatro iPhones brancos sobre fundo creme mostrando o site: a página inicial, a lista de cursos, as fotos do espaço e o rodapé com os desenhos dos visitantes",
           "ratio": "16:9",
           "caption": "Versão mobile"
         },

@@ -65,7 +65,7 @@
 .ab-title {
     margin: 0 0 clamp(32px, 5vw, 64px);
     font-family: "Instrument Serif", serif;
-    font-size: clamp(42px, 5.6vw, 84px);
+    font-size: clamp(42px, 5.6vw, 83px);
     font-weight: 400;
     line-height: 0.95;
     letter-spacing: -0.02em;
@@ -90,6 +90,46 @@
     margin: 0;
     font-size: 14px;
     line-height: 1.5;
+}
+
+/* Rastro de fotos dos lugares (Origin/Base): camada fixa sobre a página, só mouse. */
+.ab-place[data-trail] {
+    cursor: default;
+}
+
+.ab-trail {
+    position: fixed;
+    inset: 0;
+    z-index: 40;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.ab-trail-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: clamp(150px, 14vw, 210px);
+    aspect-ratio: 1.1;
+    border-radius: 12px;
+    overflow: hidden;
+    opacity: 0;
+    background: var(--surface);
+    box-shadow: 0 24px 48px -18px rgba(0, 0, 0, 0.4);
+    will-change: transform, opacity;
+}
+
+.ab-trail-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+@media (hover: none), (pointer: coarse) {
+    .ab-trail {
+        display: none;
+    }
 }
 
 .ab-country {

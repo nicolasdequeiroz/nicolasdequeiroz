@@ -222,6 +222,11 @@
     width: 176px;
 }
 
+/* Duas faixas de cores em sequência: a segunda corre no sentido contrário. */
+.work-block--palette + .work-block--palette .work-marquee-inner {
+    animation-direction: reverse;
+}
+
 @keyframes work-marquee {
     to {
         transform: translateX(-50%);

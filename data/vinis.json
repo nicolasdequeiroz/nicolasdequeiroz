@@ -192,8 +192,7 @@
       "capa": "assets/vinis/temple-of-the-dog-temple-of-the-dog.jpg",
       "estrelas": 5,
       "curiosidade": "Homenagem a Andrew Wood, vocalista do Mother Love Bone, morto em 1990. Eddie Vedder canta com Chris Cornell em “Hunger Strike”.",
-      "curiosidade_en": "A tribute to Andrew Wood, the Mother Love Bone singer who died in 1990. Eddie Vedder sings with Chris Cornell on “Hunger Strike”.",
-      "favorito": true
+      "curiosidade_en": "A tribute to Andrew Wood, the Mother Love Bone singer who died in 1990. Eddie Vedder sings with Chris Cornell on “Hunger Strike”."
     },
     {
       "artista": "A Tribe Called Quest",
@@ -218,8 +217,7 @@
       "capa": "assets/vinis/sade-the-best-of-sade.jpg",
       "estrelas": 5,
       "curiosidade": "Sade é o nome da banda e da vocalista, Sade Adu (Helen Folasade Adu), nascida na Nigéria.",
-      "curiosidade_en": "Sade is the name of both the band and its singer, Sade Adu (Helen Folasade Adu), who was born in Nigeria.",
-      "favorito": true
+      "curiosidade_en": "Sade is the name of both the band and its singer, Sade Adu (Helen Folasade Adu), who was born in Nigeria."
     },
     {
       "artista": "Jeff Buckley",
@@ -232,7 +230,19 @@
       "estrelas": 5,
       "curiosidade": "O único álbum de estúdio que Jeff Buckley lançou em vida. Inclui a versão de “Hallelujah”, de Leonard Cohen.",
       "curiosidade_en": "The only studio album Jeff Buckley released in his lifetime. It includes his cover of Leonard Cohen's “Hallelujah”.",
-      "favorito": true,
+      "favorito": true
+    },
+    {
+      "artista": "Nas",
+      "album": "Illmatic",
+      "ano": 1994,
+      "genero": "Hip-hop",
+      "cor": "#1a1a1a",
+      "nota": "",
+      "estrelas": 5,
+      "curiosidade": "Álbum de estreia de Nas. Reuniu produtores como DJ Premier, Pete Rock, Q-Tip e Large Professor, algo incomum na época.",
+      "curiosidade_en": "Nas's debut album. It brought together producers like DJ Premier, Pete Rock, Q-Tip and Large Professor, which was unusual at the time.",
+      "capa": "assets/vinis/nas-illmatic.jpg",
       "vinil": "rgba(236,241,246,0.5)"
     },
     {
@@ -245,8 +255,7 @@
       "capa": "assets/vinis/mad-season-above.jpg",
       "estrelas": 5,
       "curiosidade": "Único álbum do Mad Season, supergrupo de Seattle com Layne Staley e Mike McCready. A capa é uma ilustração do próprio Staley.",
-      "curiosidade_en": "The only album by Mad Season, a Seattle supergroup with Layne Staley and Mike McCready. The cover is an illustration by Staley himself.",
-      "favorito": true
+      "curiosidade_en": "The only album by Mad Season, a Seattle supergroup with Layne Staley and Mike McCready. The cover is an illustration by Staley himself."
     },
     {
       "artista": "Erykah Badu",
@@ -298,6 +307,18 @@
       "estrelas": 4,
       "curiosidade": "“Amor I Love You” foi o maior sucesso do disco, que ganhou o Grammy Latino de Melhor Álbum de Pop Contemporâneo Brasileiro em 2001.",
       "curiosidade_en": "“Amor I Love You” was the record's biggest hit, and the album won the Latin Grammy for Best Brazilian Contemporary Pop Album in 2001."
+    },
+    {
+      "artista": "Erykah Badu",
+      "album": "Mama's Gun",
+      "ano": 2000,
+      "genero": "Neo soul",
+      "cor": "#1a1a1a",
+      "nota": "",
+      "estrelas": 5,
+      "curiosidade": "Segundo álbum de Erykah Badu. O título vem da arma que a avó dela guardava na mesa de cabeceira e que ninguém podia tocar. Traz “Bag Lady”.",
+      "curiosidade_en": "Erykah Badu's second album. The title comes from the gun her grandmother kept in her nightstand, which nobody was allowed to touch. It includes “Bag Lady”.",
+      "capa": "assets/vinis/erykah-badu-mama-s-gun.jpg"
     },
     {
       "artista": "Linkin Park",
@@ -377,6 +398,20 @@
       "curiosidade_en": "The Internet's third album, Grammy-nominated in 2016. “Girl” features Kaytranada, who is also in this collection, and so is Steve Lacy."
     },
     {
+      "artista": "BK'",
+      "album": "Castelos & Ruínas",
+      "ano": 2016,
+      "genero": "Hip-hop / Rap",
+      "cor": "#1a1a1a",
+      "nota": "",
+      "estrelas": 5,
+      "curiosidade": "Estreia solo de BK', lançada em 2016. Virou um clássico do rap nacional e fez dez anos em 2026, com turnê comemorativa e este vinil de capa nova, que esgotou em menos de quatro horas.",
+      "curiosidade_en": "BK's solo debut, released in 2016. It became a classic of Brazilian rap and turned ten in 2026, with an anniversary tour and this vinyl with new cover art, which sold out in under four hours.",
+      "capa": "assets/vinis/bk-castelos-ruinas.jpg",
+      "vinil": "rgba(236,241,246,0.5)",
+      "favorito": true
+    },
+    {
       "artista": "Jorja Smith",
       "album": "Lost & Found",
       "ano": 2018,
@@ -387,7 +422,6 @@
       "estrelas": 5,
       "curiosidade": "Primeiro álbum de Jorja Smith, indicado ao Mercury Prize. As músicas foram escritas entre os 16 e os 21 anos dela.",
       "curiosidade_en": "Jorja Smith's debut, shortlisted for the Mercury Prize. The songs were written between the ages of 16 and 21.",
-      "favorito": true,
       "primeiro": true
     },
     {
@@ -400,8 +434,7 @@
       "capa": "assets/vinis/kids-see-ghosts-kids-see-ghosts.jpg",
       "estrelas": 5,
       "curiosidade": "Gravado em Jackson Hole, no Wyoming, tem só sete faixas. A capa é de Takashi Murakami.",
-      "curiosidade_en": "Recorded in Jackson Hole, Wyoming, it has just seven tracks. The cover is by Takashi Murakami.",
-      "favorito": true
+      "curiosidade_en": "Recorded in Jackson Hole, Wyoming, it has just seven tracks. The cover is by Takashi Murakami."
     },
     {
       "artista": "Brockhampton",
@@ -427,7 +460,6 @@
       "estrelas": 5,
       "curiosidade": "Álbum de estreia da dupla. A edição deluxe foi indicada ao Grammy de Álbum do Ano em 2021, e “Colors” concorreu a Gravação do Ano.",
       "curiosidade_en": "The band's debut. Its deluxe edition was nominated for Album of the Year at the 2021 Grammys, and “Colors” was up for Record of the Year.",
-      "favorito": true,
       "vinil": "#f4f1ea"
     },
     {
@@ -479,8 +511,7 @@
       "capa": "assets/vinis/cleo-sol-rose-in-the-dark.jpg",
       "estrelas": 5,
       "curiosidade": "Primeiro álbum de Cleo Sol, de março de 2020, produzido por Inflo, do coletivo SAULT.",
-      "curiosidade_en": "Cleo Sol's first full-length album, from March 2020, produced by Inflo of the collective SAULT.",
-      "favorito": true
+      "curiosidade_en": "Cleo Sol's first full-length album, from March 2020, produced by Inflo of the collective SAULT."
     },
     {
       "artista": "Omar Apollo",
@@ -518,7 +549,6 @@
       "estrelas": 5,
       "curiosidade": "Saiu em 2021, depois do Vol. 3 (2017) da mesma série. Don L nasceu em Brasília e é ligado ao Ceará.",
       "curiosidade_en": "Released in 2021, after Vol. 3 (2017) of the same series. Don L was born in Brasília and is tied to Ceará.",
-      "favorito": true,
       "vinil": "#f0c93a"
     },
     {
@@ -608,8 +638,7 @@
       "capa": "assets/vinis/clairo-charm.jpg",
       "estrelas": 5,
       "curiosidade": "Terceiro álbum de Clairo, produzido por Leon Michels e gravado ao vivo em fita analógica. Rendeu a primeira indicação dela ao Grammy.",
-      "curiosidade_en": "Clairo's third album, produced by Leon Michels and recorded live on analog tape. It earned her first Grammy nomination.",
-      "favorito": true
+      "curiosidade_en": "Clairo's third album, produced by Leon Michels and recorded live on analog tape. It earned her first Grammy nomination."
     },
     {
       "artista": "beabadoobee",
@@ -673,7 +702,6 @@
       "estrelas": 5,
       "curiosidade": "Terceiro álbum de Marina Sena. Foi indicado ao Grammy Latino de Melhor Álbum de Pop Contemporâneo em Português.",
       "curiosidade_en": "Marina Sena's third album. It was nominated for a Latin Grammy for Best Contemporary Pop Album in Portuguese.",
-      "favorito": true,
       "vinil": "#f0c93a"
     },
     {
@@ -688,6 +716,31 @@
       "curiosidade": "Segundo álbum de Olivia Dean, depois de Messy (2023). Chegou ao 1º lugar no Reino Unido e levou o prêmio de Álbum Britânico do Ano no Brit Awards de 2026.",
       "curiosidade_en": "Olivia Dean's second album, after Messy (2023). It hit No. 1 in the UK and won British Album of the Year at the 2026 Brit Awards.",
       "favorito": true
+    },
+    {
+      "artista": "Luedji Luna",
+      "album": "Antes Que a Terra Acabe",
+      "ano": 2025,
+      "genero": "MPB / Pop",
+      "cor": "#1a1a1a",
+      "nota": "",
+      "estrelas": 5,
+      "curiosidade": "Lançado de surpresa, cerca de três semanas depois de “Um Mar Pra Cada Um”. Fecha a trilogia sobre amor, ancestralidade e desejo.",
+      "curiosidade_en": "Released by surprise, about three weeks after “Um Mar Pra Cada Um”. It closes her trilogy about love, ancestry and desire.",
+      "capa": "assets/vinis/luedji-luna-antes-que-a-terra-acabe.jpg",
+      "vinil": "#6b4226"
+    },
+    {
+      "artista": "Geese",
+      "album": "Getting Killed",
+      "ano": 2025,
+      "genero": "Indie rock",
+      "cor": "#1a1a1a",
+      "nota": "",
+      "estrelas": 5,
+      "curiosidade": "Terceiro álbum do Geese, lançado pela Partisan em setembro de 2025, depois de “3D Country” (2023).",
+      "curiosidade_en": "Geese's third album, released on Partisan in September 2025, after “3D Country” (2023).",
+      "capa": "assets/vinis/geese-getting-killed.jpg"
     }
   ]
 }
