@@ -8,275 +8,1187 @@
   },
   "works": [
     {
-      "slug": "mizzu-sushi",
-      "title": "Mizzu Sushi",
-      "tagline": "O oceano em sua mesa.",
-      "description": "Identidade visual para um restaurante japonês em Siqueira Campos, no interior do Paraná. O nome parte de mizu (水), água em japonês: a ligação entre a água e os frutos do mar, base da gastronomia japonesa, guia a marca. Uma adaptação da Grande Onda de Kanagawa (Hokusai, 1830) evoca a herança japonesa e traz a energia do oceano para cada aplicação.",
-      "year": 2024,
+      "slug": "tasty-nutrition",
+      "title": "Tasty Nutrition",
+      "tagline": "Sabor primeiro. Sempre.",
+      "description": "Identidade visual para a Tasty Nutrition, marca premium de suplementos ancorada em saúde, bem-estar e lifestyle. No lugar da estética agressiva do segmento, um lettering script dentro de um contêiner macio, uma paleta que nasce da despensa e uma linguagem que convida em vez de cobrar.",
+      "year": 2026,
       "services": [
         "Identidade visual",
+        "Brandbook",
         "Embalagens"
       ],
-      "industry": "Restaurante japonês",
-      "location": "Siqueira Campos, PR",
-      "thumb": "assets/works/mizzu-sushi/selo-poster.webp",
-      "thumbVideo": "assets/works/mizzu-sushi/selo-behance.mp4",
+      "industry": "Suplementos",
+      "thumb": "assets/works/tasty-nutrition/capa-sacola.webp",
       "hero": {
-        "type": "video",
-        "src": "assets/works/mizzu-sushi/selo-behance.mp4",
-        "poster": "assets/works/mizzu-sushi/selo-poster.webp",
-        "mobile": "assets/works/mizzu-sushi/hero-mobile-selo.webp",
-        "mobileVideo": "assets/works/mizzu-sushi/hero-mobile-hq.mp4",
-        "alt": "Selo circular do Mizzu Sushi girando sobre padrão de ondas"
+        "type": "image",
+        "src": "assets/works/tasty-nutrition/capa-sacola.webp",
+        "mobile": "assets/works/tasty-nutrition/capa-sacola-mobile.webp",
+        "alt": "Mulher de top preto guardando um pote de Creatina Tasty numa sacola de algodão cru, sobre fundo bege"
       },
       "blocks": [
         {
-          "type": "image",
-          "src": "assets/works/mizzu-sushi/assinaturas.webp",
-          "alt": "Quatro versões do logotipo do Mizzu Sushi em vermelho, preto, creme e branco",
-          "ratio": "16:9",
-          "caption": "Assinaturas"
+          "type": "statement",
+          "text": "Tudo já estava no nome."
         },
         {
           "type": "text",
           "label": "Conceito",
-          "text": "Mizu (水) significa água. A palavra virou o ponto de partida: a água como elo entre o oceano e o prato. O ideograma assume o papel de símbolo, a tipografia serifada com espaçamento largo traz a calma da tradição, e o vermelho com o marrom quase preto remetem à laca e à cerâmica japonesas."
+          "text": "Tasty não é uma palavra sobre performance, força ou superação. É uma palavra sobre prazer. A busca foi por uma marca que se pudesse sentir com a mão: com volume, com peso, com a maciez de uma superfície que cede quando apertada. Menos parecida com um símbolo e mais parecida com um alimento."
+        },
+        {
+          "type": "image",
+          "src": "assets/works/tasty-nutrition/logotipo.svg",
+          "alt": "Logotipo Tasty em lettering creme dentro de um contêiner marrom-cacau de laterais côncavas, sobre fundo baunilha",
+          "ratio": "16:9",
+          "caption": "Logotipo"
+        },
+        {
+          "type": "text",
+          "label": "Posicionamento",
+          "text": "Uma marca de suplementos premium, ancorada em saúde, bem-estar e lifestyle. Performance existe, mas não comanda a linguagem. O público prioritário são adultos a partir dos 35 anos, com rotina cheia, que já tentaram o que não conseguiram manter: para eles, sabor e praticidade pesam tanto quanto a fórmula."
+        },
+        {
+          "type": "text",
+          "label": "Construção",
+          "text": "O contêiner nasce da interseção de círculos e elipses. As laterais côncavas e as pontas expandidas criam uma forma sob tensão, cheia no centro e comprimida nas bordas, como se fosse pressionada de fora para dentro. O lettering veio depois, sobre uma grade de linhas inclinadas, com gesto contínuo e terminais macios."
         },
         {
           "type": "pair",
           "items": [
             {
-              "src": "assets/works/mizzu-sushi/poster.webp",
-              "alt": "Pôster vermelho com a Grande Onda em um cavalete",
-              "caption": "Pôster"
+              "src": "assets/works/tasty-nutrition/construcao-circulos.svg",
+              "alt": "Círculos e elipses que dão origem ao contêiner da marca",
+              "caption": "Círculos e elipses",
+              "ratio": "16:9"
             },
             {
-              "src": "assets/works/mizzu-sushi/mizu-agua.webp",
-              "alt": "Ideograma 水 com as palavras Mizu e Água",
-              "caption": "水 · Água"
+              "src": "assets/works/tasty-nutrition/construcao-grade.svg",
+              "alt": "Grade de linhas inclinadas sobre a qual o lettering foi desenhado",
+              "caption": "Grade do lettering",
+              "ratio": "16:9"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "src": "assets/works/tasty-nutrition/versoes.webp",
+          "alt": "Logotipo Tasty sobre verde-hortelã, ameixa e cacau",
+          "ratio": "16:9",
+          "caption": "Versões de cor"
+        },
+        {
+          "type": "pair",
+          "items": [
+            {
+              "src": "assets/works/tasty-nutrition/assinaturas.webp",
+              "alt": "Logotipo com os descritivos Nutrition e Health & Lifestyle",
+              "caption": "Assinaturas",
+              "ratio": "16:9"
+            },
+            {
+              "src": "assets/works/tasty-nutrition/roxo.webp",
+              "alt": "Lettering Tasty com Nutrition, em creme sobre ameixa",
+              "caption": "Lettering",
+              "ratio": "16:9"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "label": "Cores",
+          "text": "A paleta nasce da despensa, não do laboratório. Hortelã, pistache e abacate ancoram a marca em verdes quentes, longe do verde clínico de farmácia, sobre uma base de baunilha. Ameixa, avelã, chocolate e cacau traduzem o que existe dentro do pote, e a folha de ouro, em filetes e detalhes, sustenta o premium."
+        },
+        {
+          "type": "palette",
+          "items": [
+            {
+              "name": "Hortelã",
+              "hex": "#4A7A31"
+            },
+            {
+              "name": "Pistache",
+              "hex": "#B9CF7C"
+            },
+            {
+              "name": "Abacate",
+              "hex": "#1F3A1E"
+            },
+            {
+              "name": "Ameixa",
+              "hex": "#73325A"
+            },
+            {
+              "name": "Baunilha",
+              "hex": "#F6EDE1"
+            },
+            {
+              "name": "Avelã",
+              "hex": "#C29A74"
+            },
+            {
+              "name": "Chocolate",
+              "hex": "#5E3823"
+            },
+            {
+              "name": "Cacau",
+              "hex": "#2A1A12"
+            },
+            {
+              "name": "Folha de ouro",
+              "hex": "#C9AE70"
             }
           ]
         },
         {
           "type": "statement",
-          "text": "Uma onda de 1830 como assinatura."
+          "text": "Suplemento bom é o que a pessoa toma todo dia."
+        },
+        {
+          "type": "text",
+          "label": "Tipografia",
+          "text": "Ranade nos títulos e destaques: geométrica, de terminais limpos, equilibra o gesto manual do lettering com uma estrutura racional. Instrument Sans no texto e na informação, da legenda à tabela nutricional. O lettering nunca vira fonte: ele é assinatura."
+        },
+        {
+          "type": "text",
+          "label": "Sistema gráfico",
+          "text": "A forma que abriga o lettering também vive sozinha, como moldura, etiqueta ou recorte. Repetida em grade, vira o padrão da marca. E o script pode sangrar para fora da peça: como as letras são únicas, a Tasty continua reconhecível mesmo pela metade."
         },
         {
           "type": "image",
-          "src": "assets/works/mizzu-sushi/embalagem.webp",
-          "alt": "Bandeja de sushi com cinta vermelha do Mizzu, molho shoyu e hashis",
+          "src": "assets/works/tasty-nutrition/padrao.webp",
+          "alt": "Padrão verde formado pela forma do contêiner repetida em grade, sobre baunilha",
           "ratio": "16:9",
-          "caption": "Embalagem"
+          "caption": "Padrão"
+        },
+        {
+          "type": "image",
+          "src": "assets/works/tasty-nutrition/sangra.webp",
+          "alt": "Lettering Tasty em ameixa cortado nas bordas, ao lado de uma foto com garrafa ameixa e bola de tênis",
+          "ratio": "16:9",
+          "caption": "Lettering em sangramento"
+        },
+        {
+          "type": "text",
+          "label": "Fotografia",
+          "text": "Pessoas reais, em movimento real, em situações do dia a dia. Rostos que expressam prazer e descanso, não esforço. Luz natural, céu, sombras suaves e alimento por perto; nada de interior de academia, pose de força ou fundo escuro."
+        },
+        {
+          "type": "pair",
+          "items": [
+            {
+              "src": "assets/works/tasty-nutrition/pessoa-tapete.webp",
+              "alt": "Mulher sorrindo deitada em um tapete de yoga, com o pote de creatina Tasty sobre uma toalha verde",
+              "ratio": "auto"
+            },
+            {
+              "src": "assets/works/tasty-nutrition/pessoa-grama.webp",
+              "alt": "Mulher sorrindo deitada na grama, de top roxo, com o lettering tasty vazado sobre o corpo",
+              "ratio": "auto"
+            },
+            {
+              "src": "assets/works/tasty-nutrition/foto-garrafa.webp",
+              "alt": "Garrafa verde com o ícone da marca em uma quadra de tênis, com uma jogadora em movimento ao fundo",
+              "ratio": "auto"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "src": "assets/works/tasty-nutrition/campanha-suplemento.webp",
+          "alt": "Anúncio roxo com uma mão segurando uma cápsula e a frase “Suplemento bom é o que você repete”",
+          "ratio": "16:9"
+        },
+        {
+          "type": "pair",
+          "items": [
+            {
+              "src": "assets/works/tasty-nutrition/story-haltere.webp",
+              "alt": "Story com um homem levantando um halter contra o céu e a frase “Comece o dia tasty”",
+              "ratio": "auto"
+            },
+            {
+              "src": "assets/works/tasty-nutrition/story-nome.webp",
+              "alt": "Story verde com uma plaquinha pendurada: “A gente levou o nome a sério. Porque saúde também pode ser gostosa.”",
+              "ratio": "auto"
+            },
+            {
+              "src": "assets/works/tasty-nutrition/story-yoga.webp",
+              "alt": "Story com uma mulher se alongando contra o céu e a frase “Comece o dia tasty” em roxo",
+              "ratio": "auto"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "src": "assets/works/tasty-nutrition/campanha-scoop.webp",
+          "alt": "Anúncio verde com a frase “Muito sabor em cada scoop” e um scoop derramando pó no formato da marca",
+          "ratio": "16:9"
+        },
+        {
+          "type": "pair",
+          "items": [
+            {
+              "src": "assets/works/tasty-nutrition/campanha-tapetes.webp",
+              "alt": "Duas mulheres rindo com tapetes de yoga sob o lettering tasty em creme sobre um muro com céu azul",
+              "ratio": "auto"
+            },
+            {
+              "src": "assets/works/tasty-nutrition/perfil.webp",
+              "alt": "Perfil da Tasty Nutrition em rede social, com a capa de maçãs verdes, o logotipo e o ícone da marca",
+              "ratio": "auto",
+              "caption": "Perfil nas redes"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "src": "assets/works/tasty-nutrition/macas.webp",
+          "alt": "Pote Tasty entre maçãs verdes e o selo Health, made tasty sobre verde",
+          "ratio": "16:9",
+          "caption": "Health, made tasty"
+        },
+        {
+          "type": "pair",
+          "items": [
+            {
+              "src": "assets/works/tasty-nutrition/foto-grama.webp",
+              "alt": "Lettering tasty vazado sobre duas mulheres sorrindo deitadas na grama",
+              "ratio": "auto"
+            },
+            {
+              "src": "assets/works/tasty-nutrition/foto-treino.webp",
+              "alt": "Homem sorrindo com regata verde e o ícone da marca no peito",
+              "ratio": "auto"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "src": "assets/works/tasty-nutrition/uniformes.webp",
+          "alt": "Camisa polo verde e regata preta com o logotipo Tasty, ao lado do lettering em relevo sobre baunilha",
+          "ratio": "16:9",
+          "caption": "Uniformes"
+        },
+        {
+          "type": "text",
+          "label": "Embalagens",
+          "text": "No pote, o lettering ocupa a frente de ponta a ponta e é cortado pela curvatura, como o manual prevê. A cor muda com a linha, do hortelã à ameixa, sem quebrar a unidade, e o dourado fica no filete de acabamento."
+        },
+        {
+          "type": "image",
+          "src": "assets/works/tasty-nutrition/potes.webp",
+          "alt": "Dois potes de creatina Tasty, um com lettering verde e outro ameixa",
+          "ratio": "16:9",
+          "caption": "Linha de creatina"
+        },
+        {
+          "type": "image",
+          "src": "assets/works/tasty-nutrition/sacola.webp",
+          "alt": "Pessoa tirando um pote Tasty de uma ecobag e o mesmo pote entre maçãs verdes",
+          "ratio": "16:9",
+          "caption": "No dia a dia"
+        },
+        {
+          "type": "image",
+          "src": "assets/works/tasty-nutrition/frascos.webp",
+          "alt": "Três frascos de cápsulas Tasty em verde-escuro, ameixa e verde-claro",
+          "ratio": "16:9",
+          "caption": "Cápsulas"
+        },
+        {
+          "type": "image",
+          "src": "assets/works/tasty-nutrition/pote-ceu.webp",
+          "alt": "Pote de creatina Tasty com lettering verde ao lado de um copo d’água e um scoop, sobre um cubo verde e céu azul",
+          "ratio": "16:9",
+          "caption": "Pote de creatina"
+        },
+        {
+          "type": "statement",
+          "text": "Marca boa é a que a pessoa reconhece sem precisar ler."
+        }
+      ],
+      "credits": [
+        {
+          "role": "Design",
+          "name": "Nícolas de Queiróz"
+        },
+        {
+          "role": "Intermediação",
+          "name": "SD Digital"
+        }
+      ],
+      "seo": {
+        "title": "Tasty Nutrition — Identidade para suplementos",
+        "description": "Identidade visual e brandbook da Tasty Nutrition, marca premium de suplementos: lettering script em um contêiner macio e uma paleta que nasce da despensa."
+      },
+      "trail": [
+        "assets/works/tasty-nutrition/capa-grama.webp",
+        "assets/works/tasty-nutrition/pessoa-tapete.webp",
+        "assets/works/tasty-nutrition/pessoa-grama.webp",
+        "assets/works/tasty-nutrition/foto-garrafa.webp",
+        "assets/works/tasty-nutrition/foto-treino.webp",
+        "assets/works/tasty-nutrition/macas.webp",
+        "assets/works/tasty-nutrition/campanha-scoop.webp",
+        "assets/works/tasty-nutrition/pote-ceu.webp"
+      ]
+    },
+    {
+      "slug": "kings-sneakers",
+      "title": "Kings Sneakers",
+      "tagline": "A vitrine sai da frente para o produto aparecer.",
+      "description": "Layout do novo e-commerce da Kings Sneakers, rede de lojas de lifestyle urbano com mais de 20 anos de estrada. Em parceria com a agência TEC4U, desenhei no Figma a experiência completa da loja — home, listagem, produto, carrinho, busca, menu e páginas institucionais, no desktop e no mobile. O desenvolvimento ficou com a TEC4U.",
+      "year": 2025,
+      "services": [
+        "UI design",
+        "E-commerce"
+      ],
+      "industry": "Moda e calçados",
+      "location": "São Paulo, SP",
+      "website": "https://lojakings.com.br/",
+      "thumb": "assets/works/kings-sneakers/capa.webp",
+      "hero": {
+        "type": "image",
+        "src": "assets/works/kings-sneakers/capa.webp",
+        "mobile": "assets/works/kings-sneakers/capa-mobile.webp",
+        "alt": "Close de uma mão segurando um iPhone diante de uma parede de concreto com luz de fim de tarde, mostrando a home da loja Kings Sneakers com o logo do macaquinho, os best sellers e as coleções Kings"
+      },
+      "blocks": [
+        {
+          "type": "text",
+          "label": "O projeto",
+          "text": "A Kings vende Nike, Adidas, Jordan, New Balance e a própria marca para um público que conhece produto. O desafio era um layout que desse conta de muito catálogo, campanhas que mudam toda semana e preço com Pix e parcelamento, sem virar vitrine poluída. A resposta foi uma interface em preto e branco, de grade firme e muito respiro, que sai da frente para o produto e as campanhas aparecerem."
+        },
+        {
+          "type": "video",
+          "src": "assets/works/kings-sneakers/home-scroll.mp4",
+          "poster": "assets/works/kings-sneakers/home-scroll-poster.webp",
+          "alt": "A home da Kings Sneakers rolando sob a barra do Safari, sobre fundo cinza-claro, do banner principal ao rodapé: best sellers, favoritos da comunidade, categorias, escolhas da Kings, look da vez, coleções, institucional, mídia, comunidade e rodapé",
+          "ratio": "16:9",
+          "caption": "Home"
+        },
+        {
+          "type": "text",
+          "label": "Card de produto",
+          "text": "O card é a peça que mais se repete na loja, então foi desenhado primeiro. Selo da marca no canto, foto em fundo cinza neutro, nome em caixa-alta e, logo abaixo, o preço cheio ao lado do preço no Pix em verde, com o parcelamento sem juros na linha seguinte. O desconto aparece antes do clique. No mobile, o botão Comprar vai direto no card."
+        },
+        {
+          "type": "image",
+          "src": "assets/works/kings-sneakers/card.webp",
+          "alt": "Anatomia do card de produto: selo da marca, foto em fundo neutro, nome em caixa-alta, preço no Pix em verde e parcelamento; ao lado, a versão mobile com botão Comprar",
+          "ratio": "16:9",
+          "caption": "Anatomia do card",
+          "feed": false
+        },
+        {
+          "type": "text",
+          "label": "Estrutura",
+          "text": "O layout não depende de uma grade de colunas engessada: ele nasce de auto-layout com poucas regras, repetidas em todas as páginas. Margem de 32px no desktop e 16px no mobile, uma escala curta de espaçamentos (12, 16, 24, 32, 64 e 82) e módulos que se encaixam. O card de 310px com 16px de respiro monta todas as vitrines e vaza a margem direita para sugerir o arraste. Na página de produto, a galeria 2×2 em fotos 2:3 ocupa as duas primeiras colunas e o painel de compra, a terceira. No celular, duas colunas de 165,5px com 12px entre elas e 24px entre as linhas."
+        },
+        {
+          "type": "image",
+          "src": "assets/works/kings-sneakers/grid-vitrine.webp",
+          "alt": "Vitrine Favoritos da comunidade com a grade sobreposta em vermelho: margens de 32px, cards de 310px com 16px entre eles e, em azul, 82px de respiro acima e abaixo da seção e 32px entre o título e os cards",
+          "ratio": "16:9",
+          "caption": "Vitrine",
+          "feed": false
+        },
+        {
+          "type": "image",
+          "src": "assets/works/kings-sneakers/grid-produto.webp",
+          "alt": "Topo da página de produto com a grade sobreposta: nav de 58px, margens de 32px, galeria de fotos 2:3 com 450px de largura e 16px de respiro, e o painel de compra de 444px",
+          "ratio": "16:9",
+          "caption": "Página de produto",
+          "feed": false
+        },
+        {
+          "type": "image",
+          "src": "assets/works/kings-sneakers/grid-mobile.webp",
+          "alt": "Três telas do mobile sobre fundo preto com a grade sobreposta: margens de 16px e, na listagem, duas colunas de 165,5px com 12px entre elas e 24px entre as linhas",
+          "ratio": "16:9",
+          "caption": "Mobile",
+          "feed": false
+        },
+        {
+          "type": "text",
+          "label": "Home",
+          "text": "A home alterna vitrines de produto com blocos editoriais. As categorias já trazem Masculino e Feminino no próprio card, um clique a menos até a listagem. O Look da vez junta a foto de quem veste, com crédito ao perfil, aos produtos do look num carrossel ao lado, em abas para trocar de look sem sair da página."
+        },
+        {
+          "type": "image",
+          "src": "assets/works/kings-sneakers/macbook-concreto.webp",
+          "alt": "MacBook aberto em ângulo, com a home da loja Kings Sneakers, na quina de um bloco de concreto sob luz de fim de tarde com sombras de janela, e um par de Air Jordan 1 Low preto, branco e vermelho ao fundo",
+          "ratio": "16:9"
+        },
+        {
+          "type": "image",
+          "src": "assets/works/kings-sneakers/home-secoes.webp",
+          "alt": "Duas seções da home em janelas de navegador sobre fundo preto: categorias Sneakers, Roupas e Sale com botões Masculino e Feminino, e o Look da vez com abas, foto de quem veste e produtos do look",
+          "ratio": "16:9",
+          "caption": "Categorias e Look da vez"
+        },
+        {
+          "type": "statement",
+          "text": "Preto, branco e uma grade firme: quem aparece é o produto."
+        },
+        {
+          "type": "pair",
+          "items": [
+            {
+              "src": "assets/works/kings-sneakers/mao-produto.webp",
+              "alt": "Close de uma mão segurando um iPhone com a página de produto do Tênis Nike Air Max Dn, numa sala de concreto desfocada ao fundo",
+              "ratio": "4:5"
+            },
+            {
+              "src": "assets/works/kings-sneakers/celular-no-tenis.webp",
+              "alt": "iPhone com a listagem de sneakers apoiado de pé na lateral de um Air Jordan 1 Low preto, branco e vermelho, no chão de concreto sob luz dura de fim de tarde",
+              "ratio": "4:5"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "label": "Listagem e produto",
+          "text": "Na listagem, filtros em gaveta deixam a grade de quatro colunas livre, com um card editorial da categoria abrindo a vitrine. Na página de produto, a galeria grande divide a tela com um painel de compra fixo: marca e avaliação, preço com Pix, cores, tamanhos, tabela de medidas e cálculo de frete, tudo antes da dobra."
+        },
+        {
+          "type": "image",
+          "src": "assets/works/kings-sneakers/listagem.webp",
+          "alt": "Página de listagem de sneakers sob a barra do Safari, sobre fundo cinza-claro: banner da categoria, filtros e grade de quatro colunas",
+          "ratio": "16:9",
+          "caption": "Listagem"
+        },
+        {
+          "type": "image",
+          "src": "assets/works/kings-sneakers/produto.webp",
+          "alt": "Página de produto desmontada: as quatro vistas da galeria em miniatura, o Tênis Nike Air Max Dn em destaque e o painel de compra com marca, preço no Pix, cores, tamanhos e frete",
+          "ratio": "16:9",
+          "caption": "Produto"
+        },
+        {
+          "type": "image",
+          "src": "assets/works/kings-sneakers/produto-macbook.webp",
+          "alt": "MacBook com a página de produto do Tênis Nike Air Max Dn sobre um banco de concreto, iluminado por um spot de cima, com o próprio Air Max Dn em primeiro plano",
+          "ratio": "16:9"
+        },
+        {
+          "type": "text",
+          "label": "Monte o seu look",
+          "text": "Abaixo da compra, o Monte o seu look sugere peças que combinam com o produto e oferece o conjunto com desconto no Pix, num só botão. O bloco foi pensado para aumentar o ticket sem empurrar: ele aparece depois que a decisão principal já foi tomada. O carrinho lateral segue a mesma lógica: cupom, total e o botão de compra sempre à vista."
+        },
+        {
+          "type": "image",
+          "src": "assets/works/kings-sneakers/monte-o-look.webp",
+          "alt": "Bloco Monte o seu look em cartões sobre fundo preto: a versão desktop com tênis, meias e kit de limpeza e o preço do conjunto no Pix, e a versão mobile ao lado",
+          "ratio": "16:9",
+          "caption": "Desktop e mobile"
+        },
+        {
+          "type": "text",
+          "label": "Mobile",
+          "text": "No celular, o topo fixo junta menu, logo, conta, sacola e a busca sempre à mão. O menu em gaveta destaca Sale e a coleção do momento, a busca abre com sugestões e o carrinho lateral mostra cupom e total sem tirar a pessoa da página."
+        },
+        {
+          "type": "image",
+          "src": "assets/works/kings-sneakers/menu-busca-carrinho.webp",
+          "alt": "Menu em gaveta, busca com sugestões e carrinho lateral do mobile em três cartões lado a lado sobre fundo preto",
+          "ratio": "16:9",
+          "caption": "Menu, busca e carrinho"
+        },
+        {
+          "type": "text",
+          "label": "Autoria",
+          "text": "O layout, desktop e mobile, é de minha autoria. Os banners e as fotos de campanha são da Kings, e a implementação da loja foi feita pela TEC4U."
+        }
+      ],
+      "credits": [
+        {
+          "role": "Layout (UI/UX)",
+          "name": "Nícolas de Queiróz"
+        },
+        {
+          "role": "Desenvolvimento",
+          "name": "TEC4U"
+        },
+        {
+          "role": "Banners e fotos de campanha",
+          "name": "Kings Sneakers"
+        }
+      ],
+      "seo": {
+        "title": "Kings Sneakers — Layout de e-commerce",
+        "description": "Layout do e-commerce da Kings Sneakers desenhado no Figma com a TEC4U: home, listagem, produto, carrinho e mobile em preto e branco."
+      },
+      "trail": [
+        "assets/works/kings-sneakers/produto-macbook.webp",
+        "assets/works/kings-sneakers/mao-produto.webp",
+        "assets/works/kings-sneakers/home-secoes.webp",
+        "assets/works/kings-sneakers/monte-o-look.webp",
+        "assets/works/kings-sneakers/menu-busca-carrinho.webp"
+      ]
+    },
+    {
+      "slug": "karolinne-hartung",
+      "title": "Karolinne Hartung",
+      "tagline": "Psicanálise com propósito.",
+      "description": "Identidade visual e site para a psicanalista Karolinne Hartung, em Campinas (SP). Uma marca madura e acolhedora que foge do padrão clínico da área da saúde para abraçar o lado profundamente humano da psicanálise: logotipo serifado com ícone floral, monograma KH e uma paleta de tons quentes.",
+      "year": 2026,
+      "services": [
+        "Identidade visual",
+        "Web design"
+      ],
+      "industry": "Psicanálise",
+      "location": "Campinas, SP",
+      "website": "https://www.karolinnehartung.com.br/",
+      "thumb": "assets/works/karolinne-hartung/capa.webp",
+      "hero": {
+        "type": "image",
+        "src": "assets/works/karolinne-hartung/capa.webp",
+        "mobile": "assets/works/karolinne-hartung/capa-mobile.webp",
+        "alt": "Logotipo Karolinne Hartung em creme, com ícone floral, sobre fundo bordô"
+      },
+      "blocks": [
+        {
+          "type": "text",
+          "label": "Conceito",
+          "text": "A ideia é criar uma identidade visual madura, segura e que foge do tradicional padrão clínico para abraçar o lado profundamente humano da psicanálise."
+        },
+        {
+          "type": "text",
+          "label": "Logotipo",
+          "text": "A logomarca de Karolinne Hartung une elegância e acolhimento através de uma tipografia serifada que mescla a estabilidade da fonte clássica com a fluidez orgânica do itálico, refletindo o próprio movimento do processo psicanalítico. O nome vai em romano e o sobrenome em itálico, com um ícone floral ao lado; “psicanalista” aparece em caixa-alta, sem serifa e com espaçamento aberto."
+        },
+        {
+          "type": "image",
+          "src": "assets/works/karolinne-hartung/logotipo.webp",
+          "alt": "Logotipo Karolinne Hartung em bordô, com ícone floral e a legenda psicanalista, sobre fundo areia",
+          "ratio": "16:9",
+          "caption": "Logotipo"
+        },
+        {
+          "type": "image",
+          "src": "assets/works/karolinne-hartung/versoes.webp",
+          "alt": "Três versões do logotipo em vertical: creme sobre bordô, bordô sobre branco e creme sobre verde-musgo",
+          "ratio": "16:9",
+          "caption": "Versões"
+        },
+        {
+          "type": "pair",
+          "items": [
+            {
+              "src": "assets/works/karolinne-hartung/logo-musgo.webp",
+              "alt": "Logotipo horizontal em creme sobre fundo verde-musgo",
+              "ratio": "16:9"
+            },
+            {
+              "src": "assets/works/karolinne-hartung/logo-terracota.webp",
+              "alt": "Logotipo empilhado em creme sobre fundo terracota",
+              "ratio": "16:9"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "label": "Cores",
+          "text": "A escolha desta paleta de cores foi pensada estrategicamente para fugir dos tons frios e excessivamente clínicos tradicionais da área da saúde. O objetivo é criar um ambiente visual que transmita, de forma imediata, acolhimento, profundidade e escuta ativa."
+        },
+        {
+          "type": "palette",
+          "items": [
+            {
+              "name": "Sand",
+              "hex": "#EDE3D2"
+            },
+            {
+              "name": "White",
+              "hex": "#FFFFFF"
+            },
+            {
+              "name": "Deep Moss",
+              "hex": "#175C58"
+            },
+            {
+              "name": "Terracotta",
+              "hex": "#9B5554"
+            },
+            {
+              "name": "Bordeaux",
+              "hex": "#4E1122"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "label": "Ícones",
+          "text": "O despertar consciente da mente, o florescer do autoconhecimento e o resgate da fluidez na vida. Três ícones circulares dão forma a cada um desses movimentos."
+        },
+        {
+          "type": "gallery",
+          "items": [
+            {
+              "src": "assets/works/karolinne-hartung/icone-despertar.svg",
+              "alt": "Ícone Despertar: círculo areia com uma forma de estrela em bordô",
+              "ratio": "1:1",
+              "caption": "Despertar"
+            },
+            {
+              "src": "assets/works/karolinne-hartung/icone-florescer.svg",
+              "alt": "Ícone Florescer: círculo bordô com uma flor de pétalas em areia",
+              "ratio": "1:1",
+              "caption": "Florescer"
+            },
+            {
+              "src": "assets/works/karolinne-hartung/icone-fluir.svg",
+              "alt": "Ícone Fluir: círculo bordô com um sol nascendo sobre linhas de campo",
+              "ratio": "1:1",
+              "caption": "Fluir"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "src": "assets/works/karolinne-hartung/padrao.webp",
+          "alt": "Padrão de flores em linha fina sobre fundo bordô",
+          "ratio": "16:9",
+          "caption": "Padrão"
+        },
+        {
+          "type": "text",
+          "label": "Monograma",
+          "text": "O monograma “KH” foi criado para atuar como um selo de assinatura da marca, trazendo um ar de exclusividade, proximidade e alta costura para a identidade visual. Mais do que uma simples abreviação, ele atua como a assinatura íntima da marca, traduzindo visualmente a essência do processo psicanalítico. É ideal para aplicações mais delicadas, como avatares de redes sociais, carimbos, marcas d’água ou o rodapé do site."
+        },
+        {
+          "type": "pair",
+          "items": [
+            {
+              "src": "assets/works/karolinne-hartung/monograma-areia.webp",
+              "alt": "Monograma KH em bordô, dentro de uma moldura oval, sobre fundo areia",
+              "ratio": "auto"
+            },
+            {
+              "src": "assets/works/karolinne-hartung/monograma-terracota.webp",
+              "alt": "Monograma KH em creme, dentro de uma moldura oval, sobre fundo terracota",
+              "ratio": "auto"
+            }
+          ]
+        },
+        {
+          "type": "statement",
+          "text": "Acolhimento profundo para transformações reais."
+        },
+        {
+          "type": "pair",
+          "items": [
+            {
+              "src": "assets/works/karolinne-hartung/retrato-sala.webp",
+              "alt": "Karolinne Hartung sentada em uma poltrona verde, em uma sala de paredes verde-musgo",
+              "ratio": "auto"
+            },
+            {
+              "src": "assets/works/karolinne-hartung/retrato-janela.webp",
+              "alt": "Karolinne Hartung sentada ao lado de uma janela, com o logotipo no canto inferior",
+              "ratio": "auto"
+            },
+            {
+              "src": "assets/works/karolinne-hartung/monograma-padrao.webp",
+              "alt": "Monograma KH em creme sobre o padrão de flores bordô",
+              "ratio": "auto"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "src": "assets/works/karolinne-hartung/mockup.webp",
+          "alt": "Logotipo Karolinne Hartung em relevo dourado sobre papel bordô texturizado",
+          "ratio": "16:9",
+          "caption": "Aplicação"
+        },
+        {
+          "type": "text",
+          "label": "Site",
+          "text": "O site leva a identidade para o digital: a paleta quente, a tipografia serifada com itálicos de destaque e os três ícones — despertar, florescer e fluir — organizam a página, do convite inicial ao espaço de atendimento."
+        },
+        {
+          "type": "image",
+          "src": "assets/works/karolinne-hartung/site-macbook.webp",
+          "alt": "Página inicial do site karolinnehartung.com.br em um MacBook, sobre fundo bordô",
+          "ratio": "16:9",
+          "caption": "Página inicial"
+        },
+        {
+          "type": "video",
+          "src": "assets/works/karolinne-hartung/mobile.mp4",
+          "mobile": "assets/works/karolinne-hartung/mobile-vertical-v2.mp4",
+          "poster": "assets/works/karolinne-hartung/mobile-poster.webp",
+          "alt": "Três iPhones brancos sobre fundo bordô escuro mostrando o site: a página inicial rolando em vídeo, a seção de especialidades em tela clara e a citação sobre acolhimento",
+          "ratio": "16:9",
+          "caption": "Versão mobile"
+        },
+        {
+          "type": "image",
+          "src": "assets/works/karolinne-hartung/site-secoes.webp",
+          "alt": "Duas seções do site em janelas de navegador sobrepostas, sobre fundo verde-musgo: o espaço de atendimento em bordô e o diferencial clínico em areia",
+          "ratio": "16:9",
+          "caption": "Seções"
+        },
+        {
+          "type": "video",
+          "src": "assets/works/karolinne-hartung/contato.mp4",
+          "poster": "assets/works/karolinne-hartung/contato-poster.webp",
+          "alt": "Retratos em preto e branco de pessoas diversas, em grade sobre fundo areia, que surgem e trocam de lugar em animação contínua",
+          "ratio": "16:9",
+          "caption": "Contato"
+        }
+      ],
+      "credits": [
+        {
+          "role": "Design",
+          "name": "Nícolas de Queiróz"
+        },
+        {
+          "role": "Intermediação",
+          "name": "SD Digital"
+        }
+      ],
+      "seo": {
+        "title": "Karolinne Hartung — Marca para psicanalista",
+        "description": "Identidade visual e site da psicanalista Karolinne Hartung, em Campinas (SP): logotipo serifado com ícone floral, monograma KH e paleta de tons quentes."
+      },
+      "trail": [
+        "assets/works/karolinne-hartung/capa.webp",
+        "assets/works/karolinne-hartung/logo-musgo.webp",
+        "assets/works/karolinne-hartung/logo-terracota.webp",
+        "assets/works/karolinne-hartung/padrao.webp",
+        "assets/works/karolinne-hartung/monograma-terracota.webp",
+        "assets/works/karolinne-hartung/retrato-sala.webp",
+        "assets/works/karolinne-hartung/retrato-janela.webp",
+        "assets/works/karolinne-hartung/mockup.webp"
+      ]
+    },
+    {
+      "slug": "frias-constantino",
+      "title": "Frias Constantino",
+      "tagline": "Advocacia tributária preventiva e estratégica.",
+      "description": "Identidade visual para a Frias Constantino Advocacia, escritório de advocacia tributária no Tatuapé, em São Paulo. Uma coruja em traço de gravura, um monograma FC de iniciais sobrepostas e uma paleta de verde, areia e ouro comunicam precisão antes mesmo da primeira conversa.",
+      "year": 2026,
+      "services": [
+        "Identidade visual",
+        "Papelaria"
+      ],
+      "industry": "Advocacia tributária",
+      "location": "São Paulo",
+      "thumb": "assets/works/frias-constantino/hero.webp",
+      "hero": {
+        "type": "image",
+        "src": "assets/works/frias-constantino/hero.webp",
+        "mobile": "assets/works/frias-constantino/hero-mobile-logo.webp",
+        "alt": "Lombada de um livro verde com o logotipo Frias Constantino Advocacia em dourado"
+      },
+      "blocks": [
+        {
+          "type": "statement",
+          "text": "Uma marca construída com o mesmo critério que ela representa."
+        },
+        {
+          "type": "text",
+          "label": "Conceito",
+          "text": "Cada escolha, do traço à tipografia, responde a uma intenção: comunicar precisão antes mesmo da primeira conversa."
+        },
+        {
+          "type": "image",
+          "src": "assets/works/frias-constantino/logotipo.svg",
+          "alt": "Logotipo Frias Constantino Advocacia em verde sobre fundo areia",
+          "ratio": "auto",
+          "caption": "Logotipo"
+        },
+        {
+          "type": "image",
+          "src": "assets/works/frias-constantino/logotipo-dourado.webp",
+          "alt": "Logotipo Frias Constantino Advocacia em dourado em relevo sobre papel verde-escuro texturizado",
+          "ratio": "16:9",
+          "caption": "Dourado sobre verde"
+        },
+        {
+          "type": "text",
+          "label": "A coruja",
+          "text": "A coruja atravessa culturas como símbolo de sabedoria. É a companheira de Atena, deusa grega da estratégia. Mas o que a torna precisa para esta marca é o seu comportamento: ela enxerga onde os outros não veem, voa em silêncio absoluto e age com exatidão cirúrgica. Observação, discrição e precisão: a mesma tríade que define uma boa advocacia tributária. Representada em traço de gravura, remete à tradição jurídica e editorial; em movimento de voo, comunica uma prática que não espera o problema: antecipa."
+        },
+        {
+          "type": "image",
+          "src": "assets/works/frias-constantino/coruja-por-que.webp",
+          "alt": "Coruja pousada sobre o logotipo, com anotações à mão em vermelho: por que uma coruja? Clareza, foco, visão aguçada, percepção, vigilância e sabedoria",
+          "ratio": "16:9",
+          "caption": "Por que uma coruja?"
+        },
+        {
+          "type": "image",
+          "src": "assets/works/frias-constantino/coruja-familia.svg",
+          "alt": "Seis versões da coruja da marca: em voo de frente, em voo de lado, pousada e com o nome Frias Constantino",
+          "ratio": "16:9",
+          "caption": "Família de corujas"
+        },
+        {
+          "type": "text",
+          "label": "Assinaturas",
+          "text": "O nome em duas linhas é a assinatura principal e se adapta a cada fundo: dourado sobre verde ou preto, verde sobre areia. Quando há espaço, a coruja em voo ou o selo FC em losango se juntam ao nome e formam as assinaturas completas."
+        },
+        {
+          "type": "image",
+          "src": "assets/works/frias-constantino/assinaturas-cores.webp",
+          "alt": "Três versões do logotipo: dourado sobre verde, verde sobre areia e dourado sobre preto",
+          "ratio": "16:9",
+          "caption": "Versões de cor"
+        },
+        {
+          "type": "pair",
+          "items": [
+            {
+              "src": "assets/works/frias-constantino/assinatura-coruja.webp",
+              "alt": "Assinatura vertical com a coruja em voo sobre o nome Frias Constantino Advocacia",
+              "caption": "Com a coruja",
+              "ratio": "16:9"
+            },
+            {
+              "src": "assets/works/frias-constantino/assinatura-selo.webp",
+              "alt": "Assinatura vertical com o selo FC em losango sobre o nome Frias Constantino Advocacia",
+              "caption": "Com o selo FC",
+              "ratio": "16:9"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "label": "Monograma",
+          "text": "O monograma FC nasce da sobreposição das iniciais, não lado a lado, mas atravessadas. O F se apoia na estrutura do C, e o C abraça a haste do F. É uma construção que só funciona porque as duas formas foram desenhadas uma para a outra, do mesmo modo que uma boa tese só se sustenta quando cada argumento amarra no seguinte. O desenho parte da tradição dos monogramas de selo: a chancela que, muito antes das assinaturas digitais, validava documentos e dava fé ao que estava escrito. Sozinho, o monograma é a forma mais condensada da marca: onde o nome completo não cabe, ele responde."
+        },
+        {
+          "type": "pair",
+          "items": [
+            {
+              "src": "assets/works/frias-constantino/monograma.webp",
+              "alt": "Monograma FC em relevo sobre fundo verde",
+              "caption": "Monograma em relevo",
+              "ratio": "4:3"
+            },
+            {
+              "src": "assets/works/frias-constantino/marca-final.svg",
+              "alt": "Coruja pousada sobre o monograma FC, em verde sobre fundo areia",
+              "caption": "Coruja sobre o monograma",
+              "ratio": "4:3"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "src": "assets/works/frias-constantino/monograma-versoes.webp",
+          "alt": "Monograma FC em areia sobre verde e em verde sobre areia",
+          "ratio": "16:9",
+          "caption": "Monograma"
+        },
+        {
+          "type": "pair",
+          "items": [
+            {
+              "src": "assets/works/frias-constantino/icone-versoes.webp",
+              "alt": "Ícone compacto do monograma em areia sobre verde e em verde sobre areia",
+              "caption": "Ícone",
+              "ratio": "16:9"
+            },
+            {
+              "src": "assets/works/frias-constantino/selo-versoes.webp",
+              "alt": "Selo FC em losango, em areia sobre verde e em verde sobre areia",
+              "caption": "Selo FC",
+              "ratio": "16:9"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "label": "Cores",
+          "text": "A paleta parte do verde, cor da estabilidade, do equilíbrio e da prosperidade, em uma família que vai do profundo ao sereno, sustentando a marca com a mesma constância que se espera de uma boa assessoria. Sobre ela, o areia e os marrons trazem o calor do papel e do couro, um repertório herdado do universo dos documentos e das bibliotecas jurídicas. O ouro, sempre em dose precisa, é o ponto de valor: aparece onde a marca quer conduzir o olhar, como um fio de destaque em meio à sobriedade."
+        },
+        {
+          "type": "palette",
+          "items": [
+            {
+              "name": "Verde",
+              "hex": "#324036"
+            },
+            {
+              "name": "Verde claro",
+              "hex": "#92A673"
+            },
+            {
+              "name": "Verde escuro",
+              "hex": "#111512"
+            },
+            {
+              "name": "Areia",
+              "hex": "#F3EDDF"
+            },
+            {
+              "name": "Marrom claro",
+              "hex": "#AF9061"
+            },
+            {
+              "name": "Marrom escuro",
+              "hex": "#2E2216"
+            },
+            {
+              "name": "Ouro claro",
+              "hex": "#F1DEB5"
+            },
+            {
+              "name": "Ouro",
+              "hex": "#D0AC64"
+            },
+            {
+              "name": "Ouro escuro",
+              "hex": "#97733D"
+            }
+          ]
+        },
+        {
+          "type": "statement",
+          "text": "Nenhuma cor grita; todas afirmam."
         },
         {
           "type": "text",
           "label": "Aplicações",
-          "text": "O sistema se estende por todo o contato com o cliente: cinta das bandejas de delivery, envelope do hashi, ecobag, cartão, uniforme e o perfil no Instagram. Em cada peça, a onda e o selo aparecem com parcimônia, deixando o vermelho fazer o trabalho."
+          "text": "A identidade ganha corpo no papel, no tecido e na tela: o dourado em relevo sobre o verde profundo, a coruja em marca d’água e o monograma como assinatura, onde o nome completo não cabe."
+        },
+        {
+          "type": "image",
+          "src": "assets/works/frias-constantino/brochura.webp",
+          "alt": "Mãos segurando uma brochura verde com o logotipo dourado e a coruja em marca d’água",
+          "ratio": "16:9",
+          "caption": "Brochura"
+        },
+        {
+          "type": "image",
+          "src": "assets/works/frias-constantino/cartoes.webp",
+          "alt": "Dois cartões de visita verdes, um com o logotipo dourado e outro com os dados de contato e a coruja em marca d’água",
+          "ratio": "16:9",
+          "caption": "Cartões de visita"
+        },
+        {
+          "type": "image",
+          "src": "assets/works/frias-constantino/pecas-impressas.webp",
+          "alt": "Três peças impressas: uma página areia com o logotipo e uma foto de escritório, um retrato da advogada sobre fundo verde e uma página escura com a coruja e uma frase",
+          "ratio": "16:9",
+          "caption": "Peças impressas"
+        },
+        {
+          "type": "image",
+          "src": "assets/works/frias-constantino/cartazes.webp",
+          "alt": "Dois cartazes: um com a gravura de um busto clássico e a frase Tranquilidade fiscal se constrói com método, outro com o retrato de uma advogada e a frase Segurança jurídica é o solo onde negócios crescem",
+          "ratio": "16:9",
+          "caption": "Cartazes"
+        },
+        {
+          "type": "image",
+          "src": "assets/works/frias-constantino/uniformes.webp",
+          "alt": "Uniformes: uma polo verde-clara com o monograma FC bordado, o monograma em relevo seco sobre papel areia e uma camisa verde-escura com o logotipo",
+          "ratio": "16:9",
+          "caption": "Uniformes"
+        },
+        {
+          "type": "image",
+          "src": "assets/works/frias-constantino/perfil.webp",
+          "alt": "Perfil da Frias Constantino Advocacia em uma rede social, com capa verde, o monograma como foto e a bio Advocacia tributária preventiva e estratégica",
+          "ratio": "16:9",
+          "caption": "Perfil nas redes"
+        },
+        {
+          "type": "image",
+          "src": "assets/works/frias-constantino/perfil-escuro.webp",
+          "alt": "Perfil da Frias Constantino Advocacia em versão escura, com capa de listras em verde e o selo FC como foto",
+          "ratio": "16:9",
+          "caption": "Perfil nas redes, versão escura"
+        },
+        {
+          "type": "statement",
+          "text": "Precisão antes da primeira conversa."
+        }
+      ],
+      "credits": [
+        {
+          "role": "Design",
+          "name": "Nícolas de Queiróz"
+        },
+        {
+          "role": "Briefing",
+          "name": "Carolina Frias Constantino"
+        }
+      ],
+      "seo": {
+        "title": "Frias Constantino — Identidade para advocacia",
+        "description": "Identidade visual da Frias Constantino, advocacia tributária em São Paulo: coruja em traço de gravura, monograma FC e paleta de verde, areia e ouro."
+      },
+      "trail": [
+        "assets/works/frias-constantino/hero.webp",
+        "assets/works/frias-constantino/logotipo-dourado.webp",
+        "assets/works/frias-constantino/monograma.webp",
+        "assets/works/frias-constantino/brochura.webp",
+        "assets/works/frias-constantino/cartoes.webp",
+        "assets/works/frias-constantino/pecas-impressas.webp",
+        "assets/works/frias-constantino/uniformes.webp",
+        "assets/works/frias-constantino/monograma-versoes.webp"
+      ]
+    },
+    {
+      "slug": "eora",
+      "title": "EORA",
+      "tagline": "Um objeto de desejo também na tela.",
+      "description": "Layout do e-commerce da EORA, marca brasileira de óculos de sol, bolsas e acessórios. Em parceria com a agência TEC4U, desenhei no Figma a experiência da loja — home, listagem, página de produto e as versões mobile. O desenvolvimento ficou com a TEC4U.",
+      "year": 2025,
+      "services": [
+        "UI design",
+        "E-commerce"
+      ],
+      "industry": "Moda e acessórios",
+      "location": "São Paulo, SP",
+      "website": "https://eoraeyewear.com/",
+      "thumb": "assets/works/eora/capa.webp",
+      "hero": {
+        "type": "image",
+        "src": "assets/works/eora/capa.webp",
+        "mobile": "assets/works/eora/capa-mobile.webp",
+        "alt": "Mulher de trench bege e óculos Onyx sentada numa poltrona de veludo vinho, mostrando um iPhone com a página de produto do Onyx na loja EORA, sob luz de flash"
+      },
+      "blocks": [
+        {
+          "type": "text",
+          "label": "O projeto",
+          "text": "A EORA trata cada peça como objeto de desejo: couros nobres, design autoral e acabamento artesanal. O layout precisava ter o mesmo cuidado — uma vitrine silenciosa, em preto e branco, que deixa as campanhas editoriais e os produtos falarem, com espaço para a história da marca entre uma vitrine e outra."
+        },
+        {
+          "type": "video",
+          "src": "assets/works/eora/home-scroll.mp4",
+          "poster": "assets/works/eora/home-scroll-poster.webp",
+          "alt": "A home da EORA rolando sob a barra do Safari, sobre fundo creme, do banner de lançamento ao rodapé: destaques da loja, manifesto, bolsas, de volta ao estoque, presenteáveis, categorias, Instagram e rodapé",
+          "ratio": "16:9",
+          "caption": "Home"
+        },
+        {
+          "type": "text",
+          "label": "Card de produto",
+          "text": "O card mostra a peça inteira em fundo neutro, com o nome em caixa-alta, preço, parcelamento em 10x, preço no Pix com selo de desconto e o atalho para frete e prazo pelo CEP. Selos como Novo e Pré-venda entram no canto da foto, sem competir com o produto."
+        },
+        {
+          "type": "image",
+          "src": "assets/works/eora/card.webp",
+          "alt": "Anatomia do card de produto da EORA: selo Novo, produto em fundo neutro, nome em caixa-alta, preço e parcelamento; ao lado, o card mobile com preço no Pix, selo de desconto e frete pelo CEP",
+          "ratio": "16:9",
+          "caption": "Anatomia do card",
+          "feed": false
+        },
+        {
+          "type": "text",
+          "label": "Estrutura",
+          "text": "Na home, as vitrines usam cards de 332px com só 4px entre eles e vazam a margem direita, como uma prateleira contínua. Na listagem, a grade de quatro colunas de 333px com 8px de respiro, emoldurada por margens de 43px, intercala fotos de campanha no meio dos produtos. No mobile, duas colunas com 8px entre elas."
+        },
+        {
+          "type": "image",
+          "src": "assets/works/eora/grid-vitrine.webp",
+          "alt": "Vitrine Destaques da loja com a grade sobreposta: cards de 332px com 4px entre eles, 8px de margem e, em azul, a altura do título e o respiro até os cards",
+          "ratio": "16:9",
+          "caption": "Vitrine",
+          "feed": false
+        },
+        {
+          "type": "image",
+          "src": "assets/works/eora/grid-listagem.webp",
+          "alt": "Listagem de óculos com a grade sobreposta: quatro colunas de 333px com 8px entre elas e margens de 43px",
+          "ratio": "16:9",
+          "caption": "Listagem",
+          "feed": false
+        },
+        {
+          "type": "text",
+          "label": "Home",
+          "text": "A home alterna vitrines de produto com blocos editoriais: a fala da co-fundadora em serifa, categorias em grandes fotos e as coleções de bolsas em carrossel. O tom é de revista de moda, com a navegação discreta por cima."
+        },
+        {
+          "type": "image",
+          "src": "assets/works/eora/home-secoes.webp",
+          "alt": "Duas seções da home em janelas de navegador sobre fundo vinho escuro: as categorias Óculos de sol, Acessórios e Bolsas, e o carrossel de bolsas Maxi Vértice, Vértice e Hobo Vértice",
+          "ratio": "16:9",
+          "caption": "Categorias e bolsas"
+        },
+        {
+          "type": "statement",
+          "text": "Uma vitrine silenciosa, para a peça ser a protagonista."
         },
         {
           "type": "pair",
           "items": [
             {
-              "src": "assets/works/mizzu-sushi/ecobag.webp",
-              "alt": "Ecobag de algodão com a Grande Onda em vermelho",
-              "caption": "Ecobag"
+              "src": "assets/works/eora/celular-bolsa.webp",
+              "alt": "iPhone com a página de produto da bolsa Hobo Vértice em camurça marrom apoiado de pé na própria bolsa, sobre travertino, em luz quente de fim de tarde",
+              "ratio": "4:5"
             },
             {
-              "src": "assets/works/mizzu-sushi/instagram.webp",
-              "alt": "Perfil do Mizzu Sushi no Instagram em um celular",
-              "caption": "Instagram"
+              "src": "assets/works/eora/celular-zebra.webp",
+              "alt": "Vista de cima de um iPhone com a listagem de óculos sobre um tapete de zebra, ao lado de óculos gatinho pretos, um batom vinho e um jornal, com luz de flash",
+              "ratio": "4:5"
             }
           ]
         },
         {
-          "type": "image",
-          "src": "assets/works/mizzu-sushi/hashi.webp",
-          "alt": "Hashis em envelope vermelho do Mizzu sobre prato preto",
-          "ratio": "4:3",
-          "caption": "Hashi"
+          "type": "text",
+          "label": "Listagem e produto",
+          "text": "Na listagem, a grade de produtos é interrompida por fotos de campanha, como páginas de uma revista. Na página de produto, a galeria divide a tela com o painel de compra: nome, preço com Pix, variações de cor em miniatura, botão de compra, atalho para o WhatsApp e as medidas da peça. O mesmo modelo serve óculos, bolsas e acessórios."
         },
         {
           "type": "image",
-          "src": "assets/works/mizzu-sushi/cartao.webp",
-          "alt": "Cartão preto do Mizzu entre flores de cerejeira",
-          "ratio": "4:3",
-          "caption": "Cartão"
-        },
-        {
-          "type": "image",
-          "src": "assets/works/mizzu-sushi/camiseta.webp",
-          "alt": "Camiseta branca com o logotipo do Mizzu Sushi",
+          "src": "assets/works/eora/listagem.webp",
+          "alt": "Página de listagem de óculos da EORA sob a barra do Safari, sobre fundo creme",
           "ratio": "16:9",
-          "caption": "Uniforme"
+          "caption": "Listagem"
         },
         {
           "type": "image",
-          "src": "assets/works/mizzu-sushi/embalagem-2.webp",
-          "alt": "Bandeja de sushis variados com a cinta do Mizzu",
-          "ratio": "16:9"
-        }
-      ],
-      "credits": [
-        {
-          "role": "Design e aplicações",
-          "name": "Nícolas de Queiróz"
+          "src": "assets/works/eora/produto.webp",
+          "alt": "Página de produto da Clutch Vértice em píton off-white sob a barra do Safari, sobre fundo creme: galeria em grade e painel de compra",
+          "ratio": "16:9",
+          "caption": "Produto"
         },
         {
-          "role": "Briefing",
-          "name": "Matheus Morita"
-        }
-      ],
-      "seo": {
-        "title": "Mizzu Sushi — Identidade para restaurante japonês",
-        "description": "Identidade visual e embalagens para o Mizzu Sushi, restaurante japonês no Paraná, criada a partir da água (mizu) e de uma adaptação da Grande Onda de Hokusai."
-      },
-      "trail": [
-        "assets/works/mizzu-sushi/selo-poster.webp",
-        "assets/works/mizzu-sushi/mizu-agua.webp",
-        "assets/works/mizzu-sushi/ecobag.webp",
-        "assets/works/mizzu-sushi/instagram.webp",
-        "assets/works/mizzu-sushi/hashi.webp",
-        "assets/works/mizzu-sushi/cartao.webp",
-        "assets/works/mizzu-sushi/embalagem.webp",
-        "assets/works/mizzu-sushi/embalagem-2.webp"
-      ]
-    },
-    {
-      "slug": "jabutibar",
-      "title": "JabutiBar",
-      "tagline": "Um oásis de descontração no interior paulista.",
-      "description": "Identidade visual para um bar ao ar livre em Itaporanga, no interior de São Paulo. O JabutiBar celebra a vida ao ar livre, a comida e a bebida de qualidade e a cultura local. A marca nasce da natureza que cerca o lugar e da atmosfera leve do interior paulista, traduzindo uma filosofia de acolhimento e celebração.",
-      "year": 2021,
-      "services": [
-        "Identidade visual",
-        "Ilustração",
-        "Cardápio"
-      ],
-      "industry": "Bar e lounge",
-      "location": "Itaporanga, SP",
-      "thumb": "assets/works/jabutibar/hero.webp",
-      "hero": {
-        "type": "image",
-        "src": "assets/works/jabutibar/hero.webp",
-        "mobile": "assets/works/jabutibar/hero-mobile-tote.webp",
-        "alt": "Logotipo do JabutiBar com o jabuti, emoldurado por folhagens ilustradas"
-      },
-      "blocks": [
-        {
           "type": "image",
-          "src": "assets/works/jabutibar/kombi.webp",
-          "alt": "Kombi verde com o jabuti do JabutiBar estacionada entre árvores",
+          "src": "assets/works/eora/macbook-produto.webp",
+          "alt": "MacBook com a página de produto dos óculos Onyx sobre uma mesa de travertino, ao lado de uma bolsa Clutch Vértice em píton off-white e dos próprios Onyx, em luz de fim de tarde",
           "ratio": "16:9"
         },
         {
           "type": "text",
-          "label": "Conceito",
-          "text": "Um lugar onde as preocupações somem na brisa e as risadas ecoam entre as árvores. O jabuti, sem pressa, virou o símbolo desse ritmo. Verdes de folhagem, um creme de papel e um lettering arredondado dão à marca o tom descontraído do interior, e as ilustrações de folhas trazem a mata para cada peça."
-        },
-        {
-          "type": "image",
-          "src": "assets/works/jabutibar/assinaturas.webp",
-          "alt": "Versões do logotipo e do selo Bar Lounge do JabutiBar em verde, creme e preto",
-          "ratio": "16:9",
-          "caption": "Assinaturas"
-        },
-        {
-          "type": "pair",
-          "items": [
-            {
-              "src": "assets/works/jabutibar/cartao.webp",
-              "alt": "Cartão creme do JabutiBar sobre uma folha grande",
-              "caption": "Cartão"
-            },
-            {
-              "src": "assets/works/jabutibar/comanda.webp",
-              "alt": "Comanda numerada do JabutiBar entre folhas",
-              "caption": "Comanda"
-            }
-          ]
-        },
-        {
-          "type": "image",
-          "src": "assets/works/jabutibar/cardapio.webp",
-          "alt": "Cardápio impresso verde com drinks ilustrados e petiscos",
-          "ratio": "16:9",
-          "caption": "Cardápio"
-        },
-        {
-          "type": "image",
-          "src": "assets/works/jabutibar/cardapio-digital.webp",
-          "alt": "Telas do cardápio digital do JabutiBar com destilados",
-          "ratio": "16:9",
-          "caption": "Cardápio digital"
-        },
-        {
-          "type": "statement",
-          "text": "Uma celebração da vida ao ar livre."
-        },
-        {
-          "type": "image",
-          "src": "assets/works/jabutibar/posteres.webp",
-          "alt": "Dois pôsteres de drinks em uma parede coberta de hera",
-          "ratio": "16:9",
-          "caption": "Pôsteres"
-        },
-        {
-          "type": "pair",
-          "items": [
-            {
-              "src": "assets/works/jabutibar/ecobag.webp",
-              "alt": "Ecobag do JabutiBar segurada em meio ao mato alto",
-              "caption": "Ecobag"
-            },
-            {
-              "src": "assets/works/jabutibar/garrafa.webp",
-              "alt": "Garrafa com rótulo verde do JabutiBar contra o céu",
-              "caption": "Garrafa"
-            }
-          ]
-        },
-        {
-          "type": "image",
-          "src": "assets/works/jabutibar/cavalete.webp",
-          "alt": "Cavalete verde com o selo do JabutiBar ao lado de um garçom",
-          "ratio": "16:9",
-          "caption": "Cavalete"
-        },
-        {
-          "type": "image",
-          "src": "assets/works/jabutibar/camiseta.webp",
-          "alt": "Camiseta creme com o logotipo do JabutiBar",
-          "ratio": "16:9",
-          "caption": "Uniforme"
+          "label": "Autoria",
+          "text": "O layout, desktop e mobile, foi desenhado por mim e por Natália Cracco. As fotos e os banners de campanha são da EORA, e a implementação da loja foi feita pela TEC4U."
         }
       ],
       "credits": [
         {
-          "role": "Ilustrações",
-          "name": "Nícolas de Queiróz e Artur Tadao Massuda"
+          "role": "Layout (UI/UX)",
+          "name": "Nícolas de Queiróz e Natália Cracco"
         },
         {
-          "role": "Design e aplicações",
-          "name": "Nícolas de Queiróz"
+          "role": "Desenvolvimento",
+          "name": "TEC4U"
         },
         {
-          "role": "Briefing",
-          "name": "Leonardo Diniz e Nelson Fiuza"
+          "role": "Fotos e banners de campanha",
+          "name": "EORA"
         }
       ],
       "seo": {
-        "title": "JabutiBar — Identidade visual para bar",
-        "description": "Identidade visual, ilustração e cardápio para o JabutiBar, bar ao ar livre em Itaporanga (SP) que celebra a natureza, a boa mesa e a cultura local."
+        "title": "EORA — Layout de e-commerce",
+        "description": "Layout do e-commerce da EORA, marca de óculos, bolsas e acessórios, desenhado no Figma com a TEC4U: home, listagem, produto e mobile."
       },
       "trail": [
-        "assets/works/jabutibar/hero.webp",
-        "assets/works/jabutibar/kombi.webp",
-        "assets/works/jabutibar/cartao.webp",
-        "assets/works/jabutibar/comanda.webp",
-        "assets/works/jabutibar/ecobag.webp",
-        "assets/works/jabutibar/garrafa.webp",
-        "assets/works/jabutibar/cavalete.webp",
-        "assets/works/jabutibar/posteres.webp"
+        "assets/works/eora/celular-bolsa.webp",
+        "assets/works/eora/macbook-produto.webp",
+        "assets/works/eora/celular-zebra.webp",
+        "assets/works/eora/home-secoes.webp"
       ]
     },
     {
@@ -1219,839 +2131,278 @@
       ]
     },
     {
-      "slug": "frias-constantino",
-      "title": "Frias Constantino",
-      "tagline": "Advocacia tributária preventiva e estratégica.",
-      "description": "Identidade visual para a Frias Constantino Advocacia, escritório de advocacia tributária no Tatuapé, em São Paulo. Uma coruja em traço de gravura, um monograma FC de iniciais sobrepostas e uma paleta de verde, areia e ouro comunicam precisão antes mesmo da primeira conversa.",
-      "year": 2026,
+      "slug": "mizzu-sushi",
+      "title": "Mizzu Sushi",
+      "tagline": "O oceano em sua mesa.",
+      "description": "Identidade visual para um restaurante japonês em Siqueira Campos, no interior do Paraná. O nome parte de mizu (水), água em japonês: a ligação entre a água e os frutos do mar, base da gastronomia japonesa, guia a marca. Uma adaptação da Grande Onda de Kanagawa (Hokusai, 1830) evoca a herança japonesa e traz a energia do oceano para cada aplicação.",
+      "year": 2024,
       "services": [
         "Identidade visual",
-        "Papelaria"
+        "Embalagens"
       ],
-      "industry": "Advocacia tributária",
-      "location": "São Paulo",
-      "thumb": "assets/works/frias-constantino/hero.webp",
+      "industry": "Restaurante japonês",
+      "location": "Siqueira Campos, PR",
+      "thumb": "assets/works/mizzu-sushi/selo-poster.webp",
+      "thumbVideo": "assets/works/mizzu-sushi/selo-behance.mp4",
       "hero": {
-        "type": "image",
-        "src": "assets/works/frias-constantino/hero.webp",
-        "mobile": "assets/works/frias-constantino/hero-mobile-logo.webp",
-        "alt": "Lombada de um livro verde com o logotipo Frias Constantino Advocacia em dourado"
+        "type": "video",
+        "src": "assets/works/mizzu-sushi/selo-behance.mp4",
+        "poster": "assets/works/mizzu-sushi/selo-poster.webp",
+        "mobile": "assets/works/mizzu-sushi/hero-mobile-selo.webp",
+        "mobileVideo": "assets/works/mizzu-sushi/hero-mobile-hq.mp4",
+        "alt": "Selo circular do Mizzu Sushi girando sobre padrão de ondas"
       },
       "blocks": [
         {
-          "type": "statement",
-          "text": "Uma marca construída com o mesmo critério que ela representa."
+          "type": "image",
+          "src": "assets/works/mizzu-sushi/assinaturas.webp",
+          "alt": "Quatro versões do logotipo do Mizzu Sushi em vermelho, preto, creme e branco",
+          "ratio": "16:9",
+          "caption": "Assinaturas"
         },
         {
           "type": "text",
           "label": "Conceito",
-          "text": "Cada escolha, do traço à tipografia, responde a uma intenção: comunicar precisão antes mesmo da primeira conversa."
-        },
-        {
-          "type": "image",
-          "src": "assets/works/frias-constantino/logotipo.svg",
-          "alt": "Logotipo Frias Constantino Advocacia em verde sobre fundo areia",
-          "ratio": "auto",
-          "caption": "Logotipo"
-        },
-        {
-          "type": "image",
-          "src": "assets/works/frias-constantino/logotipo-dourado.webp",
-          "alt": "Logotipo Frias Constantino Advocacia em dourado em relevo sobre papel verde-escuro texturizado",
-          "ratio": "16:9",
-          "caption": "Dourado sobre verde"
-        },
-        {
-          "type": "text",
-          "label": "A coruja",
-          "text": "A coruja atravessa culturas como símbolo de sabedoria. É a companheira de Atena, deusa grega da estratégia. Mas o que a torna precisa para esta marca é o seu comportamento: ela enxerga onde os outros não veem, voa em silêncio absoluto e age com exatidão cirúrgica. Observação, discrição e precisão: a mesma tríade que define uma boa advocacia tributária. Representada em traço de gravura, remete à tradição jurídica e editorial; em movimento de voo, comunica uma prática que não espera o problema: antecipa."
-        },
-        {
-          "type": "image",
-          "src": "assets/works/frias-constantino/coruja-por-que.webp",
-          "alt": "Coruja pousada sobre o logotipo, com anotações à mão em vermelho: por que uma coruja? Clareza, foco, visão aguçada, percepção, vigilância e sabedoria",
-          "ratio": "16:9",
-          "caption": "Por que uma coruja?"
-        },
-        {
-          "type": "image",
-          "src": "assets/works/frias-constantino/coruja-familia.svg",
-          "alt": "Seis versões da coruja da marca: em voo de frente, em voo de lado, pousada e com o nome Frias Constantino",
-          "ratio": "16:9",
-          "caption": "Família de corujas"
-        },
-        {
-          "type": "text",
-          "label": "Assinaturas",
-          "text": "O nome em duas linhas é a assinatura principal e se adapta a cada fundo: dourado sobre verde ou preto, verde sobre areia. Quando há espaço, a coruja em voo ou o selo FC em losango se juntam ao nome e formam as assinaturas completas."
-        },
-        {
-          "type": "image",
-          "src": "assets/works/frias-constantino/assinaturas-cores.webp",
-          "alt": "Três versões do logotipo: dourado sobre verde, verde sobre areia e dourado sobre preto",
-          "ratio": "16:9",
-          "caption": "Versões de cor"
+          "text": "Mizu (水) significa água. A palavra virou o ponto de partida: a água como elo entre o oceano e o prato. O ideograma assume o papel de símbolo, a tipografia serifada com espaçamento largo traz a calma da tradição, e o vermelho com o marrom quase preto remetem à laca e à cerâmica japonesas."
         },
         {
           "type": "pair",
           "items": [
             {
-              "src": "assets/works/frias-constantino/assinatura-coruja.webp",
-              "alt": "Assinatura vertical com a coruja em voo sobre o nome Frias Constantino Advocacia",
-              "caption": "Com a coruja",
-              "ratio": "16:9"
+              "src": "assets/works/mizzu-sushi/poster.webp",
+              "alt": "Pôster vermelho com a Grande Onda em um cavalete",
+              "caption": "Pôster"
             },
             {
-              "src": "assets/works/frias-constantino/assinatura-selo.webp",
-              "alt": "Assinatura vertical com o selo FC em losango sobre o nome Frias Constantino Advocacia",
-              "caption": "Com o selo FC",
-              "ratio": "16:9"
-            }
-          ]
-        },
-        {
-          "type": "text",
-          "label": "Monograma",
-          "text": "O monograma FC nasce da sobreposição das iniciais, não lado a lado, mas atravessadas. O F se apoia na estrutura do C, e o C abraça a haste do F. É uma construção que só funciona porque as duas formas foram desenhadas uma para a outra, do mesmo modo que uma boa tese só se sustenta quando cada argumento amarra no seguinte. O desenho parte da tradição dos monogramas de selo: a chancela que, muito antes das assinaturas digitais, validava documentos e dava fé ao que estava escrito. Sozinho, o monograma é a forma mais condensada da marca: onde o nome completo não cabe, ele responde."
-        },
-        {
-          "type": "pair",
-          "items": [
-            {
-              "src": "assets/works/frias-constantino/monograma.webp",
-              "alt": "Monograma FC em relevo sobre fundo verde",
-              "caption": "Monograma em relevo",
-              "ratio": "4:3"
-            },
-            {
-              "src": "assets/works/frias-constantino/marca-final.svg",
-              "alt": "Coruja pousada sobre o monograma FC, em verde sobre fundo areia",
-              "caption": "Coruja sobre o monograma",
-              "ratio": "4:3"
-            }
-          ]
-        },
-        {
-          "type": "image",
-          "src": "assets/works/frias-constantino/monograma-versoes.webp",
-          "alt": "Monograma FC em areia sobre verde e em verde sobre areia",
-          "ratio": "16:9",
-          "caption": "Monograma"
-        },
-        {
-          "type": "pair",
-          "items": [
-            {
-              "src": "assets/works/frias-constantino/icone-versoes.webp",
-              "alt": "Ícone compacto do monograma em areia sobre verde e em verde sobre areia",
-              "caption": "Ícone",
-              "ratio": "16:9"
-            },
-            {
-              "src": "assets/works/frias-constantino/selo-versoes.webp",
-              "alt": "Selo FC em losango, em areia sobre verde e em verde sobre areia",
-              "caption": "Selo FC",
-              "ratio": "16:9"
-            }
-          ]
-        },
-        {
-          "type": "text",
-          "label": "Cores",
-          "text": "A paleta parte do verde, cor da estabilidade, do equilíbrio e da prosperidade, em uma família que vai do profundo ao sereno, sustentando a marca com a mesma constância que se espera de uma boa assessoria. Sobre ela, o areia e os marrons trazem o calor do papel e do couro, um repertório herdado do universo dos documentos e das bibliotecas jurídicas. O ouro, sempre em dose precisa, é o ponto de valor: aparece onde a marca quer conduzir o olhar, como um fio de destaque em meio à sobriedade."
-        },
-        {
-          "type": "palette",
-          "items": [
-            {
-              "name": "Verde",
-              "hex": "#324036"
-            },
-            {
-              "name": "Verde claro",
-              "hex": "#92A673"
-            },
-            {
-              "name": "Verde escuro",
-              "hex": "#111512"
-            },
-            {
-              "name": "Areia",
-              "hex": "#F3EDDF"
-            },
-            {
-              "name": "Marrom claro",
-              "hex": "#AF9061"
-            },
-            {
-              "name": "Marrom escuro",
-              "hex": "#2E2216"
-            },
-            {
-              "name": "Ouro claro",
-              "hex": "#F1DEB5"
-            },
-            {
-              "name": "Ouro",
-              "hex": "#D0AC64"
-            },
-            {
-              "name": "Ouro escuro",
-              "hex": "#97733D"
+              "src": "assets/works/mizzu-sushi/mizu-agua.webp",
+              "alt": "Ideograma 水 com as palavras Mizu e Água",
+              "caption": "水 · Água"
             }
           ]
         },
         {
           "type": "statement",
-          "text": "Nenhuma cor grita; todas afirmam."
+          "text": "Uma onda de 1830 como assinatura."
+        },
+        {
+          "type": "image",
+          "src": "assets/works/mizzu-sushi/embalagem.webp",
+          "alt": "Bandeja de sushi com cinta vermelha do Mizzu, molho shoyu e hashis",
+          "ratio": "16:9",
+          "caption": "Embalagem"
         },
         {
           "type": "text",
           "label": "Aplicações",
-          "text": "A identidade ganha corpo no papel, no tecido e na tela: o dourado em relevo sobre o verde profundo, a coruja em marca d’água e o monograma como assinatura, onde o nome completo não cabe."
+          "text": "O sistema se estende por todo o contato com o cliente: cinta das bandejas de delivery, envelope do hashi, ecobag, cartão, uniforme e o perfil no Instagram. Em cada peça, a onda e o selo aparecem com parcimônia, deixando o vermelho fazer o trabalho."
+        },
+        {
+          "type": "pair",
+          "items": [
+            {
+              "src": "assets/works/mizzu-sushi/ecobag.webp",
+              "alt": "Ecobag de algodão com a Grande Onda em vermelho",
+              "caption": "Ecobag"
+            },
+            {
+              "src": "assets/works/mizzu-sushi/instagram.webp",
+              "alt": "Perfil do Mizzu Sushi no Instagram em um celular",
+              "caption": "Instagram"
+            }
+          ]
         },
         {
           "type": "image",
-          "src": "assets/works/frias-constantino/brochura.webp",
-          "alt": "Mãos segurando uma brochura verde com o logotipo dourado e a coruja em marca d’água",
-          "ratio": "16:9",
-          "caption": "Brochura"
+          "src": "assets/works/mizzu-sushi/hashi.webp",
+          "alt": "Hashis em envelope vermelho do Mizzu sobre prato preto",
+          "ratio": "4:3",
+          "caption": "Hashi"
         },
         {
           "type": "image",
-          "src": "assets/works/frias-constantino/cartoes.webp",
-          "alt": "Dois cartões de visita verdes, um com o logotipo dourado e outro com os dados de contato e a coruja em marca d’água",
-          "ratio": "16:9",
-          "caption": "Cartões de visita"
+          "src": "assets/works/mizzu-sushi/cartao.webp",
+          "alt": "Cartão preto do Mizzu entre flores de cerejeira",
+          "ratio": "4:3",
+          "caption": "Cartão"
         },
         {
           "type": "image",
-          "src": "assets/works/frias-constantino/pecas-impressas.webp",
-          "alt": "Três peças impressas: uma página areia com o logotipo e uma foto de escritório, um retrato da advogada sobre fundo verde e uma página escura com a coruja e uma frase",
+          "src": "assets/works/mizzu-sushi/camiseta.webp",
+          "alt": "Camiseta branca com o logotipo do Mizzu Sushi",
           "ratio": "16:9",
-          "caption": "Peças impressas"
+          "caption": "Uniforme"
         },
         {
           "type": "image",
-          "src": "assets/works/frias-constantino/cartazes.webp",
-          "alt": "Dois cartazes: um com a gravura de um busto clássico e a frase Tranquilidade fiscal se constrói com método, outro com o retrato de uma advogada e a frase Segurança jurídica é o solo onde negócios crescem",
-          "ratio": "16:9",
-          "caption": "Cartazes"
-        },
-        {
-          "type": "image",
-          "src": "assets/works/frias-constantino/uniformes.webp",
-          "alt": "Uniformes: uma polo verde-clara com o monograma FC bordado, o monograma em relevo seco sobre papel areia e uma camisa verde-escura com o logotipo",
-          "ratio": "16:9",
-          "caption": "Uniformes"
-        },
-        {
-          "type": "image",
-          "src": "assets/works/frias-constantino/perfil.webp",
-          "alt": "Perfil da Frias Constantino Advocacia em uma rede social, com capa verde, o monograma como foto e a bio Advocacia tributária preventiva e estratégica",
-          "ratio": "16:9",
-          "caption": "Perfil nas redes"
-        },
-        {
-          "type": "image",
-          "src": "assets/works/frias-constantino/perfil-escuro.webp",
-          "alt": "Perfil da Frias Constantino Advocacia em versão escura, com capa de listras em verde e o selo FC como foto",
-          "ratio": "16:9",
-          "caption": "Perfil nas redes, versão escura"
-        },
-        {
-          "type": "statement",
-          "text": "Precisão antes da primeira conversa."
+          "src": "assets/works/mizzu-sushi/embalagem-2.webp",
+          "alt": "Bandeja de sushis variados com a cinta do Mizzu",
+          "ratio": "16:9"
         }
       ],
       "credits": [
         {
-          "role": "Design",
+          "role": "Design e aplicações",
           "name": "Nícolas de Queiróz"
         },
         {
           "role": "Briefing",
-          "name": "Carolina Frias Constantino"
+          "name": "Matheus Morita"
         }
       ],
       "seo": {
-        "title": "Frias Constantino — Identidade para advocacia",
-        "description": "Identidade visual da Frias Constantino, advocacia tributária em São Paulo: coruja em traço de gravura, monograma FC e paleta de verde, areia e ouro."
+        "title": "Mizzu Sushi — Identidade para restaurante japonês",
+        "description": "Identidade visual e embalagens para o Mizzu Sushi, restaurante japonês no Paraná, criada a partir da água (mizu) e de uma adaptação da Grande Onda de Hokusai."
       },
       "trail": [
-        "assets/works/frias-constantino/hero.webp",
-        "assets/works/frias-constantino/logotipo-dourado.webp",
-        "assets/works/frias-constantino/monograma.webp",
-        "assets/works/frias-constantino/brochura.webp",
-        "assets/works/frias-constantino/cartoes.webp",
-        "assets/works/frias-constantino/pecas-impressas.webp",
-        "assets/works/frias-constantino/uniformes.webp",
-        "assets/works/frias-constantino/monograma-versoes.webp"
-      ]
+        "assets/works/mizzu-sushi/selo-poster.webp",
+        "assets/works/mizzu-sushi/mizu-agua.webp",
+        "assets/works/mizzu-sushi/ecobag.webp",
+        "assets/works/mizzu-sushi/instagram.webp",
+        "assets/works/mizzu-sushi/hashi.webp",
+        "assets/works/mizzu-sushi/cartao.webp",
+        "assets/works/mizzu-sushi/embalagem.webp",
+        "assets/works/mizzu-sushi/embalagem-2.webp"
+      ],
+      "home": false
     },
     {
-      "slug": "tasty-nutrition",
-      "title": "Tasty Nutrition",
-      "tagline": "Sabor primeiro. Sempre.",
-      "description": "Identidade visual para a Tasty Nutrition, marca premium de suplementos ancorada em saúde, bem-estar e lifestyle. No lugar da estética agressiva do segmento, um lettering script dentro de um contêiner macio, uma paleta que nasce da despensa e uma linguagem que convida em vez de cobrar.",
-      "year": 2026,
+      "slug": "jabutibar",
+      "title": "JabutiBar",
+      "tagline": "Um oásis de descontração no interior paulista.",
+      "description": "Identidade visual para um bar ao ar livre em Itaporanga, no interior de São Paulo. O JabutiBar celebra a vida ao ar livre, a comida e a bebida de qualidade e a cultura local. A marca nasce da natureza que cerca o lugar e da atmosfera leve do interior paulista, traduzindo uma filosofia de acolhimento e celebração.",
+      "year": 2021,
       "services": [
         "Identidade visual",
-        "Brandbook",
-        "Embalagens"
+        "Ilustração",
+        "Cardápio"
       ],
-      "industry": "Suplementos",
-      "thumb": "assets/works/tasty-nutrition/capa-grama.webp",
+      "industry": "Bar e lounge",
+      "location": "Itaporanga, SP",
+      "thumb": "assets/works/jabutibar/hero.webp",
       "hero": {
         "type": "image",
-        "src": "assets/works/tasty-nutrition/capa-grama.webp",
-        "mobile": "assets/works/tasty-nutrition/capa-grama-mobile.webp",
-        "alt": "Logotipo Tasty em creme sobre duas mulheres sorrindo deitadas na grama"
+        "src": "assets/works/jabutibar/hero.webp",
+        "mobile": "assets/works/jabutibar/hero-mobile-tote.webp",
+        "alt": "Logotipo do JabutiBar com o jabuti, emoldurado por folhagens ilustradas"
       },
       "blocks": [
         {
-          "type": "statement",
-          "text": "Tudo já estava no nome."
+          "type": "image",
+          "src": "assets/works/jabutibar/kombi.webp",
+          "alt": "Kombi verde com o jabuti do JabutiBar estacionada entre árvores",
+          "ratio": "16:9"
         },
         {
           "type": "text",
           "label": "Conceito",
-          "text": "Tasty não é uma palavra sobre performance, força ou superação. É uma palavra sobre prazer. A busca foi por uma marca que se pudesse sentir com a mão: com volume, com peso, com a maciez de uma superfície que cede quando apertada. Menos parecida com um símbolo e mais parecida com um alimento."
+          "text": "Um lugar onde as preocupações somem na brisa e as risadas ecoam entre as árvores. O jabuti, sem pressa, virou o símbolo desse ritmo. Verdes de folhagem, um creme de papel e um lettering arredondado dão à marca o tom descontraído do interior, e as ilustrações de folhas trazem a mata para cada peça."
         },
         {
           "type": "image",
-          "src": "assets/works/tasty-nutrition/logotipo.svg",
-          "alt": "Logotipo Tasty em lettering creme dentro de um contêiner marrom-cacau de laterais côncavas, sobre fundo baunilha",
+          "src": "assets/works/jabutibar/assinaturas.webp",
+          "alt": "Versões do logotipo e do selo Bar Lounge do JabutiBar em verde, creme e preto",
           "ratio": "16:9",
-          "caption": "Logotipo"
-        },
-        {
-          "type": "text",
-          "label": "Posicionamento",
-          "text": "Uma marca de suplementos premium, ancorada em saúde, bem-estar e lifestyle. Performance existe, mas não comanda a linguagem. O público prioritário são adultos a partir dos 35 anos, com rotina cheia, que já tentaram o que não conseguiram manter: para eles, sabor e praticidade pesam tanto quanto a fórmula."
-        },
-        {
-          "type": "text",
-          "label": "Construção",
-          "text": "O contêiner nasce da interseção de círculos e elipses. As laterais côncavas e as pontas expandidas criam uma forma sob tensão, cheia no centro e comprimida nas bordas, como se fosse pressionada de fora para dentro. O lettering veio depois, sobre uma grade de linhas inclinadas, com gesto contínuo e terminais macios."
+          "caption": "Assinaturas"
         },
         {
           "type": "pair",
           "items": [
             {
-              "src": "assets/works/tasty-nutrition/construcao-circulos.svg",
-              "alt": "Círculos e elipses que dão origem ao contêiner da marca",
-              "caption": "Círculos e elipses",
-              "ratio": "16:9"
+              "src": "assets/works/jabutibar/cartao.webp",
+              "alt": "Cartão creme do JabutiBar sobre uma folha grande",
+              "caption": "Cartão"
             },
             {
-              "src": "assets/works/tasty-nutrition/construcao-grade.svg",
-              "alt": "Grade de linhas inclinadas sobre a qual o lettering foi desenhado",
-              "caption": "Grade do lettering",
-              "ratio": "16:9"
+              "src": "assets/works/jabutibar/comanda.webp",
+              "alt": "Comanda numerada do JabutiBar entre folhas",
+              "caption": "Comanda"
             }
           ]
         },
         {
           "type": "image",
-          "src": "assets/works/tasty-nutrition/versoes.webp",
-          "alt": "Logotipo Tasty sobre verde-hortelã, ameixa e cacau",
+          "src": "assets/works/jabutibar/cardapio.webp",
+          "alt": "Cardápio impresso verde com drinks ilustrados e petiscos",
           "ratio": "16:9",
-          "caption": "Versões de cor"
+          "caption": "Cardápio"
         },
         {
-          "type": "pair",
-          "items": [
-            {
-              "src": "assets/works/tasty-nutrition/assinaturas.webp",
-              "alt": "Logotipo com os descritivos Nutrition e Health & Lifestyle",
-              "caption": "Assinaturas",
-              "ratio": "16:9"
-            },
-            {
-              "src": "assets/works/tasty-nutrition/roxo.webp",
-              "alt": "Lettering Tasty com Nutrition, em creme sobre ameixa",
-              "caption": "Lettering",
-              "ratio": "16:9"
-            }
-          ]
-        },
-        {
-          "type": "text",
-          "label": "Cores",
-          "text": "A paleta nasce da despensa, não do laboratório. Hortelã, pistache e abacate ancoram a marca em verdes quentes, longe do verde clínico de farmácia, sobre uma base de baunilha. Ameixa, avelã, chocolate e cacau traduzem o que existe dentro do pote, e a folha de ouro, em filetes e detalhes, sustenta o premium."
-        },
-        {
-          "type": "palette",
-          "items": [
-            {
-              "name": "Hortelã",
-              "hex": "#4A7A31"
-            },
-            {
-              "name": "Pistache",
-              "hex": "#B9CF7C"
-            },
-            {
-              "name": "Abacate",
-              "hex": "#1F3A1E"
-            },
-            {
-              "name": "Ameixa",
-              "hex": "#73325A"
-            },
-            {
-              "name": "Baunilha",
-              "hex": "#F6EDE1"
-            },
-            {
-              "name": "Avelã",
-              "hex": "#C29A74"
-            },
-            {
-              "name": "Chocolate",
-              "hex": "#5E3823"
-            },
-            {
-              "name": "Cacau",
-              "hex": "#2A1A12"
-            },
-            {
-              "name": "Folha de ouro",
-              "hex": "#C9AE70"
-            }
-          ]
+          "type": "image",
+          "src": "assets/works/jabutibar/cardapio-digital.webp",
+          "alt": "Telas do cardápio digital do JabutiBar com destilados",
+          "ratio": "16:9",
+          "caption": "Cardápio digital"
         },
         {
           "type": "statement",
-          "text": "Suplemento bom é o que a pessoa toma todo dia."
-        },
-        {
-          "type": "text",
-          "label": "Tipografia",
-          "text": "Ranade nos títulos e destaques: geométrica, de terminais limpos, equilibra o gesto manual do lettering com uma estrutura racional. Instrument Sans no texto e na informação, da legenda à tabela nutricional. O lettering nunca vira fonte: ele é assinatura."
-        },
-        {
-          "type": "text",
-          "label": "Sistema gráfico",
-          "text": "A forma que abriga o lettering também vive sozinha, como moldura, etiqueta ou recorte. Repetida em grade, vira o padrão da marca. E o script pode sangrar para fora da peça: como as letras são únicas, a Tasty continua reconhecível mesmo pela metade."
+          "text": "Uma celebração da vida ao ar livre."
         },
         {
           "type": "image",
-          "src": "assets/works/tasty-nutrition/padrao.webp",
-          "alt": "Padrão verde formado pela forma do contêiner repetida em grade, sobre baunilha",
+          "src": "assets/works/jabutibar/posteres.webp",
+          "alt": "Dois pôsteres de drinks em uma parede coberta de hera",
           "ratio": "16:9",
-          "caption": "Padrão"
-        },
-        {
-          "type": "image",
-          "src": "assets/works/tasty-nutrition/sangra.webp",
-          "alt": "Lettering Tasty em ameixa cortado nas bordas, ao lado de uma foto com garrafa ameixa e bola de tênis",
-          "ratio": "16:9",
-          "caption": "Lettering em sangramento"
-        },
-        {
-          "type": "text",
-          "label": "Fotografia",
-          "text": "Pessoas reais, em movimento real, em situações do dia a dia. Rostos que expressam prazer e descanso, não esforço. Luz natural, céu, sombras suaves e alimento por perto; nada de interior de academia, pose de força ou fundo escuro."
+          "caption": "Pôsteres"
         },
         {
           "type": "pair",
           "items": [
             {
-              "src": "assets/works/tasty-nutrition/pessoa-tapete.webp",
-              "alt": "Mulher sorrindo deitada em um tapete de yoga, com o pote de creatina Tasty sobre uma toalha verde",
-              "ratio": "auto"
+              "src": "assets/works/jabutibar/ecobag.webp",
+              "alt": "Ecobag do JabutiBar segurada em meio ao mato alto",
+              "caption": "Ecobag"
             },
             {
-              "src": "assets/works/tasty-nutrition/pessoa-grama.webp",
-              "alt": "Mulher sorrindo deitada na grama, de top roxo, com o lettering tasty vazado sobre o corpo",
-              "ratio": "auto"
-            },
-            {
-              "src": "assets/works/tasty-nutrition/foto-garrafa.webp",
-              "alt": "Garrafa verde com o ícone da marca em uma quadra de tênis, com uma jogadora em movimento ao fundo",
-              "ratio": "auto"
+              "src": "assets/works/jabutibar/garrafa.webp",
+              "alt": "Garrafa com rótulo verde do JabutiBar contra o céu",
+              "caption": "Garrafa"
             }
           ]
         },
         {
           "type": "image",
-          "src": "assets/works/tasty-nutrition/campanha-suplemento.webp",
-          "alt": "Anúncio roxo com uma mão segurando uma cápsula e a frase “Suplemento bom é o que você repete”",
-          "ratio": "16:9"
-        },
-        {
-          "type": "pair",
-          "items": [
-            {
-              "src": "assets/works/tasty-nutrition/story-haltere.webp",
-              "alt": "Story com um homem levantando um halter contra o céu e a frase “Comece o dia tasty”",
-              "ratio": "auto"
-            },
-            {
-              "src": "assets/works/tasty-nutrition/story-nome.webp",
-              "alt": "Story verde com uma plaquinha pendurada: “A gente levou o nome a sério. Porque saúde também pode ser gostosa.”",
-              "ratio": "auto"
-            },
-            {
-              "src": "assets/works/tasty-nutrition/story-yoga.webp",
-              "alt": "Story com uma mulher se alongando contra o céu e a frase “Comece o dia tasty” em roxo",
-              "ratio": "auto"
-            }
-          ]
-        },
-        {
-          "type": "image",
-          "src": "assets/works/tasty-nutrition/campanha-scoop.webp",
-          "alt": "Anúncio verde com a frase “Muito sabor em cada scoop” e um scoop derramando pó no formato da marca",
-          "ratio": "16:9"
-        },
-        {
-          "type": "pair",
-          "items": [
-            {
-              "src": "assets/works/tasty-nutrition/campanha-tapetes.webp",
-              "alt": "Duas mulheres rindo com tapetes de yoga sob o lettering tasty em creme sobre um muro com céu azul",
-              "ratio": "auto"
-            },
-            {
-              "src": "assets/works/tasty-nutrition/perfil.webp",
-              "alt": "Perfil da Tasty Nutrition em rede social, com a capa de maçãs verdes, o logotipo e o ícone da marca",
-              "ratio": "auto",
-              "caption": "Perfil nas redes"
-            }
-          ]
-        },
-        {
-          "type": "image",
-          "src": "assets/works/tasty-nutrition/macas.webp",
-          "alt": "Pote Tasty entre maçãs verdes e o selo Health, made tasty sobre verde",
+          "src": "assets/works/jabutibar/cavalete.webp",
+          "alt": "Cavalete verde com o selo do JabutiBar ao lado de um garçom",
           "ratio": "16:9",
-          "caption": "Health, made tasty"
-        },
-        {
-          "type": "pair",
-          "items": [
-            {
-              "src": "assets/works/tasty-nutrition/foto-grama.webp",
-              "alt": "Lettering tasty vazado sobre duas mulheres sorrindo deitadas na grama",
-              "ratio": "auto"
-            },
-            {
-              "src": "assets/works/tasty-nutrition/foto-treino.webp",
-              "alt": "Homem sorrindo com regata verde e o ícone da marca no peito",
-              "ratio": "auto"
-            }
-          ]
+          "caption": "Cavalete"
         },
         {
           "type": "image",
-          "src": "assets/works/tasty-nutrition/uniformes.webp",
-          "alt": "Camisa polo verde e regata preta com o logotipo Tasty, ao lado do lettering em relevo sobre baunilha",
+          "src": "assets/works/jabutibar/camiseta.webp",
+          "alt": "Camiseta creme com o logotipo do JabutiBar",
           "ratio": "16:9",
-          "caption": "Uniformes"
-        },
-        {
-          "type": "text",
-          "label": "Embalagens",
-          "text": "No pote, o lettering ocupa a frente de ponta a ponta e é cortado pela curvatura, como o manual prevê. A cor muda com a linha, do hortelã à ameixa, sem quebrar a unidade, e o dourado fica no filete de acabamento."
-        },
-        {
-          "type": "image",
-          "src": "assets/works/tasty-nutrition/potes.webp",
-          "alt": "Dois potes de creatina Tasty, um com lettering verde e outro ameixa",
-          "ratio": "16:9",
-          "caption": "Linha de creatina"
-        },
-        {
-          "type": "image",
-          "src": "assets/works/tasty-nutrition/sacola.webp",
-          "alt": "Pessoa tirando um pote Tasty de uma ecobag e o mesmo pote entre maçãs verdes",
-          "ratio": "16:9",
-          "caption": "No dia a dia"
-        },
-        {
-          "type": "image",
-          "src": "assets/works/tasty-nutrition/frascos.webp",
-          "alt": "Três frascos de cápsulas Tasty em verde-escuro, ameixa e verde-claro",
-          "ratio": "16:9",
-          "caption": "Cápsulas"
-        },
-        {
-          "type": "image",
-          "src": "assets/works/tasty-nutrition/pote-ceu.webp",
-          "alt": "Pote de creatina Tasty com lettering verde ao lado de um copo d’água e um scoop, sobre um cubo verde e céu azul",
-          "ratio": "16:9",
-          "caption": "Pote de creatina"
-        },
-        {
-          "type": "statement",
-          "text": "Marca boa é a que a pessoa reconhece sem precisar ler."
+          "caption": "Uniforme"
         }
       ],
       "credits": [
         {
-          "role": "Design",
+          "role": "Ilustrações",
+          "name": "Nícolas de Queiróz e Artur Tadao Massuda"
+        },
+        {
+          "role": "Design e aplicações",
           "name": "Nícolas de Queiróz"
         },
         {
-          "role": "Intermediação",
-          "name": "SD Digital"
+          "role": "Briefing",
+          "name": "Leonardo Diniz e Nelson Fiuza"
         }
       ],
       "seo": {
-        "title": "Tasty Nutrition — Identidade para suplementos",
-        "description": "Identidade visual e brandbook da Tasty Nutrition, marca premium de suplementos: lettering script em um contêiner macio e uma paleta que nasce da despensa."
+        "title": "JabutiBar — Identidade visual para bar",
+        "description": "Identidade visual, ilustração e cardápio para o JabutiBar, bar ao ar livre em Itaporanga (SP) que celebra a natureza, a boa mesa e a cultura local."
       },
       "trail": [
-        "assets/works/tasty-nutrition/capa-grama.webp",
-        "assets/works/tasty-nutrition/pessoa-tapete.webp",
-        "assets/works/tasty-nutrition/pessoa-grama.webp",
-        "assets/works/tasty-nutrition/foto-garrafa.webp",
-        "assets/works/tasty-nutrition/foto-treino.webp",
-        "assets/works/tasty-nutrition/macas.webp",
-        "assets/works/tasty-nutrition/campanha-scoop.webp",
-        "assets/works/tasty-nutrition/pote-ceu.webp"
-      ]
-    },
-    {
-      "slug": "karolinne-hartung",
-      "title": "Karolinne Hartung",
-      "tagline": "Psicanálise com propósito.",
-      "description": "Identidade visual e site para a psicanalista Karolinne Hartung, em Campinas (SP). Uma marca madura e acolhedora que foge do padrão clínico da área da saúde para abraçar o lado profundamente humano da psicanálise: logotipo serifado com ícone floral, monograma KH e uma paleta de tons quentes.",
-      "year": 2026,
-      "services": [
-        "Identidade visual",
-        "Web design"
+        "assets/works/jabutibar/hero.webp",
+        "assets/works/jabutibar/kombi.webp",
+        "assets/works/jabutibar/cartao.webp",
+        "assets/works/jabutibar/comanda.webp",
+        "assets/works/jabutibar/ecobag.webp",
+        "assets/works/jabutibar/garrafa.webp",
+        "assets/works/jabutibar/cavalete.webp",
+        "assets/works/jabutibar/posteres.webp"
       ],
-      "industry": "Psicanálise",
-      "location": "Campinas, SP",
-      "website": "https://www.karolinnehartung.com.br/",
-      "thumb": "assets/works/karolinne-hartung/capa.webp",
-      "hero": {
-        "type": "image",
-        "src": "assets/works/karolinne-hartung/capa.webp",
-        "mobile": "assets/works/karolinne-hartung/capa-mobile.webp",
-        "alt": "Logotipo Karolinne Hartung em creme, com ícone floral, sobre fundo bordô"
-      },
-      "blocks": [
-        {
-          "type": "text",
-          "label": "Conceito",
-          "text": "A ideia é criar uma identidade visual madura, segura e que foge do tradicional padrão clínico para abraçar o lado profundamente humano da psicanálise."
-        },
-        {
-          "type": "text",
-          "label": "Logotipo",
-          "text": "A logomarca de Karolinne Hartung une elegância e acolhimento através de uma tipografia serifada que mescla a estabilidade da fonte clássica com a fluidez orgânica do itálico, refletindo o próprio movimento do processo psicanalítico. O nome vai em romano e o sobrenome em itálico, com um ícone floral ao lado; “psicanalista” aparece em caixa-alta, sem serifa e com espaçamento aberto."
-        },
-        {
-          "type": "image",
-          "src": "assets/works/karolinne-hartung/logotipo.webp",
-          "alt": "Logotipo Karolinne Hartung em bordô, com ícone floral e a legenda psicanalista, sobre fundo areia",
-          "ratio": "16:9",
-          "caption": "Logotipo"
-        },
-        {
-          "type": "image",
-          "src": "assets/works/karolinne-hartung/versoes.webp",
-          "alt": "Três versões do logotipo em vertical: creme sobre bordô, bordô sobre branco e creme sobre verde-musgo",
-          "ratio": "16:9",
-          "caption": "Versões"
-        },
-        {
-          "type": "pair",
-          "items": [
-            {
-              "src": "assets/works/karolinne-hartung/logo-musgo.webp",
-              "alt": "Logotipo horizontal em creme sobre fundo verde-musgo",
-              "ratio": "16:9"
-            },
-            {
-              "src": "assets/works/karolinne-hartung/logo-terracota.webp",
-              "alt": "Logotipo empilhado em creme sobre fundo terracota",
-              "ratio": "16:9"
-            }
-          ]
-        },
-        {
-          "type": "text",
-          "label": "Cores",
-          "text": "A escolha desta paleta de cores foi pensada estrategicamente para fugir dos tons frios e excessivamente clínicos tradicionais da área da saúde. O objetivo é criar um ambiente visual que transmita, de forma imediata, acolhimento, profundidade e escuta ativa."
-        },
-        {
-          "type": "palette",
-          "items": [
-            {
-              "name": "Sand",
-              "hex": "#EDE3D2"
-            },
-            {
-              "name": "White",
-              "hex": "#FFFFFF"
-            },
-            {
-              "name": "Deep Moss",
-              "hex": "#175C58"
-            },
-            {
-              "name": "Terracotta",
-              "hex": "#9B5554"
-            },
-            {
-              "name": "Bordeaux",
-              "hex": "#4E1122"
-            }
-          ]
-        },
-        {
-          "type": "text",
-          "label": "Ícones",
-          "text": "O despertar consciente da mente, o florescer do autoconhecimento e o resgate da fluidez na vida. Três ícones circulares dão forma a cada um desses movimentos."
-        },
-        {
-          "type": "gallery",
-          "items": [
-            {
-              "src": "assets/works/karolinne-hartung/icone-despertar.svg",
-              "alt": "Ícone Despertar: círculo areia com uma forma de estrela em bordô",
-              "ratio": "1:1",
-              "caption": "Despertar"
-            },
-            {
-              "src": "assets/works/karolinne-hartung/icone-florescer.svg",
-              "alt": "Ícone Florescer: círculo bordô com uma flor de pétalas em areia",
-              "ratio": "1:1",
-              "caption": "Florescer"
-            },
-            {
-              "src": "assets/works/karolinne-hartung/icone-fluir.svg",
-              "alt": "Ícone Fluir: círculo bordô com um sol nascendo sobre linhas de campo",
-              "ratio": "1:1",
-              "caption": "Fluir"
-            }
-          ]
-        },
-        {
-          "type": "image",
-          "src": "assets/works/karolinne-hartung/padrao.webp",
-          "alt": "Padrão de flores em linha fina sobre fundo bordô",
-          "ratio": "16:9",
-          "caption": "Padrão"
-        },
-        {
-          "type": "text",
-          "label": "Monograma",
-          "text": "O monograma “KH” foi criado para atuar como um selo de assinatura da marca, trazendo um ar de exclusividade, proximidade e alta costura para a identidade visual. Mais do que uma simples abreviação, ele atua como a assinatura íntima da marca, traduzindo visualmente a essência do processo psicanalítico. É ideal para aplicações mais delicadas, como avatares de redes sociais, carimbos, marcas d’água ou o rodapé do site."
-        },
-        {
-          "type": "pair",
-          "items": [
-            {
-              "src": "assets/works/karolinne-hartung/monograma-areia.webp",
-              "alt": "Monograma KH em bordô, dentro de uma moldura oval, sobre fundo areia",
-              "ratio": "auto"
-            },
-            {
-              "src": "assets/works/karolinne-hartung/monograma-terracota.webp",
-              "alt": "Monograma KH em creme, dentro de uma moldura oval, sobre fundo terracota",
-              "ratio": "auto"
-            }
-          ]
-        },
-        {
-          "type": "statement",
-          "text": "Acolhimento profundo para transformações reais."
-        },
-        {
-          "type": "pair",
-          "items": [
-            {
-              "src": "assets/works/karolinne-hartung/retrato-sala.webp",
-              "alt": "Karolinne Hartung sentada em uma poltrona verde, em uma sala de paredes verde-musgo",
-              "ratio": "auto"
-            },
-            {
-              "src": "assets/works/karolinne-hartung/retrato-janela.webp",
-              "alt": "Karolinne Hartung sentada ao lado de uma janela, com o logotipo no canto inferior",
-              "ratio": "auto"
-            },
-            {
-              "src": "assets/works/karolinne-hartung/monograma-padrao.webp",
-              "alt": "Monograma KH em creme sobre o padrão de flores bordô",
-              "ratio": "auto"
-            }
-          ]
-        },
-        {
-          "type": "image",
-          "src": "assets/works/karolinne-hartung/mockup.webp",
-          "alt": "Logotipo Karolinne Hartung em relevo dourado sobre papel bordô texturizado",
-          "ratio": "16:9",
-          "caption": "Aplicação"
-        },
-        {
-          "type": "text",
-          "label": "Site",
-          "text": "O site leva a identidade para o digital: a paleta quente, a tipografia serifada com itálicos de destaque e os três ícones — despertar, florescer e fluir — organizam a página, do convite inicial ao espaço de atendimento."
-        },
-        {
-          "type": "image",
-          "src": "assets/works/karolinne-hartung/site-macbook.webp",
-          "alt": "Página inicial do site karolinnehartung.com.br em um MacBook, sobre fundo bordô",
-          "ratio": "16:9",
-          "caption": "Página inicial"
-        },
-        {
-          "type": "video",
-          "src": "assets/works/karolinne-hartung/mobile.mp4",
-          "mobile": "assets/works/karolinne-hartung/mobile-vertical-v2.mp4",
-          "poster": "assets/works/karolinne-hartung/mobile-poster.webp",
-          "alt": "Três iPhones brancos sobre fundo bordô escuro mostrando o site: a página inicial rolando em vídeo, a seção de especialidades em tela clara e a citação sobre acolhimento",
-          "ratio": "16:9",
-          "caption": "Versão mobile"
-        },
-        {
-          "type": "image",
-          "src": "assets/works/karolinne-hartung/site-secoes.webp",
-          "alt": "Duas seções do site em janelas de navegador sobrepostas, sobre fundo verde-musgo: o espaço de atendimento em bordô e o diferencial clínico em areia",
-          "ratio": "16:9",
-          "caption": "Seções"
-        },
-        {
-          "type": "video",
-          "src": "assets/works/karolinne-hartung/contato.mp4",
-          "poster": "assets/works/karolinne-hartung/contato-poster.webp",
-          "alt": "Retratos em preto e branco de pessoas diversas, em grade sobre fundo areia, que surgem e trocam de lugar em animação contínua",
-          "ratio": "16:9",
-          "caption": "Contato"
-        }
-      ],
-      "credits": [
-        {
-          "role": "Design",
-          "name": "Nícolas de Queiróz"
-        },
-        {
-          "role": "Intermediação",
-          "name": "SD Digital"
-        }
-      ],
-      "seo": {
-        "title": "Karolinne Hartung — Marca para psicanalista",
-        "description": "Identidade visual e site da psicanalista Karolinne Hartung, em Campinas (SP): logotipo serifado com ícone floral, monograma KH e paleta de tons quentes."
-      },
-      "trail": [
-        "assets/works/karolinne-hartung/capa.webp",
-        "assets/works/karolinne-hartung/logo-musgo.webp",
-        "assets/works/karolinne-hartung/logo-terracota.webp",
-        "assets/works/karolinne-hartung/padrao.webp",
-        "assets/works/karolinne-hartung/monograma-terracota.webp",
-        "assets/works/karolinne-hartung/retrato-sala.webp",
-        "assets/works/karolinne-hartung/retrato-janela.webp",
-        "assets/works/karolinne-hartung/mockup.webp"
-      ]
+      "home": false
     },
     {
       "slug": "ed-italia-pizzaria",
@@ -2170,15 +2521,11 @@
       "credits": [
         {
           "role": "Design",
-          "name": "Marcos Castilho e Nícolas Azevedo"
+          "name": "Nícolas Azevedo e Marcos Castilho"
         },
         {
-          "role": "Vídeo",
+          "role": "Motion graphics",
           "name": "Lucas Santi"
-        },
-        {
-          "role": "Projeto",
-          "name": "Blend Studio"
         }
       ],
       "seo": {

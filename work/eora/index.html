@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <script>
+    // Tema antes da pintura: escolha salva ou claro (padrão do site).
+    try { if (localStorage.getItem("nq:theme") === "dark") document.documentElement.dataset.theme = "dark"; } catch (e) {}
+  </script>
+  <title data-pt="EORA — Layout de e-commerce | Nícolas de Queiróz">EORA — E-commerce layout | Nícolas de Queiróz</title>
+  <meta name="description" content="E-commerce layout for EORA, a sunglasses, handbags and accessories brand, designed in Figma with TEC4U: home, listing, product page and mobile." data-pt-content="Layout do e-commerce da EORA, marca de óculos, bolsas e acessórios, desenhado no Figma com a TEC4U: home, listagem, produto e mobile.">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/site/favicon.png?v=dc8a4815">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../assets/site/web-clip.png?v=6ee28690">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700&family=Instrument+Serif:wght@400&display=swap">
+  <link rel="stylesheet" href="../../css/generated.css?v=df18f5aa">
+  <link rel="stylesheet" href="../../css/main.css?v=0a4d2854">
+  <link rel="stylesheet" href="../../css/cursor.css?v=ad479dc2">
+  <link rel="stylesheet" href="../../css/nav.css?v=36614465">
+  <link rel="stylesheet" href="../../css/work.css?v=b3d14b48">
+  <link rel="stylesheet" href="../../css/transitions.css?v=4b78321a">
+  <link rel="canonical" href="https://www.nicolasdequeiroz.com/work/eora/">
+  <meta property="og:url" content="https://www.nicolasdequeiroz.com/work/eora/">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="pt_BR">
+  <meta property="og:site_name" content="Nícolas de Queiróz">
+  <meta property="og:title" content="EORA — E-commerce layout | Nícolas de Queiróz" data-pt-content="EORA — Layout de e-commerce | Nícolas de Queiróz">
+  <meta property="og:description" content="E-commerce layout for EORA, a sunglasses, handbags and accessories brand, designed in Figma with TEC4U: home, listing, product page and mobile." data-pt-content="Layout do e-commerce da EORA, marca de óculos, bolsas e acessórios, desenhado no Figma com a TEC4U: home, listagem, produto e mobile.">
+  <meta property="og:image" content="https://www.nicolasdequeiroz.com/assets/works/eora/og.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Woman in a beige trench coat and Onyx sunglasses sitting in an oxblood velvet armchair, holding up an iPhone showing the Onyx product page on the EORA store, in flash light" data-pt-content="Mulher de trench bege e óculos Onyx sentada numa poltrona de veludo vinho, mostrando um iPhone com a página de produto do Onyx na loja EORA, sob luz de flash">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="EORA — E-commerce layout | Nícolas de Queiróz" data-pt-content="EORA — Layout de e-commerce | Nícolas de Queiróz">
+  <meta name="twitter:description" content="E-commerce layout for EORA, a sunglasses, handbags and accessories brand, designed in Figma with TEC4U: home, listing, product page and mobile." data-pt-content="Layout do e-commerce da EORA, marca de óculos, bolsas e acessórios, desenhado no Figma com a TEC4U: home, listagem, produto e mobile.">
+  <meta name="twitter:image" content="https://www.nicolasdequeiroz.com/assets/works/eora/og.jpg">
+  <meta name="twitter:image:alt" content="Woman in a beige trench coat and Onyx sunglasses sitting in an oxblood velvet armchair, holding up an iPhone showing the Onyx product page on the EORA store, in flash light" data-pt-content="Mulher de trench bege e óculos Onyx sentada numa poltrona de veludo vinho, mostrando um iPhone com a página de produto do Onyx na loja EORA, sob luz de flash">
+  <script type="application/ld+json">[{"@context":"https://schema.org","@type":"CreativeWork","name":"EORA","description":"E-commerce layout for EORA, a sunglasses, handbags and accessories brand, designed in Figma with TEC4U: home, listing, product page and mobile.","url":"https://www.nicolasdequeiroz.com/work/eora/","image":"https://www.nicolasdequeiroz.com/assets/works/eora/og.jpg","dateCreated":"2025","genre":"UI design, E-commerce","creator":{"@type":"Person","name":"Nícolas de Queiróz","url":"https://www.nicolasdequeiroz.com/"},"inLanguage":["en","pt-BR"]},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Nícolas de Queiróz","item":"https://www.nicolasdequeiroz.com/"},{"@type":"ListItem","position":2,"name":"EORA","item":"https://www.nicolasdequeiroz.com/work/eora/"}]}]</script>
+</head>
+<body class="min-h-[100%] antialiased font-dm-sans tracking-[0.025em] work-page">
+  <nav id="site-nav" class="nav--enter-pending" aria-label="Main navigation" data-pt-aria-label="Navegação principal">
+    <a href="../../" class="bubble-logo" aria-label="Nícolas de Queiróz — home" data-pt-aria-label="Nícolas de Queiróz — início">
+      <span class="site-nav-logo">Nícolas de Queiróz</span>
+    </a>
+    <div class="nav-actions">
+      <button class="bubble-toggle bubble-lang" type="button" data-lang-toggle
+              aria-label="Mudar para português" aria-pressed="false">
+        <span class="lang-knob" aria-hidden="true"></span>
+        <span class="lang-opt" aria-hidden="true"><svg class="lang-flag" viewBox="0 0 24 24"><clipPath id="lf-us"><circle cx="12" cy="12" r="12"/></clipPath><g clip-path="url(#lf-us)"><rect width="24" height="24" fill="#fff"/><path fill="#d22f3a" d="M0 0h24v3.4H0zm0 6.9h24v3.4H0zm0 6.9h24v3.4H0zm0 6.9h24V24H0z"/><rect width="12.5" height="10.3" fill="#2b3b82"/><g fill="#fff"><circle cx="3" cy="2.6" r=".7"/><circle cx="6.2" cy="2.6" r=".7"/><circle cx="9.4" cy="2.6" r=".7"/><circle cx="4.6" cy="5.2" r=".7"/><circle cx="7.8" cy="5.2" r=".7"/><circle cx="3" cy="7.8" r=".7"/><circle cx="6.2" cy="7.8" r=".7"/><circle cx="9.4" cy="7.8" r=".7"/></g></g></svg></span>
+        <span class="lang-opt" aria-hidden="true"><svg class="lang-flag" viewBox="0 0 24 24"><clipPath id="lf-br"><circle cx="12" cy="12" r="12"/></clipPath><g clip-path="url(#lf-br)"><rect width="24" height="24" fill="#1f9a4b"/><path d="M12 3.6 21.4 12 12 20.4 2.6 12Z" fill="#f7d437"/><circle cx="12" cy="12" r="4.4" fill="#25459a"/><path d="M7.8 11.1c2.8-.7 5.6-.2 8.4 1.6" stroke="#fff" stroke-width=".9" fill="none"/></g></svg></span>
+      </button>
+      <button class="bubble-toggle bubble-theme" id="theme-toggle" type="button"
+              aria-label="Turn on dark mode" aria-pressed="false">
+        <svg class="theme-icon theme-icon--moon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"></path>
+        </svg>
+        <svg class="theme-icon theme-icon--sun" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8"></circle>
+          <path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path>
+        </svg>
+      </button>
+      <button class="bubble-toggle" id="nav-toggle" type="button"
+              aria-label="Open menu" aria-expanded="false" aria-controls="nav-overlay">
+        <span class="menu-line" aria-hidden="true"></span>
+        <span class="menu-line" aria-hidden="true"></span>
+      </button>
+    </div>
+  </nav>
+
+  <div id="nav-overlay" class="nav-overlay" aria-hidden="true">
+    <ul class="nav-pill-list" aria-label="Navigation links" data-pt-aria-label="Links de navegação">
+      <li class="nav-pill-col">
+        <a href="../../sobre/" class="nav-pill-link" data-rotation="-8">
+          <span class="nav-pill-label" data-pt="sobre">about</span>
+        </a>
+      </li>
+      <li class="nav-pill-col">
+        <a href="../../trabalhos/" class="nav-pill-link" data-rotation="8">
+          <span class="nav-pill-label" data-pt="trabalhos">work</span>
+        </a>
+      </li>
+      <li class="nav-pill-col">
+        <a href="../../feed/" class="nav-pill-link" data-rotation="8">
+          <span class="nav-pill-label">feed</span>
+        </a>
+      </li>
+      <li class="nav-pill-col">
+        <a href="../../contato/" class="nav-pill-link" data-rotation="-8">
+          <span class="nav-pill-label" data-pt="contato">contact</span>
+        </a>
+      </li>
+      <li class="nav-pill-col nav-lang-col">
+        <button class="bubble-toggle bubble-lang bubble-lang--menu" type="button" data-lang-toggle
+              aria-label="Mudar para português" aria-pressed="false">
+        <span class="lang-knob" aria-hidden="true"></span>
+        <span class="lang-opt" aria-hidden="true"><svg class="lang-flag" viewBox="0 0 24 24"><clipPath id="lf-us2"><circle cx="12" cy="12" r="12"/></clipPath><g clip-path="url(#lf-us2)"><rect width="24" height="24" fill="#fff"/><path fill="#d22f3a" d="M0 0h24v3.4H0zm0 6.9h24v3.4H0zm0 6.9h24v3.4H0zm0 6.9h24V24H0z"/><rect width="12.5" height="10.3" fill="#2b3b82"/><g fill="#fff"><circle cx="3" cy="2.6" r=".7"/><circle cx="6.2" cy="2.6" r=".7"/><circle cx="9.4" cy="2.6" r=".7"/><circle cx="4.6" cy="5.2" r=".7"/><circle cx="7.8" cy="5.2" r=".7"/><circle cx="3" cy="7.8" r=".7"/><circle cx="6.2" cy="7.8" r=".7"/><circle cx="9.4" cy="7.8" r=".7"/></g></g></svg></span>
+        <span class="lang-opt" aria-hidden="true"><svg class="lang-flag" viewBox="0 0 24 24"><clipPath id="lf-br2"><circle cx="12" cy="12" r="12"/></clipPath><g clip-path="url(#lf-br2)"><rect width="24" height="24" fill="#1f9a4b"/><path d="M12 3.6 21.4 12 12 20.4 2.6 12Z" fill="#f7d437"/><circle cx="12" cy="12" r="4.4" fill="#25459a"/><path d="M7.8 11.1c2.8-.7 5.6-.2 8.4 1.6" stroke="#fff" stroke-width=".9" fill="none"/></g></svg></span>
+      </button>
+      </li>
+    </ul>
+  </div>
+
+  <main class="work-main">
+    <div class="work-hero"><picture><source media="(max-width: 767.98px)" srcset="../../assets/works/eora/capa-mobile.webp"><img class="work-media" style="view-transition-name: work-media" src="../../assets/works/eora/capa.webp" alt="Woman in a beige trench coat and Onyx sunglasses sitting in an oxblood velvet armchair, holding up an iPhone showing the Onyx product page on the EORA store, in flash light" data-pt-alt="Mulher de trench bege e óculos Onyx sentada numa poltrona de veludo vinho, mostrando um iPhone com a página de produto do Onyx na loja EORA, sob luz de flash" fetchpriority="high" decoding="async"></picture></div>
+    <div class="work-body">
+      <section class="work-intro">
+    <h1 class="work-title">EORA</h1>
+    <div class="work-intro-meta">
+      <div class="work-meta-item"><span class="work-block-label" data-pt="Serviços">Services</span><p><span>UI design</span><br><span>E-commerce</span></p></div>
+      <div class="work-meta-item"><span class="work-block-label" data-pt="Setor">Industry</span><p><span data-pt="Moda e acessórios">Fashion and accessories</span></p></div>
+      <div class="work-meta-item"><span class="work-block-label" data-pt="Local">Location</span><p><span data-pt="São Paulo, SP">São Paulo, SP, Brazil</span></p></div>
+      <div class="work-meta-item"><span class="work-block-label" data-pt="Ano">Year</span><p>©2025</p></div>
+    </div>
+    <div class="work-intro-body">
+      <p class="work-tagline" data-pt="Um objeto de desejo também na tela.">An object of desire, on screen too.</p>
+      <div class="work-intro-text">
+        <p class="work-description" data-pt="Layout do e-commerce da EORA, marca brasileira de óculos de sol, bolsas e acessórios. Em parceria com a agência TEC4U, desenhei no Figma a experiência da loja — home, listagem, página de produto e as versões mobile. O desenvolvimento ficou com a TEC4U.">E-commerce layout for EORA, a Brazilian brand of sunglasses, handbags and accessories. Together with the agency TEC4U, I designed the store experience in Figma — home, listing, product page and the mobile versions. Development was handled by TEC4U.</p>
+        <a class="work-website" href="https://eoraeyewear.com/" target="_blank" rel="noopener" data-pt="Visitar site ↗">Visit site ↗</a>
+      </div>
+    </div>
+  </section>
+      <div class="work-blocks">
+    <div class="work-block work-block--text"><span class="work-block-label" data-pt="O projeto">The project</span><p data-pt="A EORA trata cada peça como objeto de desejo: couros nobres, design autoral e acabamento artesanal. O layout precisava ter o mesmo cuidado — uma vitrine silenciosa, em preto e branco, que deixa as campanhas editoriais e os produtos falarem, com espaço para a história da marca entre uma vitrine e outra.">EORA treats every piece as an object of desire: fine leathers, original design and handcrafted finishing. The layout needed the same care — a quiet, black-and-white storefront that lets the editorial campaigns and the products speak, with room for the brand's story between one shelf and the next.</p></div>
+    <figure class="work-block work-block--media"><video class="work-r-169" src="../../assets/works/eora/home-scroll.mp4" autoplay muted loop playsinline preload="metadata" poster="../../assets/works/eora/home-scroll-poster.webp" aria-label="The EORA home scrolling under the Safari bar, on a cream background, from the launch banner to the footer: store highlights, manifesto, handbags, back in stock, gifts, categories, Instagram and footer" data-pt-aria-label="A home da EORA rolando sob a barra do Safari, sobre fundo creme, do banner de lançamento ao rodapé: destaques da loja, manifesto, bolsas, de volta ao estoque, presenteáveis, categorias, Instagram e rodapé"></video><figcaption>Home</figcaption></figure>
+    <div class="work-block work-block--text"><span class="work-block-label" data-pt="Card de produto">Product card</span><p data-pt="O card mostra a peça inteira em fundo neutro, com o nome em caixa-alta, preço, parcelamento em 10x, preço no Pix com selo de desconto e o atalho para frete e prazo pelo CEP. Selos como Novo e Pré-venda entram no canto da foto, sem competir com o produto.">The card shows the whole piece on a neutral background, with the name in uppercase, price, 10x installments, the Pix price with a discount badge and the shortcut to shipping by postcode. Badges like New and Pre-order sit in the corner of the photo, without competing with the product.</p></div>
+    <figure class="work-block work-block--media"><img class="work-r-169" src="../../assets/works/eora/card.webp" alt="Anatomy of the EORA product card: New badge, product on a neutral background, uppercase name, price and installments; beside it, the mobile card with the Pix price, discount badge and shipping by postcode" data-pt-alt="Anatomia do card de produto da EORA: selo Novo, produto em fundo neutro, nome em caixa-alta, preço e parcelamento; ao lado, o card mobile com preço no Pix, selo de desconto e frete pelo CEP" loading="lazy" decoding="async"><figcaption data-pt="Anatomia do card">Card anatomy</figcaption></figure>
+    <div class="work-block work-block--text"><span class="work-block-label" data-pt="Estrutura">Structure</span><p data-pt="Na home, as vitrines usam cards de 332px com só 4px entre eles e vazam a margem direita, como uma prateleira contínua. Na listagem, a grade de quatro colunas de 333px com 8px de respiro, emoldurada por margens de 43px, intercala fotos de campanha no meio dos produtos. No mobile, duas colunas com 8px entre elas.">On the home, product shelves use 332px cards with just 4px between them and bleed past the right margin, like a continuous shelf. On the listing, the four-column grid of 333px with 8px gaps, framed by 43px margins, mixes campaign photos in between the products. On mobile, two columns with 8px between them.</p></div>
+    <figure class="work-block work-block--media"><img class="work-r-169" src="../../assets/works/eora/grid-vitrine.webp" alt="Store highlights shelf with the grid overlaid: 332px cards with 4px between them, an 8px margin and, in blue, the title height and the space down to the cards" data-pt-alt="Vitrine Destaques da loja com a grade sobreposta: cards de 332px com 4px entre eles, 8px de margem e, em azul, a altura do título e o respiro até os cards" loading="lazy" decoding="async"><figcaption data-pt="Vitrine">Product shelf</figcaption></figure>
+    <figure class="work-block work-block--media"><img class="work-r-169" src="../../assets/works/eora/grid-listagem.webp" alt="Sunglasses listing with the grid overlaid: four 333px columns with 8px between them and 43px margins" data-pt-alt="Listagem de óculos com a grade sobreposta: quatro colunas de 333px com 8px entre elas e margens de 43px" loading="lazy" decoding="async"><figcaption data-pt="Listagem">Listing</figcaption></figure>
+    <div class="work-block work-block--text"><span class="work-block-label">Home</span><p data-pt="A home alterna vitrines de produto com blocos editoriais: a fala da co-fundadora em serifa, categorias em grandes fotos e as coleções de bolsas em carrossel. O tom é de revista de moda, com a navegação discreta por cima.">The home alternates product shelves with editorial blocks: the co-founder's words in a serif, categories in large photos and the handbag collections in a carousel. The tone is that of a fashion magazine, with discreet navigation on top.</p></div>
+    <figure class="work-block work-block--media"><img class="work-r-169" src="../../assets/works/eora/home-secoes.webp" alt="Two home sections in browser windows on a dark oxblood background: the Sunglasses, Accessories and Handbags categories, and the Maxi Vértice, Vértice and Hobo Vértice handbag carousel" data-pt-alt="Duas seções da home em janelas de navegador sobre fundo vinho escuro: as categorias Óculos de sol, Acessórios e Bolsas, e o carrossel de bolsas Maxi Vértice, Vértice e Hobo Vértice" loading="lazy" decoding="async"><figcaption data-pt="Categorias e bolsas">Categories and handbags</figcaption></figure>
+    <div class="work-block work-block--statement"><p data-pt="Uma vitrine silenciosa, para a peça ser a protagonista.">A quiet storefront, so the piece can take center stage.</p></div>
+    <div class="work-block work-block--pair"><figure><img class="work-r-45" src="../../assets/works/eora/celular-bolsa.webp" alt="iPhone showing the brown suede Hobo Vértice product page standing against the bag itself on travertine, in warm late-afternoon light" data-pt-alt="iPhone com a página de produto da bolsa Hobo Vértice em camurça marrom apoiado de pé na própria bolsa, sobre travertino, em luz quente de fim de tarde" loading="lazy" decoding="async"></figure><figure><img class="work-r-45" src="../../assets/works/eora/celular-zebra.webp" alt="Top-down view of an iPhone showing the sunglasses listing on a zebra rug, next to black cat-eye sunglasses, an oxblood lipstick and a newspaper, in flash light" data-pt-alt="Vista de cima de um iPhone com a listagem de óculos sobre um tapete de zebra, ao lado de óculos gatinho pretos, um batom vinho e um jornal, com luz de flash" loading="lazy" decoding="async"></figure></div>
+    <div class="work-block work-block--text"><span class="work-block-label" data-pt="Listagem e produto">Listing and product</span><p data-pt="Na listagem, a grade de produtos é interrompida por fotos de campanha, como páginas de uma revista. Na página de produto, a galeria divide a tela com o painel de compra: nome, preço com Pix, variações de cor em miniatura, botão de compra, atalho para o WhatsApp e as medidas da peça. O mesmo modelo serve óculos, bolsas e acessórios.">On the listing page, the product grid is interrupted by campaign photos, like the pages of a magazine. On the product page, the gallery shares the screen with the buying panel: name, Pix price, color variants as thumbnails, buy button, WhatsApp shortcut and the piece's measurements. The same template serves sunglasses, handbags and accessories.</p></div>
+    <figure class="work-block work-block--media"><img class="work-r-169" src="../../assets/works/eora/listagem.webp" alt="EORA sunglasses listing page under the Safari bar, on a cream background" data-pt-alt="Página de listagem de óculos da EORA sob a barra do Safari, sobre fundo creme" loading="lazy" decoding="async"><figcaption data-pt="Listagem">Listing</figcaption></figure>
+    <figure class="work-block work-block--media"><img class="work-r-169" src="../../assets/works/eora/produto.webp" alt="Clutch Vértice in off-white python product page under the Safari bar, on a cream background: gallery grid and buying panel" data-pt-alt="Página de produto da Clutch Vértice em píton off-white sob a barra do Safari, sobre fundo creme: galeria em grade e painel de compra" loading="lazy" decoding="async"><figcaption data-pt="Produto">Product</figcaption></figure>
+    <figure class="work-block work-block--media"><img class="work-r-169" src="../../assets/works/eora/macbook-produto.webp" alt="MacBook showing the Onyx sunglasses product page on a travertine table, next to an off-white python Clutch Vértice and the Onyx sunglasses themselves, in late-afternoon light" data-pt-alt="MacBook com a página de produto dos óculos Onyx sobre uma mesa de travertino, ao lado de uma bolsa Clutch Vértice em píton off-white e dos próprios Onyx, em luz de fim de tarde" loading="lazy" decoding="async"></figure>
+    <div class="work-block work-block--text"><span class="work-block-label" data-pt="Autoria">Authorship</span><p data-pt="O layout, desktop e mobile, foi desenhado por mim e por Natália Cracco. As fotos e os banners de campanha são da EORA, e a implementação da loja foi feita pela TEC4U.">The layout, desktop and mobile, was designed by Natália Cracco and me. The campaign photos and banners belong to EORA, and the store was built by TEC4U.</p></div>
+  </div>
+      <section class="work-outro">
+    <div class="work-credits">
+      <span class="work-block-label" data-pt="Créditos">Credits</span>
+      <dl>
+        <div class="work-credit"><dt>Layout (UI/UX)</dt><dd>Nícolas de Queiróz e Natália Cracco</dd></div>
+        <div class="work-credit"><dt data-pt="Desenvolvimento">Development</dt><dd>TEC4U</dd></div>
+        <div class="work-credit"><dt data-pt="Fotos e banners de campanha">Campaign photos and banners</dt><dd>EORA</dd></div>
+      </dl>
+    </div>
+    <a class="work-visit" href="https://eoraeyewear.com/" target="_blank" rel="noopener" data-pt="Visitar site ↗">Visit site ↗</a>
+  </section>
+      <a href="../studioisa/" class="work-next" aria-label="Next project: Studio Isa" data-pt-aria-label="Próximo projeto: Studio Isa">
+    <video class="work-next-media" poster="../../assets/works/studioisa/hero-card.webp" data-src="../../assets/works/studioisa/hero.mp4" muted loop playsinline preload="none" aria-hidden="true"></video>
+    <span class="work-next-content">
+      <span class="work-block-label" data-pt="Próximo projeto">Next project</span>
+      <span class="work-next-title">Studio Isa</span>
+    </span>
+  </a>
+    </div>
+    <noscript>
+      <p class="work-noscript">
+        <a href="../../">← Back to portfolio</a> · EORA
+      </p>
+    </noscript>
+  </main>
+
+  <footer>
+    <span class="site-copyright">© 2026 Nícolas de Queiróz</span>
+    <a href="../../" class="back-home bubble-back-home" aria-label="Back to home" data-pt-aria-label="Voltar para o início">
+      <svg class="back-home-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M13 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+      </svg>
+      <span data-pt="Início">Home</span>
+    </a>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js" defer></script>
+  <script src="../../js/i18n.js?v=d36dfdb5" defer></script>
+  <script src="../../js/view-transitions.js?v=c40ef3f9" defer></script>
+  <script src="../../js/theme.js?v=4505fa4f" defer></script>
+  <script src="../../js/nav.js?v=a0abf00a" defer></script>
+  <script src="../../js/nav-enter.js?v=a631242b" defer></script>
+  <script src="../../js/nav-theme.js?v=57d039e4" defer></script>
+  <script src="../../js/cursor.js?v=31c37f1e" defer></script>
+  <script src="../../js/reveal.js?v=bdce8a67" defer></script>
+  <script src="../../js/next-video.js?v=2b69ce97" defer></script>
+</body>
+</html>

@@ -993,7 +993,7 @@
     ],
     "industry": "Supplements",
     "hero": {
-      "alt": "Cream Tasty logotype over two smiling women lying on the grass"
+      "alt": "Woman in a black top putting a Tasty Creatine tub into a raw cotton tote bag, on a beige background"
     },
     "blocks": [
       {
@@ -1426,10 +1426,7 @@
         "role": "Design"
       },
       {
-        "role": "Video"
-      },
-      {
-        "role": "Project"
+        "role": "Motion graphics"
       }
     ],
     "seo": {
@@ -1589,6 +1586,225 @@
     "seo": {
       "title": "Desenhe — Visual identity and website",
       "description": "Brand manual and website for Desenhe, a drawing and painting school in Curitiba since 1988: logo, versions, orange palette, typography, stationery and website."
+    }
+  },
+  "kings-sneakers": {
+    "tagline": "The storefront steps aside so the product can shine.",
+    "description": "Layout for the new Kings Sneakers online store, a Brazilian chain of urban lifestyle stores with more than 20 years on the streets. Together with the agency TEC4U, I designed the full store experience in Figma — home, product listing, product page, cart, search, menu and institutional pages, on desktop and mobile. Development was handled by TEC4U.",
+    "services": [
+      "UI design",
+      "E-commerce"
+    ],
+    "industry": "Fashion and footwear",
+    "location": "São Paulo, SP, Brazil",
+    "hero": {
+      "alt": "Close-up of a hand holding an iPhone against a concrete wall in late-afternoon light, showing the Kings Sneakers store home with the monkey logo, the best sellers and the Kings collections"
+    },
+    "blocks": [
+      {
+        "label": "The project",
+        "text": "Kings sells Nike, Adidas, Jordan, New Balance and its own label to an audience that knows its product. The challenge was a layout that could handle a large catalog, campaigns that change every week and prices with Pix and installments, without turning into a cluttered storefront. The answer was a black-and-white interface with a firm grid and plenty of room, one that steps aside so products and campaigns can shine."
+      },
+      {
+        "alt": "The Kings Sneakers home scrolling under the Safari bar, on a light gray background, from the main banner to the footer: best sellers, community favorites, categories, Kings picks, look of the moment, collections, about, press, community and footer",
+        "caption": "Home"
+      },
+      {
+        "label": "Product card",
+        "text": "The card is the most repeated piece in the store, so it was designed first. Brand badge in the corner, photo on a neutral gray background, name in uppercase and, right below, the full price next to the Pix price in green, with interest-free installments on the next line. The discount shows up before the click. On mobile, the Buy button sits right on the card."
+      },
+      {
+        "alt": "Anatomy of the product card: brand badge, photo on a neutral background, uppercase name, Pix price in green and installments; beside it, the mobile version with a Buy button",
+        "caption": "Card anatomy"
+      },
+      {
+        "label": "Structure",
+        "text": "The layout doesn't rely on a rigid column grid: it is built from auto-layout with a few rules, repeated on every page. A 32px margin on desktop and 16px on mobile, a short spacing scale (12, 16, 24, 32, 64 and 82) and modules that fit together. The 310px card with 16px of breathing room builds every product shelf and bleeds past the right margin to hint at dragging. On the product page, the 2×2 gallery of 2:3 photos takes the first two columns and the buying panel the third. On mobile, two 165.5px columns with 12px between them and 24px between rows."
+      },
+      {
+        "alt": "Community favorites shelf with the grid overlaid in red: 32px margins, 310px cards with 16px between them and, in blue, 82px of breathing room above and below the section and 32px between the title and the cards",
+        "caption": "Product shelf"
+      },
+      {
+        "alt": "Top of the product page with the grid overlaid: 58px nav, 32px margins, 450px-wide 2:3 gallery photos with 16px gaps, and the 444px buying panel",
+        "caption": "Product page"
+      },
+      {
+        "alt": "Three mobile screens on a black background with the grid overlaid: 16px margins and, on the listing, two 165.5px columns with 12px between them and 24px between rows",
+        "caption": "Mobile"
+      },
+      {
+        "label": "Home",
+        "text": "The home alternates product shelves with editorial blocks. Categories carry Men and Women right on the card, one click less to the listing. The Look of the moment pairs a photo of who's wearing it, credited to their profile, with the products of the look in a carousel beside it, in tabs to switch looks without leaving the page."
+      },
+      {
+        "alt": "Open MacBook at an angle showing the Kings Sneakers store home on the edge of a concrete block in late-afternoon light with window shadows, with a pair of black, white and red Air Jordan 1 Low behind it"
+      },
+      {
+        "alt": "Two home sections in browser windows on a black background: Sneakers, Clothing and Sale categories with Men and Women buttons, and the Look of the moment with tabs, a photo of who's wearing it and the products of the look",
+        "caption": "Categories and Look of the moment"
+      },
+      {
+        "text": "Black, white and a firm grid: the product is what stands out."
+      },
+      {
+        "items": [
+          {
+            "alt": "Close-up of a hand holding an iPhone showing the Nike Air Max Dn product page, with an out-of-focus concrete room behind"
+          },
+          {
+            "alt": "iPhone showing the sneakers listing standing against the side of a black, white and red Air Jordan 1 Low on a concrete floor in hard late-afternoon light"
+          }
+        ]
+      },
+      {
+        "label": "Listing and product",
+        "text": "On the listing page, filters in a drawer keep the four-column grid free, with an editorial category card opening the shelf. On the product page, a large gallery shares the screen with a fixed buying panel: brand and rating, Pix price, colors, sizes, size chart and shipping calculator, all above the fold."
+      },
+      {
+        "alt": "Sneakers listing page under the Safari bar, on a light gray background: category banner, filters and a four-column grid",
+        "caption": "Listing"
+      },
+      {
+        "alt": "Product page taken apart: the four gallery views as thumbnails, the Nike Air Max Dn up front and the buying panel with brand, Pix price, colors, sizes and shipping",
+        "caption": "Product"
+      },
+      {
+        "alt": "MacBook showing the Nike Air Max Dn product page on a concrete bench under a top spotlight, with the Air Max Dn itself in the foreground"
+      },
+      {
+        "label": "Complete the look",
+        "text": "Below the purchase, Complete the look suggests pieces that go with the product and offers the set at a Pix discount, in a single button. The block was designed to raise the order value without pushing: it shows up after the main decision has already been made. The side cart follows the same logic: coupon, total and the buy button always in view."
+      },
+      {
+        "alt": "Complete the look block in cards on a black background: the desktop version with sneakers, socks and a cleaning kit and the bundle price via Pix, and the mobile version beside it",
+        "caption": "Desktop and mobile"
+      },
+      {
+        "label": "Mobile",
+        "text": "On the phone, the fixed header brings together menu, logo, account, bag and an always-at-hand search. The drawer menu highlights Sale and the current collection, search opens with suggestions and the side cart shows coupon and total without taking people off the page."
+      },
+      {
+        "alt": "Drawer menu, search with suggestions and mobile side cart in three cards side by side on a black background",
+        "caption": "Menu, search and cart"
+      },
+      {
+        "label": "Authorship",
+        "text": "The layout, desktop and mobile, is my own work. The banners and campaign photos belong to Kings, and the store was built by TEC4U."
+      }
+    ],
+    "credits": [
+      {
+        "role": "Layout (UI/UX)"
+      },
+      {
+        "role": "Development"
+      },
+      {
+        "role": "Banners and campaign photos"
+      }
+    ],
+    "seo": {
+      "title": "Kings Sneakers — E-commerce layout",
+      "description": "E-commerce layout for Kings Sneakers designed in Figma with TEC4U: home, listing, product page, cart and mobile in black and white."
+    }
+  },
+  "eora": {
+    "tagline": "An object of desire, on screen too.",
+    "description": "E-commerce layout for EORA, a Brazilian brand of sunglasses, handbags and accessories. Together with the agency TEC4U, I designed the store experience in Figma — home, listing, product page and the mobile versions. Development was handled by TEC4U.",
+    "services": [
+      "UI design",
+      "E-commerce"
+    ],
+    "industry": "Fashion and accessories",
+    "location": "São Paulo, SP, Brazil",
+    "hero": {
+      "alt": "Woman in a beige trench coat and Onyx sunglasses sitting in an oxblood velvet armchair, holding up an iPhone showing the Onyx product page on the EORA store, in flash light"
+    },
+    "blocks": [
+      {
+        "label": "The project",
+        "text": "EORA treats every piece as an object of desire: fine leathers, original design and handcrafted finishing. The layout needed the same care — a quiet, black-and-white storefront that lets the editorial campaigns and the products speak, with room for the brand's story between one shelf and the next."
+      },
+      {
+        "alt": "The EORA home scrolling under the Safari bar, on a cream background, from the launch banner to the footer: store highlights, manifesto, handbags, back in stock, gifts, categories, Instagram and footer",
+        "caption": "Home"
+      },
+      {
+        "label": "Product card",
+        "text": "The card shows the whole piece on a neutral background, with the name in uppercase, price, 10x installments, the Pix price with a discount badge and the shortcut to shipping by postcode. Badges like New and Pre-order sit in the corner of the photo, without competing with the product."
+      },
+      {
+        "alt": "Anatomy of the EORA product card: New badge, product on a neutral background, uppercase name, price and installments; beside it, the mobile card with the Pix price, discount badge and shipping by postcode",
+        "caption": "Card anatomy"
+      },
+      {
+        "label": "Structure",
+        "text": "On the home, product shelves use 332px cards with just 4px between them and bleed past the right margin, like a continuous shelf. On the listing, the four-column grid of 333px with 8px gaps, framed by 43px margins, mixes campaign photos in between the products. On mobile, two columns with 8px between them."
+      },
+      {
+        "alt": "Store highlights shelf with the grid overlaid: 332px cards with 4px between them, an 8px margin and, in blue, the title height and the space down to the cards",
+        "caption": "Product shelf"
+      },
+      {
+        "alt": "Sunglasses listing with the grid overlaid: four 333px columns with 8px between them and 43px margins",
+        "caption": "Listing"
+      },
+      {
+        "label": "Home",
+        "text": "The home alternates product shelves with editorial blocks: the co-founder's words in a serif, categories in large photos and the handbag collections in a carousel. The tone is that of a fashion magazine, with discreet navigation on top."
+      },
+      {
+        "alt": "Two home sections in browser windows on a dark oxblood background: the Sunglasses, Accessories and Handbags categories, and the Maxi Vértice, Vértice and Hobo Vértice handbag carousel",
+        "caption": "Categories and handbags"
+      },
+      {
+        "text": "A quiet storefront, so the piece can take center stage."
+      },
+      {
+        "items": [
+          {
+            "alt": "iPhone showing the brown suede Hobo Vértice product page standing against the bag itself on travertine, in warm late-afternoon light"
+          },
+          {
+            "alt": "Top-down view of an iPhone showing the sunglasses listing on a zebra rug, next to black cat-eye sunglasses, an oxblood lipstick and a newspaper, in flash light"
+          }
+        ]
+      },
+      {
+        "label": "Listing and product",
+        "text": "On the listing page, the product grid is interrupted by campaign photos, like the pages of a magazine. On the product page, the gallery shares the screen with the buying panel: name, Pix price, color variants as thumbnails, buy button, WhatsApp shortcut and the piece's measurements. The same template serves sunglasses, handbags and accessories."
+      },
+      {
+        "alt": "EORA sunglasses listing page under the Safari bar, on a cream background",
+        "caption": "Listing"
+      },
+      {
+        "alt": "Clutch Vértice in off-white python product page under the Safari bar, on a cream background: gallery grid and buying panel",
+        "caption": "Product"
+      },
+      {
+        "alt": "MacBook showing the Onyx sunglasses product page on a travertine table, next to an off-white python Clutch Vértice and the Onyx sunglasses themselves, in late-afternoon light"
+      },
+      {
+        "label": "Authorship",
+        "text": "The layout, desktop and mobile, was designed by Natália Cracco and me. The campaign photos and banners belong to EORA, and the store was built by TEC4U."
+      }
+    ],
+    "credits": [
+      {
+        "role": "Layout (UI/UX)"
+      },
+      {
+        "role": "Development"
+      },
+      {
+        "role": "Campaign photos and banners"
+      }
+    ],
+    "seo": {
+      "title": "EORA — E-commerce layout",
+      "description": "E-commerce layout for EORA, a sunglasses, handbags and accessories brand, designed in Figma with TEC4U: home, listing, product page and mobile."
     }
   }
 }

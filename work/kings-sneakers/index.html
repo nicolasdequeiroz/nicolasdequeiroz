@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <script>
+    // Tema antes da pintura: escolha salva ou claro (padrão do site).
+    try { if (localStorage.getItem("nq:theme") === "dark") document.documentElement.dataset.theme = "dark"; } catch (e) {}
+  </script>
+  <title data-pt="Kings Sneakers — Layout de e-commerce | Nícolas de Queiróz">Kings Sneakers — E-commerce layout | Nícolas de Queiróz</title>
+  <meta name="description" content="E-commerce layout for Kings Sneakers designed in Figma with TEC4U: home, listing, product page, cart and mobile in black and white." data-pt-content="Layout do e-commerce da Kings Sneakers desenhado no Figma com a TEC4U: home, listagem, produto, carrinho e mobile em preto e branco.">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/site/favicon.png?v=dc8a4815">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../assets/site/web-clip.png?v=6ee28690">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700&family=Instrument+Serif:wght@400&display=swap">
+  <link rel="stylesheet" href="../../css/generated.css?v=df18f5aa">
+  <link rel="stylesheet" href="../../css/main.css?v=0a4d2854">
+  <link rel="stylesheet" href="../../css/cursor.css?v=ad479dc2">
+  <link rel="stylesheet" href="../../css/nav.css?v=36614465">
+  <link rel="stylesheet" href="../../css/work.css?v=b3d14b48">
+  <link rel="stylesheet" href="../../css/transitions.css?v=4b78321a">
+  <link rel="canonical" href="https://www.nicolasdequeiroz.com/work/kings-sneakers/">
+  <meta property="og:url" content="https://www.nicolasdequeiroz.com/work/kings-sneakers/">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="pt_BR">
+  <meta property="og:site_name" content="Nícolas de Queiróz">
+  <meta property="og:title" content="Kings Sneakers — E-commerce layout | Nícolas de Queiróz" data-pt-content="Kings Sneakers — Layout de e-commerce | Nícolas de Queiróz">
+  <meta property="og:description" content="E-commerce layout for Kings Sneakers designed in Figma with TEC4U: home, listing, product page, cart and mobile in black and white." data-pt-content="Layout do e-commerce da Kings Sneakers desenhado no Figma com a TEC4U: home, listagem, produto, carrinho e mobile em preto e branco.">
+  <meta property="og:image" content="https://www.nicolasdequeiroz.com/assets/works/kings-sneakers/og.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Close-up of a hand holding an iPhone against a concrete wall in late-afternoon light, showing the Kings Sneakers store home with the monkey logo, the best sellers and the Kings collections" data-pt-content="Close de uma mão segurando um iPhone diante de uma parede de concreto com luz de fim de tarde, mostrando a home da loja Kings Sneakers com o logo do macaquinho, os best sellers e as coleções Kings">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Kings Sneakers — E-commerce layout | Nícolas de Queiróz" data-pt-content="Kings Sneakers — Layout de e-commerce | Nícolas de Queiróz">
+  <meta name="twitter:description" content="E-commerce layout for Kings Sneakers designed in Figma with TEC4U: home, listing, product page, cart and mobile in black and white." data-pt-content="Layout do e-commerce da Kings Sneakers desenhado no Figma com a TEC4U: home, listagem, produto, carrinho e mobile em preto e branco.">
+  <meta name="twitter:image" content="https://www.nicolasdequeiroz.com/assets/works/kings-sneakers/og.jpg">
+  <meta name="twitter:image:alt" content="Close-up of a hand holding an iPhone against a concrete wall in late-afternoon light, showing the Kings Sneakers store home with the monkey logo, the best sellers and the Kings collections" data-pt-content="Close de uma mão segurando um iPhone diante de uma parede de concreto com luz de fim de tarde, mostrando a home da loja Kings Sneakers com o logo do macaquinho, os best sellers e as coleções Kings">
+  <script type="application/ld+json">[{"@context":"https://schema.org","@type":"CreativeWork","name":"Kings Sneakers","description":"E-commerce layout for Kings Sneakers designed in Figma with TEC4U: home, listing, product page, cart and mobile in black and white.","url":"https://www.nicolasdequeiroz.com/work/kings-sneakers/","image":"https://www.nicolasdequeiroz.com/assets/works/kings-sneakers/og.jpg","dateCreated":"2025","genre":"UI design, E-commerce","creator":{"@type":"Person","name":"Nícolas de Queiróz","url":"https://www.nicolasdequeiroz.com/"},"inLanguage":["en","pt-BR"]},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Nícolas de Queiróz","item":"https://www.nicolasdequeiroz.com/"},{"@type":"ListItem","position":2,"name":"Kings Sneakers","item":"https://www.nicolasdequeiroz.com/work/kings-sneakers/"}]}]</script>
+</head>
+<body class="min-h-[100%] antialiased font-dm-sans tracking-[0.025em] work-page">
+  <nav id="site-nav" class="nav--enter-pending" aria-label="Main navigation" data-pt-aria-label="Navegação principal">
+    <a href="../../" class="bubble-logo" aria-label="Nícolas de Queiróz — home" data-pt-aria-label="Nícolas de Queiróz — início">
+      <span class="site-nav-logo">Nícolas de Queiróz</span>
+    </a>
+    <div class="nav-actions">
+      <button class="bubble-toggle bubble-lang" type="button" data-lang-toggle
+              aria-label="Mudar para português" aria-pressed="false">
+        <span class="lang-knob" aria-hidden="true"></span>
+        <span class="lang-opt" aria-hidden="true"><svg class="lang-flag" viewBox="0 0 24 24"><clipPath id="lf-us"><circle cx="12" cy="12" r="12"/></clipPath><g clip-path="url(#lf-us)"><rect width="24" height="24" fill="#fff"/><path fill="#d22f3a" d="M0 0h24v3.4H0zm0 6.9h24v3.4H0zm0 6.9h24v3.4H0zm0 6.9h24V24H0z"/><rect width="12.5" height="10.3" fill="#2b3b82"/><g fill="#fff"><circle cx="3" cy="2.6" r=".7"/><circle cx="6.2" cy="2.6" r=".7"/><circle cx="9.4" cy="2.6" r=".7"/><circle cx="4.6" cy="5.2" r=".7"/><circle cx="7.8" cy="5.2" r=".7"/><circle cx="3" cy="7.8" r=".7"/><circle cx="6.2" cy="7.8" r=".7"/><circle cx="9.4" cy="7.8" r=".7"/></g></g></svg></span>
+        <span class="lang-opt" aria-hidden="true"><svg class="lang-flag" viewBox="0 0 24 24"><clipPath id="lf-br"><circle cx="12" cy="12" r="12"/></clipPath><g clip-path="url(#lf-br)"><rect width="24" height="24" fill="#1f9a4b"/><path d="M12 3.6 21.4 12 12 20.4 2.6 12Z" fill="#f7d437"/><circle cx="12" cy="12" r="4.4" fill="#25459a"/><path d="M7.8 11.1c2.8-.7 5.6-.2 8.4 1.6" stroke="#fff" stroke-width=".9" fill="none"/></g></svg></span>
+      </button>
+      <button class="bubble-toggle bubble-theme" id="theme-toggle" type="button"
+              aria-label="Turn on dark mode" aria-pressed="false">
+        <svg class="theme-icon theme-icon--moon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"></path>
+        </svg>
+        <svg class="theme-icon theme-icon--sun" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8"></circle>
+          <path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path>
+        </svg>
+      </button>
+      <button class="bubble-toggle" id="nav-toggle" type="button"
+              aria-label="Open menu" aria-expanded="false" aria-controls="nav-overlay">
+        <span class="menu-line" aria-hidden="true"></span>
+        <span class="menu-line" aria-hidden="true"></span>
+      </button>
+    </div>
+  </nav>
+
+  <div id="nav-overlay" class="nav-overlay" aria-hidden="true">
+    <ul class="nav-pill-list" aria-label="Navigation links" data-pt-aria-label="Links de navegação">
+      <li class="nav-pill-col">
+        <a href="../../sobre/" class="nav-pill-link" data-rotation="-8">
+          <span class="nav-pill-label" data-pt="sobre">about</span>
+        </a>
+      </li>
+      <li class="nav-pill-col">
+        <a href="../../trabalhos/" class="nav-pill-link" data-rotation="8">
+          <span class="nav-pill-label" data-pt="trabalhos">work</span>
+        </a>
+      </li>
+      <li class="nav-pill-col">
+        <a href="../../feed/" class="nav-pill-link" data-rotation="8">
+          <span class="nav-pill-label">feed</span>
+        </a>
+      </li>
+      <li class="nav-pill-col">
+        <a href="../../contato/" class="nav-pill-link" data-rotation="-8">
+          <span class="nav-pill-label" data-pt="contato">contact</span>
+        </a>
+      </li>
+      <li class="nav-pill-col nav-lang-col">
+        <button class="bubble-toggle bubble-lang bubble-lang--menu" type="button" data-lang-toggle
+              aria-label="Mudar para português" aria-pressed="false">
+        <span class="lang-knob" aria-hidden="true"></span>
+        <span class="lang-opt" aria-hidden="true"><svg class="lang-flag" viewBox="0 0 24 24"><clipPath id="lf-us2"><circle cx="12" cy="12" r="12"/></clipPath><g clip-path="url(#lf-us2)"><rect width="24" height="24" fill="#fff"/><path fill="#d22f3a" d="M0 0h24v3.4H0zm0 6.9h24v3.4H0zm0 6.9h24v3.4H0zm0 6.9h24V24H0z"/><rect width="12.5" height="10.3" fill="#2b3b82"/><g fill="#fff"><circle cx="3" cy="2.6" r=".7"/><circle cx="6.2" cy="2.6" r=".7"/><circle cx="9.4" cy="2.6" r=".7"/><circle cx="4.6" cy="5.2" r=".7"/><circle cx="7.8" cy="5.2" r=".7"/><circle cx="3" cy="7.8" r=".7"/><circle cx="6.2" cy="7.8" r=".7"/><circle cx="9.4" cy="7.8" r=".7"/></g></g></svg></span>
+        <span class="lang-opt" aria-hidden="true"><svg class="lang-flag" viewBox="0 0 24 24"><clipPath id="lf-br2"><circle cx="12" cy="12" r="12"/></clipPath><g clip-path="url(#lf-br2)"><rect width="24" height="24" fill="#1f9a4b"/><path d="M12 3.6 21.4 12 12 20.4 2.6 12Z" fill="#f7d437"/><circle cx="12" cy="12" r="4.4" fill="#25459a"/><path d="M7.8 11.1c2.8-.7 5.6-.2 8.4 1.6" stroke="#fff" stroke-width=".9" fill="none"/></g></svg></span>
+      </button>
+      </li>
+    </ul>
+  </div>
+
+  <main class="work-main">
+    <div class="work-hero"><picture><source media="(max-width: 767.98px)" srcset="../../assets/works/kings-sneakers/capa-mobile.webp"><img class="work-media" style="view-transition-name: work-media" src="../../assets/works/kings-sneakers/capa.webp" alt="Close-up of a hand holding an iPhone against a concrete wall in late-afternoon light, showing the Kings Sneakers store home with the monkey logo, the best sellers and the Kings collections" data-pt-alt="Close de uma mão segurando um iPhone diante de uma parede de concreto com luz de fim de tarde, mostrando a home da loja Kings Sneakers com o logo do macaquinho, os best sellers e as coleções Kings" fetchpriority="high" decoding="async"></picture></div>
+    <div class="work-body">
+      <section class="work-intro">
+    <h1 class="work-title">Kings Sneakers</h1>
+    <div class="work-intro-meta">
+      <div class="work-meta-item"><span class="work-block-label" data-pt="Serviços">Services</span><p><span>UI design</span><br><span>E-commerce</span></p></div>
+      <div class="work-meta-item"><span class="work-block-label" data-pt="Setor">Industry</span><p><span data-pt="Moda e calçados">Fashion and footwear</span></p></div>
+      <div class="work-meta-item"><span class="work-block-label" data-pt="Local">Location</span><p><span data-pt="São Paulo, SP">São Paulo, SP, Brazil</span></p></div>
+      <div class="work-meta-item"><span class="work-block-label" data-pt="Ano">Year</span><p>©2025</p></div>
+    </div>
+    <div class="work-intro-body">
+      <p class="work-tagline" data-pt="A vitrine sai da frente para o produto aparecer.">The storefront steps aside so the product can shine.</p>
+      <div class="work-intro-text">
+        <p class="work-description" data-pt="Layout do novo e-commerce da Kings Sneakers, rede de lojas de lifestyle urbano com mais de 20 anos de estrada. Em parceria com a agência TEC4U, desenhei no Figma a experiência completa da loja — home, listagem, produto, carrinho, busca, menu e páginas institucionais, no desktop e no mobile. O desenvolvimento ficou com a TEC4U.">Layout for the new Kings Sneakers online store, a Brazilian chain of urban lifestyle stores with more than 20 years on the streets. Together with the agency TEC4U, I designed the full store experience in Figma — home, product listing, product page, cart, search, menu and institutional pages, on desktop and mobile. Development was handled by TEC4U.</p>
+        <a class="work-website" href="https://lojakings.com.br/" target="_blank" rel="noopener" data-pt="Visitar site ↗">Visit site ↗</a>
+      </div>
+    </div>
+  </section>
+      <div class="work-blocks">
+    <div class="work-block work-block--text"><span class="work-block-label" data-pt="O projeto">The project</span><p data-pt="A Kings vende Nike, Adidas, Jordan, New Balance e a própria marca para um público que conhece produto. O desafio era um layout que desse conta de muito catálogo, campanhas que mudam toda semana e preço com Pix e parcelamento, sem virar vitrine poluída. A resposta foi uma interface em preto e branco, de grade firme e muito respiro, que sai da frente para o produto e as campanhas aparecerem.">Kings sells Nike, Adidas, Jordan, New Balance and its own label to an audience that knows its product. The challenge was a layout that could handle a large catalog, campaigns that change every week and prices with Pix and installments, without turning into a cluttered storefront. The answer was a black-and-white interface with a firm grid and plenty of room, one that steps aside so products and campaigns can shine.</p></div>
+    <figure class="work-block work-block--media"><video class="work-r-169" src="../../assets/works/kings-sneakers/home-scroll.mp4" autoplay muted loop playsinline preload="metadata" poster="../../assets/works/kings-sneakers/home-scroll-poster.webp" aria-label="The Kings Sneakers home scrolling under the Safari bar, on a light gray background, from the main banner to the footer: best sellers, community favorites, categories, Kings picks, look of the moment, collections, about, press, community and footer" data-pt-aria-label="A home da Kings Sneakers rolando sob a barra do Safari, sobre fundo cinza-claro, do banner principal ao rodapé: best sellers, favoritos da comunidade, categorias, escolhas da Kings, look da vez, coleções, institucional, mídia, comunidade e rodapé"></video><figcaption>Home</figcaption></figure>
+    <div class="work-block work-block--text"><span class="work-block-label" data-pt="Card de produto">Product card</span><p data-pt="O card é a peça que mais se repete na loja, então foi desenhado primeiro. Selo da marca no canto, foto em fundo cinza neutro, nome em caixa-alta e, logo abaixo, o preço cheio ao lado do preço no Pix em verde, com o parcelamento sem juros na linha seguinte. O desconto aparece antes do clique. No mobile, o botão Comprar vai direto no card.">The card is the most repeated piece in the store, so it was designed first. Brand badge in the corner, photo on a neutral gray background, name in uppercase and, right below, the full price next to the Pix price in green, with interest-free installments on the next line. The discount shows up before the click. On mobile, the Buy button sits right on the card.</p></div>
+    <figure class="work-block work-block--media"><img class="work-r-169" src="../../assets/works/kings-sneakers/card.webp" alt="Anatomy of the product card: brand badge, photo on a neutral background, uppercase name, Pix price in green and installments; beside it, the mobile version with a Buy button" data-pt-alt="Anatomia do card de produto: selo da marca, foto em fundo neutro, nome em caixa-alta, preço no Pix em verde e parcelamento; ao lado, a versão mobile com botão Comprar" loading="lazy" decoding="async"><figcaption data-pt="Anatomia do card">Card anatomy</figcaption></figure>
+    <div class="work-block work-block--text"><span class="work-block-label" data-pt="Estrutura">Structure</span><p data-pt="O layout não depende de uma grade de colunas engessada: ele nasce de auto-layout com poucas regras, repetidas em todas as páginas. Margem de 32px no desktop e 16px no mobile, uma escala curta de espaçamentos (12, 16, 24, 32, 64 e 82) e módulos que se encaixam. O card de 310px com 16px de respiro monta todas as vitrines e vaza a margem direita para sugerir o arraste. Na página de produto, a galeria 2×2 em fotos 2:3 ocupa as duas primeiras colunas e o painel de compra, a terceira. No celular, duas colunas de 165,5px com 12px entre elas e 24px entre as linhas.">The layout doesn't rely on a rigid column grid: it is built from auto-layout with a few rules, repeated on every page. A 32px margin on desktop and 16px on mobile, a short spacing scale (12, 16, 24, 32, 64 and 82) and modules that fit together. The 310px card with 16px of breathing room builds every product shelf and bleeds past the right margin to hint at dragging. On the product page, the 2×2 gallery of 2:3 photos takes the first two columns and the buying panel the third. On mobile, two 165.5px columns with 12px between them and 24px between rows.</p></div>
+    <figure class="work-block work-block--media"><img class="work-r-169" src="../../assets/works/kings-sneakers/grid-vitrine.webp" alt="Community favorites shelf with the grid overlaid in red: 32px margins, 310px cards with 16px between them and, in blue, 82px of breathing room above and below the section and 32px between the title and the cards" data-pt-alt="Vitrine Favoritos da comunidade com a grade sobreposta em vermelho: margens de 32px, cards de 310px com 16px entre eles e, em azul, 82px de respiro acima e abaixo da seção e 32px entre o título e os cards" loading="lazy" decoding="async"><figcaption data-pt="Vitrine">Product shelf</figcaption></figure>
+    <figure class="work-block work-block--media"><img class="work-r-169" src="../../assets/works/kings-sneakers/grid-produto.webp" alt="Top of the product page with the grid overlaid: 58px nav, 32px margins, 450px-wide 2:3 gallery photos with 16px gaps, and the 444px buying panel" data-pt-alt="Topo da página de produto com a grade sobreposta: nav de 58px, margens de 32px, galeria de fotos 2:3 com 450px de largura e 16px de respiro, e o painel de compra de 444px" loading="lazy" decoding="async"><figcaption data-pt="Página de produto">Product page</figcaption></figure>
+    <figure class="work-block work-block--media"><img class="work-r-169" src="../../assets/works/kings-sneakers/grid-mobile.webp" alt="Three mobile screens on a black background with the grid overlaid: 16px margins and, on the listing, two 165.5px columns with 12px between them and 24px between rows" data-pt-alt="Três telas do mobile sobre fundo preto com a grade sobreposta: margens de 16px e, na listagem, duas colunas de 165,5px com 12px entre elas e 24px entre as linhas" loading="lazy" decoding="async"><figcaption>Mobile</figcaption></figure>
+    <div class="work-block work-block--text"><span class="work-block-label">Home</span><p data-pt="A home alterna vitrines de produto com blocos editoriais. As categorias já trazem Masculino e Feminino no próprio card, um clique a menos até a listagem. O Look da vez junta a foto de quem veste, com crédito ao perfil, aos produtos do look num carrossel ao lado, em abas para trocar de look sem sair da página.">The home alternates product shelves with editorial blocks. Categories carry Men and Women right on the card, one click less to the listing. The Look of the moment pairs a photo of who's wearing it, credited to their profile, with the products of the look in a carousel beside it, in tabs to switch looks without leaving the page.</p></div>
+    <figure class="work-block work-block--media"><img class="work-r-169" src="../../assets/works/kings-sneakers/macbook-concreto.webp" alt="Open MacBook at an angle showing the Kings Sneakers store home on the edge of a concrete block in late-afternoon light with window shadows, with a pair of black, white and red Air Jordan 1 Low behind it" data-pt-alt="MacBook aberto em ângulo, com a home da loja Kings Sneakers, na quina de um bloco de concreto sob luz de fim de tarde com sombras de janela, e um par de Air Jordan 1 Low preto, branco e vermelho ao fundo" loading="lazy" decoding="async"></figure>
+    <figure class="work-block work-block--media"><img class="work-r-169" src="../../assets/works/kings-sneakers/home-secoes.webp" alt="Two home sections in browser windows on a black background: Sneakers, Clothing and Sale categories with Men and Women buttons, and the Look of the moment with tabs, a photo of who's wearing it and the products of the look" data-pt-alt="Duas seções da home em janelas de navegador sobre fundo preto: categorias Sneakers, Roupas e Sale com botões Masculino e Feminino, e o Look da vez com abas, foto de quem veste e produtos do look" loading="lazy" decoding="async"><figcaption data-pt="Categorias e Look da vez">Categories and Look of the moment</figcaption></figure>
+    <div class="work-block work-block--statement"><p data-pt="Preto, branco e uma grade firme: quem aparece é o produto.">Black, white and a firm grid: the product is what stands out.</p></div>
+    <div class="work-block work-block--pair"><figure><img class="work-r-45" src="../../assets/works/kings-sneakers/mao-produto.webp" alt="Close-up of a hand holding an iPhone showing the Nike Air Max Dn product page, with an out-of-focus concrete room behind" data-pt-alt="Close de uma mão segurando um iPhone com a página de produto do Tênis Nike Air Max Dn, numa sala de concreto desfocada ao fundo" loading="lazy" decoding="async"></figure><figure><img class="work-r-45" src="../../assets/works/kings-sneakers/celular-no-tenis.webp" alt="iPhone showing the sneakers listing standing against the side of a black, white and red Air Jordan 1 Low on a concrete floor in hard late-afternoon light" data-pt-alt="iPhone com a listagem de sneakers apoiado de pé na lateral de um Air Jordan 1 Low preto, branco e vermelho, no chão de concreto sob luz dura de fim de tarde" loading="lazy" decoding="async"></figure></div>
+    <div class="work-block work-block--text"><span class="work-block-label" data-pt="Listagem e produto">Listing and product</span><p data-pt="Na listagem, filtros em gaveta deixam a grade de quatro colunas livre, com um card editorial da categoria abrindo a vitrine. Na página de produto, a galeria grande divide a tela com um painel de compra fixo: marca e avaliação, preço com Pix, cores, tamanhos, tabela de medidas e cálculo de frete, tudo antes da dobra.">On the listing page, filters in a drawer keep the four-column grid free, with an editorial category card opening the shelf. On the product page, a large gallery shares the screen with a fixed buying panel: brand and rating, Pix price, colors, sizes, size chart and shipping calculator, all above the fold.</p></div>
+    <figure class="work-block work-block--media"><img class="work-r-169" src="../../assets/works/kings-sneakers/listagem.webp" alt="Sneakers listing page under the Safari bar, on a light gray background: category banner, filters and a four-column grid" data-pt-alt="Página de listagem de sneakers sob a barra do Safari, sobre fundo cinza-claro: banner da categoria, filtros e grade de quatro colunas" loading="lazy" decoding="async"><figcaption data-pt="Listagem">Listing</figcaption></figure>
+    <figure class="work-block work-block--media"><img class="work-r-169" src="../../assets/works/kings-sneakers/produto.webp" alt="Product page taken apart: the four gallery views as thumbnails, the Nike Air Max Dn up front and the buying panel with brand, Pix price, colors, sizes and shipping" data-pt-alt="Página de produto desmontada: as quatro vistas da galeria em miniatura, o Tênis Nike Air Max Dn em destaque e o painel de compra com marca, preço no Pix, cores, tamanhos e frete" loading="lazy" decoding="async"><figcaption data-pt="Produto">Product</figcaption></figure>
+    <figure class="work-block work-block--media"><img class="work-r-169" src="../../assets/works/kings-sneakers/produto-macbook.webp" alt="MacBook showing the Nike Air Max Dn product page on a concrete bench under a top spotlight, with the Air Max Dn itself in the foreground" data-pt-alt="MacBook com a página de produto do Tênis Nike Air Max Dn sobre um banco de concreto, iluminado por um spot de cima, com o próprio Air Max Dn em primeiro plano" loading="lazy" decoding="async"></figure>
+    <div class="work-block work-block--text"><span class="work-block-label" data-pt="Monte o seu look">Complete the look</span><p data-pt="Abaixo da compra, o Monte o seu look sugere peças que combinam com o produto e oferece o conjunto com desconto no Pix, num só botão. O bloco foi pensado para aumentar o ticket sem empurrar: ele aparece depois que a decisão principal já foi tomada. O carrinho lateral segue a mesma lógica: cupom, total e o botão de compra sempre à vista.">Below the purchase, Complete the look suggests pieces that go with the product and offers the set at a Pix discount, in a single button. The block was designed to raise the order value without pushing: it shows up after the main decision has already been made. The side cart follows the same logic: coupon, total and the buy button always in view.</p></div>
+    <figure class="work-block work-block--media"><img class="work-r-169" src="../../assets/works/kings-sneakers/monte-o-look.webp" alt="Complete the look block in cards on a black background: the desktop version with sneakers, socks and a cleaning kit and the bundle price via Pix, and the mobile version beside it" data-pt-alt="Bloco Monte o seu look em cartões sobre fundo preto: a versão desktop com tênis, meias e kit de limpeza e o preço do conjunto no Pix, e a versão mobile ao lado" loading="lazy" decoding="async"><figcaption data-pt="Desktop e mobile">Desktop and mobile</figcaption></figure>
+    <div class="work-block work-block--text"><span class="work-block-label">Mobile</span><p data-pt="No celular, o topo fixo junta menu, logo, conta, sacola e a busca sempre à mão. O menu em gaveta destaca Sale e a coleção do momento, a busca abre com sugestões e o carrinho lateral mostra cupom e total sem tirar a pessoa da página.">On the phone, the fixed header brings together menu, logo, account, bag and an always-at-hand search. The drawer menu highlights Sale and the current collection, search opens with suggestions and the side cart shows coupon and total without taking people off the page.</p></div>
+    <figure class="work-block work-block--media"><img class="work-r-169" src="../../assets/works/kings-sneakers/menu-busca-carrinho.webp" alt="Drawer menu, search with suggestions and mobile side cart in three cards side by side on a black background" data-pt-alt="Menu em gaveta, busca com sugestões e carrinho lateral do mobile em três cartões lado a lado sobre fundo preto" loading="lazy" decoding="async"><figcaption data-pt="Menu, busca e carrinho">Menu, search and cart</figcaption></figure>
+    <div class="work-block work-block--text"><span class="work-block-label" data-pt="Autoria">Authorship</span><p data-pt="O layout, desktop e mobile, é de minha autoria. Os banners e as fotos de campanha são da Kings, e a implementação da loja foi feita pela TEC4U.">The layout, desktop and mobile, is my own work. The banners and campaign photos belong to Kings, and the store was built by TEC4U.</p></div>
+  </div>
+      <section class="work-outro">
+    <div class="work-credits">
+      <span class="work-block-label" data-pt="Créditos">Credits</span>
+      <dl>
+        <div class="work-credit"><dt>Layout (UI/UX)</dt><dd>Nícolas de Queiróz</dd></div>
+        <div class="work-credit"><dt data-pt="Desenvolvimento">Development</dt><dd>TEC4U</dd></div>
+        <div class="work-credit"><dt data-pt="Banners e fotos de campanha">Banners and campaign photos</dt><dd>Kings Sneakers</dd></div>
+      </dl>
+    </div>
+    <a class="work-visit" href="https://lojakings.com.br/" target="_blank" rel="noopener" data-pt="Visitar site ↗">Visit site ↗</a>
+  </section>
+      <a href="../karolinne-hartung/" class="work-next" aria-label="Next project: Karolinne Hartung" data-pt-aria-label="Próximo projeto: Karolinne Hartung">
+    <img class="work-next-media" src="../../assets/works/karolinne-hartung/capa.webp" alt="" loading="lazy" decoding="async">
+    <span class="work-next-content">
+      <span class="work-block-label" data-pt="Próximo projeto">Next project</span>
+      <span class="work-next-title">Karolinne Hartung</span>
+    </span>
+  </a>
+    </div>
+    <noscript>
+      <p class="work-noscript">
+        <a href="../../">← Back to portfolio</a> · Kings Sneakers
+      </p>
+    </noscript>
+  </main>
+
+  <footer>
+    <span class="site-copyright">© 2026 Nícolas de Queiróz</span>
+    <a href="../../" class="back-home bubble-back-home" aria-label="Back to home" data-pt-aria-label="Voltar para o início">
+      <svg class="back-home-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M13 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+      </svg>
+      <span data-pt="Início">Home</span>
+    </a>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js" defer></script>
+  <script src="../../js/i18n.js?v=d36dfdb5" defer></script>
+  <script src="../../js/view-transitions.js?v=c40ef3f9" defer></script>
+  <script src="../../js/theme.js?v=4505fa4f" defer></script>
+  <script src="../../js/nav.js?v=a0abf00a" defer></script>
+  <script src="../../js/nav-enter.js?v=a631242b" defer></script>
+  <script src="../../js/nav-theme.js?v=57d039e4" defer></script>
+  <script src="../../js/cursor.js?v=31c37f1e" defer></script>
+  <script src="../../js/reveal.js?v=bdce8a67" defer></script>
+  <script src="../../js/next-video.js?v=2b69ce97" defer></script>
+</body>
+</html>
